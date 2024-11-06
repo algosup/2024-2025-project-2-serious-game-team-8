@@ -1,0 +1,22 @@
+# Godot-specific files
+.import/
+export.cfg
+export_presets.cfg
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+
+# Backup files
+*.bak
+*.old
+
+# Godot editor configuration
+.editor_settings-3.tres
+.editor_settings-4.tres
+
+# Cache files
+*.godot/tmp/
