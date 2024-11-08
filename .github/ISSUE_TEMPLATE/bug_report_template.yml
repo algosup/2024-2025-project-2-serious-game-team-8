@@ -1,0 +1,66 @@
+name: Bug report Form
+description: Create a report to help improve the product
+title: "[BUG] INSERT_BUG_NAME"
+labels: bug
+assignees: mathiskakal
+projects: [algosup/45]
+body:
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      placeholder: A detailed description of the current behavior.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: "Please provide steps to reproduce the issue:\n1. Go to '...'\n2. Click on '...'\n3. Scroll down to '...'\n4. See error"
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: |
+        <details><summary><ins><em>Click to show template</em></ins></summary><br>
+        
+        \| Step ID \| Step Description \|
+        \|--------\|--------\|
+        \| O \| Cell \|
+        \| 1 \| Cell \|
+        \| 2 \| Cell \|
+        
+        </details>
+      
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      placeholder: If applicable, add screenshots to help explain your problem.  
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context / Description
+      placeholder: Add any other context about the problem here.
+    validations:
+      required: false
+      
+  - type: textarea
+    id: possible-implementation
+    attributes:
+      label: Possible Implementation
+      placeholder: Describe any suggestions for solving this issue.
+    validations:
+      required: false
