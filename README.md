@@ -8,6 +8,8 @@ EcoQuest is a serious game about climate change. It aims to educate and teach pe
 
 Consequently, we are using a game engine easy to handle and learn which is named GODOT 4.
 
+This game would be a mini-game compilation about climate change, every mini-game would have a losing and winning screen. Moreover, an info page would be displayed before each of them to showcase some learnings about the climate change.
+
 ## Who worked on this project?
 
 | Name               | Role              | Picture                                                                       | LinkedIn Profile                                                                                                                                                          | GitHub Profile                                                                                                                                 |
@@ -24,9 +26,14 @@ Consequently, we are using a game engine easy to handle and learn which is named
 
 This software has been created using [GODOT 4.3](https://en.wikipedia.org/wiki/Godot_(game_engine)).
 
-It has been mainly tested on:
-    - <!-- Mac reference -->
-    - <!-- Lenovo reference -->
+It has been mainly coded on:
+- Apple Macbook Air m3 QWERTY
+- Lenovo Thinkbook 14
+- ThinkPad E14 Gen 5
+
+And tested on:
+- Google Pixel 8 - Android 14.0
+- Iphone 14 pro - IOS 17.0
 
 ## Installation
 
