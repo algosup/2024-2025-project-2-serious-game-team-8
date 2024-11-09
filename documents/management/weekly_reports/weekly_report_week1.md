@@ -22,11 +22,13 @@ This week was the launching of the project. Consequently, the main advancement i
 
 1. **New Team**
     - The main challenge has been to communicate efficiently between members that never work together.
-2. **Time Allocation**
+2. **Missing Team Member**
+    - One of the team member wasn't present during the four first days.
+3. **Time Allocation**
     - The team should work on the project with no-project time, complicating the task.
-3. **Game Design**
+4. **Game Design**
     - None of us designed a serious game before. We should learn quikly and efficiently.
-4. **GODOT Learning**
+5. **GODOT Learning**
     - Software Engineers should learn how to use GODOT and a new language, GDScript.
 
 ## Plan for Next Week
