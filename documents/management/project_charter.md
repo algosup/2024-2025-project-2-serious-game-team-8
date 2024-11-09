@@ -71,8 +71,8 @@ In addition, a presentation of our work will be done at the end of the project t
 
 ## Allocated Resources
 
-Budget: 0€
-Workforce allocated: 7 team members (6 for the first week)
+Budget: 0€ \
+Workforce allocated: 7 team members (6 for the first week) \
 Worktime: 19 half-days of 3h30 each
 
 Total human hours estimation: 465.5h
