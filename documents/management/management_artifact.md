@@ -2,42 +2,44 @@
 
 This document aims to centralize all the management artifact links and resources listed below:
 
-<!-- - [2023 - 2024 Project-5 Flutter Team-8 - Management Artifacts](#2023---2024-project-5-flutter-team-8---management-artifacts)
-  - [Tasks \& schedule](#tasks--schedule)
-  - [RACI Matrix](#raci-matrix)
-  - [Risks \& Assumptions](#risks--assumptions)
-  - [Key Performance Indicators](#key-performance-indicators)
-    - [Definition of our KPIs](#definition-of-our-kpis)
-      - [Documents](#documents)
-      - [Design](#design)
-      - [Development](#development)
-      - [Mood](#mood)
-    - [Link to the project's KPIs](#link-to-the-projects-kpis)
-  - [Weekly reports](#weekly-reports)
-  - [Post Mortem Analysis](#post-mortem-analysis)
-  - [Addendum](#addendum)
-    - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
+- [Tasks \& schedule](#tasks--schedule)
+- [RACI Matrix](#raci-matrix)
+<!-- - [Risks \& Assumptions](#risks--assumptions) -->
+- [Key Performance Indicators](#key-performance-indicators)
+  - [Definition of our KPIs](#definition-of-our-kpis)
+    - [Documents](#documents)
+    - [Design](#design)
+    - [Game](#game)
+    - [Test](#test)
+    - [Pitch](#pitch)
+    - [Human Ressources](#human-ressources)
+    - [Mood](#mood)
+  - [Link to the project's KPIs](#link-to-the-projects-kpis)
+- [Weekly reports](#weekly-reports)
+<!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
+<!-- - [Addendum](#addendum) -->
+  <!-- - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
 
 ## Tasks & schedule
 
 You can view the breakdown of all the tasks we've identified for the duration of the project following [this link](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?gid=0#gid=0).
-<!-- 
-It has been created using Google Sheets, ensuring a good comprehension already known by everyone, but also as a modular tool, which can implement metrics. Consequently, the client can track with ease the challenges and achievements done during the project. -->
+
+This document has been created using Google Docs in order to keep tracks of the different tasks, for both team members and the client.
 
 ## RACI Matrix
 
 The RACI matrix of this project is as follows considering the [Project Charter](./project_charter.md):
-<!-- 
-| Name                     | Project Manager | Program Manager | Technical Leader | Software engineer | Quality assurance | Technical Writer | Client | Stakeholders |
-| ------------------------ | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ---------------- | ------ | ------------ |
-| Project kick-off         | I               | I               | I                | I                 | I                 | I                | R      | C            |
-| Project charter          | R               | A               | C                | C                 | C                 | C                | I      | I            |
-| Schedule creation        | R               | C               | C                | C                 | C                 | C                | /      | I            |
-| Functional specification | A               | R               | C                |                   | C                 | /                | C      | I            |
-| Technical specification  | A               | C               | R/A              | I                 | C                 | /                | C      | I            |
-| Coding process           | A               | I               | R                | R/A               | C                 | /                | /      | /            |
-| Testing planification    | A               | /               | C                | C                 | R/A               | I                | /      | /            |
-| Usage instructions       | A               | C               | C                | C                 | I                 | R/A              | I      | I            | -->
+
+| Name                      | Project Manager | Program Manager | Technical Leader | Software engineer | Quality assurance | Technical Writer | Client | Stakeholders |
+| ------------------------- | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ---------------- | ------ | ------------ |
+| Project kick-off          | I               | I               | I                | I                 | I                 | I                | A      | I            |
+| Project charter           | R               | I               | I                | /                 | I                 | I                | A      | C            |
+| Schedule creation         | R               | I               | I                | I                 | I                 | I                | I      | C            |
+| Functional specifications | A               | R               | I                | I                 | I                 | I                | C      | C            |
+| Technical specifications  | A               | C               | R                | I                 | I                 | I                | /      | C            |
+| Coding process            | A               | C               | C                | R                 | I                 | I                | I      | I            |
+| Testing planification     | A               | /               | C                | C                 | R                 | /                | /      | C            |
+| Usage instructions        | I               | C               | I                | C                 | /                 | R                | A      | C            |
 
 Legend:
 
@@ -49,7 +51,7 @@ Legend:
 | I      | Informed    | Kept updated on progress and decisions          |
 | /      | /           | No interaction with this role for this task     |
 
-## Risks & Assumptions
+<!-- ## Risks & Assumptions -->
 
 <!-- | ID  | Description                                                                   | Consequence                                                       | Impact   | Likelihood | Mitigation/Avoidance                                                                |
 | --- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------- | ---------- | ----------------------------------------------------------------------------------- |
@@ -67,39 +69,39 @@ Legend:
 
 #### Documents
 
-<!-- The following KPIs are included in this section:
+This section contains the following KPIs:
 
 - **Functional specifications**
 - **Technical specifications**
 - **Test Plan**
 - **User Manual**
 
-The progress of these documents is measured using the following formula:
+The following formula measure the progress of these documents:
 
 $$\text{percentage} = (\frac{\text{current number of sections}} {\text{total number of sections}})\times{100}$$
 
 Where:
 
 - **current_number_of_sections**: The number of sections that are completely done.
-- **total_number_of_sections**: The number of predefined sections in the document's outline, which may evolve. -->
+- **total_number_of_sections**: The number of predefined sections in the document's outline, which may evolve.
 
 #### Design
 
-<!-- The KPIs in this section include:
+This section includes:
 
-- **Mock-ups**
-- **User journey roadmap**
+- **One-Sheet Design**
+- **Assets Spritesheets**
 
 The percentage progress for these KPIs is calculated using this formula:
 
-$$\text{percentage} = (\frac{\text{current number of designed pages}} {\text{total number of pages to design}})\times{100}$$
+$$\text{percentage} = (\frac{\text{current number of assets designed}} {\text{total number of assets}})\times{100}$$
 
 Where:
 
-- **current_number_of_pages_designed**: The number of pages that have been prototyped.
-- **total_number_of_pages_to_design**: The total number of pages planned to be designed during the project analysis. -->
+- **current_number_of_assets_designed**: The number of assets that have been designed.
+- **total_number_of_assets**: The total number of assets planned to be designed during the project analysis.
 
-#### Development
+#### Game
 
 <!-- This section tracks the following KPIs:
 
@@ -117,6 +119,12 @@ Where:
 - **sum_unfinished_pages_advancements**: The cumulative progress of each unfinished page, with progress for each page ranging from 0 to 1.
 - **total_designed_pages**: The total number of pages defined during project analysis and design. -->
 
+#### Test
+
+#### Pitch
+
+#### Human Ressources
+
 #### Mood
 
 <!-- The mood percentage is calculated by averaging the weekly grades out of 10 given by each team member. These grades reflect their overall motivation and well-being from a personal perspective, as well as considering the project's milestones and challenges.
@@ -125,32 +133,33 @@ By utilizing these formulas, we ensure that our progress tracking is clear and c
 
 ### Link to the project's KPIs
 
-<!-- You can see our project's KPIs which were explained above following [this link](https://docs.google.com/spreadsheets/d/13r3LjiBo7af3gUG_U1R8BDZ1rG9yWM4tQpzGxaaGdE4/edit?usp=sharing). -->
+You can see our project's KPIs which were explained above following [this link](https://docs.google.com/spreadsheets/d/1BWe4K6mLUlL6vSzulc70gr5wj0btL7bMgGRO0_gixqE/edit?usp=sharing).
 
 ## Weekly reports
 
-<!-- The weekly reports folder can be found following [this link](/documents/management/weekly_reports/).
+The weekly reports folder can be found following [this link](/documents/management/weekly_reports/).
 
-You can directly access the reports individually following the below bullet points:
+You can access each of them directly by following the links just below:
 
-- [Access Report for Week 1](/documents/management/weekly_reports/week1.md)
-- [Access Report for Week 2](/documents/management/weekly_reports/week2.md)
-- [Access Report for Week 3](/documents/management/weekly_reports/week3.md)
-- [Access Report for Week 4](/documents/management/weekly_reports/week4.md)
-- [Access Report for Week 5](/documents/management/weekly_reports/week5.md)
-- [Access Report for Week 6](/documents/management/weekly_reports/week6.md)
+- [Access Report for Week 1](/documents/management/weekly_reports/weekly_report_week1.md)
+<!-- - [Access Report for Week 2](/documents/management/weekly_reports/weekly_report_week2.md) -->
+<!-- - [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md) -->
+<!-- - [Access Report for Week 4](/documents/management/weekly_reports/weekly_report_week4.md) -->
+<!-- - [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md) -->
+<!-- - [Access Report for Week 6](/documents/management/weekly_reports/weekly_report_week6.md) -->
+<!-- - [Access Report for Week 7](/documents/management/weekly_reports/weekly_report_week7.md) -->
 
-For a centralized collection of copies of all the reports in a single document, please refer to the Cumulative File for Weekly Reports:
+You can also access all the reports in one file using the link below:
 
-- [Access Cumulative file for all 6 weeks](/documents/management/weekly_reports/cumulative.md) -->
+- [Access Cumulative file for all 7 weeks](/documents/management/weekly_reports/weekly_reports_cumulative.md)
 
-## Post Mortem Analysis
+<!-- ## Post Mortem Analysis -->
 
 <!-- You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md) -->
 
-## Addendum
+<!-- ## Addendum -->
 
-### Differences Between Gantt Chart and Actual Schedule
+<!-- ### Differences Between Gantt Chart and Actual Schedule -->
 
 <!-- The project schedule deviated significantly from the initial Gantt Chart, reflecting substantial differences in both the timeline and the expected prototype of "Adopte Un Candidat." This section aims to explain the discrepancies between the planned and actual schedules.
 
