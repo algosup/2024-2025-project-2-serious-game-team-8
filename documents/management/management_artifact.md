@@ -4,7 +4,7 @@ This document aims to centralize all the management artifact links and resources
 
 - [Tasks \& schedule](#tasks--schedule)
 - [RACI Matrix](#raci-matrix)
-<!-- - [Risks \& Assumptions](#risks--assumptions) -->
+- [Risks \& Assumptions](#risks--assumptions)
 - [Key Performance Indicators](#key-performance-indicators)
   - [Definition of our KPIs](#definition-of-our-kpis)
     - [Documents](#documents)
@@ -15,6 +15,7 @@ This document aims to centralize all the management artifact links and resources
     - [Human Ressources](#human-ressources)
     - [Mood](#mood)
   - [Link to the project's KPIs](#link-to-the-projects-kpis)
+  - [Link to the forms](#link-to-the-forms)
 - [Weekly reports](#weekly-reports)
 <!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
 <!-- - [Addendum](#addendum) -->
@@ -51,21 +52,21 @@ Legend:
 | I      | Informed    | Kept updated on progress and decisions          |
 | /      | /           | No interaction with this role for this task     |
 
-<!-- ## Risks & Assumptions -->
+## Risks & Assumptions
 
-<!-- | ID  | Description                                                                   | Consequence                                                       | Impact   | Likelihood | Mitigation/Avoidance                                                                |
-| --- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------- | ---------- | ----------------------------------------------------------------------------------- |
-| 1   | Flutter is a language to which we are not yet used.                           | Development pace might be hindered                                | High     | Medium     | Ask for help to the other team members                                              |
-| 2   | The client might want to change /add requirements                             | We might need to change how the solution is developed             | Medium   | Low        | Validate every step of the project with the client, to ensure the solution fits him |
-| 3   | We might create a clone of an already existing solution and infringe a patent | The client couldn't develop their solution based on our prototype | High     | Low        | Check for any patent and find our unique selling point (USP)                        |
-| 4   | Misinterpretation of the project                                              | Incorrect implementation of the software                          | Critical | Medium     | Regular communication with the client to understand their needs, and stick to them. |
-| 5   | Team member leaving                                                           | Tasks left to the remaining members without any assignee          | High     | Unlikely   | Sharing the tasks among the remaining team members.                                 | -->
+| ID  | Description                                                                              | Consequence                                                               | Impact   | Likelihood | Mitigation/Avoidance                                            |
+| --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | -------- | ---------- | --------------------------------------------------------------- |
+| 1   | We might forget a key point in our solution or misinterpret a requirement                | It would impact the time of production to remove or refien them           | High     | Medium     | Regular communications about what's being done with the client. |
+| 2   | We might create a game that seems fun to us, but who is not in fact                      | The game would be pointless and we should start from scratch again        | High     | Low        | Regular testing with non-team-members tester.                   |
+| 3   | We might starting something to big to complete in the time allocated to this project     | The project will end uncomplete or the team should work in overtime a lot | High     | Medium     | Start small and scale up iteratively.                           |
+| 4   | We could fall in love with our product even though it is one not completing requirements | It would give an off-topic game which is useless                          | High     | Low        | Don't hesitate to pivot if needed.                              |
+| 5   | Team member leaving                                                                      | Tasks left to the remaining members without any assignee                  | High     | Unlikely   | Sharing the tasks among the remaining team members.             |
 
 ## Key Performance Indicators
 
 ### Definition of our KPIs
 
-<!-- To enable the client to track our project's milestones, we have defined several quantitatively measurable KPIs. Below is a list of these KPIs along with their respective calculations. -->
+To keep tracks of the project advancement, KPIs have been defined. These KPIs are defined below in there respective categories. Their way of calculations are put in addition with them.
 
 #### Documents
 
@@ -103,37 +104,90 @@ Where:
 
 #### Game
 
-<!-- This section tracks the following KPIs:
+This section tracks the following KPIs:
 
-- **Logged out interfaces**
-- **User interfaces**
-- **Company interfaces**
+- **First Prototype**
+- **Second Prototype**
+- **Final Product**
 
-Given the complexity and time required for development, we include progress on partially completed pages. The progress is calculated using:
+Each of those KPIs are based on sub-task and will use Users feedback to be calculated:
 
-$$\text{percentage} = (\frac{({\text{current number of fully coded pages + sum percentages unfinished pages}})} {\text{total designed pages}})\times{100}$$
+$$\text{percentage} = (\frac{({\text{current number of game mechanics + user feedback adaptation}})} {\text{total game mechanics predifined}})\times{100}$$
 
 Where:
 
-- **current_number_of_fully_coded_pages**: The number of pages that are fully completed.
-- **sum_unfinished_pages_advancements**: The cumulative progress of each unfinished page, with progress for each page ranging from 0 to 1.
-- **total_designed_pages**: The total number of pages defined during project analysis and design. -->
+- **current_number_of_game_mechanics**: The number of game mechanics that are fully implemented.
+- **user_feedback_adaptation**: Feedback adaptations we get during the test phases between each prototype or product.
+- **total_game_mechanics_predifined**: The total number of game mechanics predefined during project analysis and design.
 
 #### Test
 
+This section contains only one KPI:
+
+- **Test Cases**
+
+The percentage progress would be defined as such:
+
+$$\text{percentage} = (\frac{\text{current number of test cases}} {\text{total number of test cases}})\times{100}$$
+
+Where:
+
+- **current_number_of_text_cases**: The number of test cases currently written.
+- **total_number_of_test_cases**: The total number of test cases predifined.
+
 #### Pitch
+
+Only one KPI is included in this section:
+
+- **Pitch Deck**
+
+The percentage of completion would be calculated using this formula:
+
+$$\text{percentage} = (\frac{\text{current number of slides}} {\text{total number of slides}})\times{100}$$
+
+Where: 
+
+- **current_number_of_slides**: The number of slides currently designed in the Pitch Deck.
+- **total_number_of_slides**: The number of slides the Pitch Deck should contain in the end.
 
 #### Human Ressources
 
+The following KPIs are tracked in this section:
+
+- **Overtime**
+- **Injustified Absence**
+
+These KPIs are calculated only over 30 minutes each.
+
+The overtime are tracked according to a [Google form](#link-to-the-forms).
+
 #### Mood
 
-<!-- The mood percentage is calculated by averaging the weekly grades out of 10 given by each team member. These grades reflect their overall motivation and well-being from a personal perspective, as well as considering the project's milestones and challenges.
+The mood percentage is calculated from the average of a 10 personal grade. Each team members respond to a survey every weeks and they have to give their feelings over the week.
 
-By utilizing these formulas, we ensure that our progress tracking is clear and consistent, and provides a realistic view of our project's status to the client. For readibility and a better understanding, the KPIs are rounded to the nearest 5% -->
+This method allows an accurate way of tracking the motivation and global mood during the project.
+
+You can find the responses [here](#link-to-the-forms).
 
 ### Link to the project's KPIs
 
 You can see our project's KPIs which were explained above following [this link](https://docs.google.com/spreadsheets/d/1BWe4K6mLUlL6vSzulc70gr5wj0btL7bMgGRO0_gixqE/edit?usp=sharing).
+
+### Link to the forms
+
+This section is here to gather all the forms used for the KPIs.
+
+  - [Team 8 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/11JtrnA0_N300-CjYwOXmeK_fnCse6ndy-enLrrQBak8/edit?usp=sharing)
+  <!-- - [Team 8 Satisfaction Week 2]() -->
+  <!-- - [Team 8 Satisfaction Week 3]() -->
+  <!-- - [Team 8 Satisfaction Week 4]() -->
+  <!-- - [Team 8 Satisfaction Week 5]() -->
+  <!-- - [Team 8 Satisfaction Week 6]() -->
+  <!-- - [Team 8 Satisfaction Week 7]() -->
+
+The following link is used as a cumulative for the seven weeks:
+
+  - [Team 8 Satisfaction Cumulative](https://docs.google.com/spreadsheets/d/1XuxYtWgcUpnG3XmunEh33R46xmMi0EG3kv1voRpgjVk/edit?usp=sharing)
 
 ## Weekly reports
 
