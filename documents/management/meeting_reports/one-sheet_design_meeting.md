@@ -39,7 +39,6 @@ THIZEAU Maxime,  Team 8's Project Manager.
 
 And here is the client response.
 
-<!-- Copy paste the message when received. -->
 ```
-In waiting...
+Sounds interesting. The serious part is a bit thin but I suspect it's due to the young age of your target audience. Kids already spend too much time watching screens, try to think of ways to make them interact more with the physical world. State clearly what you want them to learn (the serious part) and then try to make it as fun as possible (the game part). Maybe if you were to pick an older audience you could teach more sophisticated concepts.
 ```
