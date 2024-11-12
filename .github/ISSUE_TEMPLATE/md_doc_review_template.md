@@ -1,3 +1,12 @@
+---
+name: Document Suggestion
+about: Address suggestions and potential Typos in Documents
+title: "[DOCS] DOCUMENT_NAME"
+labels: documentation
+assignees: ''
+
+---
+
 ### LABELS
 #### Text Format
 **Bold**: replaced word in original text
