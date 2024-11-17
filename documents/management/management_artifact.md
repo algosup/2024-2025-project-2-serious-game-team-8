@@ -2,22 +2,21 @@
 
 This document aims to centralize all the management artifact links and resources listed below:
 
-- [2024 - 2025 Project-2 Serious Game Team-8 - Management Artifacts](#2024---2025-project-2-serious-game-team-8---management-artifacts)
-  - [Tasks \& schedule](#tasks--schedule)
-  - [RACI Matrix](#raci-matrix)
-  - [Risks \& Assumptions](#risks--assumptions)
-  - [Key Performance Indicators](#key-performance-indicators)
-    - [Definition of our KPIs](#definition-of-our-kpis)
-      - [Documents](#documents)
-      - [Design](#design)
-      - [Game](#game)
-      - [Test](#test)
-      - [Pitch](#pitch)
-      - [Human Ressources](#human-ressources)
-      - [Mood](#mood)
-    - [Link to the project's KPIs](#link-to-the-projects-kpis)
-    - [Link to the forms](#link-to-the-forms)
-  - [Weekly reports](#weekly-reports)
+- [Tasks \& schedule](#tasks--schedule)
+- [RACI Matrix](#raci-matrix)
+- [Risks \& Assumptions](#risks--assumptions)
+- [Key Performance Indicators](#key-performance-indicators)
+  - [Definition of our KPIs](#definition-of-our-kpis)
+    - [Documents](#documents)
+    - [Design](#design)
+    - [Game](#game)
+    - [Test](#test)
+    - [Pitch](#pitch)
+    - [Human Ressources](#human-ressources)
+    - [Mood](#mood)
+  - [Link to the project's KPIs](#link-to-the-projects-kpis)
+  - [Link to the forms](#link-to-the-forms)
+- [Weekly reports](#weekly-reports)
 <!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
 <!-- - [Addendum](#addendum) -->
   <!-- - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
