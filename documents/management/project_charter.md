@@ -35,11 +35,11 @@ The serious game should be edutermaint but can take every form. It could also be
 
 On November 6th 2024, we had a meeting to brainstorm possible game ideas and to sort them or modified them to a more feasible point of view. At the end of it, three main ideas have been sorted.
 
-To communicate with the client, it would mainly be done by e-mails exchanges. However, in son=me specific occasion some meeting with the client could be organized for a better clarity.
+To communicate with the client, it would mainly be done by e-mails exchanges. However, in some specific occasion some meeting with the client could be organized for a better clarity.
 
 This project will be using the Waterfall project method du to the lack of working hours for the project. However, we plan to use some aspects of SCRUM management and Agile testing to create a bug-free game.
 
-The planning will be made by defining the tasks and objectives a serious game can involved. Thos tasks would be hierarchied according to their importance in the project. They would also be assigned to one or many team members to complete them in the most efficate way possible. \
+The planning will be made by defining the tasks and objectives a serious game can involved. Those tasks would be hierarchied according to their importance in the project. They would also be assigned to one or many team members to complete them in the most efficate way possible. \
 Finally, these tasks and objectives would be gathered on an external Spreadsheet you can find [here](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?usp=sharing).
 
 After the final presentation which will take place on December, 20th 2024, we will do a post-mortem analysis to summarize what happened and make a report to the client.
