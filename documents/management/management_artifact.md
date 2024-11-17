@@ -2,21 +2,22 @@
 
 This document aims to centralize all the management artifact links and resources listed below:
 
-- [Tasks \& schedule](#tasks--schedule)
-- [RACI Matrix](#raci-matrix)
-- [Risks \& Assumptions](#risks--assumptions)
-- [Key Performance Indicators](#key-performance-indicators)
-  - [Definition of our KPIs](#definition-of-our-kpis)
-    - [Documents](#documents)
-    - [Design](#design)
-    - [Game](#game)
-    - [Test](#test)
-    - [Pitch](#pitch)
-    - [Human Ressources](#human-ressources)
-    - [Mood](#mood)
-  - [Link to the project's KPIs](#link-to-the-projects-kpis)
-  - [Link to the forms](#link-to-the-forms)
-- [Weekly reports](#weekly-reports)
+- [2024 - 2025 Project-2 Serious Game Team-8 - Management Artifacts](#2024---2025-project-2-serious-game-team-8---management-artifacts)
+  - [Tasks \& schedule](#tasks--schedule)
+  - [RACI Matrix](#raci-matrix)
+  - [Risks \& Assumptions](#risks--assumptions)
+  - [Key Performance Indicators](#key-performance-indicators)
+    - [Definition of our KPIs](#definition-of-our-kpis)
+      - [Documents](#documents)
+      - [Design](#design)
+      - [Game](#game)
+      - [Test](#test)
+      - [Pitch](#pitch)
+      - [Human Ressources](#human-ressources)
+      - [Mood](#mood)
+    - [Link to the project's KPIs](#link-to-the-projects-kpis)
+    - [Link to the forms](#link-to-the-forms)
+  - [Weekly reports](#weekly-reports)
 <!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
 <!-- - [Addendum](#addendum) -->
   <!-- - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
@@ -196,7 +197,7 @@ The weekly reports folder can be found following [this link](/documents/manageme
 You can access each of them directly by following the links just below:
 
 - [Access Report for Week 1](/documents/management/weekly_reports/weekly_report_week1.md)
-<!-- - [Access Report for Week 2](/documents/management/weekly_reports/weekly_report_week2.md) -->
+- [Access Report for Week 2](/documents/management/weekly_reports/weekly_report_week2.md)
 <!-- - [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md) -->
 <!-- - [Access Report for Week 4](/documents/management/weekly_reports/weekly_report_week4.md) -->
 <!-- - [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md) -->
