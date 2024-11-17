@@ -37,9 +37,11 @@
 
 ## Project Overview
 
-EcoQuest is a serious game about climate change. It aims to educate and teach people about some habits everyone should instore to help with the global warming. 
+EcoQuest is a serious game about climate change. It aims to educate and teach people about some misconceptions about global warming. 
 
 Consequently, we are using a game engine easy to handle and learn which is named GODOT 4.
+
+This game would be an escape game about climate change, every puzzle/enigma would clarify a misconception about climate change. Moreover, a timer would be set to escape the "room", adding some entertainment to the game.
 
 ## Development-related information
 
