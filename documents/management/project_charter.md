@@ -1,87 +1,91 @@
 # 2024 - 2025 Project-2 Serious Game Team-8 - Project Charter
 
-## Project definition
+## Project Definition
 
-This project aims to teach and educate our users about the dangers of climate changes and how to avoid them at maximum.
-Therefore, a serious game will be created to make the learning more entertaining.
+The objective of this project is to educate users on the dangers of climate change and offer actionable steps to mitigate its effects. To achieve this, we will develop an engaging and educational serious game.
 
-This project has not been asked by a company. Therefore, the client would be our school director, the communication would be done between him and our program manager, Benoit DE KEYN.
+This project is not initiated by an external company; therefore, the client is the school director. Communication with the client will be managed by our Program Manager, Benoit DE KEYN.
 
 ## Scope
 
-This project should be done in GODOT 4. This one allow the creation of games in various platforms (Web browsers, Windows, MacOS, Consoles, and Mobile). 
+This project will be developed using the Godot 4 game engine, chosen for its versatility and capability to deploy on various platforms, including web browsers, Windows, macOS, consoles, and mobile devices.
 
-The serious game should be edutermaint but can take every form. It could also be in 2D or in 3D.
+The serious game will combine educational content with entertainment, allowing for flexibility in its design. The game may be in either 2D or 3D format, depending on the direction taken during development.
+
+## Out of Scope
+
+The following elements are outside the scope of this project:
+
+- Inclusion of complex multiplayer or online gameplay.
+- Expansive cross-platform testing (beyond the major target platforms: web browsers, Windows, and mobile devices).
+- Development of additional features or game expansions post-delivery unless explicitly requested and approved by the client.
 
 ## Stakeholders
 
-| Role                     | Representative                        | Expectation                                                                                                           |
-| ------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| School director & client | Franck JEANNIN (ALGOSUP)              | - Clear documentation and management based on the skills learnt in class. <br> - A serious game about climate change. |
+| Role                     | Representative              | Expectations                                                                                          |
+| ------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
+| School Director & Client | Franck JEANNIN (ALGOSUP)    | - Clear and structured documentation and project management, reflecting skills learned in class. <br> - A serious game focused on climate change education. |
 
-## Team members and responsibilities
+## Team Members and Responsibilities
 
-| Name               | Role              | Responsibilities                                                                                                                     | Performance criteria                                                                                                                      |
+| Name               | Role              | Responsibilities                                                                                                                     | Performance Criteria                                                                                                                      |
 | ------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Maxime THIZEAU     | Project Manager   | Managment (time, resources)<br>Workload distribution<br> Report to stakeholders<br>Risk anticipation and mitigation                  | Project delivered on time <br>Complete software delivered<br>Resource management not exceeding expectations<br>Seamlessly running project |
-| Benoit DE KEYN     | Program Manager   | Mock-ups and general design of the software<br>Communication with the client<br>Functional specification delivery<br>Risk management | Functional specification<br>Client approval of the design and functionalities                                                             |
-| Pavlo PRENDI       | Technical Leader  | Define coding conventions<br>Choose technical tools used<br>Technical specification delivery<br>Manages developer tasks              | Technical specification                                                                                                                   |
-| Aurélien FERNANDEZ | Software engineer | Write the code<br>Fix bugs<br>Document the code<br>Create the tests if needed for the code                                           | All required functionalities implemented<br>Bug-free code                                                                                 |
-| Thibaud MARLIER    | Software engineer | Write the code<br>Fix bugs<br>Document the code<br>Create the tests if needed for the code                                           | All required functionalities implemented<br>Bug-free code                                                                                 |
-| Mathis KAKAL       | Quality assurance | Verify documents<br>Test the program<br>Confirm we match the client expectations<br>Test plan delivery                               | Test Plan<br>Identification of bugs<br>Comprehensive and exhaustive documentation                                                         |
-| Antoine PREVOST    | Technical Writer  | User Manual                                                                                                                          | Clear Document                                                                                                                            |
+| Maxime THIZEAU     | Project Manager   | Manage timeline and resources<br>Distribute workload<br>Report progress to stakeholders<br>Identify and mitigate risks                | On-time project delivery<br>Complete and functional software<br>Efficient resource management<br>Smooth project execution                 |
+| Benoit DE KEYN     | Program Manager   | Create mock-ups and general design<br>Communicate with the client<br>Deliver functional specifications<br>Manage project risks        | Approved functional specifications<br>Positive client feedback on design and functionalities                                               |
+| Pavlo PRENDI       | Technical Leader  | Define coding standards<br>Choose technical tools<br>Deliver technical specifications<br>Oversee developer tasks                      | Comprehensive technical specifications                                                                                                    |
+| Aurélien FERNANDEZ | Software Engineer | Develop code<br>Fix bugs<br>Document the code<br>Create necessary tests                                                              | Full implementation of required features<br>Minimal bug count                                                                            |
+| Thibaud MARLIER    | Software Engineer | Develop code<br>Fix bugs<br>Document the code<br>Create necessary tests                                                              | Full implementation of required features<br>Minimal bug count                                                                            |
+| Mathis KAKAL       | Quality Assurance | Review documentation<br>Test the software<br>Ensure alignment with client expectations<br>Deliver a detailed test plan                | Comprehensive test plan<br>Effective bug identification<br>Thorough and complete documentation                                           |
+| Antoine PREVOST    | Technical Writer  | Prepare the user manual                                                                                                               | Clear, user-friendly documentation                                                                                                       |
 
 ## Project Plan
 
-On November 6th 2024, we had a meeting to brainstorm possible game ideas and to sort them or modified them to a more feasible point of view. At the end of it, three main ideas have been sorted.
+On November 6th, 2024, we conducted a brainstorming session to generate and refine game ideas. We shortlisted three feasible concepts to proceed with.
 
-To communicate with the client, it would mainly be done by e-mails exchanges. However, in some specific occasion some meeting with the client could be organized for a better clarity.
+Communication with the client will primarily be through email. However, meetings may be scheduled as needed for clarity on specific issues.
 
-This project will be using the Waterfall project method du to the lack of working hours for the project. However, we plan to use some aspects of SCRUM management and Agile testing to create a bug-free game.
+We have chosen a Waterfall project management approach, supplemented by elements of Scrum and Agile testing. This hybrid approach is due to limited available working hours, yet it allows for flexibility in testing and iterative improvements.
 
-The planning will be made by defining the tasks and objectives a serious game can involved. Those tasks would be hierarchied according to their importance in the project. They would also be assigned to one or many team members to complete them in the most efficate way possible. \
-Finally, these tasks and objectives would be gathered on an external Spreadsheet you can find [here](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?usp=sharing).
+Tasks and objectives will be outlined based on the components required for a serious game. These tasks will be prioritized according to their significance and assigned to team members to ensure efficient completion. A detailed project schedule and task assignment can be found in the external spreadsheet [here](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?usp=sharing).
 
-After the final presentation which will take place on December, 20th 2024, we will do a post-mortem analysis to summarize what happened and make a report to the client.
+Upon project completion, a post-mortem analysis will be conducted after the final presentation on December 20th, 2024, to evaluate performance and document lessons learned for the client.
 
 ## Milestones
 
-| Date       | Milestones                        |
-| ---------- | --------------------------------- |
-| 11/22/2024 | Functional Specification delivery |
-| 11/29/2024 | Technical Specification delivery  |
-| 12/06/2024 | Test Plan delivery                |
-| 12/13/2024 | Final product codebase delivery   |
-| 12/13/2024 | User Manual Delivery              |
-| 12/20/2024 | Final Presentation Pitch          |
+| Date       | Milestone                          |
+| ---------- | ---------------------------------- |
+| 11/22/2024 | Functional Specification Delivery  |
+| 11/29/2024 | Technical Specification Delivery   |
+| 12/06/2024 | Test Plan Delivery                 |
+| 12/13/2024 | Final Codebase Delivery            |
+| 12/13/2024 | User Manual Delivery               |
+| 12/20/2024 | Final Presentation Pitch           |
 
 ## Deliverables
 
-The main deliverable is the source code of the serious game.
+The main deliverable for this project is the source code of the serious game. Additional documentation to be provided includes:
 
-Additional documents will be given to the client:
-
-- Functional Specification
-- Technical Specification
+- Functional Specifications
+- Technical Specifications
 - Test Plan
 - User Manual
-- Management Planning & Weekly reports
+- Project Management Plan & Weekly Reports
 
-In addition, a presentation of our work will be done at the end of the project to the client as a 15-minute long presentation.
+A final 15-minute presentation summarizing the project and its outcomes will also be delivered to the client.
 
 ## Allocated Resources
 
-Budget: 0€ \
-Workforce allocated: 7 team members (6 for the first week) \
-Worktime: 19 half-days of 3h30 each
+- **Budget:** €0 (No external funding)
+- **Team:** 7 members (6 during the first week)
+- **Work Hours:** 19 half-days of 3 hours and 30 minutes each
 
-Total human hours estimation: 465.5h
+**Total estimated human hours:** 465.5 hours
 
 ## Risks
 
-| Type                                     | Description                                                                                                                | Likelihood | Impact                  | Mitigation                                                     |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------- | -------------------------------------------------------------- |
-| Wrong interpretation of the requirements | We might forget a key point in our solution or misinterpret a requirement                                                  | Medium     | High                    | Regular communications about what's being done with the client |
-| Creating a bad game                      | We might create a game that seems fun to us, but who is not in fact                                                        | Low        | High                    | Regular testing with non-team-members tester                   |
-| Over Confidence                          | We might starting something to big to complete in the time allocated to this project                                       | Medium     | High                    | Start small and scale up iteratively                           |
-| Loving our game too much                 | We could fall in love with our product even though it is one not completing requirements                                   | Low        | High                    | Don't hesitate to pivot if needed                              |
+| Risk Type                                 | Description                                                                                                           | Likelihood | Impact     | Mitigation Strategy                                      |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | --------------------------------------------------------- |
+| Misinterpretation of Requirements         | Key requirements may be misunderstood or omitted.                                                                    | Medium     | High       | Regular client communication and clarification meetings.  |
+| Unengaging Game Design                    | The game might be educational but fail to be engaging for players.                                                    | Low        | High       | Frequent testing with non-team members to gather feedback. |
+| Overconfidence in Scope                   | The project scope may exceed the available time and resources.                                                        | Medium     | High       | Start small and expand iteratively based on progress.     |
+| Attachment to the Product                 | Team members may become too attached to features that do not align with client requirements.                          | Low        | High       | Be open to pivoting and adapting to client feedback.      |
