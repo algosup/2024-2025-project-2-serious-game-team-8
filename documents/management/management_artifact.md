@@ -178,7 +178,7 @@ You can see our project's KPIs which were explained above following [this link](
 This section is here to gather all the forms used for the KPIs.
 
   - [Team 8 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/11JtrnA0_N300-CjYwOXmeK_fnCse6ndy-enLrrQBak8/edit?usp=sharing)
-  <!-- - [Team 8 Satisfaction Week 2]() -->
+  - [Team 8 Satisfaction Week 2](https://docs.google.com/spreadsheets/d/1ML4Arv1vPYiqL4hArGwEtkQfFV4OiY-ZppNbpNLqtWs/edit?usp=sharing)
   <!-- - [Team 8 Satisfaction Week 3]() -->
   <!-- - [Team 8 Satisfaction Week 4]() -->
   <!-- - [Team 8 Satisfaction Week 5]() -->
@@ -187,7 +187,7 @@ This section is here to gather all the forms used for the KPIs.
 
 The following link is used as a cumulative for the seven weeks:
 
-  - [Team 8 Satisfaction Cumulative](https://docs.google.com/spreadsheets/d/1XuxYtWgcUpnG3XmunEh33R46xmMi0EG3kv1voRpgjVk/edit?usp=sharing)
+  - [Team 8 Satisfaction Cumulative](https://docs.google.com/spreadsheets/d/1DWyQurWkC8jboxM_5IE4B2zKmjL-0ZCbOPENQtW2KXI/edit?usp=sharing)
 
 ## Weekly reports
 
