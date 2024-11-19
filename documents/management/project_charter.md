@@ -24,7 +24,7 @@ The following elements are outside the scope of this project:
 
 | Role                     | Representative              | Expectations                                                                                          |
 | ------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| School Director & Client | Franck JEANNIN (ALGOSUP)    | - Clear and structured documentation and project management, reflecting skills learned in class. <br> - A serious game focused on climate change education. |
+| School Director & Client | Franck JEANNIN (ALGOSUP)    | Clear and structured documentation and project management, reflecting skills learned in class. <br> A serious game focused on climate change education. |
 
 ## Team Members and Responsibilities
 
