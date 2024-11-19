@@ -48,9 +48,9 @@ This software has been created using [GODOT 4.3](https://en.wikipedia.org/wiki/G
 
 
 It has been mainly tested on:
-    - Mac reference
-    - Lenovo reference
-
+    - Lenovo Thinkbook 14-IIL 20 SL 16go Intel core i7-1065 g7
+    - MacBook Air M3 13" 16gb RAM 512 go SSD
+    - Lenovo IdeaPad (Debian 12)
 
 
 ## Installation
@@ -71,6 +71,5 @@ cd 2024-2025-project-2-serious-game-team-8
 
 3. Install GODOT 4:
 
-[GODOT](https://godotengine.org)
+[Direct Link to GODOT](https://godotengine.org/download/)
 
--->
