@@ -128,11 +128,11 @@ This section contains only one KPI:
 
 The percentage progress is defined as follows:
 
-$$\text{percentage} = \left(\frac{\text{current number of test cases}} {\text{total number of test cases}}\right)\times{100}$$
+$$\text{percentage} = \left(\frac{\text{number of tests performed}} {\text{total number of test cases}}\right)\times{100}$$
 
 Where:
 
-- **current_number_of_test_cases**: The number of test cases currently written.
+- **number_of_tests_performed**: The number of test cases performed.
 - **total_number_of_test_cases**: The total number of test cases predefined.
 
 #### <ins>Pitch</ins>
