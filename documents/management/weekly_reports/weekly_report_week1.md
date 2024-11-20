@@ -2,46 +2,46 @@
 
 ## Overview
 
-This week was the launching of the project. Consequently, the main advancement is document based, even if no project time was allowed to work on it.
+This week marked the launch of the project. Consequently, most advancements were document-based, even though no official project time was allocated for this work.
 
 ## Accomplishments
 
 1. **Project Analysis**
-    - We have defined what would be our game and some basic rules and mechanics.
+    - We defined our game concept along with some basic rules and mechanics.
 2. **One-Sheet Design Document**
-    - It has been written and send to the client for his approval.
+    - It has been written and sent to the client for approval.
 3. **Management Documents**
-    - The necessary documents to the good functionment of a project have been made:
+    - The essential documents for effective project management have been created:
         - Work breakdown structure;
         - Gantt Chart;
         - KPIs.
 4. **GitHub Initialization**
-    - We initiated the repository. Also, some conventions have been created.
+    - We initialized the repository and established conventions for its use.
 
 ## Challenges
 
 1. **New Team**
-    - The main challenge has been to communicate efficiently between members that never work together.
+    - The main challenge was ensuring effective communication among team members who had never worked together before.
 2. **Missing Team Member**
-    - One of the team member wasn't present during the four first days.
+    - One team member was absent for the first four days.
 3. **Time Allocation**
-    - The team should work on the project with no-project time, complicating the task.
+    - The team had to work on the project outside of dedicated project hours, complicating task management.
 4. **Game Design**
-    - None of us designed a serious game before. We should learn quikly and efficiently.
+    - None of us had prior experience designing a serious game. We need to learn quickly and efficiently.
 5. **GODOT Learning**
-    - Software Engineers should learn how to use GODOT and a new language, GDScript.
+    - The software engineers need to familiarize themselves with GODOT and GDScript, a new programming language.
 
 ## Plan for Next Week
 
 1. **Documents**
-    - Some documents should be written or at least started:
+    - Several documents should be written or at least started:
         - Project Charter;
-        - Mangement Artifacts;
+        - Management Artifacts;
         - README;
         - Functional Specifications.
 2. **Design**
-    - Now that we have the main idea, the game designs should be created to have an appealing first visual.
+    - With the core concept defined, game designs should be created to provide an appealing initial visual.
 
 ## Conclusion
 
-Our team encountered some problems during this first project week (time, communication, etc.). However, the project advence quite well and seem on a great path to become an interesting and fun serious game.
+Our team encountered several challenges during this first project week (time constraints, communication, etc.). However, the project has progressed well and appears to be on track to becoming an engaging and effective serious game.
