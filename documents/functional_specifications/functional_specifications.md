@@ -15,32 +15,24 @@
       - [1.3.5. Deliverables](#135-deliverables)
     - [1.4. Project Organization](#14-project-organization)
       - [1.4.1. Project Representatives](#141-project-representatives)
-      - [1.4.2. Steakholders](#142-steakholders)
-  - [Game Concept](#game-concept)
-    - [Core Concept:](#core-concept)
-    - [Genre:](#genre)
-    - [Game Setting:](#game-setting)
-  - [Key Features and Functional Requirements](#key-features-and-functional-requirements)
-    - [Gameplay Mechanics:](#gameplay-mechanics)
-      - [Primary Gameplay Loop:](#primary-gameplay-loop)
-      - [Secondary Gameplay Elements:](#secondary-gameplay-elements)
-    - [Learning/Training Objectives:](#learningtraining-objectives)
-    - [Progression and Reward System:](#progression-and-reward-system)
-  - [User Interface (UI) and User Experience (UX) Requirements](#user-interface-ui-and-user-experience-ux-requirements)
-    - [UI Elements:](#ui-elements)
-      - [Main Menu (start, options, exit)](#main-menu-start-options-exit)
-      - [In-game HUD (health, score, objective tracker)](#in-game-hud-health-score-objective-tracker)
-      - [Pop-up dialogs (tutorials, feedback messages)](#pop-up-dialogs-tutorials-feedback-messages)
-    - [Accessibility:](#accessibility)
-    - [User Flow:](#user-flow)
-  - [Narrative and Storytelling](#narrative-and-storytelling)
-    - [Story Overview:](#story-overview)
-    - [Cutscenes and Dialogues:](#cutscenes-and-dialogues)
-  - [Educational Content and Assessment](#educational-content-and-assessment)
-    - [Content Structure:](#content-structure)
-    - [Assessment Mechanics:](#assessment-mechanics)
-  - [Multiplayer and Social Features (Optional)](#multiplayer-and-social-features-optional)
-  - [Audio and Visual Requirements](#audio-and-visual-requirements)
+      - [1.4.2. Stakeholders](#142-stakeholders)
+  - [2. Functional Requirements](#2-functional-requirements)
+    - [2.1. Game Components](#21-game-components)
+      - [2.1.1. Physical - Card Deck](#211-physical---card-deck)
+      - [2.1.2. Digital - Mobile Application](#212-digital---mobile-application)
+    - [2.2. Game Mechanics](#22-game-mechanics)
+    - [2.3. User Interface (UI)](#23-user-interface-ui)
+      - [2.3.1. Physical Cards](#231-physical-cards)
+      - [2.3.2. Application](#232-application)
+      - [2.3.3. Mockups](#233-mockups)
+    - [2.4. Technical Requirements](#24-technical-requirements)
+      - [2.4.1. Application](#241-application)
+      - [2.4.2. Physical Cards](#242-physical-cards)
+    - [2.5. Scenarios](#25-scenarios)
+      - [2.5.1. Tutorial](#251-tutorial)
+      - [2.5.2. Scenario 1: XXXXX](#252-scenario-1-xxxxx)
+    - [2.6. Performance metrics](#26-performance-metrics)
+  - [3. Non-Functional Requirements](#3-non-functional-requirements)
 
 </details>
 
@@ -115,91 +107,62 @@ The following deliverables will be provided as part of the project:
 | Mathis KAKAL       | Quality assurance | [LinkedIn](https://www.linkedin.com/in/mathis-k-a239ba10a/)                |
 | Antoine PREVOST    | Technical writer  | [LinkedIn](https://www.linkedin.com/in/antoine-prevost-dev/)               |
 
-#### 1.4.2. Steakholders
+#### 1.4.2. Stakeholders
 
 | Role   | Representative           | Expectation                                                             |
 | ------ | ------------------------ | ----------------------------------------------------------------------- |
 | Client | Franck JEANNIN (ALGOSUP) | Project meeting the requirements and traceability of the project events |
 
-## Game Concept
+## 2. Functional Requirements
 
-### Core Concept: 
+### 2.1. Game Components
 
-<!-- Brief description of the game's core mechanics and theme. -->
+Our game is hybrid, which means you need both a physical card deck as well as a mobile application to play the game. This prevents young audiences to speend too much time in front of screens, which is a problem nowadays.
 
-### Genre: 
+#### 2.1.1. Physical - Card Deck
 
-<!-- Define the genre (e.g., simulation, adventure, puzzle). -->
+The card deck is the main medium allowing players to progress through the escape game adventures. Each of the card has a unique number or letter, indicated at the back of the card as well as at the top left corner of the card. There are in total 4 types of cards in the game, each distiguishable by the color on the top of the card:
 
-### Game Setting:
+| Card Type Name | Description                                                                                                                                                                                                                                                      | Template image                                  |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| Information    | Gives information on an element of the gameplay/Gives a fact about climate change                                                                                                                                                                                | ![Information](./images/info_card.png)          |
+| Puzzle         | Contains a puzzle, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access an interactive version of the puzzle.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
+| Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
+| Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
 
-<!-- Outline the environment and story setting (e.g., futuristic city, ancient civilization, hospital simulation). -->
+#### 2.1.2. Digital - Mobile Application
 
-## Key Features and Functional Requirements
+### 2.2. Game Mechanics
 
-### Gameplay Mechanics:
+### 2.3. User Interface (UI)
 
-#### Primary Gameplay Loop: 
+#### 2.3.1. Physical Cards
 
-<!-- Detailed explanation of the main activities the player will engage in (e.g., solving puzzles, navigating challenges). -->
+#### 2.3.2. Application
 
-#### Secondary Gameplay Elements: 
+#### 2.3.3. Mockups
 
-<!-- Additional activities or features (e.g., collecting items, interacting with NPCs). -->
+### 2.4. Technical Requirements 
 
-### Learning/Training Objectives:
+#### 2.4.1. Application
 
-<!-- Define specific educational or training goals aligned with the purpose of the game. -->
+#### 2.4.2. Physical Cards
 
-### Progression and Reward System:
+### 2.5. Scenarios
 
-<!-- Describe how players progress through the game (e.g., levels, chapters, achievements).
-Define rewards (e.g., badges, certificates, points system) and their impact on player motivation. -->
+#### 2.5.1. Tutorial
 
-## User Interface (UI) and User Experience (UX) Requirements
+#### 2.5.2. Scenario 1: XXXXX
 
-### UI Elements:
+### 2.6. Performance metrics
 
-#### Main Menu (start, options, exit)
+## 3. Non-Functional Requirements
 
-#### In-game HUD (health, score, objective tracker)
-
-#### Pop-up dialogs (tutorials, feedback messages)
-
-### Accessibility:
-
-<!-- Consider features like subtitles, color-blind modes, and adjustable text size. -->
-
-### User Flow:
-
-<!-- Outline typical user interactions and navigation paths through the game. -->
-
-## Narrative and Storytelling
-
-### Story Overview: 
-
-<!-- Brief plot summary, key characters, and narrative arcs. -->
-
-### Cutscenes and Dialogues:
-
-<!-- Define the key narrative moments and any interactions or dialogues. -->
-
-## Educational Content and Assessment
-
-### Content Structure: 
-
-<!-- Outline the educational content or curriculum integrated into the game. -->
-
-### Assessment Mechanics:
-
-<!-- Define methods of assessing player knowledge/skills (e.g., quizzes, skill challenges, scenarios).
-Describe feedback mechanisms (e.g., immediate feedback, performance reports). -->
-
-## Multiplayer and Social Features (Optional)
-<!-- Multiplayer Mode: Describe multiplayer capabilities (if applicable), including cooperative or competitive modes.
-Social Integration: Define social features (e.g., leaderboards, sharing progress). -->
-
-## Audio and Visual Requirements
-<!-- Visual Style: Describe the game's aesthetic (e.g., realistic, cartoonish, minimalistic).
-Sound Design: Outline the types of audio elements (e.g., background music, sound effects, voiceovers).
-Accessibility Considerations: Provide options for audio customization (e.g., volume controls, mute options). -->
+| Type of Non-functional Requirements | Example                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------ |
+| Performance                         | All application pages should load within 1 second                                    |
+| Compatibility                       | The mobile application should be compatible with iOS 12+ and Android Nougat or later |
+| Executable Size                     | The size of the executable should not exceed 50MB                                    |
+| Accessibility                       | Multilingual Support                                                                 |
+| Scalability                         | Support for future scenario packs                                                    |
+| Environmental impact                | Printed materials made from sustainable resources                                    |
