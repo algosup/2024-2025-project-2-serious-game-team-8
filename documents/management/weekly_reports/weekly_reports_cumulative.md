@@ -54,53 +54,53 @@ This Document is meant to gather all the seven weekly reports allowing a better 
 
 ---
 
-## Weekly Report - Week 1
+# Weekly Report - Week 1
 
-### Overview
+## Overview
 
-This week was the launching of the project. Consequently, the main advancement is document based, even if no project time was allowed to work on it.
+This week marked the launch of the project. Consequently, most advancements were document-based, even though no official project time was allocated for this work.
 
-### Accomplishments
+## Accomplishments
 
 1. **Project Analysis**
-    - We have defined what would be our game and some basic rules and mechanics.
+    - We defined our game concept along with some basic rules and mechanics.
 2. **One-Sheet Design Document**
-    - It has been written and send to the client for his approval.
+    - It has been written and sent to the client for approval.
 3. **Management Documents**
-    - The necessary documents to the good functionment of a project have been made:
+    - The essential documents for effective project management have been created:
         - Work breakdown structure;
         - Gantt Chart;
         - KPIs.
 4. **GitHub Initialization**
-    - We initiated the repository. Also, some conventions have been created.
+    - We initialized the repository and established conventions for its use.
 
-### Challenges
+## Challenges
 
 1. **New Team**
-    - The main challenge has been to communicate efficiently between members that never work together.
+    - The main challenge was ensuring effective communication among team members who had never worked together before.
 2. **Missing Team Member**
-    - One of the team member wasn't present during the four first days.
+    - One team member was absent for the first four days.
 3. **Time Allocation**
-    - The team should work on the project with no-project time, complicating the task.
+    - The team had to work on the project outside of dedicated project hours, complicating task management.
 4. **Game Design**
-    - None of us designed a serious game before. We should learn quikly and efficiently.
+    - None of us had prior experience designing a serious game. We need to learn quickly and efficiently.
 5. **GODOT Learning**
-    - Software Engineers should learn how to use GODOT and a new language, GDScript.
+    - The software engineers need to familiarize themselves with GODOT and GDScript, a new programming language.
 
-### Plan for Next Week
+## Plan for Next Week
 
 1. **Documents**
-    - Some documents should be written or at least started:
+    - Several documents should be written or at least started:
         - Project Charter;
-        - Mangement Artifacts;
+        - Management Artifacts;
         - README;
         - Functional Specifications.
 2. **Design**
-    - Now that we have the main idea, the game designs should be created to have an appealing first visual.
+    - With the core concept defined, game designs should be created to provide an appealing initial visual.
 
-### Conclusion
+## Conclusion
 
-Our team encountered some problems during this first project week (time, communication, etc.). However, the project advence quite well and seem on a great path to become an interesting and fun serious game.
+Our team encountered several challenges during this first project week (time constraints, communication, etc.). However, the project has progressed well and appears to be on track to becoming an engaging and effective serious game.
 
 ---
 
@@ -108,56 +108,56 @@ Our team encountered some problems during this first project week (time, communi
 
 ## Overview
 
-This week was mainly used to improve our game idea and how to convey our message more efficiently. It also was useful for documents creation, even if we didn't have project time allocated.
+This week was primarily dedicated to refining our game idea and determining how to convey our message more effectively. It also involved significant progress in document creation, despite the lack of allocated project time.
 
 ## Accomplishments
 
 1. **Project Analysis**
-    - The team has define an escape game idea to fit the requirements
+    - The team defined an escape game concept to meet the requirements.
 2. **Management Documents**
-    - The missing management documents have been created:
+    - The remaining management documents were created:
         - Project Charter;
-        - Mangement Artifacts;
+        - Management Artifacts;
         - README.
-3. **Templates creation**
-    - The Quality Assurance designed the templates for:
+3. **Quality Assurance**
+    - The following templates were created:
         - Bug Reports;
         - Issues.
-4. **Documents Advancement**
-    - The Functional Specifications is started.
-        - Skeleton.
-    - The Technical Specifications is started also.
+    - The GitHub Project environment was set up.
+4. **Document Progress**
+    - The Functional Specifications document was started:
+        - Skeleton created.
+    - The Technical Specifications document was also initiated:
         - GitHub Set-Up;
-        - Conventions.
-5. **Researchs**
-    - Some researchs on the climate change have been made.
-   
+        - Conventions outlined.
+5. **Research**
+    - Conducted research on climate change to support the project.
+
 ## Challenges
 
 1. **Pivoting**
-    - We decided to change the entire game to fit the reqirements
+    - The team decided to redesign the entire game concept to better meet the requirements.
 2. **Communication**
-    - One again, the communication inside the team was hard to maintain in good conditions.
+    - Maintaining effective communication within the team remained a challenge.
 3. **Time Allocation**
-    - The team should work on the project with no-project time, complicating the task.
-4. **Hybrid Game**
-    - We needed to learn how to create an hybrid game.
+    - Working on the project without dedicated project time continued to complicate task management.
+4. **Hybrid Game Development**
+    - The team needed to learn how to create a hybrid game effectively.
 
 ## Plan for Next Week
 
 1. **Documents**
-    - Finishing Functional Specifications
-    - Completing Technical Specifications
+    - Finalize the Functional Specifications.
+    - Complete the Technical Specifications.
 2. **Design**
-    - Having all or at least the main assets for the game.
+    - Create all, or at least the main, game assets.
 3. **Game**
-    - Having the first assets implemented.
-    - Having some basic mechanics implemented.
+    - Implement the first assets into the game.
+    - Develop and test basic game mechanics.
 
 ## Conclusion
 
-This week was crucial in our game development since we decided to pivot. Even so we encountered many problems such has the communication.
-The team is a bit late on some part of the project, we would catch up.
+This week was critical for our game development as we decided to pivot to a new concept. Despite several challenges, such as communication difficulties, the project has progressed. However, the team is slightly behind on certain aspects and will need to catch up in the coming week.
 
 <!-- --- -->
 
