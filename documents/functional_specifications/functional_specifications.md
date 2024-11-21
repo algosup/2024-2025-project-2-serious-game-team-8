@@ -144,9 +144,86 @@ The card deck is the main medium allowing players to progress through the escape
 
 ### 2.4. Technical Requirements 
 
-#### 2.4.1. Application
+### 2.4.1. Application (Godot Engine)
 
-#### 2.4.2. Physical Cards
+#### 2.4.1.1. Orientation and Platform
+- The game will run in **portrait mode** only.
+- Supported platforms:
+  - **Android**: Minimum version 5.0 (Lollipop).
+  - **iOS**: Minimum version 14.
+
+#### 2.4.1.2. User Interaction
+- **Primary Input**: 
+  - The app will exclusively use touch controls for input.
+  - Numeric and alphanumeric codes will be entered via a virtual keyboard provided by the app.
+- **Phone Sensors**:
+  - Certain puzzles will require the use of the device's **gyroscope and accelerometer** for interactions such as:
+    1. **Shaking the phone** to simulate actions like clearing objects or mixing contents.
+    2. **Reversing the phone** (rotating 180°) to uncover hidden information or solve specific challenges.
+
+#### 2.4.1.3. Timer
+- A countdown timer will display the time remaining (starting from 60 minutes for the scenario).
+- Time penalties will automatically deduct minutes for incorrect code inputs or app-defined triggers.
+
+#### 2.4.1.4. Background Music
+- **Duration**: A minimum of **30 minutes** of thematic background music, looping seamlessly if necessary, to cover the entire session without noticeable interruptions.
+
+#### 2.4.1.5. Machines and Puzzles
+- Machines and interactive puzzles will include:
+  1. **Input Challenges**: Numeric or alphanumeric codes to be entered into the app.
+  2. **Sensor-Based Tasks**: Interaction through shaking or tilting the phone.
+  3. **Logic/Combination Challenges**: Users solve puzzles requiring multi-step reasoning (presented visually in the app and referenced on the cards).
+
+---
+
+### 2.4.2. Physical Cards
+
+#### 2.4.2.1. Specifications
+- **Quantity**: The game will include **40 cards**.
+- **Dimensions**: Cards will measure **11 cm x 6 cm**.
+- **Material**: Rigid paper with a **320gsm semi-glossy finish** for durability and ease of handling.
+- **Printing**:
+  - Full-color double-sided printing.
+  - Front: Puzzle or object-related visuals and textual clues.
+  - Back: Hints or story elements linked to the front-side puzzle.
+
+#### 2.4.2.2. Functional Design
+- Cards will reference other cards by number, enabling exploration (e.g., "Find card 12").
+- Each card will clearly display its corresponding **alphanumeric code** for interaction with the app.
+- Puzzle progression will depend on physical card combinations (e.g., overlaying, pairing) or specific app inputs.
+
+---
+
+### 2.4.3. App-Card Integration
+
+#### 2.4.3.1. Code Validation
+- Cards will include **unique alphanumeric codes** (4–6 characters) to be entered into the app. These codes trigger:
+  - Unlocking new puzzles.
+  - Progression in the story.
+  - Hint systems or penalties.
+
+#### 2.4.3.2. Hint System
+- The app will provide a **contextual hint system**:
+  - Hints will correspond to card numbers or puzzle stages.
+  - A single tap will display progressively detailed hints.
+
+#### 2.4.3.3. Story Progression
+- Players will move through the game linearly, with each code unlocking subsequent cards or app content.
+- Certain puzzles will involve both physical card manipulation and digital app interactivity.
+
+---
+
+### 2.4.4. Functional Limits and Gameplay Scope
+
+#### 2.4.4.1. Scenario Length
+- The single game session will last approximately **30 minutes**, matching the timer duration.
+
+#### 2.4.4.2. No QR Codes
+- There will be no QR code scanning or linking mechanisms. All interactions between the cards and the app will be manual (e.g., code entry or physical references).
+
+#### 2.4.4.3. Single Game Design
+- The app and card system will only support **one scenario/game**, with no expansions planned.
+
 
 ### 2.5. Scenarios
 
