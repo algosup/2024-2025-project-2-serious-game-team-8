@@ -148,7 +148,115 @@ The card deck is the main medium allowing players to progress through the escape
 
 #### 2.1.2. Digital - Mobile Application
 
-### 2.2. Game Mechanics
+## 2.2. Game Mechanics
+
+### 2.2.1. Overview
+The game is a cooperative escape-room experience that uses **physical cards** and an accompanying **mobile application**. Players solve puzzles, explore locations, and progress through the story by interacting with cards and the app.
+
+
+### 2.2.2. Card Types and Functions
+Each card serves a specific purpose and drives the game forward. The following categories describe the types of cards and their mechanics:
+
+#### 2.2.2.1 Left/Right Action Cards (Blue/Red Cards)
+- **Blue Cards (Left Action Cards)**:
+  - Represent **objects** that players can use or interact with.
+  - Examples: A key, a hammer, or a tool.
+- **Red Cards (Right Action Cards)**:
+  - Represent **interactive elements** such as doors, locked containers, or machines.
+  - Examples: A locked chest, a door requiring a key, or a safe.
+
+**Mechanic**:  
+- Players combine **blue cards (objects)** with **red cards (interactive elements)** to progress.
+- To attempt a combination:
+  - Add the numbers of the two cards (e.g., Blue 12 + Red 25 = 37).
+  - Find the resulting card number in the deck. If the combination is correct, the new card will advance the game. If incorrect, no card exists, and a penalty may occur.
+
+#### 2.2.2.2 Yellow Cards (Machines)
+- Represent **machines or puzzles** requiring special interaction, often using the app.
+- Examples:
+  - A keypad requiring a code.
+  - A digital lock that needs to be "assembled."
+  - A device that activates when the phone is shaken or rotated.
+  
+**Mechanic**:  
+- The card provides instructions, and players interact with the app to solve the machine.
+- Solutions often involve logic, observation, or interaction with the phone's sensors (e.g., gyroscope, accelerometer).
+
+#### 2.2.2.3 Green Cards (Locations)
+- Represent **explorable areas** where players can find clues, objects, or interact with puzzles.
+- Examples: A room, a hallway, or a hidden compartment.
+
+**Mechanic**:  
+- Green cards display multiple points of interest, each marked with a number or symbol.  
+- Players search these areas by locating the corresponding cards in the deck.  
+- New cards may reveal additional blue, red, or yellow cards.
+
+#### 2.2.2.4 Gray Cards (Penalties and Hints)
+- Represent **negative consequences** or **hints** for solving puzzles.
+- Examples:
+  - A time penalty for incorrect combinations.
+  - A clue to help with a particularly challenging puzzle.
+
+**Mechanic**:  
+- Penalty cards automatically deduct time from the app’s countdown.
+- Hint cards are manually triggered by players using the app, with each hint applying a **-1 minute penalty** to the timer.
+
+
+### 2.2.3. Game Progression
+
+#### 2.2.3.1 Combining Cards
+- Players use the **addition mechanic** to combine cards:
+  - Example: A key (Blue 10) + a locked door (Red 15) = Card 25.
+  - If the resulting card exists in the deck, it will describe the outcome (e.g., the door is unlocked, revealing more clues).
+  - If no such card exists, the combination is invalid.
+
+#### 2.2.3.2 Interacting with Machines
+- **Yellow cards** introduce puzzles requiring interaction through the app:
+  - Players input numeric or alphanumeric codes into the app.
+  - They may also solve puzzles using visual or audio cues, logic, or phone gestures (e.g., shaking or tilting the device).
+
+#### 2.2.3.3 Exploring Locations
+- Green cards provide a map or visual representation of a location.
+- Points of interest (marked with numbers or symbols) direct players to search for new cards in the deck.
+
+#### 2.2.3.4 Requesting Hints
+- Players can request contextual hints through the app by entering the relevant card number.
+- Hints provide progressive help, starting vague and becoming more detailed with each request.
+- **Penalty**: Each hint request deducts **1 minute** from the timer.
+
+#### 2.2.3.5 Time and Penalties
+- The app runs a **60-minute timer**, creating a sense of urgency.
+- Incorrect actions or failed combinations may trigger penalties, deducting time from the remaining total.
+
+
+### 2.2.4. App Features
+The app supports the following functionalities to complement the cards:
+
+#### 2.2.4.1 Code Entry
+- Players enter numeric or alphanumeric codes as prompted by the cards (e.g., unlocking a safe or solving a riddle).
+
+#### 2.2.4.2 Machine Interactions
+- The app presents interactive puzzles or mini-games when players engage with yellow cards.
+- Examples:
+  - Dragging objects to assemble a device.
+  - Matching patterns or solving equations.
+
+#### 2.2.4.3 Audio and Visual Cues
+- The app enhances immersion through thematic sounds, animations, and visual feedback (e.g., a sound effect when a door unlocks).
+
+#### 2.2.4.4 Hint System
+- Hints are tied to specific card numbers and accessible at any time. Players can request multiple hints for the same card.
+- **Penalty**: Each hint deducts **1 minute** from the timer.
+
+#### 2.2.4.5 Timer
+- A countdown timer runs throughout the game, starting at 60 minutes.
+- Time penalties are automatically applied for incorrect actions.
+
+
+### 2.2.5. Victory and Loss Conditions
+- **Victory**: Players successfully solve all puzzles and escape before the timer expires.
+- **Loss**: The timer reaches zero before players complete the game.
+
 
 ### 2.3. User Interface (UI)
 
@@ -250,7 +358,7 @@ The player can only progress to the main game once the tutorial is completed.
 A transition on the mobile app will smoothly guide the player from the tutorial to the main game, including scenario reaveals.  
 
 The following graph shows the storyline of the tutorial adventures:
-*Each bloc corresponds to a card, the color indicating its kind*
+*Each bloc corresponds to a card, the color indicating its type*
 
 ```mermaid
   graph TD
