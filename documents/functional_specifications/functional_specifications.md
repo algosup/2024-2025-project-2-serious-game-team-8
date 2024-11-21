@@ -26,11 +26,26 @@
       - [2.3.2. Application](#232-application)
       - [2.3.3. Mockups](#233-mockups)
     - [2.4. Technical Requirements](#24-technical-requirements)
-      - [2.4.1. Application](#241-application)
-      - [2.4.2. Physical Cards](#242-physical-cards)
+    - [2.4.1. Application (Godot Engine)](#241-application-godot-engine)
+      - [2.4.1.1. Orientation and Platform](#2411-orientation-and-platform)
+      - [2.4.1.2. User Interaction](#2412-user-interaction)
+      - [2.4.1.3. Timer](#2413-timer)
+      - [2.4.1.4. Background Music](#2414-background-music)
+      - [2.4.1.5. Machines and Puzzles](#2415-machines-and-puzzles)
+    - [2.4.2. Physical Cards](#242-physical-cards)
+      - [2.4.2.1. Specifications](#2421-specifications)
+      - [2.4.2.2. Functional Design](#2422-functional-design)
+    - [2.4.3. App-Card Integration](#243-app-card-integration)
+      - [2.4.3.1. Code Validation](#2431-code-validation)
+      - [2.4.3.2. Hint System](#2432-hint-system)
+      - [2.4.3.3. Story Progression](#2433-story-progression)
+    - [2.4.4. Functional Limits and Gameplay Scope](#244-functional-limits-and-gameplay-scope)
+      - [2.4.4.1. Scenario Length](#2441-scenario-length)
+      - [2.4.4.2. No QR Codes](#2442-no-qr-codes)
+      - [2.4.4.3. Single Game Design](#2443-single-game-design)
     - [2.5. Scenarios](#25-scenarios)
       - [2.5.1. Tutorial](#251-tutorial)
-      - [2.5.2. Scenario 1: XXXXX](#252-scenario-1-xxxxx)
+      - [2.5.2. Scenario 1: Gatekeeper](#252-scenario-1-gatekeeper)
     - [2.6. Performance metrics](#26-performance-metrics)
   - [3. Non-Functional Requirements](#3-non-functional-requirements)
 
@@ -129,6 +144,7 @@ The card deck is the main medium allowing players to progress through the escape
 | Puzzle         | Contains a puzzle, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access an interactive version of the puzzle.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
 | Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
 | Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
+| Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to fill in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
 
 #### 2.1.2. Digital - Mobile Application
 
@@ -174,8 +190,6 @@ The card deck is the main medium allowing players to progress through the escape
   2. **Sensor-Based Tasks**: Interaction through shaking or tilting the phone.
   3. **Logic/Combination Challenges**: Users solve puzzles requiring multi-step reasoning (presented visually in the app and referenced on the cards).
 
----
-
 ### 2.4.2. Physical Cards
 
 #### 2.4.2.1. Specifications
@@ -192,12 +206,10 @@ The card deck is the main medium allowing players to progress through the escape
 - Each card will clearly display its corresponding **alphanumeric code** for interaction with the app.
 - Puzzle progression will depend on physical card combinations (e.g., overlaying, pairing) or specific app inputs.
 
----
-
 ### 2.4.3. App-Card Integration
 
 #### 2.4.3.1. Code Validation
-- Cards will include **unique alphanumeric codes** (4–6 characters) to be entered into the app. These codes trigger:
+- Cards will include **unique alphanumeric codes** (4-6 characters) to be entered into the app. These codes trigger:
   - Unlocking new puzzles.
   - Progression in the story.
   - Hint systems or penalties.
@@ -210,8 +222,6 @@ The card deck is the main medium allowing players to progress through the escape
 #### 2.4.3.3. Story Progression
 - Players will move through the game linearly, with each code unlocking subsequent cards or app content.
 - Certain puzzles will involve both physical card manipulation and digital app interactivity.
-
----
 
 ### 2.4.4. Functional Limits and Gameplay Scope
 
@@ -262,17 +272,16 @@ The tutorial introduces the environment of the escape game to the player, as wel
 
 You can find the design corresponding to this chart following [this link]() (TODO).
 
-#### 2.5.2. Scenario 1: XXXXX
+#### 2.5.2. Scenario 1: Gatekeeper
 
 ### 2.6. Performance metrics
 
 ## 3. Non-Functional Requirements
 
-| Type of Non-functional Requirements | Example                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------ |
-| Performance                         | All application pages should load within 1 second                                    |
-| Compatibility                       | The mobile application should be compatible with iOS 12+ and Android Nougat or later |
-| Executable Size                     | The size of the executable should not exceed 50MB                                    |
-| Accessibility                       | Multilingual Support                                                                 |
-| Scalability                         | Support for future scenario packs                                                    |
-| Environmental impact                | Printed materials made from sustainable resources                                    |
+| Type of Non-functional Requirements | Example                                           |
+| ----------------------------------- | ------------------------------------------------- |
+| Performance                         | All application pages should load within 1 second |
+| Executable Size                     | The size of the executable should not exceed 50MB |
+| Accessibility                       | Multilingual Support                              |
+| Scalability                         | Support for future scenario packs                 |
+| Environmental impact                | Printed materials made from sustainable resources |
