@@ -141,7 +141,7 @@ The card deck is the main medium allowing players to progress through the escape
 | Card Type Name | Description                                                                                                                                                                                                                                                      | Template image                                  |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Information    | Gives information on an element of the gameplay/Gives a fact about climate change                                                                                                                                                                                | ![Information](./images/info_card.png)          |
-| Puzzle         | Contains a puzzle, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access an interactive version of the puzzle.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
+| Machine         | Redirects to an interactive puzzle on the app, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
 | Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
 | Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
 | Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to fill in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
@@ -178,14 +178,14 @@ The card deck is the main medium allowing players to progress through the escape
     2. **Reversing the phone** (rotating 180°) to uncover hidden information or solve specific challenges.
 
 #### 2.4.1.3. Timer
-- A countdown timer will display the time remaining (starting from 60 minutes for the scenario).
+- A countdown timer will display the time remaining (starting from 30 minutes for the scenario).
 - Time penalties will automatically deduct minutes for incorrect code inputs or app-defined triggers.
 
 #### 2.4.1.4. Background Music
 - **Duration**: A minimum of **30 minutes** of thematic background music, looping seamlessly if necessary, to cover the entire session without noticeable interruptions.
 
-#### 2.4.1.5. Machines and Puzzles
-- Machines and interactive puzzles will include:
+#### 2.4.1.5. Machine Puzzles
+- Machines are interactive puzzles on the app which include:
   1. **Input Challenges**: Numeric or alphanumeric codes to be entered into the app.
   2. **Sensor-Based Tasks**: Interaction through shaking or tilting the phone.
   3. **Logic/Combination Challenges**: Users solve puzzles requiring multi-step reasoning (presented visually in the app and referenced on the cards).
@@ -200,6 +200,7 @@ The card deck is the main medium allowing players to progress through the escape
   - Full-color double-sided printing.
   - Front: Puzzle or object-related visuals and textual clues.
   - Back: Hints or story elements linked to the front-side puzzle.
+  - Back and front will include the card's **unique alphanumeric code**.
 
 #### 2.4.2.2. Functional Design
 - Cards will reference other cards by number, enabling exploration (e.g., "Find card 12").
@@ -239,7 +240,17 @@ The card deck is the main medium allowing players to progress through the escape
 
 #### 2.5.1. Tutorial
 
-The tutorial introduces the environment of the escape game to the player, as well as the core mechanics of the game in a chill environment, as there is no penalty for the player if he does worng card association. The following graph shows the storyline of the tutorial adventures:
+Before the 30 minutes main gameplay, a tutorial introduces to the player:
+- The scenario of the game
+- The global game mechanics
+- The kind of cards and their interactions  
+
+The tutorial works as a mini gameplay where the player's mistakes are not took into account for the main one. It will help the player to understand the game rules and mechanics.  
+The player can only progress to the main game once the tutorial is completed.
+A transition on the mobile app will smoothly guide the player from the tutorial to the main game, including scenario reaveals.  
+
+The following graph shows the storyline of the tutorial adventures:
+*Each bloc corresponds to a card, the color indicating its kind*
 
 ```mermaid
   graph TD
