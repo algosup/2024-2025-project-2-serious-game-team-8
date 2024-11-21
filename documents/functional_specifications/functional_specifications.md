@@ -85,13 +85,13 @@ The following deliverables will be provided as part of the project:
 - Mock-ups and Prototypes:
   - Iterative mock-ups and game prototypes to gather feedback and ensure alignment with client expectations.
 - Supporting Documentation:
-  - Functional Specification: Outlines the game’s features and functionality.
+  - Functional Specification: Outlines the game's features and functionality.
   - Technical Specification: Details the technical architecture and implementation.
-  - Test Plan: Describes the strategy for ensuring the game’s quality and reliability.
+  - Test Plan: Describes the strategy for ensuring the game's quality and reliability.
   - User Manual: Guides end-users on how to play and interact with the game.
   - Management Planning and Weekly Reports: Tracks progress and highlights milestones.
 - Final Presentation:
-  - A 15-minute presentation summarizing the project’s outcomes, key insights, and deliverables.
+  - A 15-minute presentation summarizing the project's outcomes, key insights, and deliverables.
 
 ### 1.4. Project Organization
 
@@ -228,6 +228,39 @@ The card deck is the main medium allowing players to progress through the escape
 ### 2.5. Scenarios
 
 #### 2.5.1. Tutorial
+
+The tutorial introduces the environment of the escape game to the player, as well as the core mechanics of the game in a chill environment, as there is no penalty for the player if he does worng card association. The following graph shows the storyline of the tutorial adventures:
+
+```mermaid
+  graph TD
+    A[Start - Introduction Card] --> B[Flipped Intro Card - Main Office]
+    B --> C[Vending Machine]
+    B --> D[Desk]
+    B --> E[Newspaper]
+    C --> F[Tumbdrive]
+    D --> G[PC]
+    D --> H[Badge]
+    F --> I[Screen]
+    G --> I
+    I --> J[Info 1 - Report]
+    I --> K[Info 2 - Annex]
+    I --> L[Encrypted file]
+    J --> M[Tutorial End]
+    K --> M
+    L --> M
+
+    classDef info color:#000000,fill:#977970,stroke:#000,stroke-width:1px;
+    classDef machine color:#000000,fill:#bcbcbc,stroke:#000,stroke-width:1px,font-size:14px;
+    classDef leftActionCard color:#000000,fill:#76BF5F,stroke:#000,stroke-width:1px,font-size:14px;
+    classDef rightActionCard color:#000000,fill:#39AAD5,stroke:#000,stroke-width:1px,font-size:14px;
+    classDef penalty color:#000000,fill:#CC4040,stroke:#000,stroke-width:1px,font-size:14px;
+    class A,B,C,D,E,H,I,J,K,M info;
+    class F rightActionCard;
+    class G leftActionCard;
+    class L machine;
+```
+
+You can find the design corresponding to this chart following [this link]() (TODO).
 
 #### 2.5.2. Scenario 1: XXXXX
 
