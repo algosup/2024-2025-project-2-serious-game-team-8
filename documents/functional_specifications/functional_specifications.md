@@ -373,7 +373,9 @@ All the mockups are available on Figma for both the app to be develop and the ca
 
 #### 2.5.1. Overview
 
-The game is called **Gatekeeper**, and the story began like this:
+The application, and our company is named **EcoQuest**.
+
+The game, which is our first adventure, is called **Gatekeeper**, and the story begins like this:
 ![Introduction Card](./images/introduction_card.png)
 
 The story has 2 parts : The Tutorial gameplay and the Main gameplay.
