@@ -435,6 +435,99 @@ Fueled by the need for revenge and a burning desire for justice, you resolve to 
 
 #### 2.5.3. Main Gameplay: Gatekeeper
 
+As you find access to the underground of the Omega Corp building, you discover a hidden places.
+
+The underground is splitted into 3 stages:
+The lower you dive, the more you discover the truth about complex activities of Omega Corp, and the longer you take time to finsih the level.
+
+The following descriptions of each level are not already designed in details. The cards and machines still have to be designed in detailled in parallel of the development of the tutorial.
+
+### Level 1: Do More with Less  
+**Estimated Time:** 5 minutes  
+
+#### Overview  
+The player begins their journey in the cold, industrial basement of Omega Corp’s building. Exploring the area, they uncover clues about Omega Corp’s secretive development of alternative household consumer products. However, they learn that the company intends to withhold these innovations from the market for 10 years to maintain monopolistic control. This discovery sets the stage for the player’s mission to expose Omega Corp’s unethical practices.  
+
+#### Ambience  
+- **Theme:** A chemical lab.  
+- **Colors:** Neon blue accents; other colors are dim and muted.  
+- **Details:**  
+  - Metallic walls, glass tables, heavy machinery, and biohazard warning signs.  
+  - Moderate lighting, suggesting recent activity in an otherwise dormant lab.  
+
+#### Difficulty  
+- Designed to introduce gameplay mechanics and create manageable tension.  
+- Guides players while keeping challenges straightforward.  
+
+#### Enigma  
+- **Objective:**  
+  - Players must locate four chemical formula cards hidden around the lab.  
+  - Combining these cards grants access to a mixing machine, which challenges the player with a jug problem: they must measure and mix precise amounts of chemicals to create a formula.  
+- **Optional Adjustment:**  
+  - Increase difficulty in finding the cards for added exploration.  
+  - Simplify the machine interaction for a more satisfying resolution (e.g., enhanced sound effects).  
+
+#### Resolution  
+Completing the formula causes the mixing machine to explode, spilling corrosive liquid that burns a hole in the floor. This breach reveals a path to the next area, and the player takes the elevator to Level 2, now equipped with a Level 2 Badge.  
+
+
+### Level 2: Biology Lab  
+**Estimated Time:** 7 minutes  
+
+#### Overview  
+The player emerges in a vast, lush biology lab filled with plant life. This level highlights Omega Corp’s concealment of viable solutions to global agricultural problems, such as resilient plant systems and sustainable farming methods. The player learns about the resilience of nature and the harmful effects of chemical overuse on soil, all while working to solve the next challenge.  
+
+#### Ambience  
+- **Theme:** A living, experimental environment.  
+- **Colors:** Predominantly green, with metallic accents emphasizing the lab’s industrial nature.  
+- **Details:**  
+  - Test vials, lab equipment, and experimental devices scattered throughout.  
+  - Lower lighting than Level 1, creating a mysterious and organic atmosphere.  
+
+#### Difficulty  
+- Builds on Level 1 by introducing more exploration and problem-solving.  
+- Players must search for clues and complete light puzzles to progress.  
+
+#### Enigma  
+- **Objective:**  
+  - Players must gather and plant various seeds on a 3x3 grid, following permaculture principles to ensure symbiotic growth.  
+  - Seeds are scattered across two rooms, with some given freely and others hidden or locked behind simple puzzles (e.g., card combinations or hidden numbers).  
+- **Mechanics:**  
+  - Players must determine the correct planting positions by considering factors such as compatibility and growth patterns.  
+  - Feedback (e.g., glowing plants or sound effects) indicates success.  
+
+#### Resolution  
+Successfully completing the “Garden” puzzle activates the elevator, allowing the player to proceed to Level 3.  
+
+
+### Level 3: Energy Lab  
+**Estimated Time:** 8–10 minutes  
+
+#### Overview  
+In this high-tech energy lab, the player uncovers Omega Corp’s deliberate efforts to spread inefficient technologies while suppressing advancements in renewable energy and storage. The level challenges the player to rethink misconceptions about energy losses and the importance of efficient distribution, storage, and consumption.  
+
+#### Ambience  
+- **Theme:** A futuristic energy research facility.  
+- **Colors:** Bright neon yellow and white accents, symbolizing energy and power.  
+- **Details:**  
+  - Glowing energy cells, holographic displays, wires, and sparking panels.  
+  - A subtle hum of machinery, with occasional sparks and flickers of light.  
+
+#### Difficulty  
+- Introduces interconnected puzzles requiring logical thinking and resource management.  
+- Builds on concepts from earlier levels, challenging players with a more complex enigma.  
+
+#### Enigma  
+- **Objective:**  
+  - Players must balance energy distribution across several storage units while minimizing losses.  
+  - Using energy modules (e.g., 10 kWh, 20 kWh), players allocate energy to storage cells with varying capacities and efficiencies.  
+- **Mechanics:**  
+  - Each storage unit has a loss rate and a maximum capacity (e.g., “10% energy lost per 10 kWh stored”).  
+  - Players must optimize their allocations using real-time feedback from a holographic power grid.  
+  - Misleading options highlight common misconceptions, such as overcharging efficient units (causing overflow) or relying on inefficient systems (leading to massive losses).  
+
+#### Resolution  
+Completing the puzzle causes an energy system overload, resulting in a blackout. Emergency power activates, revealing a hidden pathway. The player proceeds to the next level, armed with new knowledge about energy efficiency and a deeper suspicion of Omega Corp.  
 
 
 ### 2.6. Performance Metrics
