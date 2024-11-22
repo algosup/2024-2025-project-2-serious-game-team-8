@@ -52,9 +52,12 @@ It has been mainly coded on:
 - Lenovo Thinkbook 14
 - ThinkPad E14 Gen 5
 
-And tested on:
-- Google Pixel 8 - Android 14.0
-- Iphone 14 pro - IOS 17.0
+
+It has been mainly tested on:
+    - Lenovo Thinkbook 14-IIL 20 SL 16go Intel core i7-1065 g7
+    - MacBook Air M3 13" 16gb RAM 512 go SSD
+    - Lenovo IdeaPad (Debian 12)
+
 
 ## Installation
 
@@ -74,4 +77,5 @@ cd 2024-2025-project-2-serious-game-team-8
 
 3. Install GODOT 4:
 
-[GODOT](https://godotengine.org)
+[Direct Link to GODOT](https://godotengine.org/download/)
+
