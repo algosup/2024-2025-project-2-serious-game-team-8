@@ -94,7 +94,7 @@ The vision is to educate players about climate change by embedding factual knowl
 
 #### 1.3.2. Objectives
 
-- Develop a Serious Game centeGreen around climate change.
+- Develop a Serious Game centered around climate change.
 - Design engaging, adventure-based gameplay to captivate players.
 - Use Godot 4.0 for seamless deployment across digital platforms.
 
@@ -153,11 +153,11 @@ The following deliverables will be provided as part of the project:
 
 ### 2.1. Game Components
 
-Our game is hybrid, which means you need both a physical card deck as well as a mobile application to play the game. This prevents young audiences to speend too much time in front of screens, which is a problem nowadays.
+Our game is hybrid, which means you need both a physical card deck as well as a mobile application to play the game. This prevents young audiences to spend too much time in front of screens, which is a problem nowadays.
 
 #### 2.1.1. Physical - Card Deck
 
-The card deck is the main medium allowing players to progress through the escape game adventures. Each of the card has a unique number or letter, indicated at the back of the card as well as at the top left corner of the card. There are in total 4 types of cards in the game, each distiguishable by the color on the top of the card:
+The card deck is the main medium allowing players to progress through the escape game adventures. Each of the cards has a unique number or letter, indicated at the back of the card and at the top left of it too. There are in total 4 types of cards in the game, each distiguishable by the color on the top of the card:
 
 | Card Type Name | Description                                                                                                                                                                                                                                                      | Template image                                  |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
@@ -165,7 +165,7 @@ The card deck is the main medium allowing players to progress through the escape
 | Machine        | Redirects to an interactive puzzle on the app, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                       | ![Puzzle](./images/puzzle_card.png)             |
 | Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
 | Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
-| Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to fill in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
+| Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to confirm in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
 
 #### 2.1.2. Digital - Mobile Application
 
@@ -260,6 +260,8 @@ The app supports the following functionalities to complement the cards:
 
 #### 2.2.4.3 Audio and Visual Cues
 - The app enhances immersion through thematic sounds, animations, and visual feedback.
+- 5 Music tracks will be made: 1 for the tutorial, one for each level and one for menus.
+- Sound effects will be used at critical moments of the game, such as when the timer is running out or when the player succeeds or fails a puzzle to intensify the game. 
 
 #### 2.2.4.4 Hint System
 - Hints are tied to specific card numbers and accessible at any time. Players can request multiple hints for the same card.
@@ -302,7 +304,7 @@ All the mockups are available on Figma for both the app to be develop and the ca
 #### 2.4.1.2. User Interaction
 - **Primary Input**: 
   - The app will exclusively use touch controls for input.
-  - Numeric and alphanumeric codes will be enteGreen via a virtual keyboard provided by the app.
+  - Numeric and alphanumeric codes will be entered via a virtual keyboard provided by the app.
 - **Phone Sensors**:
   - Certain puzzles will require the use of the device's **gyroscope and accelerometer** for interactions such as:
     1. **Shaking the phone** to simulate actions like clearing objects or mixing contents.
@@ -317,7 +319,7 @@ All the mockups are available on Figma for both the app to be develop and the ca
 
 #### 2.4.1.5. Machine Puzzles
 - Machines are interactive puzzles on the app which include:
-  1. **Input Challenges**: Numeric or alphanumeric codes to be enteGreen into the app.
+  1. **Input Challenges**: Numeric or alphanumeric codes to be entered into the app.
   2. **Sensor-Based Tasks**: Interaction through shaking or tilting the phone.
   3. **Logic/Combination Challenges**: Users solve puzzles requiring multi-step reasoning (presented visually in the app and referenced on the cards).
 
@@ -431,7 +433,7 @@ You succeed in decrypting the folder, and a chilling realization dawns upon you.
 
 But then, one file stops you cold: a list titled “Silenced Employees.” Its contents are partially corrupted, but one name leaps out at you like a dagger to the heart—your closest colleague, the friend who vanished from work without explanation just weeks ago. Now, you understand why.
 
-Fueled by the need for revenge and a burning desire for justice, you resolve to expose Omega Corp for what it truly is. No more hiding behind their lies. No more unchecked power. Steeling yourself, you set your sights on their headquarters. The shadow war begins here.
+Fueled by the need for revenge and a burning desire for justice, you resolve to expose Omega Corp for what it truly is. No more hiding behind their lies. No more unchecked power. Steeling yourself, you set your sights on their headquarters. The shadow war begins...
 
 #### 2.5.3. Main Gameplay: Gatekeeper
 
@@ -568,6 +570,6 @@ Players will receive a star ranking (1–5) based on their performance. Stars ar
 | ----------------------------------- | ------------------------------------------------- |
 | Performance                         | All application pages should load within 1 second |
 | Executable Size                     | The size of the executable should not exceed 50MB |
-| Accessibility                       | Multilingual Support                              |
-| Scalability                         | Support for future scenario packs                 |
+| Accessibility                       | Support for French and English                              |
+| Extensibility                         | Support for future scenario packs                 |
 | Environmental impact                | Printed materials made from sustainable resources |
