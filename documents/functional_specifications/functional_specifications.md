@@ -376,6 +376,10 @@ The game is called **Gatekeeper**, and the story began like this:
 
 The story has 2 parts : The Tutorial gameplay and the Main gameplay.
 
+All the design thinking of the scenario and cards are available on [this spreadsheet](https://docs.google.com/spreadsheets/d/16rkbt74pS5Rb-UToZqiECkykuM-bd2_UqGowPhPE3_A/edit?gid=0#gid=0)
+
+Details for each gameplay are given below.
+
 #### 2.5.2. Tutorial
 
 Before the 30 minutes main gameplay, a 10 minutes long tutorial introduces to the player:
