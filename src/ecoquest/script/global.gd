@@ -6,4 +6,4 @@ func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
 
 func _process(delta: float) -> void:
-	print(screen_size)  # Print the screen size each frame
+	pass
