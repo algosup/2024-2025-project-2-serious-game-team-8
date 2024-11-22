@@ -372,7 +372,6 @@ All the mockups are available on Figma for both the app to be develop and the ca
 
 The game is called **Gatekeeper**, and the story began like this:
 ![Introduction Card](./images/introduction_card.png)
-Then the tutorial is playable with the already designed cards on the [figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=296-412&node-type=canvas&t=CMAiP2Gods2REIfN-0) given above.
 
 The story has 2 parts : The Tutorial gameplay and the Main gameplay.
 
@@ -386,6 +385,8 @@ Before the 30 minutes main gameplay, a 10 minutes long tutorial introduces to th
 The tutorial works as a mini gameplay where the player's mistakes are not took into account for the main one. It will help the player to understand the game rules and mechanics.  
 The player can only progress to the main game once the tutorial is completed.
 A transition on the mobile app will smoothly guide the player from the tutorial to the main game, including scenario reaveals.  
+
+Thus the tutorial is playable with the already designed cards on the [figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=296-412&node-type=canvas&t=CMAiP2Gods2REIfN-0) given above.
 
 The following graph shows the storyline of the tutorial adventures:
 *Each bloc corresponds to a card, the color indicating its type*
@@ -418,8 +419,6 @@ The following graph shows the storyline of the tutorial adventures:
     class G leftActionCard;
     class L machine;
 ```
-
-You can find the design corresponding to this chart following [this link]() (TODO).
 
 #### 2.5.2. Scenario 1: Gatekeeper
 
