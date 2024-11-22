@@ -20,18 +20,36 @@
     - [2.1. Game Components](#21-game-components)
       - [2.1.1. Physical - Card Deck](#211-physical---card-deck)
       - [2.1.2. Digital - Mobile Application](#212-digital---mobile-application)
-    - [2.2. Game Mechanics](#22-game-mechanics)
-    - [2.3. User Interface (UI)](#23-user-interface-ui)
-      - [2.3.1. Physical Cards](#231-physical-cards)
-      - [2.3.2. Application](#232-application)
-      - [2.3.3. Mockups](#233-mockups)
+  - [2.2. Game Mechanics](#22-game-mechanics)
+    - [2.2.1. Overview](#221-overview)
+    - [2.2.2. Card Types and Functions](#222-card-types-and-functions)
+      - [2.2.2.1 Left/Right Action Cards (Blue/Green Cards)](#2221-leftright-action-cards-bluegreen-cards)
+      - [2.2.2.2 Grey Cards (Machines)](#2222-grey-cards-machines)
+      - [2.2.2.3 Brown Cards (Locations)](#2223-brown-cards-locations)
+      - [2.2.2.4 Red Cards (Penalties)](#2224-red-cards-penalties)
+    - [2.2.3. Game Progression](#223-game-progression)
+      - [2.2.3.1 Combining Cards](#2231-combining-cards)
+      - [2.2.3.2 Interacting with Machines](#2232-interacting-with-machines)
+      - [2.2.3.3 Exploring Locations](#2233-exploring-locations)
+      - [2.2.3.4 Requesting Hints](#2234-requesting-hints)
+      - [2.2.3.5 Time and Penalties](#2235-time-and-penalties)
+    - [2.2.4. App Features](#224-app-features)
+      - [2.2.4.1 Code Entry](#2241-code-entry)
+      - [2.2.4.2 Machine Interactions](#2242-machine-interactions)
+      - [2.2.4.3 Audio and Visual Cues](#2243-audio-and-visual-cues)
+      - [2.2.4.4 Hint System](#2244-hint-system)
+      - [2.2.4.5 Timer](#2245-timer)
+    - [2.2.5. Victory and Loss Conditions](#225-victory-and-loss-conditions)
+    - [2.3. Mockups](#23-mockups)
+      - [2.3.1 Cards Mockups](#231-cards-mockups)
+      - [2.3.2 App Mockups](#232-app-mockups)
     - [2.4. Technical Requirements](#24-technical-requirements)
     - [2.4.1. Application (Godot Engine)](#241-application-godot-engine)
       - [2.4.1.1. Orientation and Platform](#2411-orientation-and-platform)
       - [2.4.1.2. User Interaction](#2412-user-interaction)
       - [2.4.1.3. Timer](#2413-timer)
       - [2.4.1.4. Background Music](#2414-background-music)
-      - [2.4.1.5. Machines and Puzzles](#2415-machines-and-puzzles)
+      - [2.4.1.5. Machine Puzzles](#2415-machine-puzzles)
     - [2.4.2. Physical Cards](#242-physical-cards)
       - [2.4.2.1. Specifications](#2421-specifications)
       - [2.4.2.2. Functional Design](#2422-functional-design)
@@ -46,7 +64,9 @@
     - [2.5. Scenarios](#25-scenarios)
       - [2.5.1. Tutorial](#251-tutorial)
       - [2.5.2. Scenario 1: Gatekeeper](#252-scenario-1-gatekeeper)
-    - [2.6. Performance metrics](#26-performance-metrics)
+    - [2.6. Performance Metrics](#26-performance-metrics)
+    - [2.7. End-Game Ranking](#27-end-game-ranking)
+      - [2.7.1. Ranking Breakdown:](#271-ranking-breakdown)
   - [3. Non-Functional Requirements](#3-non-functional-requirements)
 
 </details>
@@ -141,7 +161,7 @@ The card deck is the main medium allowing players to progress through the escape
 | Card Type Name | Description                                                                                                                                                                                                                                                      | Template image                                  |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Information    | Gives information on an element of the gameplay/Gives a fact about climate change                                                                                                                                                                                | ![Information](./images/info_card.png)          |
-| Machine         | Greenirects to an interactive puzzle on the app, or one of its parts. The number of the card can be enteGreen when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
+| Machine        | Redirects to an interactive puzzle on the app, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                       | ![Puzzle](./images/puzzle_card.png)             |
 | Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
 | Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
 | Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to fill in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
@@ -395,7 +415,41 @@ You can find the design corresponding to this chart following [this link]() (TOD
 
 #### 2.5.2. Scenario 1: Gatekeeper
 
-### 2.6. Performance metrics
+### 2.6. Performance Metrics
+
+At the end of each game, the application will display the statistics of the adventure. Below is the exhaustive list of metrics and their calculation methods:
+
+| Statistic Name                 | Calculation Method                                                               |
+| ------------------------------ | -------------------------------------------------------------------------------- |
+| Time Spent                     | Total time elapsed from the start of the game, including any penalties incurred. |
+| Penalties                      | The number of times the *Penalty* button was pressed.                            |
+| Number of Hints Viewed         | Total number of unique hints requested by the player.                            |
+| Incorrect Machine Code Entries | The number of incorrect machine codes entered by the player (if applicable).     |
+| Incorrect Code Submissions     | Total number of incorrect code entries made by the user in the application.      |
+
+### 2.7. End-Game Ranking  
+
+Players will receive a star ranking (1–5) based on their performance. Stars are deducted based on the following criteria:  
+
+| Criteria                                 | Condition for Losing a Star                                                 |
+| ---------------------------------------- | --------------------------------------------------------------------------- |
+| Time Limit Exceeded                      | If the player exceeds the allotted time for the game.                       |
+| Wrong Machine Code Entries (Threshold 1) | Submitting more than 2 incorrect machine codes results in losing 1 star.    |
+| Wrong Machine Code Entries (Threshold 2) | Submitting 3 or more additional incorrect machine codes loses another star. |
+| Hints Viewed                             | If the player views more than 10% of the total available hints.             |
+| Excessive Penalties                      | If the player incurs more than 5 penalties.                                 |
+
+#### 2.7.1. Ranking Breakdown:
+- **5 Stars**: Perfect performance (no stars lost).  
+- **4 Stars**: Minor mistakes (lose 1 star).  
+- **3 Stars**: Moderate mistakes (lose 2 stars).  
+- **2 Stars**: Significant mistakes (lose 3 stars).  
+- **1 Star**: Major issues (lose 4 stars).  
+- **0 Stars**: Game completed but fails to meet any performance standards (lose all stars).  
+
+---
+
+This provides a clear framework for assessing player performance and gives players concrete feedback on how their decisions impact their overall ranking. Would you like to add specific examples or customize the thresholds further?
 
 ## 3. Non-Functional Requirements
 
