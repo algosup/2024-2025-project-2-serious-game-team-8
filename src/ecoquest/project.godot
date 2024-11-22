@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="EcoQuest"
+run/main_scene="res://scene/splash_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://ecoquest_logo.png"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=720
+window/size/mode=3
+window/handheld/orientation=6
 
 [rendering]
 
