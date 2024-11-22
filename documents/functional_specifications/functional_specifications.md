@@ -106,6 +106,36 @@ This project seeks to:
 - Address and correct common misconceptions about the environment.
 - Create an accessible and interactive learning tool adaptable for different audiences.
 
+#### 1.3.4. Out-of-Scope
+
+1. **Dedicated Game Board or Physical Maps**  
+   The project avoids integrating physical boards or printed maps as central gameplay elements. Players will not need to arrange cards on a board or manipulate a paper-based map to solve enigmas. Exploration is purely app-guided, ensuring portability and minimal required materials.
+
+2. **Additional Scenarios or Modular Content**  
+   The initial release focuses on a single scenario, *EcoQuest*. While the framework is adaptable for future content, no additional scenarios, expansions, or modular gameplay packs are planned as part of this initial scope.
+
+3. **Multiplayer or Asynchronous Gameplay**  
+   The game emphasizes cooperative play within a single session. No features support online multiplayer, turn-based gameplay, or sharing progress across different devices.
+
+4. **Complex App-Card Interactions (e.g., Dynamic Card Placement)**  
+   The project excludes puzzles requiring players to physically arrange cards on a predefined template (e.g., aligning cards to create shapes or activate in-app responses). All card interactions involve referencing their numbers and following simple app prompts.
+  
+5. **Camera-Based Enigma Solving**  
+   The app will not use the device’s camera for scanning patterns, solving visual puzzles, or interpreting real-world objects. All interactions and puzzles remain screen-based or card-based.
+
+6. **NFC-Enabled Cards or Devices**  
+   While NFC technology can create seamless interactions between physical cards and digital devices, this game does not incorporate NFC-enabled features. All card-to-app interactions rely on manually entering alphanumeric codes for accessibility and simplicity.
+
+
+#### Reasoning for Exclusions
+
+- **Simplification**: By focusing on manual and screen-based interactions, the design avoids potential technical issues, ensuring broader device compatibility and a smoother player experience.  
+- **Accessibility**: Excluding camera and NFC features reduces hardware requirements, making the game playable on a wider range of devices.  
+- **Streamlined Development**: Keeping interactions app-based with printed cards aligns with the goal of rapid iteration and efficient production of a polished initial experience.  
+
+This scope balances ambitious features with achievable exclusions, paving the way for future iterations like introducing **EcoQuest expansions** or incorporating more complex mechanics later on.
+
+
 #### 1.3.4. Target Audience
 
 - **Teenagers & Young Adults:** Teenagers willing to expand their general knowledge or to delve deeper into cliamte change understanding.
@@ -357,18 +387,6 @@ All the mockups are available on Figma for both the app to be develop and the ca
 - Players will move through the game linearly, with each code unlocking subsequent cards or app content.
 - Certain puzzles will involve both physical card manipulation and digital app interactivity.
 
-### 2.4.4. Functional Limits and Gameplay Scope
-
-#### 2.4.4.1. Scenario Length
-- The single game session will last approximately **30 minutes**, matching the timer duration.
-
-#### 2.4.4.2. No QR Codes
-- There will be no QR code scanning or linking mechanisms. All interactions between the cards and the app will be manual (numeric code reference).
-
-#### 2.4.4.3. Single Game Design
-- The app and card system will only support **one scenario/game**, with no expansions planned.
-
-
 ### 2.5. Scenarios
 
 #### 2.5.1. Overview
@@ -474,7 +492,6 @@ The player begins their journey in the cold, industrial basement of Omega Corp�
 #### Resolution  
 Completing the formula causes the mixing machine to explode, spilling corrosive liquid that burns a hole in the floor. This breach reveals a path to the next area, and the player takes the elevator to Level 2, now equipped with a Level 2 Badge.  
 
-
 ### Level 2: Biology Lab  
 **Estimated Time:** 7 minutes  
 
@@ -502,7 +519,6 @@ The player emerges in a vast, lush biology lab filled with plant life. This leve
 
 #### Resolution  
 Successfully completing the “Garden” puzzle activates the elevator, allowing the player to proceed to Level 3.  
-
 
 ### Level 3: Energy Lab  
 **Estimated Time:** 8–10 minutes  
@@ -575,3 +591,4 @@ Players will receive a star ranking (1–5) based on their performance. Stars ar
 | Accessibility                       | Support for French and English                              |
 | Extensibility                         | Support for future scenario packs                 |
 | Environmental impact                | Printed materials made from sustainable resources |
+
