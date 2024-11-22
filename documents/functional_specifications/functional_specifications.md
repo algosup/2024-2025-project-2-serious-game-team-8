@@ -64,19 +64,19 @@
       - [2.5.2. Tutorial](#252-tutorial)
       - [2.5.2. Transition](#252-transition)
       - [2.5.3. Main Gameplay: Gatekeeper](#253-main-gameplay-gatekeeper)
-    - [Level 1: Do More with Less](#level-1-do-more-with-less)
+    - [2.5.3.1 Level 1: Do More with Less](#2531-level-1-do-more-with-less)
       - [Overview](#overview)
       - [Ambience](#ambience)
       - [Difficulty](#difficulty)
       - [Enigma](#enigma)
       - [Resolution](#resolution)
-    - [Level 2: Biology Lab](#level-2-biology-lab)
+    - [2.5.3.2 Level 2: Biology Lab](#2532-level-2-biology-lab)
       - [Overview](#overview-1)
       - [Ambience](#ambience-1)
       - [Difficulty](#difficulty-1)
       - [Enigma](#enigma-1)
       - [Resolution](#resolution-1)
-    - [Level 3: Energy Lab](#level-3-energy-lab)
+    - [2.5.3.3 Level 3: Energy Lab](#2533-level-3-energy-lab)
       - [Overview](#overview-2)
       - [Ambience](#ambience-2)
       - [Difficulty](#difficulty-2)
@@ -481,7 +481,7 @@ The lower you dive, the more you discover the truth about complex activities of 
 
 The following descriptions of each level are not already designed in details. The cards and machines still have to be designed in detailled in parallel of the development of the tutorial.
 
-### Level 1: Do More with Less  
+### 2.5.3.1 Level 1: Do More with Less  
 **Estimated Time:** 5 minutes  
 
 #### Overview  
@@ -509,7 +509,7 @@ The player begins their journey in the cold, industrial basement of Omega Corp�
 #### Resolution  
 Completing the formula causes the mixing machine to explode, spilling corrosive liquid that burns a hole in the floor. This breach reveals a path to the next area, and the player takes the elevator to Level 2, now equipped with a Level 2 Badge.  
 
-### Level 2: Biology Lab  
+### 2.5.3.2 Level 2: Biology Lab  
 **Estimated Time:** 7 minutes  
 
 #### Overview  
@@ -537,7 +537,7 @@ The player emerges in a vast, lush biology lab filled with plant life. This leve
 #### Resolution  
 Successfully completing the “Garden” puzzle activates the elevator, allowing the player to proceed to Level 3.  
 
-### Level 3: Energy Lab  
+### 2.5.3.3 Level 3: Energy Lab  
 **Estimated Time:** 8–10 minutes  
 
 #### Overview  
