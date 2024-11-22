@@ -73,7 +73,7 @@ The vision is to educate players about climate change by embedding factual knowl
 
 #### 1.3.2. Objectives
 
-- Develop a Serious Game centered around climate change.
+- Develop a Serious Game centeGreen around climate change.
 - Design engaging, adventure-based gameplay to captivate players.
 - Use Godot 4.0 for seamless deployment across digital platforms.
 
@@ -141,7 +141,7 @@ The card deck is the main medium allowing players to progress through the escape
 | Card Type Name | Description                                                                                                                                                                                                                                                      | Template image                                  |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Information    | Gives information on an element of the gameplay/Gives a fact about climate change                                                                                                                                                                                | ![Information](./images/info_card.png)          |
-| Machine         | Redirects to an interactive puzzle on the app, or one of its parts. The number of the card can be entered when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
+| Machine         | Greenirects to an interactive puzzle on the app, or one of its parts. The number of the card can be enteGreen when clicking on the "Machine" button and filling the popup to access the interactive machine puzzle on the app.                                                                        | ![Puzzle](./images/puzzle_card.png)             |
 | Left Action    | They contain a visual element, generally an object, which can be logically combined with an element on a "Right Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one. | ![Left Action](./images/left_action_card.png)   |
 | Right Action   | They contain a visual element, generally an object, which can be logically combined with an element on a "Left Action Card". The sum of the two cards should allow the player to take the card with the equivalent number, either a penalty or the correct one.  | ![Right Action](./images/right_action_card.png) |
 | Penalty        | They indicate a wrong path taken by the player, resulting in a time penalty the player has to fill in the application.                                                                                                                                           | ![Penalty](./images/penalty_card.png)           |
@@ -151,67 +151,63 @@ The card deck is the main medium allowing players to progress through the escape
 ## 2.2. Game Mechanics
 
 ### 2.2.1. Overview
-The game is a cooperative escape-room experience that uses **physical cards** and an accompanying **mobile application**. Players solve puzzles, explore locations, and progress through the story by interacting with cards and the app.
+The game is a cooperative escape-room experience that uses **physical cards** and a **mobile application** as a guide. Players solve puzzles, explore locations, and progress through the story by interacting with cards and the app.
 
 
 ### 2.2.2. Card Types and Functions
 Each card serves a specific purpose and drives the game forward. The following categories describe the types of cards and their mechanics:
 
-#### 2.2.2.1 Left/Right Action Cards (Blue/Red Cards)
+#### 2.2.2.1 Left/Right Action Cards (Blue/Green Cards)
 - **Blue Cards (Left Action Cards)**:
   - Represent **objects** that players can use or interact with.
   - Examples: A key, a hammer, or a tool.
-- **Red Cards (Right Action Cards)**:
+- **Green Cards (Right Action Cards)**:
   - Represent **interactive elements** such as doors, locked containers, or machines.
   - Examples: A locked chest, a door requiring a key, or a safe.
 
 **Mechanic**:  
-- Players combine **blue cards (objects)** with **red cards (interactive elements)** to progress.
+- Players combine **blue cards (objects)** with **Green cards (interactive elements)** to progress.
 - To attempt a combination:
-  - Add the numbers of the two cards (e.g., Blue 12 + Red 25 = 37).
-  - Find the resulting card number in the deck. If the combination is correct, the new card will advance the game. If incorrect, no card exists, and a penalty may occur.
+  - Add the numbers of the two cards (e.g., Blue 12 + Green 25 = 37).
+  - Find the resulting card number in the deck. If the combination is correct, the new card will advance the game. If incorrect, you get either a penalty card , either no card.
 
-#### 2.2.2.2 Yellow Cards (Machines)
-- Represent **machines or puzzles** requiring special interaction, often using the app.
+#### 2.2.2.2 Grey Cards (Machines)
+- Represent **machines puzzles** requiring special interaction, using the app.
 - Examples:
   - A keypad requiring a code.
   - A digital lock that needs to be "assembled."
   - A device that activates when the phone is shaken or rotated.
   
 **Mechanic**:  
-- The card provides instructions, and players interact with the app to solve the machine.
-- Solutions often involve logic, observation, or interaction with the phone's sensors (e.g., gyroscope, accelerometer).
+- Some cards provide hints/instructions, and players interact with the app to solve the machine.
+- Solutions often involve logic, observation, or interaction with the phone's sensors.
 
-#### 2.2.2.3 Green Cards (Locations)
+#### 2.2.2.3 Brown Cards (Locations)
 - Represent **explorable areas** where players can find clues, objects, or interact with puzzles.
 - Examples: A room, a hallway, or a hidden compartment.
 
 **Mechanic**:  
-- Green cards display multiple points of interest, each marked with a number or symbol.  
+- Brown cards display multiple points of interest, each marked with a number or symbol.  
 - Players search these areas by locating the corresponding cards in the deck.  
-- New cards may reveal additional blue, red, or yellow cards.
+- New cards may reveal additional cards to deal with.
 
-#### 2.2.2.4 Gray Cards (Penalties and Hints)
-- Represent **negative consequences** or **hints** for solving puzzles.
-- Examples:
-  - A time penalty for incorrect combinations.
-  - A clue to help with a particularly challenging puzzle.
+#### 2.2.2.4 Red Cards (Penalties)
+- Represent **negative consequences**: A time penalty for incorrect combinations.
 
 **Mechanic**:  
-- Penalty cards automatically deduct time from the app’s countdown.
-- Hint cards are manually triggered by players using the app, with each hint applying a **-1 minute penalty** to the timer.
+- When a penalty card is picked, players must tap the penalty button on the app, which automatically deducts time from the app’s countdown.
 
 
 ### 2.2.3. Game Progression
 
 #### 2.2.3.1 Combining Cards
 - Players use the **addition mechanic** to combine cards:
-  - Example: A key (Blue 10) + a locked door (Red 15) = Card 25.
+  - Example: A key (Blue 10) + a locked door (Green 15) = Card 25.
   - If the resulting card exists in the deck, it will describe the outcome (e.g., the door is unlocked, revealing more clues).
   - If no such card exists, the combination is invalid.
 
 #### 2.2.3.2 Interacting with Machines
-- **Yellow cards** introduce puzzles requiring interaction through the app:
+- **Grey cards** introduce puzzles requiring interaction through the app:
   - Players input numeric or alphanumeric codes into the app.
   - They may also solve puzzles using visual or audio cues, logic, or phone gestures (e.g., shaking or tilting the device).
 
@@ -220,12 +216,12 @@ Each card serves a specific purpose and drives the game forward. The following c
 - Points of interest (marked with numbers or symbols) direct players to search for new cards in the deck.
 
 #### 2.2.3.4 Requesting Hints
-- Players can request contextual hints through the app by entering the relevant card number.
+- Players can request contextual hints about a card through the app by entering the relevant card number.
 - Hints provide progressive help, starting vague and becoming more detailed with each request.
 - **Penalty**: Each hint request deducts **1 minute** from the timer.
 
 #### 2.2.3.5 Time and Penalties
-- The app runs a **60-minute timer**, creating a sense of urgency.
+- The app runs a **30-minute timer**, creating a sense of urgency.
 - Incorrect actions or failed combinations may trigger penalties, deducting time from the remaining total.
 
 
@@ -236,13 +232,13 @@ The app supports the following functionalities to complement the cards:
 - Players enter numeric or alphanumeric codes as prompted by the cards (e.g., unlocking a safe or solving a riddle).
 
 #### 2.2.4.2 Machine Interactions
-- The app presents interactive puzzles or mini-games when players engage with yellow cards.
+- The app presents interactive puzzles or mini-games when players engage with Machine cards (grey).
 - Examples:
   - Dragging objects to assemble a device.
   - Matching patterns or solving equations.
 
 #### 2.2.4.3 Audio and Visual Cues
-- The app enhances immersion through thematic sounds, animations, and visual feedback (e.g., a sound effect when a door unlocks).
+- The app enhances immersion through thematic sounds, animations, and visual feedback.
 
 #### 2.2.4.4 Hint System
 - Hints are tied to specific card numbers and accessible at any time. Players can request multiple hints for the same card.
@@ -255,16 +251,22 @@ The app supports the following functionalities to complement the cards:
 
 ### 2.2.5. Victory and Loss Conditions
 - **Victory**: Players successfully solve all puzzles and escape before the timer expires.
-- **Loss**: The timer reaches zero before players complete the game.
+- **Loss**: The timer reaches zero before players complete the game. They can continue even after that until the last enigma is solved.
 
 
-### 2.3. User Interface (UI)
+### 2.3. Mockups
 
-#### 2.3.1. Physical Cards
+All the mockups are available on Figma for both the app to be develop and the cards to be printed.
 
-#### 2.3.2. Application
+#### 2.3.1 Cards Mockups
 
-#### 2.3.3. Mockups
+[This Figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=296-412&node-type=canvas&t=CMAiP2Gods2REIfN-0) contains all the cards used in the TUTORIAL gameplay. They have a recto and a verso.   
+[This Figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=296-411&node-type=canvas&t=CMAiP2Gods2REIfN-0) WILL contain all the cards used in the MAIN gameplay.
+
+
+#### 2.3.2 App Mockups
+
+[This Figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=0-1&node-type=canvas&t=CMAiP2Gods2REIfN-0) contains the all the app designs used in the whole game.
 
 ### 2.4. Technical Requirements 
 
@@ -279,7 +281,7 @@ The app supports the following functionalities to complement the cards:
 #### 2.4.1.2. User Interaction
 - **Primary Input**: 
   - The app will exclusively use touch controls for input.
-  - Numeric and alphanumeric codes will be entered via a virtual keyboard provided by the app.
+  - Numeric and alphanumeric codes will be enteGreen via a virtual keyboard provided by the app.
 - **Phone Sensors**:
   - Certain puzzles will require the use of the device's **gyroscope and accelerometer** for interactions such as:
     1. **Shaking the phone** to simulate actions like clearing objects or mixing contents.
@@ -294,7 +296,7 @@ The app supports the following functionalities to complement the cards:
 
 #### 2.4.1.5. Machine Puzzles
 - Machines are interactive puzzles on the app which include:
-  1. **Input Challenges**: Numeric or alphanumeric codes to be entered into the app.
+  1. **Input Challenges**: Numeric or alphanumeric codes to be enteGreen into the app.
   2. **Sensor-Based Tasks**: Interaction through shaking or tilting the phone.
   3. **Logic/Combination Challenges**: Users solve puzzles requiring multi-step reasoning (presented visually in the app and referenced on the cards).
 
@@ -318,7 +320,7 @@ The app supports the following functionalities to complement the cards:
 ### 2.4.3. App-Card Integration
 
 #### 2.4.3.1. Code Validation
-- Cards will include **unique alphanumeric codes** (4-6 characters) to be entered into the app. These codes trigger:
+- Cards will include **unique alphanumeric codes** (4-6 characters) to be enteGreen into the app. These codes trigger:
   - Unlocking new puzzles.
   - Progression in the story.
   - Hint systems or penalties.
@@ -338,7 +340,7 @@ The app supports the following functionalities to complement the cards:
 - The single game session will last approximately **30 minutes**, matching the timer duration.
 
 #### 2.4.4.2. No QR Codes
-- There will be no QR code scanning or linking mechanisms. All interactions between the cards and the app will be manual (e.g., code entry or physical references).
+- There will be no QR code scanning or linking mechanisms. All interactions between the cards and the app will be manual (numeric code reference).
 
 #### 2.4.4.3. Single Game Design
 - The app and card system will only support **one scenario/game**, with no expansions planned.
