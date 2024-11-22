@@ -62,7 +62,8 @@
       - [2.4.4.2. No QR Codes](#2442-no-qr-codes)
       - [2.4.4.3. Single Game Design](#2443-single-game-design)
     - [2.5. Scenarios](#25-scenarios)
-      - [2.5.1. Tutorial](#251-tutorial)
+      - [2.5.1. Overview](#251-overview)
+      - [2.5.2. Tutorial](#252-tutorial)
       - [2.5.2. Scenario 1: Gatekeeper](#252-scenario-1-gatekeeper)
     - [2.6. Performance Metrics](#26-performance-metrics)
     - [2.7. End-Game Ranking](#27-end-game-ranking)
@@ -453,10 +454,6 @@ Players will receive a star ranking (1–5) based on their performance. Stars ar
 - **2 Stars**: Significant mistakes (lose 3 stars).  
 - **1 Star**: Major issues (lose 4 stars).  
 - **0 Stars**: Game completed but fails to meet any performance standards (lose all stars).  
-
----
-
-This provides a clear framework for assessing player performance and gives players concrete feedback on how their decisions impact their overall ranking. Would you like to add specific examples or customize the thresholds further?
 
 ## 3. Non-Functional Requirements
 
