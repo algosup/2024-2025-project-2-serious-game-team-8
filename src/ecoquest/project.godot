@@ -15,11 +15,15 @@ run/main_scene="res://scene/splash_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://ecoquest_logo.png"
 
+[autoload]
+
+Global="*res://script/global.gd"
+
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=720
-window/size/mode=3
+window/stretch/mode="viewport"
 window/handheld/orientation=6
 
 [rendering]
