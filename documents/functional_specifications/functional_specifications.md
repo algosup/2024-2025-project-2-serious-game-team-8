@@ -368,9 +368,17 @@ All the mockups are available on Figma for both the app to be develop and the ca
 
 ### 2.5. Scenarios
 
-#### 2.5.1. Tutorial
+#### 2.5.1. Overview
 
-Before the 30 minutes main gameplay, a tutorial introduces to the player:
+The game is called **Gatekeeper**, and the story began like this:
+![Introduction Card](./images/introduction_card.png)
+Then the tutorial is playable with the already designed cards on the [figma page](https://www.figma.com/design/8HPNc76tbBFUHng9vnqG2n/EcoQuest?node-id=296-412&node-type=canvas&t=CMAiP2Gods2REIfN-0) given above.
+
+The story has 2 parts : The Tutorial gameplay and the Main gameplay.
+
+#### 2.5.2. Tutorial
+
+Before the 30 minutes main gameplay, a 10 minutes long tutorial introduces to the player:
 - The scenario of the game
 - The global game mechanics
 - The kind of cards and their interactions  
