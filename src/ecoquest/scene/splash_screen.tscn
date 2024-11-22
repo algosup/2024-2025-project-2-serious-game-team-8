@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmrq8lmjtshgp"]
+
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="1_jqsnx"]
+
+[node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EcoQuestLogo" type="Sprite2D" parent="."]
+position = Vector2(160, 288)
+texture = ExtResource("1_jqsnx")
