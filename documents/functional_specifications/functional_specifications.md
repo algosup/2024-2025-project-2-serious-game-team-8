@@ -425,7 +425,17 @@ The following graph shows the storyline of the tutorial adventures:
     class L machine;
 ```
 
-#### 2.5.2. Scenario 1: Gatekeeper
+#### 2.5.2. Transition
+
+You succeed in decrypting the folder, and a chilling realization dawns upon you. A flood of hidden documents fills your screen, exposing the sinister underbelly of Omega Corp. The company’s polished image of ecological advocacy crumbles under the weight of these revelations: clandestine operations, a shadowy parallel organization pulling the strings, and the horrifying truth behind global environmental disasters. The green facade wasn’t a mission—it was a ruse. Their so-called "ecological efforts" served as nothing more than a smokescreen for motives far darker and greedier than you ever imagined.
+
+But then, one file stops you cold: a list titled “Silenced Employees.” Its contents are partially corrupted, but one name leaps out at you like a dagger to the heart—your closest colleague, the friend who vanished from work without explanation just weeks ago. Now, you understand why.
+
+Fueled by the need for revenge and a burning desire for justice, you resolve to expose Omega Corp for what it truly is. No more hiding behind their lies. No more unchecked power. Steeling yourself, you set your sights on their headquarters. The shadow war begins here.
+
+#### 2.5.3. Main Gameplay: Gatekeeper
+
+
 
 ### 2.6. Performance Metrics
 
