@@ -22,7 +22,7 @@ Global="*res://script/global.gd"
 [display]
 
 window/size/viewport_width=720
-window/size/viewport_height=1080
+window/size/viewport_height=1900
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
