@@ -179,7 +179,7 @@ This section gathers all the forms used for the KPIs.
 
 - [Team 8 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/11JtrnA0_N300-CjYwOXmeK_fnCse6ndy-enLrrQBak8/edit?usp=sharing)
 - [Team 8 Satisfaction Week 2](https://docs.google.com/spreadsheets/d/1ML4Arv1vPYiqL4hArGwEtkQfFV4OiY-ZppNbpNLqtWs/edit?usp=sharing)
-<!-- - [Team 8 Satisfaction Week 3]() -->
+- [Team 8 Satisfaction Week 3](https://docs.google.com/spreadsheets/d/1_P8kYex3n9S3TnirVDKRWVjTEJSFhVTa1bV3EisE8-Y/edit?usp=sharing)
 <!-- - [Team 8 Satisfaction Week 4]() -->
 <!-- - [Team 8 Satisfaction Week 5]() -->
 <!-- - [Team 8 Satisfaction Week 6]() -->
