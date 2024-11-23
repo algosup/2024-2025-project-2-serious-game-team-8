@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdexg62j8ms4c"]
+[gd_scene load_steps=9 format=3 uid="uid://q66v306kfprs"]
 
 [ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="1_gpfe6"]
 [ext_resource type="Script" path="res://scene/home_page.gd" id="1_qbvgi"]
@@ -121,9 +121,10 @@ pivot_offset = Vector2(80, 35)
 texture_normal = ExtResource("5_wyg2g")
 texture_pressed = ExtResource("7_iytfu")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_22ub0")
 autoplay = true
 bus = &"Menu Music"
+parameters/looping = true
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
