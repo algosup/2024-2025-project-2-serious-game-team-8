@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0ogv2vt64x3a"]
+[gd_scene load_steps=15 format=3 uid="uid://b0ogv2vt64x3a"]
 
 [ext_resource type="Script" path="res://script/game_page.gd" id="1_50ksb"]
 [ext_resource type="Texture2D" uid="uid://bcxb7cvix84hp" path="res://resources/background/game_bg.png" id="2_co0cp"]
@@ -8,7 +8,96 @@
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_berp6"]
 [ext_resource type="Texture2D" uid="uid://cikema3s7ltca" path="res://resources/svg/Circle.png" id="6_qtagr"]
 [ext_resource type="Texture2D" uid="uid://d4ljj3b3n71xf" path="res://resources/svg/Icon/Pause.svg" id="8_epgyr"]
+[ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/resume.png" id="9_cec5p"]
 [ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/visibility.png" id="9_pc4mj"]
+
+[sub_resource type="Animation" id="Animation_od8fg"]
+resource_name = "pause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8buug"]
+resource_name = "resume"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8g2nl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4ctl"]
+_data = {
+"RESET": SubResource("Animation_8g2nl"),
+"pause": SubResource("Animation_od8fg"),
+"resume": SubResource("Animation_8buug")
+}
 
 [node name="GamePage" type="Node2D"]
 script = ExtResource("1_50ksb")
@@ -44,11 +133,6 @@ position = Vector2(705, 792)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
-[node name="leaf5" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(747, 574)
-scale = Vector2(2, 2)
-texture = ExtResource("3_8qnhd")
-
 [node name="leaf3" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
 position = Vector2(309, 927)
 scale = Vector2(2, 2)
@@ -56,6 +140,11 @@ texture = ExtResource("3_8qnhd")
 
 [node name="leaf4" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
 position = Vector2(163, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="leaf5" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
+position = Vector2(747, 574)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
@@ -148,9 +237,22 @@ theme_override_fonts/font = ExtResource("6_berp6")
 theme_override_font_sizes/font_size = 50
 text = "Pause"
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/GameControls/Pause"]
+[node name="PauseButtonSprite" type="Sprite2D" parent="CanvasLayer/GameControls/Pause"]
 position = Vector2(150, 217)
 texture = ExtResource("8_epgyr")
+
+[node name="ResumeButton" type="Sprite2D" parent="CanvasLayer/GameControls/Pause"]
+visible = false
+position = Vector2(150, 217)
+texture = ExtResource("9_cec5p")
+
+[node name="PauseButton" type="Button" parent="CanvasLayer/GameControls/Pause"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 15.0
+offset_right = 211.0
+offset_bottom = 300.0
+flat = true
 
 [node name="Hint" type="TextureButton" parent="CanvasLayer/GameControls"]
 layout_mode = 1
@@ -286,6 +388,11 @@ text = "View
 hints"
 horizontal_alignment = 1
 
+[node name="PauseAnimation" type="AnimationPlayer" parent="CanvasLayer/GameControls"]
+libraries = {
+"": SubResource("AnimationLibrary_p4ctl")
+}
+
 [node name="VisibilityControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchor_left = 0.774
@@ -318,4 +425,5 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("9_pc4mj")
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Pause/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]

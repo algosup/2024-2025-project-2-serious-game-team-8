@@ -1,5 +1,7 @@
 extends Node2D
 
+var is_paused: bool = false
+
 ### Close the settings page
 func _on_close_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/home_page.tscn")
@@ -16,3 +18,15 @@ func _on_visibility_pressed() -> void:
 		$CanvasLayer/GameControls.visible=true
 		
 	
+
+func _on_pause_button_pressed() -> void:
+	if is_paused == false: 
+		is_paused = true
+		$CanvasLayer/GameControls/PauseAnimation.play("pause")
+	else:  # If `is_paused` is true
+		is_paused = false
+		$CanvasLayer/GameControls/PauseAnimation.play("RESET")
+	
+	print(is_paused)
+
+		
