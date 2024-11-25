@@ -128,3 +128,4 @@ bus = &"Menu Music"
 parameters/looping = true
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonControl/TextureButton" to="." method="_on_texture_button_pressed"]

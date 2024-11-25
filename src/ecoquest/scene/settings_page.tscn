@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://drw5ljx4fsbdx"]
+[gd_scene load_steps=11 format=3 uid="uid://drw5ljx4fsbdx"]
 
 [ext_resource type="Script" path="res://scene/settings_page.gd" id="1_2wayq"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="2_35iie"]
 [ext_resource type="Texture2D" uid="uid://d266wn84ttcyn" path="res://resources/svg/cross.svg" id="3_f2uej"]
 [ext_resource type="Texture2D" uid="uid://didfekidtqn53" path="res://resources/svg/cross_hover.svg" id="4_neh5v"]
+[ext_resource type="Texture2D" uid="uid://c8nlcgd4sgeim" path="res://resources/svg/Button/Rect/Fill/Default.svg" id="5_fhuid"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_wwy6w"]
+[ext_resource type="Texture2D" uid="uid://l74ox0t2vnmd" path="res://resources/svg/Bar/slider.png" id="7_qw0tp"]
+[ext_resource type="Texture2D" uid="uid://do6w35im262pi" path="res://resources/svg/Bar/Line.png" id="8_x4akh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_govi0"]
+texture = ExtResource("8_x4akh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gv0q6"]
+texture = ExtResource("8_x4akh")
 
 [node name="SettingsPage" type="Node2D"]
 script = ExtResource("1_2wayq")
@@ -34,7 +44,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -40.0
+offset_bottom = -1714.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -68,4 +78,121 @@ scale = Vector2(3, 3)
 texture_normal = ExtResource("3_f2uej")
 texture_pressed = ExtResource("4_neh5v")
 
+[node name="AudioButtonControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioButton" type="TextureRect" parent="CanvasLayer/AudioButtonControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -13.525
+anchor_right = 0.5
+anchor_bottom = -13.525
+offset_left = -197.0
+offset_top = -84.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("5_fhuid")
+
+[node name="Audio Text" type="Label" parent="CanvasLayer/AudioButtonControl/AudioButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.423
+anchor_right = 0.5
+anchor_bottom = 0.423
+offset_left = -55.0
+offset_top = -20.532
+offset_right = 3.0
+offset_bottom = 2.468
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("6_wwy6w")
+text = "AUDIO"
+
+[node name="MusicSliderControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="Music Slider" type="HSlider" parent="CanvasLayer/MusicSliderControl"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.637
+anchor_top = -6.9
+anchor_right = -0.637
+anchor_bottom = -6.9
+offset_left = -248.52
+offset_top = -43.0
+offset_right = 248.48
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = ExtResource("7_qw0tp")
+theme_override_icons/grabber_highlight = ExtResource("7_qw0tp")
+theme_override_icons/grabber_disabled = ExtResource("7_qw0tp")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_govi0")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_gv0q6")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="MusicTextControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MusicTextControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.65
+anchor_top = -8.975
+anchor_right = -2.65
+anchor_bottom = -8.975
+offset_left = -168.0
+offset_top = -46.0
+offset_right = -46.0
+offset_bottom = 1.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.298039, 0.239216, 0.219608, 1)
+theme_override_fonts/font = ExtResource("6_wwy6w")
+theme_override_font_sizes/font_size = 35
+text = "Music"
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/MusicSliderControl/Music Slider" to="." method="_on_music_slider_value_changed"]

@@ -20,6 +20,10 @@ config/icon="res://ecoquest_logo.png"
 
 Global="*res://script/global.gd"
 
+[custom]
+
+slider_volume=0.256
+
 [display]
 
 window/size/viewport_width=1080
