@@ -26,7 +26,12 @@ func _on_music_slider_value_changed(value: float) -> void:
 		bus_index,
 		linear_to_db(value)
 	)
-
+	
+### Close the settings page
 func _on_close_button_pressed() -> void:
 	# Clean up the node
 	queue_free()
+
+### Open the Github repository on a browser
+func _on_github_button_pressed() -> void:
+	OS.shell_open("https://github.com/algosup/2024-2025-project-2-serious-game-team-8")

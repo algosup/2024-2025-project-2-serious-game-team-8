@@ -1,14 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://drw5ljx4fsbdx"]
+[gd_scene load_steps=15 format=3 uid="uid://drw5ljx4fsbdx"]
 
 [ext_resource type="Script" path="res://scene/settings_page.gd" id="1_2wayq"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="2_35iie"]
-[ext_resource type="Texture2D" uid="uid://d266wn84ttcyn" path="res://resources/svg/cross.svg" id="3_f2uej"]
-[ext_resource type="Texture2D" uid="uid://didfekidtqn53" path="res://resources/svg/cross_hover.svg" id="4_neh5v"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_foelt"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_a2agt"]
 [ext_resource type="Texture2D" uid="uid://c8nlcgd4sgeim" path="res://resources/svg/Button/Rect/Fill/Default.svg" id="5_fhuid"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_wwy6w"]
 [ext_resource type="Texture2D" uid="uid://uqx6thmo3fgi" path="res://resources/svg/Bar/slider.svg" id="7_7urlr"]
 [ext_resource type="Texture2D" uid="uid://d0qp1ohmkdao2" path="res://resources/svg/Bar/Background.svg" id="8_65s1p"]
 [ext_resource type="Texture2D" uid="uid://do6w35im262pi" path="res://resources/svg/Bar/Line.png" id="8_x4akh"]
+[ext_resource type="Texture2D" uid="uid://ckjs7k7m0bu64" path="res://resources/svg/github.png" id="10_2sfd5"]
+[ext_resource type="Texture2D" uid="uid://dnv1ofnbolvyt" path="res://resources/svg/github_hover.png" id="11_48ckv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkuus"]
 content_margin_left = 15.0
@@ -87,8 +89,8 @@ offset_right = -160.0
 offset_bottom = 70.0
 grow_horizontal = 0
 scale = Vector2(3, 3)
-texture_normal = ExtResource("3_f2uej")
-texture_pressed = ExtResource("4_neh5v")
+texture_normal = ExtResource("3_foelt")
+texture_pressed = ExtResource("4_a2agt")
 
 [node name="AudioButtonControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -174,6 +176,32 @@ max_value = 1.0
 step = 0.001
 value = 1.0
 
+[node name="GithubButtonControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GithubButton" type="TextureButton" parent="CanvasLayer/GithubButtonControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 584.0
+offset_right = -31.0
+offset_bottom = 668.0
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture_normal = ExtResource("10_2sfd5")
+texture_pressed = ExtResource("11_48ckv")
+
 [node name="MusicTextControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 8
@@ -209,3 +237,4 @@ text = "Music"
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="value_changed" from="CanvasLayer/MusicSliderControl/Music Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/GithubButtonControl/GithubButton" to="." method="_on_github_button_pressed"]
