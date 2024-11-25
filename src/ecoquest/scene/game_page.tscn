@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0ogv2vt64x3a"]
+[gd_scene load_steps=16 format=3 uid="uid://b0ogv2vt64x3a"]
 
 [ext_resource type="Script" path="res://script/game_page.gd" id="1_50ksb"]
 [ext_resource type="Texture2D" uid="uid://bcxb7cvix84hp" path="res://resources/background/game_bg.png" id="2_co0cp"]
@@ -10,6 +10,34 @@
 [ext_resource type="Texture2D" uid="uid://d4ljj3b3n71xf" path="res://resources/svg/Icon/Pause.svg" id="8_epgyr"]
 [ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/resume.png" id="9_cec5p"]
 [ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/visibility.png" id="9_pc4mj"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="11_i1g5n"]
+
+[sub_resource type="Animation" id="Animation_8g2nl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_od8fg"]
 resource_name = "pause"
@@ -63,33 +91,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_8g2nl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Pause/ResumeButton:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p4ctl"]
@@ -423,6 +424,30 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("9_pc4mj")
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 900.0
+
+[node name="TimerBg" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(549, 364)
+scale = Vector2(3, 3)
+texture = ExtResource("11_i1g5n")
+
+[node name="TimerText" type="Label" parent="CanvasLayer/TimerBg"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -57.5
+offset_right = -21.0
+offset_bottom = -2.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_font_sizes/font_size = 35
+text = "15:00"
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause/PauseButton" to="." method="_on_pause_button_pressed"]
