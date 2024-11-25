@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://q66v306kfprs"]
 
 [ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="1_gpfe6"]
-[ext_resource type="Script" path="res://scene/home_page.gd" id="1_qbvgi"]
+[ext_resource type="Script" path="res://home_page.gd" id="1_qbvgi"]
 [ext_resource type="Texture2D" uid="uid://bht10qg071lt1" path="res://resources/background/menu_background.png" id="2_sbdoo"]
 [ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="4_3mcu8"]
 [ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="4_xtb3p"]
