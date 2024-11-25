@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://drw5ljx4fsbdx"]
 
-[ext_resource type="Script" path="res://settings_page.gd" id="1_2wayq"]
+[ext_resource type="Script" path="res://script/settings_page.gd" id="1_2oj5p"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="2_35iie"]
 [ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_foelt"]
 [ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_a2agt"]
@@ -30,7 +30,7 @@ texture = ExtResource("8_x4akh")
 texture = ExtResource("8_x4akh")
 
 [node name="SettingsPage" type="Node2D"]
-script = ExtResource("1_2wayq")
+script = ExtResource("1_2oj5p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
