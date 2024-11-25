@@ -2,8 +2,7 @@ extends Node2D
 
 ### Close the settings page
 func _on_close_button_pressed() -> void:
-	# Clean up the node
-	queue_free()
+	get_tree().change_scene_to_file("res://scene/home_page.tscn")
 
 var visibilityOn= load("res://resources/svg/visibility.png")
 var visibilityOff= load("res://resources/svg/no-visibility.png")

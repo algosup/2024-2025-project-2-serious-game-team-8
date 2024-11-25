@@ -7,4 +7,4 @@ func _on_setting_button_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
-	print("chapter one")
+	get_tree().change_scene_to_file("res://scene/game_page.tscn")
