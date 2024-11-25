@@ -124,28 +124,98 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_co0cp")
 
-[node name="leaf1" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(480, 453)
+[node name="LeafOneControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf1" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafOneControl"]
+position = Vector2(-26, -469)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
-[node name="leaf2" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(705, 792)
+[node name="LeafTwoControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf2" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafTwoControl"]
+position = Vector2(185, -148)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
-[node name="leaf3" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(309, 927)
+[node name="LeafThreeControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf3" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafThreeControl"]
+position = Vector2(-211, -13)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
-[node name="leaf4" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(163, 560)
+[node name="LeafFourControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf4" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafFourControl"]
+position = Vector2(-357, -380)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
-[node name="leaf5" type="Sprite2D" parent="CanvasLayer/BackgroundControl"]
-position = Vector2(747, 574)
+[node name="LeafFiveControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf5" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafFiveControl"]
+position = Vector2(227, -366)
 scale = Vector2(2, 2)
 texture = ExtResource("3_8qnhd")
 
@@ -419,6 +489,7 @@ texture_normal = ExtResource("9_pc4mj")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 900.0
+autostart = true
 
 [node name="TimerControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -459,4 +530,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Code" to="." method="_on_code_pressed"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]

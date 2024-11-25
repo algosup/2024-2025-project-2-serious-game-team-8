@@ -1,0 +1,309 @@
+[gd_scene load_steps=10 format=3 uid="uid://dj2t6wt3up3mr"]
+
+[ext_resource type="Script" path="res://scene/code_page.gd" id="1_024cc"]
+[ext_resource type="Texture2D" uid="uid://bswro0u38sx8v" path="res://resources/background/backgroundcode.png" id="1_84fgg"]
+[ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="2_5b5u0"]
+[ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="3_b0e20"]
+[ext_resource type="Texture2D" uid="uid://bnctt6jxrjy67" path="res://resources/svg/Button/Square/Fill/Default-1.svg" id="5_fl28m"]
+[ext_resource type="Texture2D" uid="uid://ddttqfpdjpkp5" path="res://resources/svg/Button/Square/Fill/Hover-1.svg" id="6_diwvx"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="7_xugxh"]
+[ext_resource type="Texture2D" uid="uid://cjuwtto6ory06" path="res://resources/svg/Button/Rect/Fill/Default-1.svg" id="8_eng8g"]
+[ext_resource type="Texture2D" uid="uid://blfxh7dk75nb4" path="res://resources/svg/Button/Rect/Fill/Hover.svg" id="9_c13s8"]
+
+[node name="CodePage" type="Node2D"]
+script = ExtResource("1_024cc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_84fgg")
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1714.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="ReturnButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 14.0
+offset_right = 112.0
+offset_bottom = 98.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_5b5u0")
+texture_pressed = ExtResource("3_b0e20")
+texture_hover = ExtResource("3_b0e20")
+
+[node name="Buttons Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = 37.0
+offset_right = 423.0
+offset_bottom = 527.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonOne" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = -67.0
+offset_right = 169.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonOne"]
+layout_mode = 0
+offset_left = 30.5
+offset_top = 12.5
+offset_right = 70.5
+offset_bottom = 59.5
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "1
+"
+
+[node name="ButtonTwo" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = -67.0
+offset_right = 399.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonTwo"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.5
+offset_right = 70.0
+offset_bottom = 59.5
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "2
+"
+
+[node name="ButtonThree" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = -67.0
+offset_right = 621.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonThree"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.5
+offset_right = 70.0
+offset_bottom = 59.5
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "3
+"
+
+[node name="ButtonFour" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 173.0
+offset_right = 169.0
+offset_bottom = 257.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonFour"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "4
+"
+
+[node name="ButtonFive" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 173.0
+offset_right = 399.0
+offset_bottom = 257.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonFive"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "5"
+
+[node name="ButtonSix" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 173.0
+offset_right = 621.0
+offset_bottom = 257.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonSix"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "6"
+
+[node name="ButtonSeven" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 401.0
+offset_right = 169.0
+offset_bottom = 485.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonSeven"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "7"
+
+[node name="ButtonEight" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 401.0
+offset_right = 399.0
+offset_bottom = 485.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonEight"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.5
+offset_right = 70.0
+offset_bottom = 55.5
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 32
+text = "8"
+
+[node name="ButtonNine" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 401.0
+offset_right = 621.0
+offset_bottom = 485.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_fl28m")
+texture_hover = ExtResource("6_diwvx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/ButtonNine"]
+layout_mode = 0
+offset_left = 30.5
+offset_top = 12.0
+offset_right = 70.5
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "9"
+
+[node name="Enter" type="TextureButton" parent="CanvasLayer/Buttons Control"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 636.0
+offset_right = 388.0
+offset_bottom = 720.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_eng8g")
+texture_hover = ExtResource("9_c13s8")
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons Control/Enter"]
+layout_mode = 0
+offset_left = 10.5
+offset_top = 12.5
+offset_right = 182.5
+offset_bottom = 59.5
+theme_override_colors/font_color = Color(0.643137, 0.572549, 0.372549, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "CONFIRM"
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonOne" to="." method="_on_button_one_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonTwo" to="." method="_on_button_two_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonThree" to="." method="_on_button_three_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonFour" to="." method="_on_button_four_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonFive" to="." method="_on_button_five_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonSix" to="." method="_on_button_six_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonSeven" to="." method="_on_button_seven_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonEight" to="." method="_on_button_eight_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/ButtonNine" to="." method="_on_button_nine_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons Control/Enter" to="." method="_on_enter_pressed"]

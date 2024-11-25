@@ -1,12 +1,17 @@
 extends Node2D
 
 var is_paused: bool = false
+var initial_time: float = 900.0  # Initial time in seconds (15 minutes)
+
 func _ready() -> void:
+	$CanvasLayer/Timer.wait_time = initial_time  # Set the timer's countdown time
 	$CanvasLayer/Timer.start()
+	
 func _process(delta: float) -> void:
-	var minutes = int($CanvasLayer/Timer.time_left / 60) # Get the minutes 
-	var seconds = int(fmod($CanvasLayer/Timer.time_left,  60)) # Get the seconds 
+	var minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
+	var seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 	$CanvasLayer/TimerControl/TimerBg/TimerText.text = str(minutes)+':'+str(seconds)
+	_removing_leaves()
 
 
 ### Close the settings page
@@ -37,3 +42,19 @@ func _on_pause_pressed() -> void:
 		is_paused = false
 		$CanvasLayer/Timer.paused=false
 		$CanvasLayer/GameControls/PauseAnimation.play("RESET")
+		
+func _removing_leaves() -> void:
+	if $CanvasLayer/Timer.time_left < 720:
+		$CanvasLayer/BackgroundControl/leaf5.visible = false
+	if $CanvasLayer/Timer.time_left < 540:
+		$CanvasLayer/BackgroundControl/leaf4.visible = false
+	if $CanvasLayer/Timer.time_left < 360:
+		$CanvasLayer/BackgroundControl/leaf3.visible = false
+	if $CanvasLayer/Timer.time_left < 180:
+		$CanvasLayer/BackgroundControl/leaf2.visible = false
+	if $CanvasLayer/Timer.time_left <= 0:
+		$CanvasLayer/BackgroundControl/leaf1.visible = false
+
+
+func _on_code_pressed() -> void:
+	add_child(Global.code_page.instantiate())
