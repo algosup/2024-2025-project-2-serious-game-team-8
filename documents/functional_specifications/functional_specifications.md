@@ -155,7 +155,7 @@ This scope balances ambitious features with achievable exclusions, paving the wa
 
 #### 1.3.4. Target Audience
 
-- **Teenagers & Young Adults:** Teenagers willing to expand their general knowledge or to delve deeper into cliamte change understanding.
+- **Teenagers & Young Adults:** Teenagers willing to expand their general knowledge or to delve deeper into climate change understanding.
 - **Families:** Families wanting to spend a great time in an adventure together while gaining general knowledge and doing some brain exercises.
 
 #### 1.3.5. Deliverables
@@ -390,7 +390,7 @@ All the mockups are available on Figma for both the app to be develop and the ca
 ### 2.4.3. App-Card Integration
 
 #### 2.4.3.1. Code Validation
-- Cards will include **unique alphanumeric codes** (4-6 characters) to be enteGreen into the app. These codes trigger:
+- Cards will include **unique alphanumeric codes** (4-6 characters) to be entered into the app. These codes trigger:
   - Unlocking new puzzles.
   - Progression in the story.
   - Hint systems or penalties.
