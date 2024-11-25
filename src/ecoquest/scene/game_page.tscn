@@ -247,14 +247,6 @@ visible = false
 position = Vector2(150, 217)
 texture = ExtResource("9_cec5p")
 
-[node name="PauseButton" type="Button" parent="CanvasLayer/GameControls/Pause"]
-layout_mode = 0
-offset_left = 92.0
-offset_top = 15.0
-offset_right = 211.0
-offset_bottom = 300.0
-flat = true
-
 [node name="Hint" type="TextureButton" parent="CanvasLayer/GameControls"]
 layout_mode = 1
 anchors_preset = 7
@@ -428,27 +420,43 @@ texture_normal = ExtResource("9_pc4mj")
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 900.0
 
-[node name="TimerBg" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(549, 364)
-scale = Vector2(3, 3)
-texture = ExtResource("11_i1g5n")
-
-[node name="TimerText" type="Label" parent="CanvasLayer/TimerBg"]
+[node name="TimerControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -123.0
-offset_top = -57.5
-offset_right = -21.0
-offset_bottom = -2.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerBg" type="Sprite2D" parent="CanvasLayer/TimerControl"]
+position = Vector2(25, -570)
+scale = Vector2(3, 3)
+texture = ExtResource("11_i1g5n")
+
+[node name="TimerText" type="Label" parent="CanvasLayer/TimerControl/TimerBg"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -58.1667
+offset_right = -18.0
+offset_bottom = -3.16666
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
 theme_override_font_sizes/font_size = 35
 text = "15:00"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/GameControls/Pause/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]
