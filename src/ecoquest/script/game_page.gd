@@ -58,3 +58,7 @@ func _removing_leaves() -> void:
 
 func _on_code_pressed() -> void:
 	add_child(Global.code_page.instantiate())
+
+
+func _on_setting_button_pressed() -> void:
+	add_child(Global.settings.instantiate())
