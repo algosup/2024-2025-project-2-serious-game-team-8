@@ -17,10 +17,18 @@ func _process(_delta: float) -> void:
 		seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 		_removing_leaves()
 		time_low_warning()
-	elif $CanvasLayer/IncrementTimer.is_stopped():
-		$CanvasLayer/IncrementTimer.start()
-
-	$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+		if(has_node("CodePage")):
+			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
+		else:
+			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
+			
+	else:
+		if $CanvasLayer/IncrementTimer.is_stopped():
+			$CanvasLayer/IncrementTimer.start()
+		if(has_node("CodePage")):
+			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+		else:
+			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 
 
 ### Close the settings page
@@ -63,7 +71,7 @@ func _removing_leaves() -> void:
 		$CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible = false
 	if $CanvasLayer/Timer.time_left < 180 && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
 		$CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible = false
-	if $CanvasLayer/Timer.time_left <= 0 && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
+	if $CanvasLayer/Timer.time_left <= 1 && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
 		$CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible = false
 
 

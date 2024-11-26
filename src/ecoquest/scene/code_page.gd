@@ -1,11 +1,8 @@
 extends Node2D
 
 
-func _process(_delta: float) -> void:
-	var minutes = int(get_parent().get_node("CanvasLayer").get_node("Timer").time_left / 60)  # Get the minutes
-	var seconds = int(fmod(get_parent().get_node("CanvasLayer").get_node("Timer").time_left, 60))  # Get the seconds
-	$CanvasLayer/TimerControl/TimerBg/TimerText.text = str(minutes) + ":" + str(seconds)
-
+func _ready() -> void:
+	$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate 
 
 func _on_return_button_pressed() -> void:
 	queue_free()
