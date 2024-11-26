@@ -32,6 +32,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 window/handheld/orientation=1
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdscript_formatter/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="mobile"

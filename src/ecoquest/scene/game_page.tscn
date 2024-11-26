@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cikema3s7ltca" path="res://resources/svg/Circle.png" id="6_qtagr"]
 [ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="7_mpjea"]
 [ext_resource type="Texture2D" uid="uid://d4ljj3b3n71xf" path="res://resources/svg/Icon/Pause.svg" id="8_epgyr"]
-[ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/resume.png" id="9_cec5p"]
+[ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/Icon/resume.png" id="9_cec5p"]
 [ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/visibility.png" id="9_pc4mj"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="11_i1g5n"]
 
