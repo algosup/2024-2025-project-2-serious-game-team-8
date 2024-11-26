@@ -59,7 +59,7 @@ func _on_input_pressed(buttonID: int) -> void:
 
 
 func _on_enter_button_pressed() -> void:
-	if(get_node(input1).text=="1" && get_node(input2).text=="2" && get_node(input3).text=="3" && get_node(input4).text=="4"):
+	if(get_node(input1).text=="4" && get_node(input2).text=="7" && get_node(input3).text=="3" && get_node(input4).text=="2"):
 		print("success")
 	else:
 		print("failure")
