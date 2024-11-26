@@ -98,3 +98,8 @@ func _on_increment_timer_timeout() -> void:
 		seconds=0
 		minutes+=1
 		
+
+func _beat_chapter_1() -> void: 
+	if Global.beat_chapter1 == true: 
+		add_child(Global.chapter_one_completion_page)
+		
