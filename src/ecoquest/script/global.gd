@@ -11,5 +11,5 @@ var music_slider_value: float = 1.0  # Default volume value
 func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

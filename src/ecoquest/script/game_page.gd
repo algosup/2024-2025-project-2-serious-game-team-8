@@ -7,11 +7,12 @@ func _ready() -> void:
 	$CanvasLayer/Timer.wait_time = initial_time  # Set the timer's countdown time
 	$CanvasLayer/Timer.start()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
 	var seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 	$CanvasLayer/TimerControl/TimerBg/TimerText.text = str(minutes)+':'+str(seconds)
 	_removing_leaves()
+	time_low_warning()
 
 
 ### Close the settings page
@@ -55,6 +56,9 @@ func _removing_leaves() -> void:
 	if $CanvasLayer/Timer.time_left <= 0:
 		$CanvasLayer/BackgroundControl/leaf1.visible = false
 
+func time_low_warning() -> void: 
+	if $CanvasLayer/Timer.time_left <= 120:
+		$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = Color(1, 0, 0)  # Set text to red
 
 func _on_code_pressed() -> void:
 	add_child(Global.code_page.instantiate())
