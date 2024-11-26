@@ -505,7 +505,10 @@ texture_normal = ExtResource("9_pc4mj")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 900.0
+one_shot = true
 autostart = true
+
+[node name="IncrementTimer" type="Timer" parent="CanvasLayer"]
 
 [node name="TimerControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -549,3 +552,5 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Code" to="." method="_on_code_pressed"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/IncrementTimer" to="." method="_on_increment_timer_timeout"]
