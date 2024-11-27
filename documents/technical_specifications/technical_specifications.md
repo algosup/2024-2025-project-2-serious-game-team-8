@@ -165,15 +165,15 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 
 - Scene Structure 
 
-```text
-SplashScreen # Root node for the splash screen.  
-├── CanvasLayer # Keeps UI fixed.  
+```plaintext
+SplashScreen # Root node for the splash screen. 
+├── CanvasLayer # Keeps UI fixed. 
 │ ├── BackgroundControl # Manages the background.  
-│ │ ├── ColorRect # Solid background color.  
-│ ├── LogoControl # Displays the logo.  
-│ │ ├── Logo # Game logo graphic.  
-│ ├── TextControl # Handles text display.  
-│ │ ├── Label # Loading or subtitle text.  
+│ │ ├── ColorRect # Solid background color. 
+│ ├── LogoControl # Displays the logo.
+│ │ ├── Logo # Game logo graphic.
+│ ├── TextControl # Handles text display.
+│ │ ├── Label # Loading or subtitle text.
 ├── LoadingTime # Loading animation or cue.  
 ```
 
@@ -228,7 +228,7 @@ Acts as the main hub for the app, allowing users to start the game or access the
 
 - Scene Structure 
 
-```text
+```plaintext
 HomePage # Root node for the home page interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages the background visuals.  
@@ -265,7 +265,7 @@ Provides options for the user to adjust audio settings and view the app’s GitH
 
 - Scene Structure 
 
-```text
+```plaintext
 SettingsPage # Root node for the settings page interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages the background visuals.  
@@ -323,7 +323,7 @@ Allows the user to select a chapter to play. Only the first chapter is unlocked 
 
 - Scene Structure
 
-```text
+```plaintext
 ChaptersSelection # Root node for the chapter selection screen.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages the background visuals.  
@@ -365,7 +365,8 @@ func _on_button_pressed() -> void:
 The primary gameplay screen where players review hints, interact with the environment, manage time, and solve puzzles.
 
 - Scene Structure 
-```text
+
+```plaintext
 GamePage # Root node for the main game interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages background visuals.  
@@ -521,7 +522,7 @@ func _beat_chapter_1() -> void:
 Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
 - Scene Structure
-```text
+```plaintext
 CodePage # Root node for the code page interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundColor # Manages the background color of the page.  
@@ -652,8 +653,8 @@ func _on_enter_button_pressed() -> void:
 Displays a congratulatory message to the player for successfully solving the puzzle by entering the correct combination.
 
 - Scene Structure
-```text
-ChapterOneWin #
+```plaintext
+ChapterOneWin 
 ├── CanvasLayer # Manages the visual elements
 | ├── BackgroundControl # Controls background display
 | | ├── BackgroundColor # Sets the background color
@@ -677,8 +678,8 @@ func _on_close_button_pressed() -> void:
 Alerts the player when an incorrect code is entered and penalizes them by deducting time from the countdown timer (feature pending implementation).
 
 - Scene structure
-```text
-ChapterOneWin #
+```plaintext
+ChapterOneWin 
 ├── CanvasLayer # Manages the visual elements
 | ├── BackgroundControl # Controls background display
 | | ├── BackgroundColor # Sets the background color
