@@ -206,15 +206,15 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 - Scene Structure 
 
 ```gdsrcipt 
-SplashScreen # Root node for the splash screen. 
-├── CanvasLayer # Keeps UI fixed. 
-│ ├── BackgroundControl # Manages the background.  
-│ │ ├── ColorRect # Solid background color. 
-│ ├── LogoControl # Displays the logo.
-│ │ ├── Logo # Game logo graphic.
-│ ├── TextControl # Handles text display.
-│ │ ├── Label # Loading or subtitle text.
-├── LoadingTime # Loading animation or cue.  
+SplashScreen #Root node for the splash screen. 
+├── CanvasLayer #Keeps UI fixed. 
+│ ├── BackgroundControl #Manages the background.  
+│ │ ├── ColorRect #Solid background color. 
+│ ├── LogoControl #Displays the logo.
+│ │ ├── Logo #Game logo graphic.
+│ ├── TextControl #Handles text display.
+│ │ ├── Label #Loading or subtitle text.
+├── LoadingTime #Loading animation or cue.  
 ```
 
 - Code implementation
