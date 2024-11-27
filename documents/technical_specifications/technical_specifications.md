@@ -194,7 +194,7 @@ The folder structure of the serious game project will be defined as follows, acc
 │  ├─ home_page.tscn
 │  ├─ settings_page.tscn
 │  └─ splash_screen.tscn
-├─ default_bus_layout.t
+├─ default_bus_layout.
 └─ ecoquest_logo.png
 ```
 ## Data structures
@@ -205,7 +205,7 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 
 - Scene Structure 
 
-```markdown
+```gdsrcipt 
 SplashScreen # Root node for the splash screen. 
 ├── CanvasLayer # Keeps UI fixed. 
 │ ├── BackgroundControl # Manages the background.  
