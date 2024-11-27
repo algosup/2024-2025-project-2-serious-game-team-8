@@ -64,11 +64,13 @@ The document should also benefit other stakeholders and project owners by giving
 
 # Glossary
 
-- **Hybrid Game:** A game combining physical and digital elements.
-- **Godot Engine:** The game engine used for development.
-- **Functional Requirements:** The "what" of the project, defining features and scope.
-- **Technical Specifications:** The "how" of the project, detailing implementation and architecture.
-- **Serious Game:** A game designed for educational purposes, such as climate change awareness.
+| Name | Description | 
+| -- | --|
+| **Hybrid Game:** | A game combining physical and digital elements. |
+| **Godot Engine:** | The game engine used for development. |
+| **Functional Requirements:** | The "what" of the project, defining features and scope. |
+| **Technical Specifications:** | The "how" of the project, detailing implementation and architecture. |
+| **Serious Game:** | A game designed for educational purposes, such as climate change awareness. |
 
 # Project Overview 
 
