@@ -165,7 +165,7 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 
 - Scene Structure 
 
-```plaintext
+```markdown
 SplashScreen # Root node for the splash screen. 
 ├── CanvasLayer # Keeps UI fixed. 
 │ ├── BackgroundControl # Manages the background.  
@@ -229,7 +229,7 @@ Acts as the main hub for the app, allowing users to start the game or access the
 - Scene Structure 
 
 ```plaintext
-HomePage # Root node for the home page interface.  
+HomePage #Root node for the home page interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages the background visuals.  
 │ │ ├── TextureRect # Displays the background image.  
@@ -265,8 +265,8 @@ Provides options for the user to adjust audio settings and view the app’s GitH
 
 - Scene Structure 
 
-```plaintext
-SettingsPage # Root node for the settings page interface.  
+```markdown
+SettingsPage #Root node for the settings page interface.  
 ├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
 │ ├── BackgroundControl # Manages the background visuals.  
 │ │ ├── TextureRect # Displays the background image.  
