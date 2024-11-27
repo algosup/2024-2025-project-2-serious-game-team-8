@@ -8,14 +8,24 @@ var is_paused: bool = false
 ### This variable represents the seconds of the timer
 @export var seconds: int
 
+### This variable checks if the chapter is finished, it resets when the chapter is selected
+@export var is_chapter_finished=false
 
 func _ready() -> void:
 	minutes = 0
 	seconds = 0
+	$CanvasLayer/Timer.start(900)
 
 
 func _process(_delta: float) -> void:
-	if $CanvasLayer/Timer.is_stopped() == false && $CanvasLayer/Timer.time_left >= 1 or Global.beat_chapter1 == true:
+	if is_chapter_finished:
+		if $CanvasLayer/Timer.is_stopped() == false:
+			minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
+			seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
+			$CanvasLayer/Timer.stop()
+		else:
+			$CanvasLayer/IncrementTimer.stop()
+	elif $CanvasLayer/Timer.is_stopped() == false && $CanvasLayer/Timer.time_left >= 1:
 		minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
 		seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 		_removing_leaves()
@@ -32,7 +42,6 @@ func _process(_delta: float) -> void:
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
-	_beat_chapter_1()
 
 ### Close the settings page
 func _on_close_button_pressed() -> void:
@@ -101,13 +110,6 @@ func _on_increment_timer_timeout() -> void:
 		seconds=0
 		minutes+=1
 		
-
-func _beat_chapter_1() -> void: 
-	if Global.beat_chapter1 == true: 
-		$CanvasLayer/Timer.stop()
-		if $CanvasLayer/IncrementTimer:
-			$CanvasLayer/IncrementTimer.stop()
-
 
 func remove_time() -> void:
 	var time_left = $CanvasLayer/Timer.time_left
