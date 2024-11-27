@@ -1,5 +1,7 @@
 extends Node2D
 
 
-func _on_close_button_pressed() -> void:
-	queue_free()
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			queue_free()

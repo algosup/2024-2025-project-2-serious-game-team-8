@@ -2,8 +2,11 @@ extends Node2D
 
 var is_paused: bool = false
 
-var minutes: int
-var seconds: int
+### This variable represents the minutes of the timer
+@export var minutes: int
+
+### This variable represents the seconds of the timer
+@export var seconds: int
 
 
 func _ready() -> void:
