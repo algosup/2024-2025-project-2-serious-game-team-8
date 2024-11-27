@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if $CanvasLayer/Timer.is_stopped() == false && $CanvasLayer/Timer.time_left >= 1:
+	if $CanvasLayer/Timer.is_stopped() == false && $CanvasLayer/Timer.time_left >= 1 or Global.beat_chapter1 == true:
 		minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
 		seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 		_removing_leaves()
@@ -74,7 +74,7 @@ func _removing_leaves() -> void:
 		$CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible = false
 	if $CanvasLayer/Timer.time_left < 180 && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
 		$CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible = false
-	if $CanvasLayer/Timer.time_left <= 1 && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
+	if $CanvasLayer/Timer.time_left < 60 && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
 		$CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible = false
 
 
