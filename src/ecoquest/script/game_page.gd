@@ -11,6 +11,7 @@ var is_paused: bool = false
 ### This variable checks if the chapter is finished, it resets when the chapter is selected
 @export var is_chapter_finished=false
 
+
 func _ready() -> void:
 	minutes = 0
 	seconds = 0
@@ -75,15 +76,16 @@ func _on_pause_pressed() -> void:
 
 
 func _removing_leaves() -> void:
-	if $CanvasLayer/Timer.time_left < 720 && $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
+	var time_left = $CanvasLayer/Timer.wait_time
+	if $CanvasLayer/Timer.time_left < (time_left * 0.80) && $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
 		$CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible = false
-	if $CanvasLayer/Timer.time_left < 540 && $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
+	if $CanvasLayer/Timer.time_left < (time_left * 0.60) && $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
 		$CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible = false
-	if $CanvasLayer/Timer.time_left < 360 && $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible:
+	if $CanvasLayer/Timer.time_left < (time_left * 0.40) && $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible:
 		$CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible = false
-	if $CanvasLayer/Timer.time_left < 180 && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
+	if $CanvasLayer/Timer.time_left < (time_left * 0.20) && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
 		$CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible = false
-	if $CanvasLayer/Timer.time_left < 60 && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
+	if $CanvasLayer/Timer.time_left < (time_left * 0.05) && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
 		$CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible = false
 
 
