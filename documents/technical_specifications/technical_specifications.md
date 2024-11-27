@@ -280,7 +280,7 @@ HomePage #Root node for the home page interface.
 │ ├── LogoControl # Displays the game logo.  
 │ │ ├── Logo # Game logo graphic.  
 │ ├── ButtonControl # Manages main menu buttons.  
-│ │ ├── textureButton # Main button for navigation or interaction.  
+│ │ ├── TextureButton # Main button for navigation or interaction.  
 ├── MenuMusic # Plays the home page background music.  
 ```
 
