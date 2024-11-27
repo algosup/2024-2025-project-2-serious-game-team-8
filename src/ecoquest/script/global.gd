@@ -7,8 +7,13 @@ var win_page = preload("res://scene/code_win_page.tscn")
 var game_page = preload("res://scene/game_page.tscn")
 var error_page = preload("res://scene/code_error_page.tscn")
 var chapter_one_completion_page = preload("res://scene/chapter_one_win.tscn")
+var work_in_progress_page = preload("res://scene/work_in_progress_pop_up.tscn")
+var chapter_locked = preload("res://scene/locked_chapter.tscn")
 
 var beat_chapter1: bool = false
+var beat_chapter2: bool = false
+var beat_chapter3: bool = false
+
 
 
 var screen_size: Vector2 = Vector2()  # Initialize screen_size as a Vector2

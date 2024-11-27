@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnpvjxnw4l2ca"]
+[gd_scene load_steps=5 format=3 uid="uid://dkcny8yyextey"]
 
-[ext_resource type="Script" path="res://script/code_win_page.gd" id="1_3ea0g"]
-[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="1_u3sof"]
-[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_b5dck"]
-[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_n3hds"]
+[ext_resource type="Script" path="res://script/locked_chapter.gd" id="1_hrotc"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_glqhp"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_n15lm"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_skcg4"]
 
-[node name="CodeWinPage" type="Node2D"]
-script = ExtResource("1_3ea0g")
+[node name="LockedChapter" type="Node2D"]
+script = ExtResource("1_hrotc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -73,13 +73,10 @@ offset_right = 247.0
 offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_u3sof")
+theme_override_fonts/font = ExtResource("2_glqhp")
 theme_override_font_sizes/font_size = 32
-text = "Congratulations!
-
-You've beaten this level.
-
-close this page to go back to the chapter selection"
+text = "Finish the previous chapter(s) to unlock this one!"
+vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
@@ -100,8 +97,8 @@ offset_top = 52.0
 offset_right = -74.0
 offset_bottom = 102.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("3_b5dck")
-texture_hover = ExtResource("4_n3hds")
+texture_normal = ExtResource("3_n15lm")
+texture_hover = ExtResource("4_skcg4")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]

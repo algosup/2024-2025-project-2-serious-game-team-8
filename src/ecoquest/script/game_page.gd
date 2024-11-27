@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
-
+	_beat_chapter_1()
 
 ### Close the settings page
 func _on_close_button_pressed() -> void:
@@ -101,5 +101,6 @@ func _on_increment_timer_timeout() -> void:
 
 func _beat_chapter_1() -> void: 
 	if Global.beat_chapter1 == true: 
-		add_child(Global.chapter_one_completion_page)
-		
+		$CanvasLayer/Timer.stop()
+		if $CanvasLayer/IncrementTimer:
+			$CanvasLayer/IncrementTimer.stop()

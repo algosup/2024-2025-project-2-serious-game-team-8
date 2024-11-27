@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3dwgpo3xkmpd"]
+[gd_scene load_steps=11 format=3 uid="uid://b3dwgpo3xkmpd"]
 
 [ext_resource type="Script" path="res://script/chapters_selection.gd" id="1_isrpi"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="1_up845"]
 [ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="3_qlydm"]
 [ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="4_35b5x"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="5_5owiw"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="5_gmpmu"]
 [ext_resource type="Texture2D" uid="uid://b3a34xecqal02" path="res://resources/chapterImages/chapter1img.png" id="6_sst5g"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="6_wpkta"]
 [ext_resource type="Texture2D" uid="uid://3cc5015rsdq1" path="res://resources/chapterImages/chapter2img.png" id="7_tif53"]
 [ext_resource type="Texture2D" uid="uid://lf5e68srctih" path="res://resources/chapterImages/chapter3img.png" id="8_x4uxa"]
 
@@ -69,6 +71,32 @@ grow_vertical = 2
 scale = Vector2(3, 3)
 texture_normal = ExtResource("3_qlydm")
 texture_pressed = ExtResource("4_35b5x")
+
+[node name="BackButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.012
+anchor_top = 2.512
+anchor_right = -2.012
+anchor_bottom = 2.512
+offset_left = -72.52
+offset_top = -72.48
+offset_right = -22.52
+offset_bottom = -22.48
+scale = Vector2(2.9, 2.9)
+texture_normal = ExtResource("5_gmpmu")
+texture_hover = ExtResource("6_wpkta")
+metadata/_edit_use_anchors_ = true
 
 [node name="ChapterOneTextControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -227,6 +255,12 @@ scale = Vector2(1.2, 1.2)
 pivot_offset = Vector2(320, 106)
 texture = ExtResource("7_tif53")
 
+[node name="ChapterTwoButton" type="Button" parent="CanvasLayer/ChapterTwoImgControl/ChapterTwoImage"]
+layout_mode = 0
+offset_right = 649.0
+offset_bottom = 252.0
+flat = true
+
 [node name="ChapterThreeImgControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 8
@@ -258,5 +292,14 @@ scale = Vector2(1.2, 1.2)
 pivot_offset = Vector2(320, 106)
 texture = ExtResource("8_x4uxa")
 
+[node name="ChapterThreeButton" type="Button" parent="CanvasLayer/ChapterThreeImgControl/ChapterThreeImage"]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 252.0
+flat = true
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/ChapterOneImgControl/ChapterOneImage/ChapterOneButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ChapterOneImgControl/ChapterOneImage/ChapterOneButton" to="." method="_on_chapter_one_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ChapterTwoImgControl/ChapterTwoImage/ChapterTwoButton" to="." method="_on_chapter_two_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ChapterThreeImgControl/ChapterThreeImage/ChapterThreeButton" to="." method="_on_chapter_three_button_pressed"]
