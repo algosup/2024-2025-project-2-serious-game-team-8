@@ -21,9 +21,11 @@ func _change_image_resource() -> void:
 		var image_node = $CanvasLayer/ChapterTwoImgControl/ChapterTwoImage
 		image_node.texture = new_image_chapter_two_texture
 
-
 func _on_chapter_one_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/game_page.tscn")
+	var tutorial= preload("res://scene/game_page.tscn")
+	var tutorial_instance= tutorial.instantiate()
+	tutorial_instance.current_chapter=0
+	get_tree().change_scene_to_packed(tutorial)
 
 
 func _on_chapter_two_button_pressed() -> void:

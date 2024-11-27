@@ -9,13 +9,17 @@ var is_paused: bool = false
 @export var seconds: int
 
 ### This variable checks if the chapter is finished, it resets when the chapter is selected
-@export var is_chapter_finished=false
+@export var is_chapter_finished: bool=false
 
+### this variable represents the current chapter
+@export var current_chapter: int = 0
+
+var time_limits= [600,900,1200]
 
 func _ready() -> void:
 	minutes = 0
 	seconds = 0
-	$CanvasLayer/Timer.start(900)
+	$CanvasLayer/Timer.start(time_limits[current_chapter])
 
 
 func _process(_delta: float) -> void:
@@ -76,16 +80,16 @@ func _on_pause_pressed() -> void:
 
 
 func _removing_leaves() -> void:
-	var time_left = $CanvasLayer/Timer.wait_time
-	if $CanvasLayer/Timer.time_left < (time_left * 0.80) && $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
+	var max_time = time_limits[current_chapter]
+	if $CanvasLayer/Timer.time_left < (max_time * 0.8) && $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
 		$CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible = false
-	if $CanvasLayer/Timer.time_left < (time_left * 0.60) && $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
+	if $CanvasLayer/Timer.time_left < (max_time * 0.6) && $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
 		$CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible = false
-	if $CanvasLayer/Timer.time_left < (time_left * 0.40) && $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible:
+	if $CanvasLayer/Timer.time_left < (max_time * 0.4) && $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible:
 		$CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible = false
-	if $CanvasLayer/Timer.time_left < (time_left * 0.20) && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
+	if $CanvasLayer/Timer.time_left < (max_time * 0.2) && $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
 		$CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible = false
-	if $CanvasLayer/Timer.time_left < (time_left * 0.05) && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
+	if $CanvasLayer/Timer.time_left < (max_time * 0.1) && $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
 		$CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible = false
 
 
