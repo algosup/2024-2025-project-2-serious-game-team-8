@@ -125,7 +125,7 @@ offset_right = 170.48
 offset_bottom = -8.0
 theme_override_fonts/font = ExtResource("5_5owiw")
 theme_override_font_sizes/font_size = 60
-text = "CHAPTER 1"
+text = "INTRODUCTION	"
 
 [node name="ChapterTwoTextControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -154,7 +154,7 @@ offset_right = 172.48
 offset_bottom = 437.0
 theme_override_fonts/font = ExtResource("5_5owiw")
 theme_override_font_sizes/font_size = 60
-text = "CHAPTER 2
+text = "CHAPTER 1
 "
 
 [node name="ChapterThreeTextControl" type="Control" parent="CanvasLayer"]
@@ -184,8 +184,7 @@ offset_right = 172.48
 offset_bottom = 877.0
 theme_override_fonts/font = ExtResource("5_5owiw")
 theme_override_font_sizes/font_size = 60
-text = "CHAPTER 3
-"
+text = "CHAPTER 2"
 
 [node name="ChapterOneImgControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3

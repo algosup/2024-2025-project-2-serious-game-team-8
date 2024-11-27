@@ -66,13 +66,7 @@ func _on_enter_button_pressed() -> void:
 	else:
 		add_child(Global.error_page.instantiate())
 		var time_left = get_parent().get_child(0).get_node("Timer").time_left
-		if time_left > 60:
-			get_parent().get_child(0).get_node("Timer").start(time_left - 60)
-		else:
-			if get_parent().get_child(0).get_node("Timer").time_left > 0:
-				get_parent().seconds = get_parent().get_child(0).get_node("Timer").time_left
-				get_parent().get_child(0).get_node("Timer").stop()
-			else:
-				get_parent().minutes = get_parent().minutes + 1
+		get_parent().remove_time()
+		if time_left <= 60:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.modulate =  Color(1, 0, 0)
 		

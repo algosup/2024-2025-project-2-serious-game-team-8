@@ -107,3 +107,15 @@ func _beat_chapter_1() -> void:
 		$CanvasLayer/Timer.stop()
 		if $CanvasLayer/IncrementTimer:
 			$CanvasLayer/IncrementTimer.stop()
+
+
+func remove_time() -> void:
+	var time_left = $CanvasLayer/Timer.time_left
+	if time_left > 60:
+		$CanvasLayer/Timer.start(time_left - 60)
+	else:
+		if $CanvasLayer/Timer.time_left > 0:
+			seconds = time_left
+			$CanvasLayer/Timer.stop()
+		else:
+			minutes = minutes + 1

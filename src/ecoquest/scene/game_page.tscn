@@ -398,7 +398,7 @@ theme_override_fonts/font = ExtResource("6_berp6")
 theme_override_font_sizes/font_size = 50
 text = "Code"
 
-[node name="Object" type="TextureButton" parent="CanvasLayer/GameControls"]
+[node name="Penality" type="TextureButton" parent="CanvasLayer/GameControls"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -413,7 +413,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_qtagr")
 
-[node name="Label" type="Label" parent="CanvasLayer/GameControls/Object"]
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/Penality"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -429,7 +429,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_berp6")
 theme_override_font_sizes/font_size = 50
-text = "Objects"
+text = "PENALITY"
 
 [node name="View" type="TextureButton" parent="CanvasLayer/GameControls"]
 layout_mode = 1
@@ -550,6 +550,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Code" to="." method="_on_code_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Penality" to="." method="remove_time"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/IncrementTimer" to="." method="_on_increment_timer_timeout"]
