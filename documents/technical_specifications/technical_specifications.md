@@ -9,6 +9,44 @@
 | Software Developer | Aurélien FERNANDEZ | ✅         | 11/21/2024 |
 | Quality Assurance  | Mathis KAKAL       | ✅         | 11/21/2024 |
 
+<details>
+<summary>
+Table of content
+</summary>
+
+ - [1. Introduction](#1-introduction)
+     - [Document Purpose & Definition](#document-purpose--definition)
+     - [Glossary](#glossary)
+     - [Project Overview](#project-overview)
+         - [Project Brief](#project-brief)
+         - [Requirements](#requirements)
+         - [setting up the development environment](#setting-up-the-development-environment)
+             - [Hardware Requirements](#hardware-requirements)
+             - [Software Requirements](#software-requirements)
+             - [Coding Methodology](#coding-methodology)
+                 - [Workflow](#workflow)
+                 - [Coding Conventions](#coding-conventions)
+                 - [Commenting Conventions](#commenting-conventions)
+                 - [Documenting Conventions](#documenting-conventions)
+    - [Setting up the game](#setting-up-the-game)
+         - [Hardware Requirements](#hardware-requirements-1)
+         - [Software Requirements](#software-requirements-1)
+ - [Technical Specifications](#2-technical-specifications)
+     - [Folder Structure](#folder-structure)
+     - [Data Structures](#data-structures)
+         - [Splash Screen](#splash-screen)
+         - [Home Page](#home-page)
+         - [Settings Page](#settings-page)
+         - [Chapter Select](#chapter-select)
+         - [Game Page](#game-page)
+         - [Code Page](#code-page)
+         - [Code Win Page](#code-win-page)
+         - [Code Error Page](#code-error-page)
+
+</details>
+
+
+
 # 1. Introduction
 
 # Document Purpose & Definition
@@ -72,7 +110,7 @@ The first step is to set up the development environment, which we can define as 
 
 As this game combines a mobile app with a card game, the focus is split between the app’s development and the implementation of the cards. For details about the cards and their functionality, refer to the [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/blob/main/documents/functional_specifications/functional_specifications.md). This section will focus primarily on the app’s implementation.
 
-#### <ins>Coding conventions</ins>
+#### <ins>Coding Conventions</ins>
 
 1. **Variables and constants**
 	- Use snake_case for variables and UPPERCASE_WITH_UNDERSCORES for constants.
