@@ -1,14 +1,3 @@
-
-| Role               | Name               | Signature | Date       |
-| ------------------ | ------------------ | --------- | ---------- |
-| Project Manager    | Maxime THIZEAU     | ✅         | 11/21/2024 |
-| Program Manager    | Benoît DE KEYN     | ✅         | 11/21/2024 |
-| Tech Lead          | Pavlo PRENDI       | ✅         | 11/21/2024 |
-| Technical Writer   | Antoine PREVOST    | ✅         | 11/21/2024 |
-| Software Developer | Thibaud MARLIER    | ✅         | 11/21/2024 |
-| Software Developer | Aurélien FERNANDEZ | ✅         | 11/21/2024 |
-| Quality Assurance  | Mathis KAKAL       | ✅         | 11/21/2024 |
-
 <details>
 <summary>
 Table of content
@@ -16,7 +5,6 @@ Table of content
 
  - [1. Introduction](#1-introduction)
      - [Document Purpose & Definition](#document-purpose--definition)
-     - [Glossary](#glossary)
      - [Project Overview](#project-overview)
          - [Project Brief](#project-brief)
          - [Requirements](#requirements)
@@ -42,6 +30,7 @@ Table of content
          - [Code Page](#code-page)
          - [Code Win Page](#code-win-page)
          - [Code Error Page](#code-error-page)
+     - [Glossary](#glossary)
 
 </details>
 
@@ -61,16 +50,6 @@ In a sense, while the Functional Requirements represent the "What/Why" aspect of
 With that being said, we will try to cover as many functional and non-functional aspects of the project while making technological and architectural decisions, evaluating those decisions, measuring their associated risks and impact (providing mitigation) and compare those to other potential solutions.
 
 The document should also benefit other stakeholders and project owners by giving insight into our methodology and may serve as a future reference for maintenance or simple documentation purposes.
-
-# Glossary
-
-| Name | Description | 
-| -- | --|
-| **Hybrid Game** | A game combining physical and digital elements. |
-| **Godot Engine** | The game engine used for development. |
-| **Functional Requirements** | The "what" of the project, defining features and scope. |
-| **Technical Specifications** | The "how" of the project, detailing implementation and architecture. |
-| **Serious Game** | A game designed for educational purposes, such as climate change awareness. |
 
 # Project Overview 
 
@@ -165,37 +144,37 @@ The folder structure of the serious game project will be defined as follows, acc
 
 ```
 📦 res://
-├─ addons
-│  └─ gdscript_formatter
-├─ resources
-│  ├─ background
-│  ├─ chapterImages
-│  ├─ font
-│  ├─ musics
-│  └─ svg
-├─ script
-│  ├─ chapters_selection.gd
-│  ├─ code_error_message.gd
-│  ├─ code_page.gd
-│  ├─ code_win_page.gd
-│  ├─ game_page.gd
-│  ├─ global.gd
-│  ├─ home_page.gd
-│  ├─ settings_page.gd
-│  └─ splash_screen.gd
-├─ scene
-│  ├─ backgroundSplashScreen.png
-│  ├─ chapters_selection.tscn
-│  ├─ chapter_one_win.tscn
-│  ├─ code_error_message.tscn
-│  ├─ code_page.tscn
-│  ├─ code_win_page.tscn
-│  ├─ game_page.tscn
-│  ├─ home_page.tscn
-│  ├─ settings_page.tscn
-│  └─ splash_screen.tscn
-├─ default_bus_layout.
-└─ ecoquest_logo.png
+├─📁 addons
+│  └─📄 gdscript_formatter
+├─📁 resources
+│  ├─📁 background
+│  ├─📁 chapterImages
+│  ├─📁 font
+│  ├─📁 musics
+│  └─📁 svg
+├─📁 script
+│  ├─📝 chapters_selection.gd
+│  ├─📝 code_error_message.gd
+│  ├─📝 code_page.gd
+│  ├─📝 code_win_page.gd
+│  ├─📝 game_page.gd
+│  ├─📝 global.gd
+│  ├─📝 home_page.gd
+│  ├─📝 settings_page.gd
+│  └─📝 splash_screen.gd
+├─📁 scene
+│  ├─🖼️ backgroundSplashScreen.png
+│  ├─📝 chapters_selection.tscn
+│  ├─📝 chapter_one_win.tscn
+│  ├─📝 code_error_message.tscn
+│  ├─📝 code_page.tscn
+│  ├─📝 code_win_page.tscn
+│  ├─📝 game_page.tscn
+│  ├─📝 home_page.tscn
+│  ├─📝 settings_page.tscn
+│  └─📝 splash_screen.tscn
+├─📄 default_bus_layout.
+└─🖼️ ecoquest_logo.png
 ```
 ## Data structures
 
@@ -603,10 +582,17 @@ ChapterOneWin
 2. Handle Close Button
    └── On close button press:
        └── Remove the error page from the scene.
-
 ```
 
+# Glossary
 
+| Name | Description | 
+| -- | --|
+| **Hybrid Game** | A game combining physical and digital elements. |
+| **Godot Engine** | The game engine used for development. |
+| **Functional Requirements** | The "what" of the project, defining features and scope. |
+| **Technical Specifications** | The "how" of the project, detailing implementation and architecture. |
+| **Serious Game** | A game designed for educational purposes, such as climate change awareness. |
 
 
 
