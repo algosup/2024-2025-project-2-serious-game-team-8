@@ -276,18 +276,21 @@ HomePage #Root node for the home page interface.
 ```
 
 - Code implementation
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Home Page
+   └── Load the root node (`Node2D`).
+   └── Set up the main menu layout:
+       └── Add texture button.
+       └── Add settings button.
 
-# Called when the texture button is pressed
-func _on_texture_button_pressed() -> void:
-    # Adds the chapter selection scene as a child node
-    add_child(Global.chapter_selection.instantiate())
+2. Handle Button Press Events
+   └── Texture Button Pressed
+       └── Instantiate the chapter selection scene.
+       └── Add it as a child node to the current scene.
 
-# Called when the settings button is pressed
-func _on_setting_button_pressed() -> void:
-    # Adds the settings scene as a child node
-    add_child(Global.settings.instantiate())
+   └── Settings Button Pressed
+       └── Instantiate the settings scene.
+       └── Add it as a child node to the current scene.
 ```
 
 ### Settings Page
@@ -318,34 +321,31 @@ SettingsPage #Root node for the settings page interface.
 
 - Code implementation
 
-```gdscript
-# Set the audio bus volume to the saved value
-AudioServer.set_bus_volume_db(
-    bus_index,  # The index of the audio bus
-    linear_to_db(Global.music_slider_value)  # Convert the slider value to dB
-)
+```markdown
+1. Initialize Settings Page
+   └── Load the root node.
+   └── Set up UI components, including:
+       └── Music slider.
+       └── Close button.
+       └── GitHub button.
 
-# Initialize the slider's value to the saved value
-$"CanvasLayer/MusicSliderControl/Music Slider".value = Global.music_slider_value
+2. Configure Audio Settings
+   └── Set the audio bus volume to the saved value.
+   └── Initialize the slider's value to the saved global value.
 
-# Connect the slider's value_changed signal to handle changes
-$"CanvasLayer/MusicSliderControl/Music Slider".value_changed.connect(_on_music_slider_value_changed)
+3. Handle Slider Changes
+   └── Connect the slider's `value_changed` signal.
+   └── On slider value change:
+       └── Update the global volume value.
+       └── Adjust the audio bus volume in real-time.
 
-# Called when the music slider value changes
-func _on_music_slider_value_changed(value: float) -> void:
-    Global.music_slider_value = value  # Update the global volume value
-    AudioServer.set_bus_volume_db(
-        bus_index,  
-        linear_to_db(value)  # Update the audio bus volume based on the new value
-    )
+4. Handle Close Button
+   └── On close button press:
+       └── Remove the settings page from the scene.
 
-# Close the settings page
-func _on_close_button_pressed() -> void:
-    queue_free()  # Remove the settings page from the scene
-
-# Open the Github repository in a browser
-func _on_github_button_pressed() -> void:
-    OS.shell_open("https://github.com/algosup/2024-2025-project-2-serious-game-team-8")  # Opens the URL
+5. Handle GitHub Button
+   └── On GitHub button press:
+       └── Open the repository in the default browser.
 ```
 
 ### Chapter Select 
@@ -379,16 +379,20 @@ ChaptersSelection # Root node for the chapter selection screen.
 ```
 
 - Code implementation
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Chapter Select Page
+   └── Load the root node (`Node2D`).
+   └── Set up UI components, including:
+       └── Chapter selection buttons.
+       └── Settings button.
 
-# Called when the settings button is pressed
-func _on_setting_button_pressed() -> void:
-    add_child(Global.settings.instantiate())  # Instantiates and adds the settings scene
+2. Handle Button Press Events
+   └── Settings Button Pressed
+       └── Instantiate the settings scene.
+       └── Add it as a child node to the current scene.
 
-# Called when the chapter selection button is pressed
-func _on_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://scene/game_page.tscn")  # Changes the scene to the game page
+   └── Chapter Selection Button Pressed
+       └── Switch to the game page scene.
 ```
 
 ### Game page
@@ -437,115 +441,40 @@ GamePage # Root node for the main game interface.
 ```
 
 - Code implementation
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Game Page
+   └── Set up the timer and background elements.
+   └── Load visibility icons and prepare controls.
 
-# Tracks whether the game is paused
-var is_paused: bool = false
+2. Manage Timer
+   └── Track time left and update the timer display.
+   └── If time is low (2 minutes or less), change the timer text color to red.
+   └── On timeout:
+       └── Display the "lose" screen.
 
-# Variables for tracking the timer display (minutes and seconds)
-var minutes: int
-var seconds: int
+3. Handle Pause Button
+   └── Toggle the `is_paused` state.
+   └── Pause or resume the timer and animations.
 
-# Called when the node is added to the scene. Initializes the timer values.
-func _ready() -> void:
-    minutes = 0
-    seconds = 0
+4. Handle Visibility Button
+   └── Toggle the visibility of game controls.
+   └── Update the visibility icon accordingly.
 
-# Called every frame. Updates the timer display and manages game logic.
-func _process(_delta: float) -> void:
-    # Check if the main timer is running and has time left
-    if $CanvasLayer/Timer.is_stopped() == false and $CanvasLayer/Timer.time_left >= 1:
-        # Calculate minutes and seconds remaining
-        minutes = int($CanvasLayer/Timer.time_left / 60)  # Get the minutes
-        seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
-        _removing_leaves()  # Remove leaves based on the time left
-        time_low_warning()  # Trigger warning if time is low
+5. Remove Leaves
+   └── As time decreases, make background leaves disappear in stages.
 
-        # Update the timer display depending on the current scene
-        if has_node("CodePage"):
-            $CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
-        else:
-            $CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
-    else:
-        # If the main timer is stopped, start the increment timer
-        if $CanvasLayer/IncrementTimer.is_stopped():
-            $CanvasLayer/IncrementTimer.start()
-        # Update the display to show incremented time
-        if has_node("CodePage"):
-            $CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
-        else:
-            $CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+6. Open Additional Pages
+   └── **Settings Button**: Instantiate and display the settings page.
+   └── **Code Button**: Instantiate and display the code input page.
 
-# Closes the settings page and navigates to the home page
-func _on_close_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://scene/home_page.tscn")
+7. Increment Timer
+   └── On increment timer timeout:
+       └── Add one second to the timer.
+       └── Adjust minutes when seconds reach 60.
 
-# Preloads textures for visibility icons
-var visibilityOn = load("res://resources/svg/visibility.png")
-var visibilityOff = load("res://resources/svg/no-visibility.png")
-
-# Toggles visibility of the game controls and updates the visibility icon
-func _on_visibility_pressed() -> void:
-    if $CanvasLayer/GameControls.visible:
-        $CanvasLayer/VisibilityControl/Visibility.texture_normal = visibilityOff
-        $CanvasLayer/GameControls.visible = false
-    else:
-        $CanvasLayer/VisibilityControl/Visibility.texture_normal = visibilityOn
-        $CanvasLayer/GameControls.visible = true
-
-# Toggles pause state and updates the timer and animation accordingly
-func _on_pause_pressed() -> void:
-    if is_paused == false:
-        is_paused = true
-        $CanvasLayer/GameControls/PauseAnimation.play("pause")
-        $CanvasLayer/Timer.paused = true
-    else:
-        is_paused = false
-        $CanvasLayer/Timer.paused = false
-        $CanvasLayer/GameControls/PauseAnimation.play("RESET")
-
-# Removes leaves from the background as time decreases
-func _removing_leaves() -> void:
-    if $CanvasLayer/Timer.time_left < 720 and $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
-        $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible = false
-    if $CanvasLayer/Timer.time_left < 540 and $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
-        $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible = false
-    if $CanvasLayer/Timer.time_left < 360 and $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible:
-        $CanvasLayer/BackgroundControl/LeafThreeControl/leaf3.visible = false
-    if $CanvasLayer/Timer.time_left < 180 and $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible:
-        $CanvasLayer/BackgroundControl/LeafTwoControl/leaf2.visible = false
-    if $CanvasLayer/Timer.time_left <= 1 and $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible:
-        $CanvasLayer/BackgroundControl/LeafOneControl/leaf1.visible = false
-
-# Changes the timer text color to red when the time is low (2 minutes or less)
-func time_low_warning() -> void:
-    if $CanvasLayer/Timer.time_left <= 120:
-        $CanvasLayer/TimerControl/TimerBg/TimerText.modulate = Color(1, 0, 0)  # Set text to red
-
-# Adds the code input page to the scene
-func _on_code_pressed() -> void:
-    add_child(Global.code_page.instantiate())
-
-# Adds the settings page to the scene
-func _on_setting_button_pressed() -> void:
-    add_child(Global.settings.instantiate())
-
-# Displays the "lose" screen when the timer reaches zero
-func _on_timer_timeout() -> void:
-    $CanvasLayer/BackgroundControl/TextureRect.texture = load("res://resources/background/looseScreen2.png")
-
-# Increments the timer by 1 second when the increment timer times out
-func _on_increment_timer_timeout() -> void:
-    seconds += 1
-    if seconds == 60:
-        seconds = 0
-        minutes += 1
-
-# Checks if Chapter 1 is completed and shows the completion page
-func _beat_chapter_1() -> void:
-    if Global.beat_chapter1 == true:
-        add_child(Global.chapter_one_completion_page)
+8. Check Chapter Progress
+   └── If Chapter 1 is completed:
+       └── Display the Chapter 1 completion page.
 ```
 
 ### Code page 
@@ -599,84 +528,27 @@ CodePage # Root node for the code page interface.
 - Code implementation
 	This code manages the timer display synchronization, input handling for numeric values (with increment and decrement functionality), and the validation of a code entry with a win/error page transition.
 
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Code Page
+   └── Sync the timer text color with the parent scene.
 
-# Called when the node is ready, used for setting up the initial state
-func _ready() -> void:
-    # Sync the TimerText color from the parent scene to this scene's TimerText
-    $CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate 
+2. Handle Return Button
+   └── On return button press:
+       └── Remove the code page from the scene.
 
-# Called when the return button is pressed to free the current node
-func _on_return_button_pressed() -> void:
-    queue_free()
+3. Manage Input Fields
+   └── Input Fields:
+       └── **Increment**: Increase the number or reset to 0 if it reaches 9.
+       └── **Decrement**: Decrease the number or reset to 9 if it reaches 0.
 
-# Paths to input label nodes for easy reference
-var input1 = "CanvasLayer/CodeControl/Input1/Label"
-var input2 = "CanvasLayer/CodeControl/Input2/Label"
-var input3 = "CanvasLayer/CodeControl/Input3/Label"
-var input4 = "CanvasLayer/CodeControl/Input4/Label"
-
-# Handles button presses for each input field (increment or decrement the values)
-func _on_input_pressed(buttonID: int) -> void:
-    match buttonID:
-        1:
-            # Increment the first input, or reset to 0 if it reaches 9
-            if(int(get_node(input1).text) < 9):
-                get_node(input1).text = str(int(get_node(input1).text) + 1)
-            else:
-                get_node(input1).text = "0"
-        2:
-            # Decrement the first input, or reset to 9 if it reaches 0
-            if(int(get_node(input1).text) > 0):
-                get_node(input1).text = str(int(get_node(input1).text) - 1)
-            else:
-                get_node(input1).text = "9"
-        3:
-            # Increment the second input, or reset to 0 if it reaches 9
-            if(int(get_node(input2).text) < 9):
-                get_node(input2).text = str(int(get_node(input2).text) + 1)
-            else:
-                get_node(input2).text = "0"
-        4:
-            # Decrement the second input, or reset to 9 if it reaches 0
-            if(int(get_node(input2).text) > 0):
-                get_node(input2).text = str(int(get_node(input2).text) - 1)
-            else:
-                get_node(input2).text = "9"
-        5:
-            # Increment the third input, or reset to 0 if it reaches 9
-            if(int(get_node(input3).text) < 9):
-                get_node(input3).text = str(int(get_node(input3).text) + 1)
-            else:
-                get_node(input3).text = "0"
-        6:
-            # Decrement the third input, or reset to 9 if it reaches 0
-            if(int(get_node(input3).text) > 0):
-                get_node(input3).text = str(int(get_node(input3).text) - 1)
-            else:
-                get_node(input3).text = "9"
-        7:
-            # Increment the fourth input, or reset to 0 if it reaches 9
-            if(int(get_node(input4).text) < 9):
-                get_node(input4).text = str(int(get_node(input4).text) + 1)
-            else:
-                get_node(input4).text = "0"
-        8:
-            # Decrement the fourth input, or reset to 9 if it reaches 0
-            if(int(get_node(input4).text) > 0):
-                get_node(input4).text = str(int(get_node(input4).text) - 1)
-            else:
-                get_node(input4).text = "9"
-
-# Called when the enter button is pressed to check if the input is correct
-func _on_enter_button_pressed() -> void:
-    # Check if the input matches the correct code, and show the corresponding page
-    if(get_node(input1).text == "4" && get_node(input2).text == "7" && get_node(input3).text == "3" && get_node(input4).text == "2"):
-        add_child(Global.win_page.instantiate())  # Show win page
-        Global.beat_chapter1 = true  # Mark chapter 1 as complete
-    else:
-        add_child(Global.error_page.instantiate())  # Show error page
+4. Validate Code
+   └── On enter button press:
+       └── Check if the input matches the correct code ("4732").
+       └── If correct:
+           └── Display the win page.
+           └── Mark Chapter 1 as complete.
+       └── If incorrect:
+           └── Display the error page.
 ```
 
 ### Code win page
@@ -697,12 +569,14 @@ ChapterOneWin
 ```
 
 - Code Implementation
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Code Win Page
+   └── Display the win page content.
 
-# Handles the press event of the close button, changing the scene to chapter selection
-func _on_close_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/chapters_selection.tscn")
+2. Handle Close Button
+   └── On close button press:
+       └── Change the scene to the chapter selection page.
+
 ```
 ### Code error page
 
@@ -722,12 +596,14 @@ ChapterOneWin
 ```
 
 - Code implementation
-```gdscript
-extends Node2D
+```markdown
+1. Initialize Code Error Page
+   └── Display the error page content.
 
-# Handles the press event of the close button, removing the current node from the scene
-func _on_close_button_pressed() -> void:
-	queue_free()
+2. Handle Close Button
+   └── On close button press:
+       └── Remove the error page from the scene.
+
 ```
 
 
