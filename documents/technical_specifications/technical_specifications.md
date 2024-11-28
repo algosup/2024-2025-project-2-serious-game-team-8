@@ -219,43 +219,36 @@ SplashScreen #Root node for the splash screen.
 
 - Code implementation
 
-```gdscript
-extends Node2D
+```scss
+[Start Splash Screen]
+       ↓
+[Initialize Components]
+  - Load background
+  - Load logo
+  - Set up text
+       ↓
+[Set Up UI Layers]
+  - Create fixed UI layer
+  - Add background, logo, and text
+       ↓
+[Display Splash Screen]
+  - Show background
+  - Display logo
+  - Update text (e.g., "Loading...")
+       ↓
+[Start Loading Process]
+  ┌────────────────────────────────┐
+  │ WHILE assets are loading:      │
+  │   - Update loading animation   │
+  │   - Show progress (optional)   │
+  └────────────────────────────────┘
+       ↓
+[On Load Complete]
+  - Fade out splash screen
+  - Transition to the next scene
+       ↓
+[End Splash Screen]
 
-# Reference to a Tween node used for animating properties
-var tween: Tween
-
-# Called when the scene is initialized
-func _ready() -> void:
-    # Create a Tween instance for animating the logo
-    tween = create_tween()
-    
-    # Animate the "scale" property of the logo with easing
-    tween.tween_property(
-        $CanvasLayer/LogoControl/Logo,  # The node to animate
-        "scale",                        # Property to animate
-        Vector2(1.6, 1.6),              # Target value (scaled size)
-        1.5                             # Duration of the animation (in seconds)
-    ).set_ease(Tween.EASE_OUT)          # Apply easing to slow the animation at the end
-    
-    # Connect the tween's "finished" signal to handle the end of the animation
-    tween.finished.connect(_on_tween_finished)
-
-# Called when the tween animation finishes
-func _on_tween_finished() -> void:
-    $LoadingTime.start()  # Start the timer to control the splash screen duration
-
-# Preload the home page scene
-var home: PackedScene = preload("res://scene/home_page.tscn")
-
-# Called when the "LoadingTime" timer times out
-func _on_loading_time_timeout() -> void:
-    # Change the current scene to the home page
-    var result = get_tree().change_scene_to_packed(home)
-    
-    # Check for errors during the scene transition
-    if result != OK:
-        print("Failed to change scene: ", result)
 ```
 
 - Result 
