@@ -1,0 +1,555 @@
+[gd_scene load_steps=18 format=3 uid="uid://b0ogv2vt64x3a"]
+
+[ext_resource type="Script" path="res://script/game_page.gd" id="1_50ksb"]
+[ext_resource type="Texture2D" uid="uid://bcxb7cvix84hp" path="res://resources/background/game_bg.png" id="2_co0cp"]
+[ext_resource type="Texture2D" uid="uid://c4v2r43fdr1ua" path="res://resources/background/leaf.png" id="3_8qnhd"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_hhwml"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_ny88t"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_berp6"]
+[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="6_cwxfd"]
+[ext_resource type="Texture2D" uid="uid://cikema3s7ltca" path="res://resources/svg/Circle.png" id="6_qtagr"]
+[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="7_mpjea"]
+[ext_resource type="Texture2D" uid="uid://d4ljj3b3n71xf" path="res://resources/svg/Icon/Pause.svg" id="8_epgyr"]
+[ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/Icon/resume.png" id="9_cec5p"]
+[ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/visibility.png" id="9_pc4mj"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="11_i1g5n"]
+
+[sub_resource type="Animation" id="Animation_8g2nl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_od8fg"]
+resource_name = "pause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8buug"]
+resource_name = "resume"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Pause/PauseButtonSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/ResumeButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4ctl"]
+_data = {
+"RESET": SubResource("Animation_8g2nl"),
+"pause": SubResource("Animation_od8fg"),
+"resume": SubResource("Animation_8buug")
+}
+
+[node name="GamePage" type="Node2D"]
+script = ExtResource("1_50ksb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_co0cp")
+
+[node name="LeafOneControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf1" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafOneControl"]
+position = Vector2(-26, -469)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="LeafTwoControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf2" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafTwoControl"]
+position = Vector2(185, -148)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="LeafThreeControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf3" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafThreeControl"]
+position = Vector2(-211, -13)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="LeafFourControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf4" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafFourControl"]
+position = Vector2(-357, -380)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="LeafFiveControl" type="Control" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leaf5" type="Sprite2D" parent="CanvasLayer/BackgroundControl/LeafFiveControl"]
+position = Vector2(227, -366)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8qnhd")
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="ButtonsControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -79.0
+offset_right = 100.0
+offset_bottom = -25.0
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture_normal = ExtResource("6_cwxfd")
+texture_pressed = ExtResource("7_mpjea")
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_top = 20.0
+offset_right = -160.0
+offset_bottom = 70.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("3_hhwml")
+texture_pressed = ExtResource("4_ny88t")
+
+[node name="GameControls" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Pause" type="TextureButton" parent="CanvasLayer/GameControls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -295.0
+offset_top = -300.0
+offset_right = 12.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("6_qtagr")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/Pause"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 50
+text = "Pause"
+
+[node name="PauseButtonSprite" type="Sprite2D" parent="CanvasLayer/GameControls/Pause"]
+position = Vector2(150, 217)
+texture = ExtResource("8_epgyr")
+
+[node name="ResumeButton" type="Sprite2D" parent="CanvasLayer/GameControls/Pause"]
+visible = false
+position = Vector2(150, 217)
+texture = ExtResource("9_cec5p")
+
+[node name="Hint" type="TextureButton" parent="CanvasLayer/GameControls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -423.0
+offset_top = -404.0
+offset_right = -116.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_qtagr")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/Hint"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 50
+text = "Hint"
+
+[node name="Code" type="TextureButton" parent="CanvasLayer/GameControls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = -404.0
+offset_right = 437.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_qtagr")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/Code"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 50
+text = "Code"
+
+[node name="Penality" type="TextureButton" parent="CanvasLayer/GameControls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = 60.0
+offset_right = 437.0
+offset_bottom = 373.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_qtagr")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/Penality"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 50
+text = "penalty"
+
+[node name="View" type="TextureButton" parent="CanvasLayer/GameControls"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -423.0
+offset_top = 60.0
+offset_right = -116.0
+offset_bottom = 373.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_qtagr")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameControls/View"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 50
+text = "View 
+hints"
+horizontal_alignment = 1
+
+[node name="PauseAnimation" type="AnimationPlayer" parent="CanvasLayer/GameControls"]
+libraries = {
+"": SubResource("AnimationLibrary_p4ctl")
+}
+
+[node name="VisibilityControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.774
+anchor_top = 0.936
+anchor_right = 0.774
+anchor_bottom = 0.936
+offset_left = -325.92
+offset_top = -857.12
+offset_right = -275.92
+offset_bottom = -817.12
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Visibility" type="TextureButton" parent="CanvasLayer/VisibilityControl"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 406.0
+offset_top = 844.0
+offset_right = 456.0
+offset_bottom = 879.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("9_pc4mj")
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 600.0
+one_shot = true
+
+[node name="IncrementTimer" type="Timer" parent="CanvasLayer"]
+
+[node name="TimerControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerBg" type="Sprite2D" parent="CanvasLayer/TimerControl"]
+position = Vector2(25, -570)
+scale = Vector2(3, 3)
+texture = ExtResource("11_i1g5n")
+
+[node name="TimerText" type="Label" parent="CanvasLayer/TimerControl/TimerBg"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -58.1667
+offset_right = -18.0
+offset_bottom = -3.16666
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_fonts/font = ExtResource("6_berp6")
+theme_override_font_sizes/font_size = 35
+text = "15:00"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Code" to="." method="_on_code_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Penality" to="." method="remove_time"]
+[connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/IncrementTimer" to="." method="_on_increment_timer_timeout"]

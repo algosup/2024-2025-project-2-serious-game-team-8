@@ -1,0 +1,131 @@
+[gd_scene load_steps=9 format=3 uid="uid://q66v306kfprs"]
+
+[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="1_gpfe6"]
+[ext_resource type="Script" path="res://script/home_page.gd" id="1_qbvgi"]
+[ext_resource type="Texture2D" uid="uid://bht10qg071lt1" path="res://resources/background/menu_background.png" id="2_sbdoo"]
+[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="4_3mcu8"]
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="4_xtb3p"]
+[ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/start.png" id="5_wyg2g"]
+[ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/start_hover.png" id="7_iytfu"]
+[ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/menu_music.mp3" id="8_22ub0"]
+
+[node name="HomePage" type="Node2D"]
+script = ExtResource("1_qbvgi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sbdoo")
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="SettingsButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -82.0
+offset_right = 100.0
+offset_bottom = -28.0
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_gpfe6")
+texture_pressed = ExtResource("4_3mcu8")
+
+[node name="LogoControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Logo" type="Sprite2D" parent="CanvasLayer/LogoControl"]
+position = Vector2(25, -505)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_xtb3p")
+
+[node name="ButtonControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/ButtonControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -35.5
+offset_right = 79.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset = Vector2(80, 35)
+texture_normal = ExtResource("5_wyg2g")
+texture_pressed = ExtResource("7_iytfu")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_22ub0")
+autoplay = true
+bus = &"Menu Music"
+parameters/looping = true
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonControl/TextureButton" to="." method="_on_texture_button_pressed"]

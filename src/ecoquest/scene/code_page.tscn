@@ -1,0 +1,517 @@
+[gd_scene load_steps=10 format=3 uid="uid://dux62apj6tdyy"]
+
+[ext_resource type="Script" path="res://script/code_page.gd" id="1_024cc"]
+[ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="2_5b5u0"]
+[ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="3_b0e20"]
+[ext_resource type="Texture2D" uid="uid://nolsljayfhy1" path="res://resources/svg/folder.png" id="6_cl8rv"]
+[ext_resource type="Texture2D" uid="uid://c51xvqk7ipllc" path="res://resources/svg/TriangleUp.png" id="7_01f26"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="7_xugxh"]
+[ext_resource type="Texture2D" uid="uid://qynoa8mkeydb" path="res://resources/svg/Triangle.png" id="8_h86hf"]
+[ext_resource type="Texture2D" uid="uid://hcqrrr5buy6n" path="res://resources/svg/EnterButton.png" id="9_sq8wt"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="10_wlc8v"]
+
+[node name="CodePage" type="Node2D"]
+script = ExtResource("1_024cc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.133333, 0.129412, 1)
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1714.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="ReturnButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 14.0
+offset_right = 112.0
+offset_bottom = 98.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_5b5u0")
+texture_pressed = ExtResource("3_b0e20")
+texture_hover = ExtResource("3_b0e20")
+
+[node name="TimerControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerBg" type="Sprite2D" parent="CanvasLayer/TimerControl"]
+position = Vector2(25, -570)
+scale = Vector2(3, 3)
+texture = ExtResource("10_wlc8v")
+
+[node name="TimerText" type="Label" parent="CanvasLayer/TimerControl/TimerBg"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -58.1667
+offset_right = -18.0
+offset_bottom = -3.16666
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 35
+text = "15:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="CodeControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -20.0
+offset_right = 2.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CodeControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.0
+offset_top = -361.0
+offset_right = 11.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("6_cl8rv")
+
+[node name="Input1" type="ColorRect" parent="CanvasLayer/CodeControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -42.0
+offset_right = -116.0
+offset_bottom = 88.0
+color = Color(0.147672, 0.147672, 0.147672, 0.454902)
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Input1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -22.0
+offset_right = 33.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input2" type="ColorRect" parent="CanvasLayer/CodeControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -42.0
+offset_right = 18.0
+offset_bottom = 88.0
+color = Color(0.147672, 0.147672, 0.147672, 0.454902)
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Input2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input3" type="ColorRect" parent="CanvasLayer/CodeControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 51.0
+offset_top = -42.0
+offset_right = 152.0
+offset_bottom = 88.0
+color = Color(0.147672, 0.147672, 0.147672, 0.454902)
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Input3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input4" type="ColorRect" parent="CanvasLayer/CodeControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 185.0
+offset_top = -42.0
+offset_right = 286.0
+offset_bottom = 88.0
+color = Color(0.147672, 0.147672, 0.147672, 0.454902)
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Input4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -88.0
+offset_right = -164.0
+offset_bottom = -68.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_01f26")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 34.92
+offset_bottom = 25.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -88.0
+offset_right = -30.0
+offset_bottom = -68.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_01f26")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 34.92
+offset_bottom = 25.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -88.0
+offset_right = 104.0
+offset_bottom = -68.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_01f26")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 34.92
+offset_bottom = 25.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = -88.0
+offset_right = 238.0
+offset_bottom = -68.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_01f26")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 34.92
+offset_bottom = 25.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Minus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = 112.0
+offset_right = -164.0
+offset_bottom = 132.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_h86hf")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 34.92
+offset_bottom = 22.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Minus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = -66.0
+offset_top = 112.0
+offset_right = -30.0
+offset_bottom = 132.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_h86hf")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 34.92
+offset_bottom = 22.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Minus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 112.0
+offset_right = 104.0
+offset_bottom = 132.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_h86hf")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 34.92
+offset_bottom = 22.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Minus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 112.0
+offset_right = 238.0
+offset_bottom = 132.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_h86hf")
+
+[node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.119
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 34.92
+offset_bottom = 22.24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 15
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnterControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="EnterButton" type="TextureButton" parent="CanvasLayer/EnterControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 591.0
+offset_right = 176.0
+offset_bottom = 743.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_sq8wt")
+
+[node name="Label" type="Label" parent="CanvasLayer/EnterControl/EnterButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -68.5
+offset_right = 138.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_xugxh")
+theme_override_font_sizes/font_size = 80
+text = "Enter
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Plus1" to="." method="_on_input_pressed" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Plus2" to="." method="_on_input_pressed" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Plus3" to="." method="_on_input_pressed" binds= [5]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Plus4" to="." method="_on_input_pressed" binds= [7]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Minus1" to="." method="_on_input_pressed" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Minus2" to="." method="_on_input_pressed" binds= [4]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Minus3" to="." method="_on_input_pressed" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/CodeControl/Minus4" to="." method="_on_input_pressed" binds= [8]]
+[connection signal="pressed" from="CanvasLayer/EnterControl/EnterButton" to="." method="_on_enter_button_pressed"]
