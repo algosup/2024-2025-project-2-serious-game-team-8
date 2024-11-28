@@ -219,36 +219,34 @@ SplashScreen #Root node for the splash screen.
 
 - Code implementation
 
-```scss
-[Start Splash Screen]
-       ↓
-[Initialize Components]
-  - Load background
-  - Load logo
-  - Set up text
-       ↓
-[Set Up UI Layers]
-  - Create fixed UI layer
-  - Add background, logo, and text
-       ↓
-[Display Splash Screen]
-  - Show background
-  - Display logo
-  - Update text (e.g., "Loading...")
-       ↓
-[Start Loading Process]
-  ┌────────────────────────────────┐
-  │ WHILE assets are loading:      │
-  │   - Update loading animation   │
-  │   - Show progress (optional)   │
-  └────────────────────────────────┘
-       ↓
-[On Load Complete]
-  - Fade out splash screen
-  - Transition to the next scene
-       ↓
-[End Splash Screen]
+```markdown
 
+1. Initialize Splash Screen
+   └── Load background
+   └── Load logo
+   └── Set up loading text (e.g., "Loading...")
+
+2. Set Up UI
+   └── Create a fixed UI layer
+       └── Add background
+       └── Add logo
+       └── Add loading text
+
+3. Display Splash Screen
+   └── Render all elements:
+       └── Show background color or image
+       └── Display logo
+       └── Show "Loading..." or introductory text
+
+4. Start Loading Process
+   └── Begin asset loading:
+       └── Animate progress or show spinner
+       └── Update visual cues (optional)
+   └── Wait until assets are fully loaded
+
+5. Transition to Main Game
+   └── Fade out splash screen
+   └── Load the main menu or game scene
 ```
 
 - Result 
