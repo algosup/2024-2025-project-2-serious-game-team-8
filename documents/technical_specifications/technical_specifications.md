@@ -209,7 +209,11 @@ images, music files and so on.
 GDScript is a high-level, dynamically-typed scripting language used in Godot for game logic. Its syntax is simple and Python-like, making it accessible yet powerful for game development.
 The following code implementations will all be written using gdscript.
 
-### Splash Screen
+### App Flow 
+
+This section provides a step-by-step breakdown of the app's key screens and their functionality, including how users navigate between them and interact with different features. Each subsection explains the main elements, user interactions, and core logic behind the implementation.
+
+#### Splash Screen
 
 Displays the game's logo and transitions to the main menu after a brief delay.
 
@@ -248,7 +252,7 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 
 ![loading](pictures_and_media/loading.gif)
 
-### Home page
+#### Home page
 
 Acts as the main hub for the app, allowing users to start the game or access the settings menu.
 
@@ -270,7 +274,7 @@ Acts as the main hub for the app, allowing users to start the game or access the
        └── Add it as a child node to the current scene.
 ```
 
-### Settings Page
+#### Settings Page
 
 Provides options for the user to adjust audio settings and view the app’s GitHub repository. Includes a way to return to the home page.
 
@@ -303,7 +307,7 @@ Provides options for the user to adjust audio settings and view the app’s GitH
        └── Open the repository in the default browser.
 ```
 
-### Chapter Select 
+#### Chapter Select 
 
 Allows the user to select a chapter to play. Only the first chapter is unlocked initially, with subsequent chapters becoming accessible after progression.
 
@@ -324,7 +328,7 @@ Allows the user to select a chapter to play. Only the first chapter is unlocked 
        └── Switch to the game page scene.
 ```
 
-### Game page
+#### Game page
 
 The primary gameplay screen where players review hints, interact with the environment, manage time, and solve puzzles.
 
@@ -365,7 +369,7 @@ The primary gameplay screen where players review hints, interact with the enviro
        └── Display the Chapter 1 completion page.
 ```
 
-### Code page 
+#### Code page 
 
 Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
@@ -395,7 +399,7 @@ Serves as a puzzle-solving screen, for now it will only contain one puzzle.
            └── Display the error page.
 ```
 
-### Code win page
+#### Code win page
 
 Displays a congratulatory message to the player for successfully solving the puzzle by entering the correct combination.
 
@@ -409,7 +413,7 @@ Displays a congratulatory message to the player for successfully solving the puz
        └── Change the scene to the chapter selection page.
 
 ```
-### Code error page
+#### Code error page
 
 Alerts the player when an incorrect code is entered and penalizes them by deducting time from the countdown timer (feature pending implementation).
 
