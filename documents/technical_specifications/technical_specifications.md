@@ -1,40 +1,52 @@
 <details>
 <summary>
-Table of content
+Table of contents
 </summary>
 
- - [1. Introduction](#1-introduction)
-     - [Document Purpose & Definition](#document-purpose--definition)
-     - [Project Overview](#project-overview)
-         - [Project Brief](#project-brief)
-         - [Requirements](#requirements)
-         - [setting up the development environment](#setting-up-the-development-environment)
-             - [Hardware Requirements](#hardware-requirements)
-             - [Software Requirements](#software-requirements)
-             - [Coding Methodology](#coding-methodology)
-                 - [Workflow](#workflow)
-                 - [Coding Conventions](#coding-conventions)
-                 - [Commenting Conventions](#commenting-conventions)
-                 - [Documenting Conventions](#documenting-conventions)
-    - [Setting up the game](#setting-up-the-game)
-         - [Hardware Requirements](#hardware-requirements-1)
-         - [Software Requirements](#software-requirements-1)
- - [Technical Specifications](#2-technical-specifications)
-     - [Folder Structure](#folder-structure)
-     - [Data Structures](#data-structures)
-         - [Splash Screen](#splash-screen)
-         - [Home Page](#home-page)
-         - [Settings Page](#settings-page)
-         - [Chapter Select](#chapter-select)
-         - [Game Page](#game-page)
-         - [Code Page](#code-page)
-         - [Code Win Page](#code-win-page)
-         - [Code Error Page](#code-error-page)
-     - [Glossary](#glossary)
+- [Glossary](#glossary)
+- [1. Introduction](#1-introduction)
+- [Document Purpose \& Definition](#document-purpose--definition)
+  - [Scope](#scope)
+  - [Target audience](#target-audience)
+- [Project Overview](#project-overview)
+  - [Project Brief](#project-brief)
+  - [Requirements](#requirements)
+  - [Setting up the development environment](#setting-up-the-development-environment)
+    - [Hardware Requirements](#hardware-requirements)
+    - [Software Requirements](#software-requirements)
+  - [User requirements](#user-requirements)
+    - [Coding Methodology](#coding-methodology)
+      - [Workflow](#workflow)
+      - [Coding Conventions](#coding-conventions)
+      - [Commenting Conventions ](#commenting-conventions-)
+      - [Documenting Conventions](#documenting-conventions)
+  - [Setting up the game](#setting-up-the-game)
+    - [Hardware requirements](#hardware-requirements-1)
+    - [Software requirements](#software-requirements-1)
+- [2. Technical Specifications](#2-technical-specifications)
+  - [Folder Structure](#folder-structure)
+  - [Data structures](#data-structures)
+    - [GDScript Overview](#gdscript-overview)
+    - [Splash Screen](#splash-screen)
+    - [Home page](#home-page)
+    - [Settings Page](#settings-page)
+    - [Chapter Select](#chapter-select)
+    - [Game page](#game-page)
+    - [Code page](#code-page)
+    - [Code win page](#code-win-page)
+    - [Code error page](#code-error-page)
 
 </details>
 
+# Glossary
 
+| Name                         | Description                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| **Hybrid Game**              | A game combining physical and digital elements.                             |
+| **Godot Engine**             | The game engine used for development.                                       |
+| **Functional Requirements**  | The "what" of the project, defining features and scope.                     |
+| **Technical Specifications** | The "how" of the project, detailing implementation and architecture.        |
+| **Serious Game**             | A game designed for educational purposes, such as climate change awareness. |
 
 # 1. Introduction
 
@@ -78,7 +90,7 @@ The first step is to set up the development environment, which we can define as 
 ### Hardware Requirements
 
 - A mobile phone 
-- A pc 
+- A PC 
 - A physical board and cards for the game
 - Additional papers which would include the tutorial/manual 
 
@@ -86,13 +98,11 @@ The first step is to set up the development environment, which we can define as 
 
 - Any OS that supports Godot
 - Any text editor 
-- GitHub or any other source control management, [GitHub](https://github.com/) is recommended for this task.
+- [GitHub](https://github.com/) as a version control management system.
 
 ## User requirements
 
-The user should expect a basic explanation of the game in the form of a tutorial 
-which will be provided in a pamphlet along with the cards.
-
+The user should expect a basic explanation of the game in the form of a tutorial which will be provided in a pamphlet along with the cards.
 
 ### Coding Methodology
 
@@ -102,7 +112,7 @@ As this game combines a mobile app with a card game, the focus is split between 
 
 #### <ins>Coding Conventions</ins>
 
-1. **Variables and constants**
+1. **Variables And Constants**
 	- Use snake_case for variables and UPPERCASE_WITH_UNDERSCORES for constants.
 	- Choose descriptive names that clearly indicate their purpose.
 
@@ -116,11 +126,11 @@ As this game combines a mobile app with a card game, the focus is split between 
 
 4. **Signals** 
 	- Use snake_case for signals, with names that describe the event being triggered.
-    - Prefix connected functions with _on_ to clarify they are signal handlers.
+   - Prefix connected functions with _on_ to clarify they are signal handlers.
 
 5. **Scene and Node Names**
 	- Use lowerCamelCase for scenes and node names to distinguish them from variables and scripts.
-    - Use descriptive names that indicate the role of the scene or node.
+   - Use descriptive names that indicate the role of the scene or node.
 
 #### <ins>Commenting Conventions </ins>
 
@@ -129,7 +139,6 @@ Comment near 100% of the Functions in the code
 #### <ins>Documenting Conventions</ins>
 
 All project documentation will be written in **Markdown**. This includes technical documentation, code comments, and user manuals. Markdown files will be stored in the `docs/` folder in the repository.
-
 
 ## Setting up the game
 
@@ -413,34 +422,3 @@ Alerts the player when an incorrect code is entered and penalizes them by deduct
    └── On close button press:
        └── Remove the error page from the scene.
 ```
-
-# Glossary
-
-| Name | Description | 
-| -- | --|
-| **Hybrid Game** | A game combining physical and digital elements. |
-| **Godot Engine** | The game engine used for development. |
-| **Functional Requirements** | The "what" of the project, defining features and scope. |
-| **Technical Specifications** | The "how" of the project, detailing implementation and architecture. |
-| **Serious Game** | A game designed for educational purposes, such as climate change awareness. |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
