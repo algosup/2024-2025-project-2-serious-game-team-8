@@ -201,10 +201,7 @@ images, music files and so on.
 ### GDScript Overview
 
 GDScript is a high-level, dynamically-typed scripting language used in Godot for game logic. Its syntax is simple and Python-like, making it accessible yet powerful for game development.
-
-### Flowchart 
-
-In this flowchart, you can see how the user will be able to navigate through the app.
+The following code implementations will all be written using gdscript.
 
 ### Splash Screen
 
@@ -213,7 +210,6 @@ Displays the game's logo and transitions to the main menu after a brief delay.
 - Code implementation
 
 ```markdown
-
 1. Initialize Splash Screen
    └── Load background
    └── Load logo
