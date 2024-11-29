@@ -80,7 +80,7 @@ As stated in the functional requirements, the goal of the project is to create a
 We have been given 7 weeks to finish the project.
 We chose to develop a board and mobile game because it allows us to concentrate on exploring and researching climate change and integrating these elements into a serious game. This approach aligns with our focus, without the added complexity of developing a PC game.
 
-## Requirements 
+# Requirements 
 
 
 ## Setting up the development environment 
@@ -100,17 +100,17 @@ The first step is to set up the development environment, which we can define as 
 - Any text editor 
 - [GitHub](https://github.com/) as a version control management system.
 
-## User requirements
+### User requirements
 
 The user should expect a basic explanation of the game in the form of a tutorial which will be provided in a pamphlet along with the cards.
 
-### Coding Methodology
+## Coding Methodology
 
-#### <ins>Workflow</ins>
+### <ins>Workflow</ins>
 
 As this game combines a mobile app with a card game, the focus is split between the app’s development and the implementation of the cards. For details about the cards and their functionality, refer to the [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/blob/main/documents/functional_specifications/functional_specifications.md). This section will focus primarily on the app’s implementation.
 
-#### <ins>Coding Conventions</ins>
+### <ins>Coding Conventions</ins>
 
 1. **Variables And Constants**
 	- Use snake_case for variables and UPPERCASE_WITH_UNDERSCORES for constants.
@@ -132,11 +132,11 @@ As this game combines a mobile app with a card game, the focus is split between 
 	- Use lowerCamelCase for scenes and node names to distinguish them from variables and scripts.
    - Use descriptive names that indicate the role of the scene or node.
 
-#### <ins>Commenting Conventions </ins>
+### <ins>Commenting Conventions </ins>
 
 Comment near 100% of the Functions in the code
 
-#### <ins>Documenting Conventions</ins>
+### <ins>Documenting Conventions</ins>
 
 All project documentation will be written in **Markdown**. This includes technical documentation, code comments, and user manuals. Markdown files will be stored in the `docs/` folder in the repository.
 
