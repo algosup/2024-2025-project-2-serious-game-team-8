@@ -372,8 +372,6 @@ The primary gameplay screen where players review hints, interact with the enviro
 Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
 - Code implementation
-	This code manages the timer display synchronization, input handling for numeric values (with increment and decrement functionality), and the validation of a code entry with a win/error page transition.
-
 ```markdown
 1. Initialize Code Page
    └── Sync the timer text color with the parent scene.
