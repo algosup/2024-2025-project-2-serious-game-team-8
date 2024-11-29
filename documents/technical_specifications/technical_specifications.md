@@ -1,3 +1,5 @@
+# Technical Specifications 
+
 <details>
 <summary>
 Table of contents
@@ -37,6 +39,7 @@ Table of contents
 
 </details>
 
+
 # Glossary
 
 | Name                         | Description                                                                 |
@@ -46,13 +49,12 @@ Table of contents
 | **Functional Requirements**  | The "what" of the project, defining features and scope.                     |
 | **Technical Specifications** | The "how" of the project, detailing implementation and architecture.        |
 | **Serious Game**             | A game designed for educational purposes, such as climate change awareness. |
-| **Non-Functional Requirements** | Technical specifications addressing performance, usability, reliability, and scalability, focusing on the "How." |
 
 # 1. Introduction
 
 # Document Purpose & Definition
 
-The goal of the Technical Specifications is to take the Functional Requirements which defines the features, scope and goals of the project, to dissect each requirement and turn it into instructions, as clear as possible, to guide the development team as well as the quality assurance team in the successful completion of their mission.
+The goal of the Technical Specifications is to take the Functional Requirements, which defines the features, scope, and goals of the project, to dissect each requirement and turn it into instructions, as clear as possible, to guide the development team as well as the quality assurance team in the successful completion of their mission.
 
 We therefore encourage thorough reading of the [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/blob/main/documents/functional_specifications/functional_specifications.md) before reading further.
 
@@ -69,13 +71,13 @@ The scope of the project is to prioritize educating users on climate change thro
 
 ## Target Audience 
 
-The document is primarily intended for stakeholders, providing a clear understanding of the project's objectives and scope. Additionally, it serves as a valuable reference for developers and QA teams, offering insights into the design and implementation aspects.
+The document is primarily intended for stakeholders, providing a clear understanding of the project's objectives and scope. Additionally, it serves as a valuable reference for developers and QA teams, providing insights into design and implementation.
 
 # Project Overview 
 
 ## Project Brief
 
-As stated in the functional requirements, the goal of the project is to create a serious game focused on climate change, combining a board game with cards and a mobile app, which are both required to play, creating a integrated and interactive experience. The mobile app will be designed using Godot.
+As stated in the functional requirements, the goal of the project is to create a serious game focused on climate change, combining a board game with cards and a mobile app, which are both required to play, creating an integrated and interactive experience. The mobile app will be designed using Godot.
 
 We have been given 7 weeks to finish the project.
 We chose to develop a board and mobile game because it allows us to concentrate on exploring and researching climate change and integrating these elements into a serious game. This approach aligns with our focus, without the added complexity of developing a PC game.
@@ -99,23 +101,23 @@ The first step is to set up the development environment, which we can define as 
 
 ### User Requirements
 
-The user should expect a basic explanation of the game in the form of a tutorial which will be provided in a pamphlet along with the cards.
+Users will receive a basic explanation of the game in the form of a tutorial provided in a pamphlet along with the cards.
 
 ## Coding Methodology
 
 ### <ins>Workflow</ins>
 
-As this game combines a mobile app with a card game, the focus is split between the app’s development and the implementation of the cards. For details about the cards and their functionality, refer to the [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/blob/main/documents/functional_specifications/functional_specifications.md). This section will focus primarily on the app’s implementation.
+As this game combines a mobile app with a card game, the focus is split between the app’s development and the card's implementation. For details about the cards and their functionality, refer to the [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/blob/main/documents/functional_specifications/functional_specifications.md). This section will focus primarily on the app’s implementation.
 
 ### <ins>Coding Conventions</ins>
 
 1. **Variables And Constants**
-	- Use snake_case for variables and UPPERCASE_WITH_UNDERSCORES for constants.
+	- Use snake_case for variables and SCREAMING_SNAKE_CASE for constants.
 	- Choose descriptive names that clearly indicate their purpose.
 
 2. **Function Names**
 	- Use snake_case for function names.
-	- Begin with a verb to clearly describe the function’s action or purpose.
+	- Begin with a verb to describe the function's action or purpose clearly.
 
 3. **Class Names**
 	- Use PascalCase for class names to distinguish them from variables and functions.
@@ -135,14 +137,14 @@ Comment near 100% of the Functions in the code
 
 ### <ins>Documenting Conventions</ins>
 
-All project documentation will be written in **Markdown**. This includes technical documentation, code comments, and user manuals. Markdown files will be stored in the `docs/` folder in the repository.
+All project documentation, including technical documents, code comments, and user manuals, will be written in **Markdown**. Markdown files will be stored in the `documents/` folder in the repository.
 
 ## Setting up the game
 
 ### Hardware requirements 
 
 - Mobile device, either Android version 5.0 and higher, or iOS version 14 and higher.
-- Cards (see F.S.(TODO) For more detail)
+- Cards
 
 ### Software requirements 
 
@@ -204,7 +206,7 @@ images, music files and so on.
 ### GDScript Overview
 
 GDScript is a high-level, dynamically-typed scripting language used in Godot for game logic. Its syntax is simple and Python-like, making it accessible yet powerful for game development.
-The following code implementations will all be written using gdscript.
+The following code implementations will all be written using GDScript.
 
 ### App Flow 
 
@@ -292,7 +294,7 @@ Provides options for the user to adjust audio settings and view the app’s GitH
    └── Connect the slider's 'value_changed' signal.
    └── On slider value change:
        └── Update the global volume value.
-       └── Adjust the audio b us volume in real-time.
+       └── Adjust the audio bus volume in real-time.
 
 4. Handle Close Button
    └── On close button press:
@@ -370,8 +372,6 @@ The primary gameplay screen where players review hints, interact with the enviro
 Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
 - Code implementation
-	This code manages the timer display synchronization, input handling for numeric values (with increment and decrement functionality), and the validation of a code entry with a win/error page transition.
-
 ```markdown
 1. Initialize Code Page
    └── Sync the timer text color with the parent scene.
@@ -387,7 +387,7 @@ Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
 4. Validate Code
    └── On enter button press:
-       └── Check if the input matches the correct code ("4732").
+       └── Check if the input matches the correct code ("3247").
        └── If correct:
            └── Display the win page.
            └── Mark Chapter 1 as complete.
