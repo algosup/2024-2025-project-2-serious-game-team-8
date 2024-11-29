@@ -3,18 +3,17 @@
 Table of contents
 </summary>
 
-- [Glossary](#glossary)
+   - [Glossary](#glossary)
 - [1. Introduction](#1-introduction)
 - [Document Purpose \& Definition](#document-purpose--definition)
   - [Scope](#scope)
-  - [Target audience](#target-audience)
+  - [Target Audience](#target-audience)
 - [Project Overview](#project-overview)
   - [Project Brief](#project-brief)
-  - [Requirements](#requirements)
   - [Setting up the development environment](#setting-up-the-development-environment)
     - [Hardware Requirements](#hardware-requirements)
     - [Software Requirements](#software-requirements)
-  - [User requirements](#user-requirements)
+    - [User Requirements](#user-requirements)
     - [Coding Methodology](#coding-methodology)
       - [Workflow](#workflow)
       - [Coding Conventions](#coding-conventions)
@@ -47,6 +46,7 @@ Table of contents
 | **Functional Requirements**  | The "what" of the project, defining features and scope.                     |
 | **Technical Specifications** | The "how" of the project, detailing implementation and architecture.        |
 | **Serious Game**             | A game designed for educational purposes, such as climate change awareness. |
+| **Non-Functional Requirements** | Technical specifications addressing performance, usability, reliability, and scalability, focusing on the "How." |
 
 # 1. Introduction
 
@@ -67,7 +67,7 @@ The document should also benefit other stakeholders and project owners by giving
 
 The scope of the project is to prioritize educating users on climate change through engaging, interactive elements, with the gameplay serving as a supportive framework to reinforce the educational objectives.
 
-## Target audience 
+## Target Audience 
 
 The document is primarily intended for stakeholders, providing a clear understanding of the project's objectives and scope. Additionally, it serves as a valuable reference for developers and QA teams, offering insights into the design and implementation aspects.
 
@@ -79,9 +79,6 @@ As stated in the functional requirements, the goal of the project is to create a
 
 We have been given 7 weeks to finish the project.
 We chose to develop a board and mobile game because it allows us to concentrate on exploring and researching climate change and integrating these elements into a serious game. This approach aligns with our focus, without the added complexity of developing a PC game.
-
-# Requirements 
-
 
 ## Setting up the development environment 
 
@@ -100,7 +97,7 @@ The first step is to set up the development environment, which we can define as 
 - Any text editor 
 - [GitHub](https://github.com/) as a version control management system.
 
-### User requirements
+### User Requirements
 
 The user should expect a basic explanation of the game in the form of a tutorial which will be provided in a pamphlet along with the cards.
 
@@ -259,7 +256,7 @@ Acts as the main hub for the app, allowing users to start the game or access the
 - Code implementation
 ```markdown
 1. Initialize Home Page
-   └── Load the root node (`Node2D`).
+   └── Load the root node ('Node2D').
    └── Set up the main menu layout:
        └── Add texture button.
        └── Add settings button.
@@ -268,7 +265,6 @@ Acts as the main hub for the app, allowing users to start the game or access the
    └── Texture Button Pressed
        └── Instantiate the chapter selection scene.
        └── Add it as a child node to the current scene.
-
    └── Settings Button Pressed
        └── Instantiate the settings scene.
        └── Add it as a child node to the current scene.
@@ -293,10 +289,10 @@ Provides options for the user to adjust audio settings and view the app’s GitH
    └── Initialize the slider's value to the saved global value.
 
 3. Handle Slider Changes
-   └── Connect the slider's `value_changed` signal.
+   └── Connect the slider's 'value_changed' signal.
    └── On slider value change:
        └── Update the global volume value.
-       └── Adjust the audio bus volume in real-time.
+       └── Adjust the audio b us volume in real-time.
 
 4. Handle Close Button
    └── On close button press:
@@ -314,7 +310,7 @@ Allows the user to select a chapter to play. Only the first chapter is unlocked 
 - Code implementation
 ```markdown
 1. Initialize Chapter Select Page
-   └── Load the root node (`Node2D`).
+   └── Load the root node ('Node2D').
    └── Set up UI components, including:
        └── Chapter selection buttons.
        └── Settings button.
@@ -345,7 +341,7 @@ The primary gameplay screen where players review hints, interact with the enviro
        └── Display the "lose" screen.
 
 3. Handle Pause Button
-   └── Toggle the `is_paused` state.
+   └── Toggle the 'is_paused' state.
    └── Pause or resume the timer and animations.
 
 4. Handle Visibility Button
