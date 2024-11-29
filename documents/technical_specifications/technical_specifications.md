@@ -51,6 +51,14 @@ With that being said, we will try to cover as many functional and non-functional
 
 The document should also benefit other stakeholders and project owners by giving insight into our methodology and may serve as a future reference for maintenance or simple documentation purposes.
 
+## Scope
+
+The scope of the project is to prioritize educating users on climate change through engaging, interactive elements, with the gameplay serving as a supportive framework to reinforce the educational objectives.
+
+## Target audience 
+
+The document is primarily intended for stakeholders, providing a clear understanding of the project's objectives and scope. Additionally, it serves as a valuable reference for developers and QA teams, offering insights into the design and implementation aspects.
+
 # Project Overview 
 
 ## Project Brief
@@ -63,7 +71,6 @@ We chose to develop a board and mobile game because it allows us to concentrate 
 ## Requirements 
 
 While this document aims to be as clear and concise as possible to ensure a full understanding of the mobile game's implementation, some basic coding knowledge is necessary to fully grasp the code-related sections. The engine utilized will be Godot 4.0 and the code will be GDScript.
-
 
 The game will be able to be run on IOS/Android and you will require the board game in order to play.
 
@@ -83,6 +90,11 @@ The first step is to set up the development environment, which we can define as 
 - Any OS that supports Godot
 - Any text editor 
 - GitHub or any other source control management, [GitHub](https://github.com/) is recommended for this task.
+
+## User requirements
+
+The user should expect a basic explanation of the game in the form of a tutorial 
+which will be provided in a pamphlet along with the cards.
 
 
 ### Coding Methodology
@@ -176,25 +188,27 @@ The folder structure of the serious game project will be defined as follows, acc
 ├─📄 default_bus_layout.
 └─🖼️ ecoquest_logo.png
 ```
+
+- The resources folder will be used to store different types of material such as sprites, 
+images, music files and so on.
+
+- The script folder will be used to store the code of each scene.
+
+- The scene folder will be used to store each scene of the game.
+
 ## Data structures
+
+### GDScript Overview
+
+GDScript is a high-level, dynamically-typed scripting language used in Godot for game logic. Its syntax is simple and Python-like, making it accessible yet powerful for game development.
+
+### Flowchart 
+
+In this flowchart, you can see how the user will be able to navigate through the app.
 
 ### Splash Screen
 
 Displays the game's logo and transitions to the main menu after a brief delay.
-
-- Scene Structure 
-
-```py
-SplashScreen #Root node for the splash screen. 
-├── CanvasLayer # Keeps UI fixed. 
-│ ├── BackgroundControl # Manages the background.  
-│ │ ├── ColorRect # Solid background color. 
-│ ├── LogoControl # Displays the logo.
-│ │ ├── Logo # Game logo graphic.
-│ ├── TextControl # Handles text display.
-│ │ ├── Label # Loading or subtitle text.
-├── LoadingTime # Loading animation or cue.  
-```
 
 - Code implementation
 
@@ -236,24 +250,6 @@ SplashScreen #Root node for the splash screen.
 
 Acts as the main hub for the app, allowing users to start the game or access the settings menu.
 
-- Scene Structure 
-
-```py
-HomePage #Root node for the home page interface.  
-├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
-│ ├── BackgroundControl # Manages the background visuals.  
-│ │ ├── TextureRect # Displays the background image.  
-│ ├── HeadBarControl # Organizes the top bar elements.  
-│ │ ├── HeadBar # Container for settings button.  
-│ │ │ ├── SettingsButtonControl # Handles the settings button layout.  
-│ │ │ │ ├── SettingButton # Button to open settings.  
-│ ├── LogoControl # Displays the game logo.  
-│ │ ├── Logo # Game logo graphic.  
-│ ├── ButtonControl # Manages main menu buttons.  
-│ │ ├── TextureButton # Main button for navigation or interaction.  
-├── MenuMusic # Plays the home page background music.  
-```
-
 - Code implementation
 ```markdown
 1. Initialize Home Page
@@ -275,28 +271,6 @@ HomePage #Root node for the home page interface.
 ### Settings Page
 
 Provides options for the user to adjust audio settings and view the app’s GitHub repository. Includes a way to return to the home page.
-
-- Scene Structure 
-
-```py
-SettingsPage #Root node for the settings page interface.  
-├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
-│ ├── BackgroundControl # Manages the background visuals.  
-│ │ ├── TextureRect # Displays the background image.  
-│ ├── HeadBarControl # Organizes the top bar elements.  
-│ │ ├── HeadBar # Container for the close button.  
-│ │ │ ├── CloseButtonControl # Handles the close button layout.  
-│ │ │ │ ├── CloseButton # Button to exit the settings page.  
-│ ├── AudioButtonControl # Controls the audio toggle button.  
-│ │ ├── AudioButton # Toggles game audio on/off.  
-│ │ │ ├── AudioText # Label for the audio toggle button.  
-│ ├── MusicSliderControl # Manages the music volume slider.  
-│ │ ├── MusicSlider # Slider to adjust music volume.  
-│ ├── GithubButtonControl # Controls the GitHub link button.  
-│ │ ├── GithubButton # Button to open the project's GitHub page.  
-│ ├── MusicTextControl # Displays music-related text.  
-│ │ ├── Label # Text label for music options or instructions.  
-```
 
 - Code implementation
 
@@ -331,32 +305,6 @@ SettingsPage #Root node for the settings page interface.
 
 Allows the user to select a chapter to play. Only the first chapter is unlocked initially, with subsequent chapters becoming accessible after progression.
 
-- Scene Structure
-
-```py
-ChaptersSelection # Root node for the chapter selection screen.  
-├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
-│ ├── BackgroundControl # Manages the background visuals.  
-│ │ ├── TextureRect # Displays the background image.  
-│ ├── HeadBarControl # Organizes the top bar elements.  
-│ │ ├── HeadBar # Container for settings button.  
-│ │ │ ├── SettingsButtonControl # Handles the settings button layout.  
-│ │ │ │ ├── SettingButton # Button to open settings.  
-│ ├── ChapterOneTextControl # Displays the label for Chapter One.  
-│ │ ├── Label # Text label for Chapter One description.  
-│ ├── ChapterTwoTextControl # Displays the label for Chapter Two.  
-│ │ ├── Label # Text label for Chapter Two description.  
-│ ├── ChapterThreeTextControl # Displays the label for Chapter Three.  
-│ │ ├── Label # Text label for Chapter Three description.  
-│ ├── ChapterOneImgControl # Controls the image for Chapter One.  
-│ │ ├── ChapterOneImage # Image for Chapter One.  
-│ │ │ ├── ChapterOneButton # Button to select Chapter One.  
-│ ├── ChapterTwoImgControl # Controls the image for Chapter Two.  
-│ │ ├── ChapterTwoImage # Image for Chapter Two.  
-│ ├── ChapterThreeImgControl # Controls the image for Chapter Three.  
-│ │ ├── ChapterThreeImage # Image for Chapter Three.  
-```
-
 - Code implementation
 ```markdown
 1. Initialize Chapter Select Page
@@ -377,47 +325,6 @@ ChaptersSelection # Root node for the chapter selection screen.
 ### Game page
 
 The primary gameplay screen where players review hints, interact with the environment, manage time, and solve puzzles.
-
-- Scene Structure 
-
-```py
-GamePage # Root node for the main game interface.  
-├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
-│ ├── BackgroundControl # Manages background visuals.  
-│ │ ├── TextureRect # Displays the background image.  
-│ ├── LeafOneControl # Controls visibility of leaf 1.  
-│ │ ├── Leaf1 # Leaf graphic 1.  
-│ ├── LeafTwoControl # Controls visibility of leaf 2.  
-│ │ ├── Leaf2 # Leaf graphic 2.  
-│ ├── LeafThreeControl # Controls visibility of leaf 3.  
-│ │ ├── Leaf3 # Leaf graphic 3.  
-│ ├── LeafFourControl # Controls visibility of leaf 4.  
-│ │ ├── Leaf4 # Leaf graphic 4.  
-│ ├── LeafFiveControl # Controls visibility of leaf 5.  
-│ │ ├── Leaf5 # Leaf graphic 5.  
-│ ├── HeadBarControl # Organizes top bar elements.  
-│ │ ├── HeadBar # Container for buttons and controls.  
-│ │ │ ├── ButtonsControl # Groups settings and close buttons.  
-│ │ │ │ ├── SettingButton # Opens settings.  
-│ │ │ │ ├── CloseButton # Exits the game.  
-│ ├── GameControls # Contains pause and hint controls.  
-│ │ ├── Pause # Handles pause functionality.  
-│ │ │ ├── Label # Pause label text.  
-│ │ │ ├── PauseButtonSprite # Pause button graphic.  
-│ │ │ ├── ResumeButton # Button to resume the game.  
-│ ├── Hint # Displays hints.  
-│ │ ├── Label # Hint text.  
-│ ├── View # Handles viewing options and animations.  
-│ │ ├── Label # View label text.  
-│ │ ├── PauseAnimation # Animation for pausing.  
-│ ├── VisibilityControl # Controls visibility of UI elements.  
-│ │ ├── Visibility # Button to toggle visibility.  
-│ │ ├── Timer # Main game timer.  
-│ │ ├── IncrementTimer # Timer for tracking added time.  
-│ │ ├── TimerControl # Organizes timer display elements.  
-│ │ │ ├── TimerBg # Background for the timer display.  
-│ │ │ │ ├── TimerText # Displays the timer value.  
-```
 
 - Code implementation
 ```markdown
@@ -460,50 +367,6 @@ GamePage # Root node for the main game interface.
 
 Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
-- Scene Structure
-```py
-CodePage # Root node for the code page interface.  
-├── CanvasLayer # Keeps UI elements fixed and independent of the camera.  
-│ ├── BackgroundColor # Manages the background color of the page.  
-│ │ ├── ColorRect # Displays the background color.  
-│ ├── HeadBarControl # Organizes the top bar elements.  
-│ │ ├── HeadBar # Container for the return button.  
-│ │ │ ├── ReturnButtonControl # Handles the return button layout.  
-│ │ │ │ ├── ReturnButton # Button to return to the previous screen.  
-│ ├── TimerControl # Manages the timer display.  
-│ │ ├── TimerBg # Background container for the timer.  
-│ │ │ ├── TimerText # Displays the timer value.  
-│ ├── CodeControl # Manages the input fields and operation buttons.  
-│ │ ├── TextureRect # Visual element for the code input area.  
-│ │ ├── Input1 # First input field for user input.  
-│ │ │ ├── Label # Label for the first input.  
-│ │ ├── Input2 # Second input field for user input.  
-│ │ │ ├── Label # Label for the second input.  
-│ │ ├── Input3 # Third input field for user input.  
-│ │ │ ├── Label # Label for the third input.  
-│ │ ├── Input4 # Fourth input field for user input.  
-│ │ │ ├── Label # Label for the fourth input.  
-│ │ ├── Plus1 # Button for adding value to the first input.  
-│ │ │ ├── Label # Label for the plus button.  
-│ │ ├── Plus2 # Button for adding value to the second input.  
-│ │ │ ├── Label # Label for the plus button.  
-│ │ ├── Plus3 # Button for adding value to the third input.  
-│ │ │ ├── Label # Label for the plus button.  
-│ │ ├── Plus4 # Button for adding value to the fourth input.  
-│ │ │ ├── Label # Label for the plus button.  
-│ │ ├── Minus1 # Button for subtracting value from the first input.  
-│ │ │ ├── Label # Label for the minus button.  
-│ │ ├── Minus2 # Button for subtracting value from the second input.  
-│ │ │ ├── Label # Label for the minus button.  
-│ │ ├── Minus3 # Button for subtracting value from the third input.  
-│ │ │ ├── Label # Label for the minus button.  
-│ │ ├── Minus4 # Button for subtracting value from the fourth input.  
-│ │ │ ├── Label # Label for the minus button.  
-│ ├── EnterControl # Controls the enter button.  
-│ │ ├── EnterButton # Button to submit the entered values.  
-│ │ │ ├── Label # Label for the enter button.  
-```
-
 - Code implementation
 	This code manages the timer display synchronization, input handling for numeric values (with increment and decrement functionality), and the validation of a code entry with a win/error page transition.
 
@@ -534,19 +397,6 @@ CodePage # Root node for the code page interface.
 
 Displays a congratulatory message to the player for successfully solving the puzzle by entering the correct combination.
 
-- Scene Structure
-```py
-ChapterOneWin 
-├── CanvasLayer # Manages the visual elements
-| ├── BackgroundControl # Controls background display
-| | ├── BackgroundColor # Sets the background color
-| ├── ContainerControl # Container for UI elements
-| | ├── ColorRect # Background or visual rectangle
-| | | ├── Label # Displays text or message
-| ├── BackButtonControl # Manages the back button
-| | ├── CloseButton # Button to close or return
-```
-
 - Code Implementation
 ```markdown
 1. Initialize Code Win Page
@@ -561,22 +411,9 @@ ChapterOneWin
 
 Alerts the player when an incorrect code is entered and penalizes them by deducting time from the countdown timer (feature pending implementation).
 
-- Scene structure
-```py
-ChapterOneWin 
-├── CanvasLayer # Manages the visual elements
-| ├── BackgroundControl # Controls background display
-| | ├── BackgroundColor # Sets the background color
-| ├── ContainerControl # Container for UI elements
-| | ├── ColorRect # Background or visual rectangle
-| | | ├── Label # Displays text or message
-| ├── BackButtonControl # Manages the back button
-| | ├── CloseButton # Button to close or return
-```
-
 - Code implementation
 ```markdown
-1. Initialize Code Error Page
+1. Initialize Code Error page
    └── Display the error page content.
 
 2. Handle Close Button
