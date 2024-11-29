@@ -70,7 +70,7 @@ func _on_visibility_pressed() -> void:
 
 
 func _on_pause_pressed() -> void:
-	var buttons = [$CanvasLayer/GameControls/Code, $CanvasLayer/GameControls/Penality, $CanvasLayer/GameControls/Hint]
+	var buttons = [$CanvasLayer/GameControls/Code, $CanvasLayer/GameControls/Penality, $CanvasLayer/GameControls/Hint, $CanvasLayer/GameControls/View]
 	if is_paused == false:
 		is_paused = true
 		$CanvasLayer/GameControls/PauseAnimation.play("pause")
@@ -137,3 +137,7 @@ func remove_time() -> void:
 			$CanvasLayer/Timer.stop()
 		else:
 			minutes = minutes + 1
+
+
+func _on_hint_pressed() -> void:
+	add_child(Global.hint_page.instantiate())
