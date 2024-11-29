@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0ogv2vt64x3a"]
+[gd_scene load_steps=19 format=3 uid="uid://b0ogv2vt64x3a"]
 
 [ext_resource type="Script" path="res://script/game_page.gd" id="1_50ksb"]
 [ext_resource type="Texture2D" uid="uid://bcxb7cvix84hp" path="res://resources/background/game_bg.png" id="2_co0cp"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://chb2b074kepln" path="res://resources/svg/Icon/resume.png" id="9_cec5p"]
 [ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/visibility.png" id="9_pc4mj"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="11_i1g5n"]
+[ext_resource type="Texture2D" uid="uid://dn255hidwwwsh" path="res://resources/svg/circle_disabled.png" id="12_jvn7x"]
 
 [sub_resource type="Animation" id="Animation_8g2nl"]
 length = 0.001
@@ -346,6 +347,7 @@ offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_qtagr")
+texture_disabled = ExtResource("12_jvn7x")
 
 [node name="Label" type="Label" parent="CanvasLayer/GameControls/Hint"]
 layout_mode = 1
@@ -379,6 +381,7 @@ offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_qtagr")
+texture_disabled = ExtResource("12_jvn7x")
 
 [node name="Label" type="Label" parent="CanvasLayer/GameControls/Code"]
 layout_mode = 1
@@ -412,6 +415,7 @@ offset_bottom = 373.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_qtagr")
+texture_disabled = ExtResource("12_jvn7x")
 
 [node name="Label" type="Label" parent="CanvasLayer/GameControls/Penality"]
 layout_mode = 1
@@ -445,6 +449,7 @@ offset_bottom = 373.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_qtagr")
+texture_disabled = ExtResource("12_jvn7x")
 
 [node name="Label" type="Label" parent="CanvasLayer/GameControls/View"]
 layout_mode = 1
@@ -462,8 +467,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_berp6")
 theme_override_font_sizes/font_size = 50
-text = "View 
-hints"
+text = "wip"
 horizontal_alignment = 1
 
 [node name="PauseAnimation" type="AnimationPlayer" parent="CanvasLayer/GameControls"]
@@ -548,6 +552,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameControls/Hint" to="." method="_on_hint_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Code" to="." method="_on_code_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Penality" to="." method="remove_time"]
 [connection signal="pressed" from="CanvasLayer/VisibilityControl/Visibility" to="." method="_on_visibility_pressed"]

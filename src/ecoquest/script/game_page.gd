@@ -9,12 +9,13 @@ var is_paused: bool = false
 @export var seconds: int
 
 ### This variable checks if the chapter is finished, it resets when the chapter is selected
-@export var is_chapter_finished: bool=false
+@export var is_chapter_finished: bool = false
 
 ### this variable represents the current chapter
 @export var current_chapter: int = 0
 
-var time_limits= [600,900,1200]
+var time_limits = [600, 900, 1200]
+
 
 func _ready() -> void:
 	minutes = 0
@@ -35,18 +36,19 @@ func _process(_delta: float) -> void:
 		seconds = int(fmod($CanvasLayer/Timer.time_left, 60))  # Get the seconds
 		_removing_leaves()
 		time_low_warning()
-		if(has_node("CodePage")):
+		if has_node("CodePage"):
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
-			
+
 	else:
 		if $CanvasLayer/IncrementTimer.is_stopped():
 			$CanvasLayer/IncrementTimer.start()
-		if(has_node("CodePage")):
+		if has_node("CodePage"):
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+
 
 ### Close the settings page
 func _on_close_button_pressed() -> void:
@@ -68,13 +70,21 @@ func _on_visibility_pressed() -> void:
 
 
 func _on_pause_pressed() -> void:
+	var buttons = [$CanvasLayer/GameControls/Code, $CanvasLayer/GameControls/Penality, $CanvasLayer/GameControls/Hint, $CanvasLayer/GameControls/View]
 	if is_paused == false:
 		is_paused = true
 		$CanvasLayer/GameControls/PauseAnimation.play("pause")
 		$CanvasLayer/Timer.paused = true
 
+		# Disable buttons and apply grayscale
+		for button in buttons:
+			button.disabled = true
 	else:
 		is_paused = false
+		
+		for button in buttons:
+			button.disabled = false
+			
 		$CanvasLayer/Timer.paused = false
 		$CanvasLayer/GameControls/PauseAnimation.play("RESET")
 
@@ -111,11 +121,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_increment_timer_timeout() -> void:
-	seconds+=1
-	if(seconds == 60):
-		seconds=0
-		minutes+=1
-		
+	seconds += 1
+	if seconds == 60:
+		seconds = 0
+		minutes += 1
+
 
 func remove_time() -> void:
 	var time_left = $CanvasLayer/Timer.time_left
@@ -127,3 +137,7 @@ func remove_time() -> void:
 			$CanvasLayer/Timer.stop()
 		else:
 			minutes = minutes + 1
+
+
+func _on_hint_pressed() -> void:
+	add_child(Global.hint_page.instantiate())
