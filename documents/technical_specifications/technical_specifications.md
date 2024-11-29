@@ -387,7 +387,7 @@ Serves as a puzzle-solving screen, for now it will only contain one puzzle.
 
 4. Validate Code
    └── On enter button press:
-       └── Check if the input matches the correct code ("4732").
+       └── Check if the input matches the correct code ("3247").
        └── If correct:
            └── Display the win page.
            └── Mark Chapter 1 as complete.
