@@ -60,7 +60,8 @@ func _on_input_pressed(buttonID: int) -> void:
 
 
 func _on_enter_button_pressed() -> void:
-	if get_node(input1).text == "4" && get_node(input2).text == "7" && get_node(input3).text == "3" && get_node(input4).text == "2":
+	var answer = get_node(input1).text + get_node(input2).text + get_node(input3).text + get_node(input4).text
+	if str(answer) == "3247":
 		add_child(Global.win_page.instantiate())
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true
