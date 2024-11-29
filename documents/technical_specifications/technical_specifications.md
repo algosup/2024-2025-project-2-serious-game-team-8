@@ -1,3 +1,5 @@
+# Technical Specifications 
+
 <details>
 <summary>
 Table of contents
@@ -36,6 +38,7 @@ Table of contents
     - [Code error page](#code-error-page)
 
 </details>
+
 
 # Glossary
 
