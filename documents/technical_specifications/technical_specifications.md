@@ -70,9 +70,6 @@ We chose to develop a board and mobile game because it allows us to concentrate 
 
 ## Requirements 
 
-While this document aims to be as clear and concise as possible to ensure a full understanding of the mobile game's implementation, some basic coding knowledge is necessary to fully grasp the code-related sections. The engine utilized will be Godot 4.0 and the code will be GDScript.
-
-The game will be able to be run on IOS/Android and you will require the board game in order to play.
 
 ## Setting up the development environment 
 
@@ -143,7 +140,7 @@ All project documentation will be written in **Markdown**. This includes technic
 
 ### Software requirements 
 
-- Godot Version 4.0
+- Godot Version 4.3
 - Figma
 
 # 2. Technical Specifications 
