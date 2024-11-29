@@ -2,9 +2,9 @@
 
 This document aims to centralize all the management artifact links and resources listed below:
 
-- [Tasks \& schedule](#tasks--schedule)
+- [Tasks & Schedule](#tasks--schedule)
 - [RACI Matrix](#raci-matrix)
-- [Risks \& Assumptions](#risks--assumptions)
+- [Risks & Assumptions](#risks--assumptions)
 - [Key Performance Indicators](#key-performance-indicators)
   - [Definition of our KPIs](#definition-of-our-kpis)
     - [Documents](#documents)
@@ -12,42 +12,42 @@ This document aims to centralize all the management artifact links and resources
     - [Game](#game)
     - [Test](#test)
     - [Pitch](#pitch)
-    - [Human Ressources](#human-ressources)
+    - [Human Resources](#human-resources)
     - [Mood](#mood)
   - [Link to the project's KPIs](#link-to-the-projects-kpis)
   - [Link to the forms](#link-to-the-forms)
-- [Weekly reports](#weekly-reports)
+- [Weekly Reports](#weekly-reports)
 <!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
 <!-- - [Addendum](#addendum) -->
   <!-- - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
 
-## Tasks & schedule
+## Tasks & Schedule
 
-You can view the breakdown of all the tasks we've identified for the duration of the project following [this link](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?gid=0#gid=0).
+You can view the breakdown of all the tasks we've identified for the duration of the project by following [this link](https://docs.google.com/spreadsheets/d/1YawyIgXylS97_ymcw2Y4kwv85DKmZqUtg69qEnfmWP8/edit?gid=0#gid=0).
 
-This document has been created using Google Docs in order to keep tracks of the different tasks, for both team members and the client.
+This document has been created using Google Docs to keep track of the different tasks for both team members and the client.
 
 ## RACI Matrix
 
-The RACI matrix of this project is as follows considering the [Project Charter](./project_charter.md):
+The RACI matrix of this project is as follows, considering the [Project Charter](./project_charter.md):
 
-| Name                      | Project Manager | Program Manager | Technical Leader | Software engineer | Quality assurance | Technical Writer | Client | Stakeholders |
-| ------------------------- | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ---------------- | ------ | ------------ |
-| Project kick-off          | I               | I               | I                | I                 | I                 | I                | A      | I            |
-| Project charter           | R               | I               | I                | /                 | I                 | I                | A      | C            |
-| Schedule creation         | R               | I               | I                | I                 | I                 | I                | I      | C            |
-| Functional specifications | A               | R               | I                | I                 | I                 | I                | C      | C            |
-| Technical specifications  | A               | C               | R                | I                 | I                 | I                | /      | C            |
-| Coding process            | A               | C               | C                | R                 | I                 | I                | I      | I            |
-| Testing planification     | A               | /               | C                | C                 | R                 | /                | /      | C            |
-| Usage instructions        | I               | C               | I                | C                 | /                 | R                | A      | C            |
+| Name                      | Project Manager | Program Manager | Technical Leader | Software Engineer | Quality Assurance | Technical Writer | Client & Stakeholder |
+| ------------------------- | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ---------------- | -------------------- |
+| Project kick-off          | I               | I               | I                | I                 | I                 | I                | A/I                  |
+| Project charter           | R               | I               | I                | /                 | I                 | I                | A/C                  |
+| Schedule creation         | R               | I               | I                | I                 | I                 | I                | I/C                  |
+| Functional specifications | A               | R               | I                | I                 | I                 | I                | C                    |
+| Technical specifications  | A               | C               | R                | I                 | I                 | I                | C                    |
+| Coding process            | A               | C               | C                | R                 | I                 | I                | I                    |
+| Testing planification     | A               | /               | C                | C                 | R                 | /                | C                    |
+| Usage instructions        | I               | C               | I                | C                 | /                 | R                | A/C                  |
 
 Legend:
 
-| Letter | Full name   | Description                                     |
+| Letter | Full Name   | Description                                     |
 | ------ | ----------- | ----------------------------------------------- |
 | R      | Responsible | Executes the task or activity                   |
-| A      | Accountant  | Ultimately answerable for the task's completion |
+| A      | Accountable | Ultimately answerable for the task's completion |
 | C      | Consulted   | Provides input and/or advice on the task        |
 | I      | Informed    | Kept updated on progress and decisions          |
 | /      | /           | No interaction with this role for this task     |
@@ -56,37 +56,37 @@ Legend:
 
 | ID  | Description                                                                              | Consequence                                                               | Impact   | Likelihood | Mitigation/Avoidance                                            |
 | --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | -------- | ---------- | --------------------------------------------------------------- |
-| 1   | We might forget a key point in our solution or misinterpret a requirement                | It would impact the time of production to remove or refien them           | High     | Medium     | Regular communications about what's being done with the client. |
-| 2   | We might create a game that seems fun to us, but who is not in fact                      | The game would be pointless and we should start from scratch again        | High     | Low        | Regular testing with non-team-members tester.                   |
-| 3   | We might starting something to big to complete in the time allocated to this project     | The project will end uncomplete or the team should work in overtime a lot | High     | Medium     | Start small and scale up iteratively.                           |
-| 4   | We could fall in love with our product even though it is one not completing requirements | It would give an off-topic game which is useless                          | High     | Low        | Don't hesitate to pivot if needed.                              |
+| 1   | We might forget a key point in our solution or misinterpret a requirement                | It would impact the time of production to remove or refine them           | High     | Medium     | Regular communications about what's being done with the client. |
+| 2   | We might create a game that seems fun to us, but which is not in fact                    | The game would be pointless and we should start from scratch again        | High     | Low        | Regular testing with non-team-member testers.                   |
+| 3   | We might start something too big to complete in the time allocated to this project       | The project will end incomplete, or the team would need to work overtime a lot | High     | Medium     | Start small and scale up iteratively.                           |
+| 4   | We could fall in love with our product even though it is not completing requirements     | It would result in an off-topic game that is useless                     | High     | Low        | Don't hesitate to pivot if needed.                              |
 | 5   | Team member leaving                                                                      | Tasks left to the remaining members without any assignee                  | High     | Unlikely   | Sharing the tasks among the remaining team members.             |
 
 ## Key Performance Indicators
 
 ### Definition of our KPIs
 
-To keep tracks of the project advancement, KPIs have been defined. These KPIs are defined below in there respective categories. Their way of calculations are put in addition with them.
+To keep track of the project's advancement, KPIs have been defined. These KPIs are listed below in their respective categories, along with the reasoning behind each.
 
-#### Documents
+#### <ins>Documents</ins>
 
 This section contains the following KPIs:
 
-- **Functional specifications**
-- **Technical specifications**
+- **Functional Specifications**
+- **Technical Specifications**
 - **Test Plan**
 - **User Manual**
 
-The following formula measure the progress of these documents:
+The following formula measures the progress of these documents:
 
-$$\text{percentage} = (\frac{\text{current number of sections}} {\text{total number of sections}})\times{100}$$
+$$\text{percentage} = \left(\frac{\text{current number of sections}} {\text{total number of sections}}\right)\times{100}$$
 
 Where:
 
 - **current_number_of_sections**: The number of sections that are completely done.
 - **total_number_of_sections**: The number of predefined sections in the document's outline, which may evolve.
 
-#### Design
+#### <ins>Design</ins>
 
 This section includes:
 
@@ -95,14 +95,14 @@ This section includes:
 
 The percentage progress for these KPIs is calculated using this formula:
 
-$$\text{percentage} = (\frac{\text{current number of assets designed}} {\text{total number of assets}})\times{100}$$
+$$\text{percentage} = \left(\frac{\text{current number of assets designed}} {\text{total number of assets}}\right)\times{100}$$
 
 Where:
 
 - **current_number_of_assets_designed**: The number of assets that have been designed.
 - **total_number_of_assets**: The total number of assets planned to be designed during the project analysis.
 
-#### Game
+#### <ins>Game</ins>
 
 This section tracks the following KPIs:
 
@@ -110,94 +110,94 @@ This section tracks the following KPIs:
 - **Second Prototype**
 - **Final Product**
 
-Each of those KPIs are based on sub-task and will use Users feedback to be calculated:
+Each of these KPIs is based on sub-tasks and will use user feedback to be calculated:
 
-$$\text{percentage} = (\frac{({\text{current number of game mechanics + user feedback adaptation}})} {\text{total game mechanics predifined}})\times{100}$$
+$$\text{percentage} = \left(\frac{{\text{current number of game mechanics + user feedback adaptation}}} {\text{total game mechanics predefined}}\right)\times{100}$$
 
 Where:
 
 - **current_number_of_game_mechanics**: The number of game mechanics that are fully implemented.
 - **user_feedback_adaptation**: Feedback adaptations we get during the test phases between each prototype or product.
-- **total_game_mechanics_predifined**: The total number of game mechanics predefined during project analysis and design.
+- **total_game_mechanics_predefined**: The total number of game mechanics predefined during project analysis and design.
 
-#### Test
+#### <ins>Test</ins>
 
 This section contains only one KPI:
 
 - **Test Cases**
 
-The percentage progress would be defined as such:
+The percentage progress is defined as follows:
 
-$$\text{percentage} = (\frac{\text{current number of test cases}} {\text{total number of test cases}})\times{100}$$
+$$\text{percentage} = \left(\frac{\text{number of tests performed}} {\text{total number of test cases}}\right)\times{100}$$
 
 Where:
 
-- **current_number_of_text_cases**: The number of test cases currently written.
-- **total_number_of_test_cases**: The total number of test cases predifined.
+- **number_of_tests_performed**: The number of test cases performed.
+- **total_number_of_test_cases**: The total number of test cases predefined.
 
-#### Pitch
+#### <ins>Pitch</ins>
 
 Only one KPI is included in this section:
 
 - **Pitch Deck**
 
-The percentage of completion would be calculated using this formula:
+The percentage of completion is calculated using this formula:
 
-$$\text{percentage} = (\frac{\text{current number of slides}} {\text{total number of slides}})\times{100}$$
+$$\text{percentage} = \left(\frac{\text{current number of slides}} {\text{total number of slides}}\right)\times{100}$$
 
-Where: 
+Where:
 
 - **current_number_of_slides**: The number of slides currently designed in the Pitch Deck.
 - **total_number_of_slides**: The number of slides the Pitch Deck should contain in the end.
 
-#### Human Ressources
+#### <ins>Human Resources</ins>
 
 The following KPIs are tracked in this section:
 
 - **Overtime**
-- **Injustified Absence**
+- **Unjustified Absence**
 
 These KPIs are calculated only over 30 minutes each.
 
-The overtime are tracked according to a [Google form](#link-to-the-forms).
+The overtime is tracked according to a [Google Form](#link-to-the-forms).
 
-#### Mood
+#### <ins>Mood</ins>
 
-The mood percentage is calculated from the average of a 10 personal grade. Each team members respond to a survey every weeks and they have to give their feelings over the week.
+The mood percentage is calculated from the average of a 10-point personal grade. Each team member responds to a survey every week and gives their feelings about the week.
 
-This method allows an accurate way of tracking the motivation and global mood during the project.
+This method allows an accurate way of tracking the motivation and overall mood during the project.
 
 You can find the responses [here](#link-to-the-forms).
 
-### Link to the project's KPIs
+### Link to the Project's KPIs
 
-You can see our project's KPIs which were explained above following [this link](https://docs.google.com/spreadsheets/d/1BWe4K6mLUlL6vSzulc70gr5wj0btL7bMgGRO0_gixqE/edit?usp=sharing).
+You can see our project's KPIs, which were explained above, by following [this link](https://docs.google.com/spreadsheets/d/1BWe4K6mLUlL6vSzulc70gr5wj0btL7bMgGRO0_gixqE/edit?usp=sharing).
 
-### Link to the forms
+### Link to the Forms
 
-This section is here to gather all the forms used for the KPIs.
+This section gathers all the forms used for the KPIs.
 
-  - [Team 8 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/11JtrnA0_N300-CjYwOXmeK_fnCse6ndy-enLrrQBak8/edit?usp=sharing)
-  <!-- - [Team 8 Satisfaction Week 2]() -->
-  <!-- - [Team 8 Satisfaction Week 3]() -->
-  <!-- - [Team 8 Satisfaction Week 4]() -->
-  <!-- - [Team 8 Satisfaction Week 5]() -->
-  <!-- - [Team 8 Satisfaction Week 6]() -->
-  <!-- - [Team 8 Satisfaction Week 7]() -->
+- [Team 8 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/11JtrnA0_N300-CjYwOXmeK_fnCse6ndy-enLrrQBak8/edit?usp=sharing)
+- [Team 8 Satisfaction Week 2](https://docs.google.com/spreadsheets/d/1ML4Arv1vPYiqL4hArGwEtkQfFV4OiY-ZppNbpNLqtWs/edit?usp=sharing)
+- [Team 8 Satisfaction Week 3](https://docs.google.com/spreadsheets/d/1_P8kYex3n9S3TnirVDKRWVjTEJSFhVTa1bV3EisE8-Y/edit?usp=sharing)
+<!-- - [Team 8 Satisfaction Week 4]() -->
+<!-- - [Team 8 Satisfaction Week 5]() -->
+<!-- - [Team 8 Satisfaction Week 6]() -->
+<!-- - [Team 8 Satisfaction Week 7]() -->
 
-The following link is used as a cumulative for the seven weeks:
+The following link is used as a cumulative file for the seven weeks:
 
-  - [Team 8 Satisfaction Cumulative](https://docs.google.com/spreadsheets/d/1XuxYtWgcUpnG3XmunEh33R46xmMi0EG3kv1voRpgjVk/edit?usp=sharing)
+- [Team 8 Satisfaction Cumulative](https://docs.google.com/spreadsheets/d/1DWyQurWkC8jboxM_5IE4B2zKmjL-0ZCbOPENQtW2KXI/edit?usp=sharing)
 
-## Weekly reports
+## Weekly Reports
 
-The weekly reports folder can be found following [this link](/documents/management/weekly_reports/).
+The weekly reports folder can be found by following [this link](/documents/management/weekly_reports/).
 
-You can access each of them directly by following the links just below:
+You can access each of them directly by following the links below:
 
 - [Access Report for Week 1](/documents/management/weekly_reports/weekly_report_week1.md)
 - [Access Report for Week 2](/documents/management/weekly_reports/weekly_report_week2.md)
-<!-- - [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md) -->
+- [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md)
 <!-- - [Access Report for Week 4](/documents/management/weekly_reports/weekly_report_week4.md) -->
 <!-- - [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md) -->
 <!-- - [Access Report for Week 6](/documents/management/weekly_reports/weekly_report_week6.md) -->
@@ -205,11 +205,11 @@ You can access each of them directly by following the links just below:
 
 You can also access all the reports in one file using the link below:
 
-- [Access Cumulative file for all 7 weeks](/documents/management/weekly_reports/weekly_reports_cumulative.md)
+- [Access Cumulative File for All 7 Weeks](/documents/management/weekly_reports/weekly_reports_cumulative.md)
 
 <!-- ## Post Mortem Analysis -->
 
-<!-- You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md) -->
+<!-- You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md). -->
 
 <!-- ## Addendum -->
 
@@ -219,6 +219,6 @@ You can also access all the reports in one file using the link below:
 
 Learning Dart and Flutter took longer than anticipated, delaying the development phase from the start. As mentioned in the [Post Mortem Analysis](./post_mortem.md), we should have spent more time mastering the language before diving into the project. This would have prevented many of the issues and incompatibilities discovered later, which forced us to rework several features towards the end.
 
-As the project manager, I underestimated the time required to develop each page and its related features. This miscalculation could not be mitigated by overtime if our software engineer worked alone. Consequently, to ensure a functional prototype, we had to reorganize our efforts. Our QA and Technical Writer continued with their tasks, only seeking assistance when necessary. We also solely focused on the job seeker side rather than the company one, preferring quality rather than quantity.
+As the project manager, I underestimated the time required to develop each page and its related features. This miscalculation could not be mitigated by overtime if our software engineer worked alone. Consequently, to ensure a functional prototype, we had to reorganize our efforts. Our QA and Technical Writer continued with their tasks, only seeking assistance when necessary. We also solely focused on the job seeker side rather than the company one, preferring quality over quantity.
 
 Overall, although our progress was not as far along as planned, future projects should account more accurately for the software engineer's learning curve and the actual effort needed to create each page. -->
