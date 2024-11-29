@@ -142,7 +142,7 @@ All project documentation will be written in **Markdown**. This includes technic
 ### Hardware requirements 
 
 - Mobile device, either Android version 5.0 and higher, or iOS version 14 and higher.
-- Cards (see F.S.(TODO) For more detail)
+- Cards
 
 ### Software requirements 
 
