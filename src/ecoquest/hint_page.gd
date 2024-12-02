@@ -7,9 +7,16 @@ func _ready() -> void:
 	$CanvasLayer/ContainerControl/HintButton2.modulate = Global.final_hint_button_color if Global.opened_hint_1_tutorial else Global.initial_hint_button_color
 	$CanvasLayer/ContainerControl/HintButton3.modulate = Global.final_hint_button_color if Global.opened_hint_2_tutorial else Global.initial_hint_button_color
 
+
+
+var normal = preload("res://resources/svg/Button/Square/Fill/Default.svg")
+var focused = preload("res://resources/svg/Hover.png")
 func _on_hint_button_1_pressed() -> void:
 	# Always allow the hint popup to appear
 	$CanvasLayer/ContainerControl/HintBackground/Label.text= hints[Global.current_chapter][0]
+	$CanvasLayer/ContainerControl/HintButton1.texture_normal= focused
+	$CanvasLayer/ContainerControl/HintButton2.texture_normal= normal
+	$CanvasLayer/ContainerControl/HintButton3.texture_normal= normal
 	# Update state and make Button 2 active
 	if not Global.opened_hint_1_tutorial:
 		Global.opened_hint_1_tutorial = true
@@ -18,6 +25,9 @@ func _on_hint_button_1_pressed() -> void:
 func _on_hint_button_2_pressed() -> void:
 		if Global.opened_hint_1_tutorial:
 			$CanvasLayer/ContainerControl/HintBackground/Label.text= hints[Global.current_chapter][1]
+			$CanvasLayer/ContainerControl/HintButton1.texture_normal= normal
+			$CanvasLayer/ContainerControl/HintButton2.texture_normal= focused
+			$CanvasLayer/ContainerControl/HintButton3.texture_normal= normal
 			# Update state and make Button 3 active
 			if not Global.opened_hint_2_tutorial:
 				Global.opened_hint_2_tutorial = true
@@ -26,7 +36,9 @@ func _on_hint_button_2_pressed() -> void:
 func _on_hint_button_3_pressed() -> void:
 		if Global.opened_hint_2_tutorial:
 			$CanvasLayer/ContainerControl/HintBackground/Label.text= hints[Global.current_chapter][2]
-
+			$CanvasLayer/ContainerControl/HintButton1.texture_normal= normal
+			$CanvasLayer/ContainerControl/HintButton2.texture_normal= normal
+			$CanvasLayer/ContainerControl/HintButton3.texture_normal= focused
 		
 		
 		# Mark the third hint as opened

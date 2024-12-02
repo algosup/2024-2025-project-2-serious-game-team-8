@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://54n70f0b7m7r"]
+[gd_scene load_steps=8 format=3 uid="uid://54n70f0b7m7r"]
 
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="1_e2vpk"]
 [ext_resource type="Script" path="res://hint_page.gd" id="1_fx6j6"]
 [ext_resource type="Texture2D" uid="uid://dl747fbwjeasn" path="res://resources/svg/Button/Square/Fill/Default.svg" id="2_b6yuw"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="2_vqcq2"]
-[ext_resource type="Texture2D" uid="uid://cfxp8hoxb3t13" path="res://resources/svg/Button/Square/Fill/Hover.svg" id="3_15lvh"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="3_jhko3"]
 [ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="5_f5cs7"]
 [ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="6_7phm4"]
@@ -111,7 +110,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_b6yuw")
-texture_hover = ExtResource("3_15lvh")
 
 [node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton1"]
 layout_mode = 0
@@ -137,7 +135,6 @@ offset_bottom = 271.0
 grow_horizontal = 2
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_b6yuw")
-texture_hover = ExtResource("3_15lvh")
 
 [node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton2"]
 modulate = Color(0.212305, 0.212305, 0.212305, 1)
@@ -160,7 +157,6 @@ offset_right = 225.0
 offset_bottom = 271.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_b6yuw")
-texture_hover = ExtResource("3_15lvh")
 
 [node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton3"]
 modulate = Color(0.211765, 0.211765, 0.211765, 1)
