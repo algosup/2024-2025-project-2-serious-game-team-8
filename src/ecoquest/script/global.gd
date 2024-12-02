@@ -9,10 +9,10 @@ var error_page = preload("res://scene/code_error_page.tscn")
 var chapter_one_completion_page = preload("res://scene/chapter_one_win.tscn")
 var work_in_progress_page = preload("res://scene/work_in_progress_pop_up.tscn")
 var chapter_locked = preload("res://scene/locked_chapter.tscn")
-var hint_page = preload("res://scene/hint_page.tscn")
+var popup_page = preload("res://scene/popup_page.tscn")
+var hint_parent_page = preload("res://scene/hint_parent_page.tscn")
 var digicode = preload("res://scene/digicode.tscn")
 var tutorial= preload("res://scene/game_page.tscn")
-
 var beat_chapter1: bool = false
 var beat_chapter2: bool = false
 var beat_chapter3: bool = false

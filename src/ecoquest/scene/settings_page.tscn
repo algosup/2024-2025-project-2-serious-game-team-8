@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8nlcgd4sgeim" path="res://resources/svg/Button/Rect/Fill/Default.svg" id="5_fhuid"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_wwy6w"]
 [ext_resource type="Texture2D" uid="uid://uqx6thmo3fgi" path="res://resources/svg/Bar/slider.svg" id="7_7urlr"]
-[ext_resource type="Texture2D" uid="uid://d0qp1ohmkdao2" path="res://resources/svg/Bar/Background.svg" id="8_65s1p"]
+[ext_resource type="Texture2D" uid="uid://d0qp1ohmkdao2" path="res://resources/svg/Background.svg" id="8_65s1p"]
 [ext_resource type="Texture2D" uid="uid://do6w35im262pi" path="res://resources/svg/Bar/Line.png" id="8_x4akh"]
 [ext_resource type="Texture2D" uid="uid://ckjs7k7m0bu64" path="res://resources/svg/github.png" id="10_2sfd5"]
 [ext_resource type="Texture2D" uid="uid://dnv1ofnbolvyt" path="res://resources/svg/github_hover.png" id="11_48ckv"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://mn5cv22ntp47"]
+
+[ext_resource type="Script" path="res://script/popup_page.gd" id="1_opu4c"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_b83cp"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_tw77i"]
+
+[node name="popup_page" type="Node2D"]
+script = ExtResource("1_opu4c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -207.0
+offset_right = 362.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tw77i")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503333
+anchor_top = 0.3975
+anchor_right = 0.503333
+anchor_bottom = 0.8
+offset_left = -245.0
+offset_top = -111.0
+offset_right = 247.0
+offset_bottom = 47.0001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_b83cp")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true

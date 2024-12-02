@@ -7,6 +7,8 @@ func _ready() -> void:
 	var chapter_two_image = $CanvasLayer/ChapterTwoImgControl/ChapterTwoImage
 	chapter_two_image.texture = load("res://resources/chapterImages/chapter2img.png")
 	_change_image_resource()
+	Global.opened_hint_1_tutorial = false
+	Global.opened_hint_2_tutorial = false
 
 func _process(_delta: float) -> void:
 	pass
