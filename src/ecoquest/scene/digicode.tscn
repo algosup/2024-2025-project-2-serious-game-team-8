@@ -456,7 +456,13 @@ text = "X"
 
 [node name="DisplayControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="TextureRect" parent="CanvasLayer/DisplayControl"]
 custom_minimum_size = Vector2(0, 300)
@@ -466,10 +472,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 160.0
-offset_top = 329.0
-offset_right = 1710.0
-offset_bottom = 629.0
+offset_left = -367.0
+offset_top = -707.0
+offset_right = 1183.0
+offset_bottom = -407.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 1)
@@ -482,10 +488,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 222.5
-offset_top = 347.0
-offset_right = 887.5
-offset_bottom = 611.0
+offset_left = -317.0
+offset_top = -697.0
+offset_right = 348.0
+offset_bottom = -433.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)

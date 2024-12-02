@@ -38,8 +38,11 @@ func _on_digicode_press(buttonID: int):
 	if buttonID == 10:
 		if hints_or_puzzles == 0:
 			if hint_codes[Global.current_chapter].has(label.text):
-				print("present")
+				var hint_page = Global.hint_page.instantiate()
+				hint_page.text = ""
+				add_child(hint_page)
 				label.text = ""
+				
 
 			else:
 				for i in range(2):
