@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwg00jxcbo7gy"]
+[gd_scene load_steps=2 format=3 uid="uid://cwg00jxcbo7gy"]
 
-[ext_resource type="Script" path="res://script/hint_parent_page.gd" id="1_d1wqp"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_oqwd3"]
 
 [node name="HintParentPage" type="Node2D"]
-script = ExtResource("1_d1wqp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

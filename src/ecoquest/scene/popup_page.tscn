@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://mn5cv22ntp47"]
+[gd_scene load_steps=4 format=3 uid="uid://boynipxmy1er"]
 
 [ext_resource type="Script" path="res://script/popup_page.gd" id="1_opu4c"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_b83cp"]

@@ -1,5 +1,4 @@
 [gd_scene load_steps=8 format=3 uid="uid://54n70f0b7m7r"]
-
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="1_e2vpk"]
 [ext_resource type="Script" path="res://hint_page.gd" id="1_fx6j6"]
 [ext_resource type="Texture2D" uid="uid://dl747fbwjeasn" path="res://resources/svg/Button/Square/Fill/Default.svg" id="2_b6yuw"]
