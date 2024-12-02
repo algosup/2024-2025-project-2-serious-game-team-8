@@ -7,6 +7,9 @@ assignees: ''
 
 ---
 
+> [!IMPORTANT]
+> This template serves as a guideline to improve the quality of the deliverables. The document owner is expected to tick the boxes once they have taken the points into consideration. This does not mean that the tasks HAVE to be executed, as they are only suggestions.
+
 <details>
 <summary>
 <h4>LABELS</h4>  
