@@ -13,7 +13,7 @@ var input2 = "CanvasLayer/CodeControl/Input2/Label"
 var input3 = "CanvasLayer/CodeControl/Input3/Label"
 var input4 = "CanvasLayer/CodeControl/Input4/Label"
 
-var codes=["3247","1443","1566"]
+var codes=["3426","1443","1566"]
 
 func _on_input_pressed(buttonID: int) -> void:
 	match buttonID:

@@ -38,7 +38,7 @@ func _on_digicode_press(buttonID: int):
 	if buttonID == 10:
 		if hints_or_puzzles == 0:
 			if hint_codes[Global.current_chapter] == label.text:
-				var hint_page = Global.hint_parent_page.instantiate()
+				var hint_page = Global.hint_page.instantiate()
 				add_child(hint_page)
 				label.text = ""
 

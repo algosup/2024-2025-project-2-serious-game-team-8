@@ -1,7 +1,7 @@
 extends Node2D
 
 # Holds every hints, each array representing a chapter
-var hints =[["test1", "test2", "test3"], ["test4", "test5", "test6"], ["test7", "test8", "test9"]]
+var hints =[["Focus only on the important words of the topic", "Read attentively the text", "There are 5 numbers to consider"], ["test4", "test5", "test6"], ["test7", "test8", "test9"]]
 func _ready() -> void:
 	# Set button states and colors based on the global variables
 	$CanvasLayer/ContainerControl/HintButton2.modulate = Global.final_hint_button_color if Global.opened_hint_1_tutorial else Global.initial_hint_button_color
