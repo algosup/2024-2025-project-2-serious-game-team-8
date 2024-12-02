@@ -1,53 +1,99 @@
 ---
-name: Project Charter Check Template
-about: Address suggestions and potential Typos in Documents
-title: "[DOCS] Project Charter Check #"
+name: Project Charter Review Template
+about: Address suggestions and potential improvements for the Project Charter
+title: "[DOCS] Project Charter Review #"
 labels: documentation
 assignees: ''
 
 ---
 
-### LABELS
-
 <details>
-
+<summary>
+<h4>LABELS</h4>  
+</summary>
+  
 #### Text Format
-**Bold**: replaced word in original text
-Normal: Citation from original text
-*Italic*: Comment
+- **Bold**: replaced word in original text
+- Normal: Citation from original text
+- *Italic*: Comment
+- ~~strikethrough~~: Original text to remove
+
 #### Suggestions
-IMPROVEMENT: something to add, to be defined by document owner
-TYPO: a suggestion for correcting a found typo
+- IMPROVEMENT: something to add, to be defined by document owner
+- TYPO: a suggestion for correcting a found typo
 
 </details>
 
 ### What has been quality checked?
-#### Compliance with Use cases/Business Requirements
 
-- [ ] Make sure it follows the client's requests.
-- [ ] Make sure In Scope and Out of Scope is well set
-- [ ] Make sure it is in line with the rest of the Documents
+#### **Project Objectives and Definition**
 
-#### Readability
+- [ ] Does the document clearly define the project's purpose and goals?
+- [ ] Are the objectives actionable, measurable, and aligned with the intended outcomes?
+- [ ] Is the project purpose explained in a way that aligns with stakeholder expectations?
 
-- [ ] Make sure paragraphs are mostly never over 3-4 lines long.
-- [ ] Make sure the document features at least 1/10th visuals.
-- [ ] Make sure the document features some admonition for information hierarchy.
-- [ ] Ensure accessibility by checking Links, Image alt attributes, and presence of Table of content
-- [ ] Make sure the heading logic is clear (no H2 in an h3 for instance)
+#### **Scope and Out of Scope**
 
-#### Coherence
+- [ ] Is the scope section detailed enough to clarify the project's boundaries?
+- [ ] Does the "Out of Scope" section effectively manage expectations by explicitly stating exclusions?
+- [ ] Is the level of detail in both sections sufficient to prevent misunderstandings about deliverables?
 
-- [ ] Make sure the document doesn't contradict itself and with the rest of the documents.
+#### **Stakeholders and Team Roles**
 
-#### Spell Check
+- [ ] Are the roles and responsibilities of team members and stakeholders clearly defined?
+- [ ] Are performance criteria or deliverable expectations for each role measurable and actionable?
+- [ ] Are the communication channels and feedback loops with stakeholders clearly outlined?
 
-- [ ] Make sure the document is written in a professional, idiomatic American English
+#### **Project Plan and Management Approach**
 
-## Global Suggestions
+- [ ] Does the document outline a realistic timeline and clear methodology for managing the project?
+- [ ] Is the chosen project management approach appropriate for the project's size, scope, and team structure?
+- [ ] Are task prioritization and assignment processes clearly described and transparent?
 
-*list your suggestions that apply to the whole document or its style here*
+#### **Milestones and Deliverables**
 
-## Detailed Suggestions
+- [ ] Are the milestones clearly defined, specific, and achievable within the project's timeline?
+- [ ] Do the deliverables align with the stated objectives and add measurable value to the project?
+- [ ] Are iterative feedback and testing phases accounted for in the milestones and deadlines?
 
-*list all the specific suggestions here, most notably typos and improvements*
+#### **Allocated Resources**
+
+- [ ] Does the resource allocation (e.g., team size, working hours, budget) align with the project's scope?
+- [ ] Are the available resources sufficient to meet the milestones without undue stress on the team?
+- [ ] Have potential risks due to resource constraints (e.g., lack of budget, personnel, or time) been identified?
+
+#### **Risk Management**
+
+- [ ] Are risks comprehensively identified and ranked by impact and likelihood?
+- [ ] Are mitigation strategies realistic and proactive, with clear steps for addressing risks?
+- [ ] Have common risks (e.g., technical challenges, scope creep, team attrition) been considered?
+
+#### **Alignment with Goals and Objectives**
+
+- [ ] Does the document ensure alignment between the project goals and deliverables?
+- [ ] Are methodologies, workflows, and resources designed to achieve the stated outcomes effectively?
+- [ ] Are potential risks to achieving the goals adequately addressed?
+
+#### **Clarity and Accessibility**
+
+- [ ] Is the document easy to read, with a logical structure and consistent terminology?
+- [ ] Are external links, references, and resources clearly cited and accessible?
+- [ ] Are complex concepts or sections explained in a way that all stakeholders can understand?
+
+#### **Flexibility and Future Relevance**
+
+- [ ] Does the document allow for adaptability in response to unforeseen challenges or feedback?
+- [ ] Is the project plan designed to support future iterations or expansions?
+- [ ] Can milestones and deliverables be adjusted to reflect evolving stakeholder needs?
+
+---
+
+### **Global Suggestions**
+
+*List any suggestions that apply to the entire document or its overall style.*
+
+---
+
+### **Detailed Suggestions**
+
+*Provide specific recommendations or highlight typos, improvements, and other corrections here.*
