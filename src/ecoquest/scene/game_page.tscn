@@ -549,6 +549,10 @@ theme_override_font_sizes/font_size = 35
 text = "15:00"
 metadata/_edit_use_anchors_ = true
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"Menu Music"
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameControls/Pause" to="." method="_on_pause_pressed"]

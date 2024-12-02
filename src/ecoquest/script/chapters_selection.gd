@@ -2,6 +2,7 @@ extends Node2D
 
 @export var image_resource: Texture
 
+
 func _ready() -> void:
 	# Set the initial image on the specified node
 	var chapter_two_image = $CanvasLayer/ChapterTwoImgControl/ChapterTwoImage

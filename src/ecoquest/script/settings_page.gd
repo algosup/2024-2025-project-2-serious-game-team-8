@@ -15,7 +15,8 @@ func _ready() -> void:
 	# Initialize the slider's value to the saved value
 	$"CanvasLayer/MusicSliderControl/Music Slider".value = Global.music_slider_value
 	# Connect the slider's value_changed signal 
-	$"CanvasLayer/MusicSliderControl/Music Slider".value_changed.connect(_on_music_slider_value_changed)
+	if not $"CanvasLayer/MusicSliderControl/Music Slider".is_connected("value_changed", Callable(self, "_on_music_slider_value_changed")):
+			$"CanvasLayer/MusicSliderControl/Music Slider".value_changed.connect(_on_music_slider_value_changed)
 
 func _on_music_slider_value_changed(value: float) -> void:
 	# Update the global value

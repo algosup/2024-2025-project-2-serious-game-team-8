@@ -2,6 +2,16 @@ extends Node2D
 
 var is_paused: bool = false
 
+var music_list = [
+	"res://resources/musics/The Final Escape.mp3",
+	"res://resources/musics/Climate Crisis in the Company.mp3",
+	"res://resources/musics/The Final Flee.mp3"
+]
+
+var current_music_index: int = 0
+@onready var music_player: AudioStreamPlayer = $BackgroundMusic
+
+
 ### This variable represents the minutes of the timer
 @export var minutes: int
 
@@ -15,6 +25,7 @@ var time_limits = [600, 900, 1200]
 
 
 func _ready() -> void:
+	play_current_track()
 	minutes = 0
 	seconds = 0
 	$CanvasLayer/Timer.start(time_limits[Global.current_chapter])
@@ -45,6 +56,24 @@ func _process(_delta: float) -> void:
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+
+
+func play_current_track() -> void:
+	var audio_stream: AudioStream = load(music_list[current_music_index]) as AudioStream
+	if audio_stream:
+		music_player.stream = audio_stream  # Assign the loaded stream
+		music_player.play()
+		# Check if the signal is already connected before connecting
+		if not music_player.is_connected("finished", Callable(self, "_on_music_finished")):
+			music_player.connect("finished", Callable(self, "_on_music_finished"))
+	else:
+		print("Error: Failed to load audio stream from path: ", music_list[current_music_index])
+
+
+func _on_music_finished() -> void:
+	# Increment the music index and loop back if necessary
+	current_music_index = (current_music_index + 1) % music_list.size()
+	play_current_track()
 
 
 ### Close the settings page
