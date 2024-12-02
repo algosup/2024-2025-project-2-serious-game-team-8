@@ -10,10 +10,10 @@ assignees: ''
 > [!IMPORTANT]
 > This template serves as a guideline to improve the quality of the deliverables. The document owner is expected to tick the boxes once they have taken the points into consideration. This does not mean that the tasks HAVE to be executed, as they are only suggestions.
 
+
+
 <details>
-<summary>
-<h4>LABELS</h4>  
-</summary>
+<summary><em><ins>Click to reveal keys...</ins></em></summary>
   
 #### Text Format
 - **Bold**: replaced word in original text
@@ -27,7 +27,9 @@ assignees: ''
 
 </details>
 
-### What has been quality checked?
+## Project Charter Review
+
+### 🕵️ What has been quality checked?
 
 #### **Project Objectives and Definition**
 
@@ -91,12 +93,12 @@ assignees: ''
 
 ---
 
-### **Global Suggestions**
+### 🌍 **Global Suggestions**
 
 *List any suggestions that apply to the entire document or its overall style.*
 
 ---
 
-### **Detailed Suggestions**
+### 🔎 **Detailed Suggestions**
 
 *Provide specific recommendations or highlight typos, improvements, and other corrections here.*
