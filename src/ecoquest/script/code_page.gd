@@ -8,12 +8,12 @@ func _ready() -> void:
 func _on_return_button_pressed() -> void:
 	queue_free()
 
-
 var input1 = "CanvasLayer/CodeControl/Input1/Label"
 var input2 = "CanvasLayer/CodeControl/Input2/Label"
 var input3 = "CanvasLayer/CodeControl/Input3/Label"
 var input4 = "CanvasLayer/CodeControl/Input4/Label"
 
+var codes=["3247","1443","1566"]
 
 func _on_input_pressed(buttonID: int) -> void:
 	match buttonID:
@@ -61,7 +61,7 @@ func _on_input_pressed(buttonID: int) -> void:
 
 func _on_enter_button_pressed() -> void:
 	var answer = get_node(input1).text + get_node(input2).text + get_node(input3).text + get_node(input4).text
-	if str(answer) == "3247":
+	if str(answer) == codes[Global.current_chapter]:
 		add_child(Global.win_page.instantiate())
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true

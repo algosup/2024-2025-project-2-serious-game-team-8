@@ -1,0 +1,187 @@
+[gd_scene load_steps=7 format=3 uid="uid://54n70f0b7m7r"]
+
+[ext_resource type="Script" path="res://hint_page.gd" id="1_oxcap"]
+[ext_resource type="Texture2D" uid="uid://dl747fbwjeasn" path="res://resources/svg/Button/Square/Fill/Default.svg" id="2_miopa"]
+[ext_resource type="Texture2D" uid="uid://cfxp8hoxb3t13" path="res://resources/svg/Button/Square/Fill/Hover.svg" id="3_qxqeb"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_oqwd3"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="5_tklmm"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="6_q3f52"]
+
+[node name="HintPage" type="Node2D"]
+script = ExtResource("1_oxcap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.388235, 0.388235, 0.388235, 0.588235)
+metadata/_edit_use_anchors_ = true
+
+[node name="ContainerControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.471
+anchor_top = 0.402
+anchor_right = 0.471
+anchor_bottom = 0.402
+offset_left = 11.32
+offset_top = 168.16
+offset_right = 51.32
+offset_bottom = 208.16
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ContainerControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.0
+offset_top = -608.0
+offset_right = 400.0
+offset_bottom = 697.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.592157, 0.47451, 0.439216, 1)
+
+[node name="HintButton1" type="TextureButton" parent="CanvasLayer/ContainerControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -88.0
+offset_right = -203.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_miopa")
+texture_hover = ExtResource("3_qxqeb")
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton1"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oqwd3")
+text = "1"
+
+[node name="HintButton2" type="TextureButton" parent="CanvasLayer/ContainerControl"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_top = -68.0
+offset_right = 1.0
+offset_bottom = 16.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_miopa")
+texture_hover = ExtResource("3_qxqeb")
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton2"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 12.0
+offset_right = 47.0
+offset_bottom = 35.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oqwd3")
+text = "2"
+
+[node name="HintButton3" type="TextureButton" parent="CanvasLayer/ContainerControl"]
+modulate = Color(0.211765, 0.211765, 0.211765, 1)
+layout_mode = 0
+offset_left = 141.0
+offset_top = -68.0
+offset_right = 225.0
+offset_bottom = 16.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_miopa")
+texture_hover = ExtResource("3_qxqeb")
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton3"]
+modulate = Color(0.211765, 0.211765, 0.211765, 1)
+layout_mode = 0
+offset_left = 32.5
+offset_top = 12.5
+offset_right = 72.5
+offset_bottom = 35.5
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oqwd3")
+text = "3"
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = -5.443
+anchor_right = 1.0
+anchor_bottom = -5.443
+offset_left = -264.0
+offset_top = -289.28
+offset_right = 219.0
+offset_bottom = -242.28
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oqwd3")
+theme_override_font_sizes/font_size = 35
+text = "Select one of the hints"
+
+[node name="BackButtonControl" type="Control" parent="CanvasLayer/ContainerControl"]
+layout_mode = 1
+anchor_left = -1.475
+anchor_top = -4.3
+anchor_right = -1.475
+anchor_bottom = -4.3
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/ContainerControl/BackButtonControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 16.075
+anchor_top = -19.9
+anchor_right = 16.075
+anchor_bottom = -19.9
+offset_left = -124.0
+offset_top = 52.0
+offset_right = -74.0
+offset_bottom = 102.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("5_tklmm")
+texture_hover = ExtResource("6_q3f52")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton1" to="." method="_on_hint_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton2" to="." method="_on_hint_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton3" to="." method="_on_hint_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/ContainerControl/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]

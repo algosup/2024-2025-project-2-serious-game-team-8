@@ -259,6 +259,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Plus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0861017, 0, 0.808627, 1)
 layout_mode = 0
 offset_left = -200.0
 offset_top = -88.0
@@ -284,6 +285,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Plus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = -66.0
 offset_top = -88.0
@@ -309,6 +311,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Plus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = 68.0
 offset_top = -88.0
@@ -334,6 +337,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Plus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = 202.0
 offset_top = -88.0
@@ -359,6 +363,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Minus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = -200.0
 offset_top = 112.0
@@ -384,6 +389,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Minus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = -66.0
 offset_top = 112.0
@@ -409,6 +415,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Minus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = 68.0
 offset_top = 112.0
@@ -434,6 +441,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Minus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
+modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
 offset_left = 202.0
 offset_top = 112.0

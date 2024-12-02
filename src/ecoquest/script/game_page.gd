@@ -11,16 +11,13 @@ var is_paused: bool = false
 ### This variable checks if the chapter is finished, it resets when the chapter is selected
 @export var is_chapter_finished: bool = false
 
-### this variable represents the current chapter
-@export var current_chapter: int = 0
-
 var time_limits = [600, 900, 1200]
 
 
 func _ready() -> void:
 	minutes = 0
 	seconds = 0
-	$CanvasLayer/Timer.start(time_limits[current_chapter])
+	$CanvasLayer/Timer.start(time_limits[Global.current_chapter])
 
 
 func _process(_delta: float) -> void:
@@ -90,7 +87,7 @@ func _on_pause_pressed() -> void:
 
 
 func _removing_leaves() -> void:
-	var max_time = time_limits[current_chapter]
+	var max_time = time_limits[Global.current_chapter]
 	if $CanvasLayer/Timer.time_left < (max_time * 0.8) && $CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible:
 		$CanvasLayer/BackgroundControl/LeafFiveControl/leaf5.visible = false
 	if $CanvasLayer/Timer.time_left < (max_time * 0.6) && $CanvasLayer/BackgroundControl/LeafFourControl/leaf4.visible:
@@ -109,8 +106,9 @@ func time_low_warning() -> void:
 
 
 func _on_code_pressed() -> void:
-	add_child(Global.code_page.instantiate())
-
+	var digicode= Global.digicode.instantiate()
+	digicode.hints_or_puzzles= 1
+	add_child(digicode)
 
 func _on_setting_button_pressed() -> void:
 	add_child(Global.settings.instantiate())
@@ -140,4 +138,6 @@ func remove_time() -> void:
 
 
 func _on_hint_pressed() -> void:
-	add_child(Global.hint_page.instantiate())
+	var digicode= Global.digicode.instantiate()
+	digicode.hints_or_puzzles= 0
+	add_child(digicode)
