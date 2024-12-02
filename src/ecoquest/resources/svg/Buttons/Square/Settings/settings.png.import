@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jqtcnyfdhxcb"
-path="res://.godot/imported/visibility.png-8a301a2381a61e809401d7b1d8178c67.ctex"
+uid="uid://b3ak1svtyb2ai"
+path="res://.godot/imported/settings.png-f26f67684a656a2ee808bd7613052bdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/svg/visibility.png"
-dest_files=["res://.godot/imported/visibility.png-8a301a2381a61e809401d7b1d8178c67.ctex"]
+source_file="res://resources/svg/Buttons/Square/Settings/settings.png"
+dest_files=["res://.godot/imported/settings.png-f26f67684a656a2ee808bd7613052bdf.ctex"]
 
 [params]
 

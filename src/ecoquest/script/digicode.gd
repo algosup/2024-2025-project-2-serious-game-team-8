@@ -55,7 +55,12 @@ func _on_digicode_press(buttonID: int):
 			queue_free()
 
 		else:
-			print("fail")
+			for i in range(2):
+					label.add_theme_color_override("font_color", red)  # Change to red
+					await get_tree().create_timer(0.3).timeout  # Wait for the duration
+					label.add_theme_color_override("font_color", original_color)  # Revert to original color
+					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
+
 	if buttonID == 11:
 		label.text = label.text.substr(0, label.text.length() - 1)
 

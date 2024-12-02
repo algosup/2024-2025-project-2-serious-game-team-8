@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hcqrrr5buy6n"
-path="res://.godot/imported/EnterButton.png-93c0fdb92152b256a1df22f92f50f008.ctex"
+uid="uid://qynoa8mkeydb"
+path="res://.godot/imported/Triangle.png-f8a5fefc72f77d60ac03332a5f8acc68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/svg/EnterButton.png"
-dest_files=["res://.godot/imported/EnterButton.png-93c0fdb92152b256a1df22f92f50f008.ctex"]
+source_file="res://resources/svg/Icon/Triangle.png"
+dest_files=["res://.godot/imported/Triangle.png-f8a5fefc72f77d60ac03332a5f8acc68.ctex"]
 
 [params]
 

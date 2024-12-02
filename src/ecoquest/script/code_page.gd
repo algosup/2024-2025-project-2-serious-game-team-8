@@ -66,7 +66,10 @@ func _on_enter_button_pressed() -> void:
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true
 	else:
-		add_child(Global.error_page.instantiate())
+		var popup = Global.popup_page.instantiate()
+		popup.text= "There was an error. \nThis was the wrong password. \n-1 minute to the timer"
+		popup.color= Color(1,0,0)
+		add_child(popup)
 		var time_left = get_parent().get_child(0).get_node("Timer").time_left
 		get_parent().remove_time()
 		if time_left <= 60:

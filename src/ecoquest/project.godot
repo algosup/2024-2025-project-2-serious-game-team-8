@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/show_image=false
 config/icon="res://ecoquest_logo.png"
 
+[audio]
+
+buses/default_bus_layout="res://resources/musics/default_bus_layout.tres"
+
 [autoload]
 
 Global="*res://script/global.gd"

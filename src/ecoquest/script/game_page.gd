@@ -81,8 +81,8 @@ func _on_close_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/home_page.tscn")
 
 
-var visibilityOn = load("res://resources/svg/visibility.png")
-var visibilityOff = load("res://resources/svg/no-visibility.png")
+var visibilityOn = load("res://resources/svg/Icon/visibility.png")
+var visibilityOff = load("res://resources/svg/Icon/no-visibility.png")
 
 
 ### Change the visibility icon's texture and toggle the visibility of the game controls on/off

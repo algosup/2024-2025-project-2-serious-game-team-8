@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 var normal = preload("res://resources/svg/Button/Square/Fill/Default.svg")
-var focused = preload("res://resources/svg/Hover.png")
+var focused = preload("res://resources/svg/Button/Square/Hover.png")
 func _on_hint_button_1_pressed() -> void:
 	# Always allow the hint popup to appear
 	$CanvasLayer/ContainerControl/HintBackground/Label.text= hints[Global.current_chapter][0]

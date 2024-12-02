@@ -34,8 +34,10 @@ func _on_chapter_two_button_pressed() -> void:
 		var locked_instance = Global.chapter_locked.instantiate()
 		add_child(locked_instance)
 	elif Global.beat_chapter1 == true:
-		var wip_instance = Global.work_in_progress_page.instantiate()
-		add_child(wip_instance)
+		var popup = Global.popup_page.instantiate()
+		popup.text= "You've beaten the game for now. \nOur team is working on a new chapter. \nstay tuned and come back later"
+		popup.color= Color(1,1,1)
+		add_child(popup)
 
 
 func _on_chapter_three_button_pressed() -> void:
@@ -43,8 +45,10 @@ func _on_chapter_three_button_pressed() -> void:
 		var locked_instance = Global.chapter_locked.instantiate()
 		add_child(locked_instance)
 	elif Global.beat_chapter2 == true: 
-		var wip_instance = Global.work_in_progress_page.instantiate()
-		add_child(wip_instance)
+		var popup = Global.popup_page.instantiate()
+		popup.text= "You've beaten the game for now. \nOur team is working on a new chapter. \nstay tuned and come back later"
+		popup.color= Color(1,1,1)
+		add_child(popup)
 
 
 func _on_close_button_pressed() -> void:

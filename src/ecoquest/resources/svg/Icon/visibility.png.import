@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cikema3s7ltca"
-path="res://.godot/imported/Circle.png-7ceedd6f1c484c699aa5162e3aeee4d4.ctex"
+uid="uid://jqtcnyfdhxcb"
+path="res://.godot/imported/visibility.png-d5c61be7baf73836a84df8c5e6e7192d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/svg/Circle.png"
-dest_files=["res://.godot/imported/Circle.png-7ceedd6f1c484c699aa5162e3aeee4d4.ctex"]
+source_file="res://resources/svg/Icon/visibility.png"
+dest_files=["res://.godot/imported/visibility.png-d5c61be7baf73836a84df8c5e6e7192d.ctex"]
 
 [params]
 

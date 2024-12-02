@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddp7ccypqeptl"
-path="res://.godot/imported/cross.png-fe9bdccd79e95936da53c292c31f8d28.ctex"
+uid="uid://nolsljayfhy1"
+path="res://.godot/imported/folder.png-27153b1e7f0200195c8d23c1449efc77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/svg/cross.png"
-dest_files=["res://.godot/imported/cross.png-fe9bdccd79e95936da53c292c31f8d28.ctex"]
+source_file="res://resources/svg/Button/Puzzle/folder.png"
+dest_files=["res://.godot/imported/folder.png-27153b1e7f0200195c8d23c1449efc77.ctex"]
 
 [params]
 

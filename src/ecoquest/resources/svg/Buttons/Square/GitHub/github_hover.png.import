@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn255hidwwwsh"
-path="res://.godot/imported/circle_disabled.png-974fbb359d63b711e08b2c1f9f7b472a.ctex"
+uid="uid://dnv1ofnbolvyt"
+path="res://.godot/imported/github_hover.png-13c4e950698d16ede6fae115eb8a6f8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/svg/circle_disabled.png"
-dest_files=["res://.godot/imported/circle_disabled.png-974fbb359d63b711e08b2c1f9f7b472a.ctex"]
+source_file="res://resources/svg/Buttons/Square/GitHub/github_hover.png"
+dest_files=["res://.godot/imported/github_hover.png-13c4e950698d16ede6fae115eb8a6f8e.ctex"]
 
 [params]
 
