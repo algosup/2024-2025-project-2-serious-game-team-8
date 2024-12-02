@@ -1,12 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwg00jxcbo7gy"]
+[gd_scene load_steps=3 format=3 uid="uid://cwg00jxcbo7gy"]
 
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_7y0np"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_oqwd3"]
 
 [node name="HintParentPage" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="Rectangle" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -18,10 +19,10 @@ offset_right = 300.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.592157, 0.47451, 0.439216, 1)
+texture = ExtResource("1_7y0np")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+[node name="Label" type="Label" parent="CanvasLayer/Rectangle"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.503333
