@@ -35,7 +35,7 @@
 
 <hr>
 
-## Project Overview
+## Introduction
 
 Step into the world of GateKeeper, the thrilling hybrid escape game by EkoLock that tackles climate change head-on!
 
