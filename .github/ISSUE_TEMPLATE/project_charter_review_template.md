@@ -81,6 +81,7 @@ assignees: ''
 
 #### **Clarity and Accessibility**
 
+- [ ] Make sure the document is written in a professional, idiomatic American English.
 - [ ] Is the document easy to read, with a logical structure and consistent terminology?
 - [ ] Are external links, references, and resources clearly cited and accessible?
 - [ ] Are complex concepts or sections explained in a way that all stakeholders can understand?
