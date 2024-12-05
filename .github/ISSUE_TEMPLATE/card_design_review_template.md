@@ -64,7 +64,7 @@ assignees: ''
 #### **Physical Usability**
 
 - [ ] Are the card dimensions and material suitable for gameplay and handling?  
-- [ ] Does the layout prevent important details from being obscured during use?  
+- [ ] Does the layout ensure important details aren't being obscured during use?  
 - [ ] Are the card’s design elements durable and resistant to wear during gameplay?  
 
 #### **Compatibility with Digital Features**
