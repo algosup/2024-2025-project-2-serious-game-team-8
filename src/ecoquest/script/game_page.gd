@@ -160,7 +160,6 @@ func remove_time() -> void:
 		$CanvasLayer/Timer.start(time_left - 60)
 	else:
 		if($CanvasLayer/BackgroundControl/TextureRect.texture!=load("res://resources/background/looseScreen2.png")):
-			print('change')
 			$CanvasLayer/BackgroundControl/TextureRect.texture = load("res://resources/background/looseScreen2.png")
 		if $CanvasLayer/Timer.time_left > 0:
 			seconds = time_left

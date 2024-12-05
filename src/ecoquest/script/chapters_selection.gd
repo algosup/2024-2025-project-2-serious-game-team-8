@@ -26,7 +26,7 @@ func _change_image_resource() -> void:
 
 func _on_chapter_one_button_pressed() -> void:
 	Global.current_chapter = 0
-	get_tree().change_scene_to_packed(Global.tutorial)
+	add_child(Global.confirmation_tutorial.instantiate())
 
 
 func _on_chapter_two_button_pressed() -> void:

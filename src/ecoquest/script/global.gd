@@ -11,6 +11,7 @@ var popup_page = preload("res://scene/popup_page.tscn")
 var hint_page = preload("res://scene/hint_page.tscn")
 var digicode = preload("res://scene/digicode.tscn")
 var tutorial= preload("res://scene/game_page.tscn")
+var confirmation_tutorial = preload("res://scene/confirmation_page.tscn")
 var beat_chapter1: bool = false
 var beat_chapter2: bool = false
 var beat_chapter3: bool = false

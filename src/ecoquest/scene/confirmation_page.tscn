@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0eidsrmt4pv2"]
+
+[ext_resource type="Script" path="res://scene/confirmation_page.gd" id="1_l226x"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_dpl2d"]
+[ext_resource type="Texture2D" uid="uid://h2cyl2qpmipo" path="res://resources/svg/Container.png" id="2_ens5x"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/Buttons/Square/Cross/cross.png" id="3_dc5vs"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/Buttons/Square/Cross/cross_hover.png" id="4_0wtvr"]
+[ext_resource type="Texture2D" uid="uid://dtue8nc3ftqji" path="res://resources/svg/Buttons/Square/Play/Default.svg" id="4_sxbxg"]
+[ext_resource type="Texture2D" uid="uid://cfocxawnl4mxp" path="res://resources/svg/Buttons/Square/Play/Hover.svg" id="5_c7w36"]
+
+[node name="ConfirmationPage" type="Node2D"]
+script = ExtResource("1_l226x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.384314, 0.384314, 0.384314, 0.615686)
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -545.0
+offset_right = 469.0
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ens5x")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.251852
+anchor_top = 0.150677
+anchor_right = 0.756137
+anchor_bottom = 0.718454
+offset_left = -245.0
+offset_top = -111.0
+offset_right = 247.0
+offset_bottom = 47.0001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_dpl2d")
+theme_override_font_sizes/font_size = 65
+text = "- Read the rules
+
+-Read the introduction card 
+
+- Start when you are ready"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.282
+anchor_bottom = 0.463
+offset_left = 393.0
+offset_top = 796.0
+offset_right = 210.51
+offset_bottom = 372.7
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_sxbxg")
+texture_hover = ExtResource("5_c7w36")
+
+[node name="BackButtonControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/BackButtonControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.012
+anchor_top = 2.512
+anchor_right = -2.012
+anchor_bottom = 2.512
+offset_left = -72.52
+offset_top = -72.48
+offset_right = -22.52
+offset_bottom = -22.48
+scale = Vector2(2.9, 2.9)
+texture_normal = ExtResource("3_dc5vs")
+texture_hover = ExtResource("4_0wtvr")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
