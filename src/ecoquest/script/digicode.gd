@@ -3,8 +3,8 @@ extends Node2D
 ## An int representing the type of digicode, 0 being hints & 1 being puzzles
 @export var hints_or_puzzles: int = 0
 
-var hint_codes = ["1234", "4321", "4562"]
-var puzzle_codes = [["0090","0054","0060"], ["2345", "2443"]]
+var hint_codes = [["0090","0054","0060"], "4321", "4562"]
+var puzzle_codes = ["0090", "2345", "2443"]
 
 
 func _on_digicode_press(buttonID: int):
@@ -37,7 +37,7 @@ func _on_digicode_press(buttonID: int):
 				label.text += "9"
 	if buttonID == 10:
 		if hints_or_puzzles == 0:
-			if hint_codes[Global.current_chapter] == label.text:
+			if hint_codes[Global.current_chapter].has(label.text):
 				var hint_page = Global.hint_page.instantiate()
 				add_child(hint_page)
 				label.text = ""
@@ -49,7 +49,7 @@ func _on_digicode_press(buttonID: int):
 					label.add_theme_color_override("font_color", original_color)  # Revert to original color
 					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
 
-		elif puzzle_codes[Global.current_chapter].has(label.text):
+		elif puzzle_codes[Global.current_chapter] == label.text:
 			var code_page = Global.code_page.instantiate()
 			get_parent().add_child(code_page)
 			queue_free()

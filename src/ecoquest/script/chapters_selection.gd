@@ -30,14 +30,13 @@ func _on_chapter_one_button_pressed() -> void:
 
 
 func _on_chapter_two_button_pressed() -> void:
+	Global.current_chapter = 1
 	if Global.beat_chapter1 == false: 
 		var locked_instance = Global.chapter_locked.instantiate()
 		add_child(locked_instance)
 	elif Global.beat_chapter1 == true:
-		var popup = Global.popup_page.instantiate()
-		popup.text= "You've beaten the game for now. \nOur team is working on a new chapter. \nstay tuned and come back later"
-		popup.color= Color(1,1,1)
-		add_child(popup)
+		get_tree().change_scene_to_packed(Global.tutorial)
+
 
 
 func _on_chapter_three_button_pressed() -> void:
