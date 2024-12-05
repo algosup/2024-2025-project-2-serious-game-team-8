@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="EcoQuest"
+config/name="EkoLock"
 run/main_scene="res://scene/splash_screen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/show_image=false
-config/icon="res://ecoquest_logo.png"
+config/icon="res://ekoLock_logo.png"
 
 [audio]
 

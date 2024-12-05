@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmrq8lmjtshgp"]
 
 [ext_resource type="Script" path="res://script/splash_screen.gd" id="1_iclyy"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="1_jqsnx"]
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="1_jqsnx"]
 
 [node name="SplashScreen" type="Node2D"]
 script = ExtResource("1_iclyy")

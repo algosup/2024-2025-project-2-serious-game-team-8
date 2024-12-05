@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://q66v306kfprs"]
 
-[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="1_gpfe6"]
+[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/Buttons/Square/Settings/settings.png" id="1_gpfe6"]
 [ext_resource type="Script" path="res://script/home_page.gd" id="1_qbvgi"]
 [ext_resource type="Texture2D" uid="uid://bht10qg071lt1" path="res://resources/background/menu_background.png" id="2_sbdoo"]
-[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="4_3mcu8"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="4_xtb3p"]
-[ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/start.png" id="5_wyg2g"]
-[ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/start_hover.png" id="7_iytfu"]
+[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/Buttons/Square/Settings/settings_hover.png" id="4_3mcu8"]
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="4_xtb3p"]
+[ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/Buttons/Rect/Start/start.png" id="5_wyg2g"]
+[ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/Buttons/Rect/Start/start_hover.png" id="7_iytfu"]
 [ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/menu_music.mp3" id="8_22ub0"]
 
 [node name="HomePage" type="Node2D"]
