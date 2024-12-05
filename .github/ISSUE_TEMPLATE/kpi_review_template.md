@@ -50,18 +50,17 @@ assignees: ''
 #### **Relevance**
 
 - [ ] Do the KPIs address the most critical aspects of the project, such as app performance, card usability, or player satisfaction?  
-- [ ] Are the KPIs actionable, providing data that the team can use to improve performance?  
 - [ ] Do the KPIs cover both short-term deliverables and long-term project outcomes?  
 
 #### **Attainability**
 
 - [ ] Are the KPIs realistic given the project’s timeline, resources, and constraints?  
 - [ ] Do they reflect the team’s current capacity and skill set?  
-- [ ] Are any KPIs overly ambitious or too conservative?  
+- [ ] Ensure the KPIs aren't overly ambitious or too conservative.  
 
 #### **Time-Bound**
 
-- [ ] Are there specific timeframes associated with each KPI (e.g., weekly, monthly tracking)?  
+- [ ] Are there specific timeframes associated with each KPI (e.g., weekly, monthly tracking)? 
 - [ ] Does the tracking frequency align with project milestones or deliverables?  
 - [ ] Is the time allocated for achieving certain KPIs reasonable?  
 
