@@ -85,15 +85,12 @@ assignees: ''
 
 #### **Clarity and Accessibility**
 
-- [ ] Is the document structured logically and easy to follow?  
+- [ ] Is the document structured logically and easy to follow?
 - [ ] Are all technical terms and concepts explained for the intended audience?  
-- [ ] Do visual aids like diagrams, tables, or mockups improve understanding?  
-
-#### **Scalability and Future Updates**
-
-- [ ] Does the document account for potential future expansions or modifications?  
-- [ ] Are the folder structure, coding methodologies, and app flow adaptable to new features?  
-- [ ] Are provisions made for iterative development or changes in requirements?  
+- [ ] Do visual aids like diagrams, tables, or mockups, admonition improve understanding a good rule of thumb is to have at least 1/10th of the document that isn't text?  
+- [ ] Are none of the paragraphs more than 3-4 lines long?
+- [ ] Does the Document feature a table of content?
+- [ ] Are all the links functional and link to the right destination?
 
 #### **Visualization and Documentation**
 
