@@ -69,12 +69,6 @@ assignees: ''
 - [ ] Are the design components aligned with the project's goals and user needs?  
 - [ ] Does the document outline user-friendly interaction methods and workflows?  
 
-#### **Integration and Compatibility**
-
-- [ ] Are integration points with other components or systems clearly described?  
-- [ ] Are usability and interaction methods efficient and effective?  
-- [ ] Are dependencies or compatibility requirements outlined and justified?  
-
 #### **Testing and Validation**
 
 - [ ] Does the document outline a clear strategy for testing and validation?  
@@ -85,13 +79,7 @@ assignees: ''
 
 - [ ] Is the document structured in a way that is easy to navigate and understand?  
 - [ ] Are technical terms and concepts adequately explained for the intended audience?  
-- [ ] Does the document include helpful references like glossaries, diagrams, or tables?  
-
-#### **Adaptability and Scalability**
-
-- [ ] Does the document account for potential future changes or expansions?  
-- [ ] Are provisions made for adding new features or adjusting scope if necessary?  
-- [ ] Is the system design scalable to handle increased demand or additional use cases?  
+- [ ] Does the document include helpful references like glossaries, diagrams, or tables?   
 
 ---
 
