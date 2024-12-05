@@ -52,7 +52,7 @@ assignees: ''
 #### **Balanced Information**
 
 - [ ] Does the report maintain a balance between high-level summaries and detailed updates?  
-- [ ] Is excessive detail avoided to prevent overwhelming the audience?  
+- [ ] Ensure the level of detail isn't excessive to prevent overwhelming the audience.
 
 #### **Team Contributions and Collaboration**
 
