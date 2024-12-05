@@ -1,7 +1,7 @@
 ---
-name: Management Artifacts Review Template
-about: Address suggestions and potential improvements for the Management Artifacts document
-title: "[DOCS] Management Artifacts Review #"
+name: Management Artefacts Review Template
+about: Address suggestions and potential improvements for the Management Artefacts document
+title: "[DOCS] Management Artefacts Review #"
 labels: documentation
 assignees: ''
 
@@ -25,7 +25,7 @@ assignees: ''
 
 </details>
 
-## Management Artifacts Review
+## Management Artefacts Review
 
 ### 🕵️ What has been quality checked?
 
