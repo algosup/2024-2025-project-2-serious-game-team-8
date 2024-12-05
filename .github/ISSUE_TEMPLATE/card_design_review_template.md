@@ -58,7 +58,7 @@ assignees: ''
 #### **Accuracy and Clarity of Content**
 
 - [ ] Are the card’s instructions or descriptions clear and accurate?  
-- [ ] Are there any spelling, grammar, or factual errors in the text?  
+- [ ] Is the text free of any spelling, grammar, or factual errors in the text?  
 - [ ] Does the content support the intended gameplay mechanics or narrative?  
 
 #### **Physical Usability**
