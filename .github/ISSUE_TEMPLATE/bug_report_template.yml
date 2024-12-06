@@ -64,11 +64,11 @@ body:
       value: |
         <details><summary><ins><em>Click to show template</em></ins></summary><br>
         
-        | Step ID | Step Description | Step Date | Expected Results | Actual Results | Pass / Fail | Add. Notes |
-        |--------|--------|--------|--------|--------|--------|--------|
-        | O | Cell | Cell | Cell | Cell | Cell | Cell |
-        | 1 | Cell | Cell | Cell | Cell | Cell | Cell |
-        | 2 | Cell | Cell | Cell | Cell | Cell | Cell |
+        \| Step ID \| Step Description \|
+        \|--------\|--------\|
+        \| 1 \| Describe the first step here \|
+        \| 2 \| Describe the second step here \|
+        \| 3 \| Describe the third step here \|
         
         </details>
       
