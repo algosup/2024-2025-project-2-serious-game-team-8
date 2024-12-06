@@ -1,16 +1,83 @@
 
----
-
-# Introduction
+<div align="right"><h6>Document Owner: Mathis KAKAL</h6></div>
 
 ---
 
-## Purpose
+<div align="center"><h1>Test Plan</h1></div>
+
+
+<details><summary><em><ins>Click to expand table of content...</ins></em></summary>
+
+- [1 - Introduction](#1---introduction)
+    - [1.1 - Purpose](#11---purpose)  
+  - [1.2 - Product Overview](#12---product-overview)  
+    - [1.2.1 - Customer/Business Requirements](#121---customerbusiness-requirements)  
+    - [1.2.2 - Functional and Technical Specifications](#122---functional-and-technical-specifications)  
+      - [1.2.2.1 - Game Structure and Mechanics](#1221---game-structure-and-mechanics)  
+      - [1.2.2.2 - Educational Focus](#1222---educational-focus)  
+      - [1.2.2.3 - Card-Based Gameplay](#1223---card-based-gameplay)  
+      - [1.2.2.4 - Digital Application Features](#1224---digital-application-features)  
+      - [1.2.2.5 - Game Levels and Narrative](#1225---game-levels-and-narrative)  
+      - [1.2.2.6 - Integration of Cards and App](#1226---integration-of-cards-and-app)  
+      - [1.2.2.7 - Performance Metrics and Player Feedback](#1227---performance-metrics-and-player-feedback)  
+      - [1.2.2.8 - Design and Accessibility](#1228---design-and-accessibility)  
+      - [1.2.2.9 - Technical and Environmental Constraints](#1229---technical-and-environmental-constraints)  
+      - [1.2.2.10 - Future Scalability](#12210---future-scalability)  
+  - [1.3 - Testing Areas](#13---testing-areas)  
+    - [1.3.1 - Overview](#131---overview)  
+    - [1.3.2 - Detailed (Project Scope)](#132---detailed-project-scope)  
+  - [1.4 - Success Criteria](#14---success-criteria)  
+  - [1.5 - Identified Risks & Mitigations](#15---identified-risks--mitigations)
+- [2 - Tooling](#2---tooling)  
+  - [2.1 - Methodology](#21---methodology)  
+    - [2.1.1 - Bug Resolution process (Corrective QA)](#211---bug-resolution-process-corrective-qa)  
+    - [2.1.2 - Test Creation and Execution (Proactive Quality Improvement)](#212---test-creation-and-execution-proactive-quality-improvement)
+  - [2.2 - GitHub Issues](#22---github-issues)  
+    - [2.2.1 - Issue Templates](#221---issue-templates)  
+      - [2.2.1.1 - Overview](#2211---overview)  
+      - [2.2.1.2 - Detailed](#2212---detailed)  
+  - [2.3 - GitHub Project](#23---github-project)  
+    - [2.3.1 - Issue Attributes](#231---issue-attributes)  
+    - [2.3.2 - Insights](#232---insights)  
+      - [2.3.2.1 - Issues by priority across iterations](#2321---issues-by-priority-across-iterations)  
+      - [2.3.2.2 - Test Sizes Across Assignees](#2322---test-sizes-across-assignees)  
+      - [2.3.2.3 - Issues by Status and Severity](#2323---issues-by-status-and-severity)  
+      - [2.3.2.4 - Test Execution Progress By Iteration](#2324---test-execution-progress-by-iteration)  
+      - [2.3.2.5 - Labels by Iteration](#2325---labels-by-iteration)  
+      - [2.3.2.6 - Severity Distribution per Milestone](#2326---severity-distribution-per-milestone)  
+      - [2.3.2.7 - Issue Completion Rate by Iteration](#2327---issue-completion-rate-by-iteration)  
+      - [2.3.2.8 - Status by Assignees](#2328---status-by-assignees)  
+      - [2.3.2.9 - Priority by Severity](#2329---priority-by-severity)  
+      - [2.3.2.10 - Issue Count by Iteration and Milestone](#23210---issue-count-by-iteration-and-milestone)  
+      - [2.3.2.11 - Test Size Trend Over Time](#23211---test-size-trend-over-time)
+- [3 - Strategy](#3---strategy)  
+  - [3.1 - Testing Approaches](#31---testing-approaches)  
+    - [3.1.1 - Integration Testing](#311---integration-testing)  
+    - [3.1.2 - Functional Testing](#312---functional-testing)  
+    - [3.1.3 - Internal Playtesting](#313---internal-playtesting)  
+    - [3.1.4 - Regression Testing](#314---regression-testing)  
+    - [3.1.5 - End-to-End Testing](#315---end-to-end-testing)  
+    - [3.1.6 - Usability and Accessibility Testing](#316---usability-and-accessibility-testing)  
+    - [3.1.7 - Performance Testing](#317---performance-testing)  
+  - [3.2 - Testing Schedule](#32---testing-schedule)  
+    - [3.2.1 - Week 5: Validation and Early Integration](#321---week-5-validation-and-early-integration)  
+    - [3.2.2 - Week 6: Release Preparation and Final QA](#322---week-6-release-preparation-and-final-qa)  
+    - [3.2.3 - Week 7: Presentation and Demo Preparation](#323---week-7-presentation-and-demo-preparation)
+
+</details>
+
+---
+
+# 1 - Introduction
+
+---
+
+## 1.1 - Purpose
 
 The test plan is a strategic document that outlines the approach, scope and schedule of testing activities. It should provide stakeholders and collaborators alike with a comprehensive framework to ensure the software meets its requirements and functions as intended.
 
-## Product Overview
-### Customer/Business Requirements
+## 1.2 - Product Overview
+### 1.2.1 - Customer/Business Requirements
 
 *In order to meet the Customer and Business Requirements, our team, EkoLock, must produce a serious game that adheres to the following principles.*
 
@@ -29,16 +96,17 @@ The test plan is a strategic document that outlines the approach, scope and sche
 > [!TIP]  
 You may read [the management reports](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/tree/3add43b3f611172f90a27cf675fb493f85c54f56/documents/management) to get a better idea of the process of refining the idea and defining the scope of the project with the stakeholders.  
 
-### Functional and Technical Specifications
+### 1.2.2 - Functional and Technical Specifications
 
 > The vision is to educate players about climate change by embedding factual knowledge in a gamified, adventure-driven environment. The game aims to challenge misconceptions and deepen players’ understanding of environmental issues while keeping the experience enjoyable and interactive.  
 
-- *Extract from the Functional Specifications.*
-*Here are the main features of the game, as laid out in the functional specifications:*
+ - *Extract from the Functional Specifications.*
 
-#### Game Structure and Mechanics
+Here are the main features of the game, as laid out in the functional specifications:
 
- - The game combines physical cards and a digital app for a ^^hybrid^^ experience.
+#### 1.2.2.1 - Game Structure and Mechanics
+
+ - The game combines physical cards and a digital app for a hybrid experience.
 
  - Players solve puzzles, interact with cards, and progress through a narrative-driven escape-room style game.
 
@@ -46,13 +114,13 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
  - A timer creates urgency, with penalties for mistakes.
 
-#### Educational Focus
+#### 1.2.2.2 - Educational Focus
 
  - The game must teach players about climate change, addressing misconceptions and providing factual knowledge.
 
  - Educational objectives are embedded within the puzzles, narrative, and gameplay mechanics.
 
-#### Card-Based Gameplay
+#### 1.2.2.3 - Card-Based Gameplay
 
  - Physical cards have distinct types (Action Cards, Machines, Locations, Penalties) to guide gameplay.
 
@@ -62,7 +130,7 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
 - Cards are marked with unique alphanumeric codes for app integration.
 
-#### Digital Application Features
+#### 1.2.2.4 Digital Application Features
 
  - The app manages:
     - **Code entry** for unlocking puzzles or progressing in the story.
@@ -71,7 +139,7 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
     - **Timer functionality** to track game progress and enforce urgency.
     - **End-game metrics and ranking** to evaluate player performance based on time, penalties, and mistakes.
 
-#### Game Levels and Narrative
+#### 1.2.2.5 - Game Levels and Narrative
 
  - The game includes a tutorial for onboarding players, introducing mechanics, and ensuring understanding.
 
@@ -79,13 +147,13 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
  - Levels feature unique themes and increasing puzzle complexity to maintain engagement.
 
-#### Integration of Cards and App
+#### 1.2.2.6 - Integration of Cards and App
 
  - The app validates unique alphanumeric codes on the cards to trigger actions like unlocking puzzles or advancing the story.
 
  - Cards reference other cards and app content, enabling dynamic storytelling and puzzle progression.
 
-#### Performance Metrics and Player Feedback
+#### 1.2.2.7 - Performance Metrics and Player Feedback
 
  - The game tracks key performance metrics, including:
     - Time spent
@@ -95,7 +163,7 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
  - Players receive a star-based ranking at the end of the game, reflecting their performance and mistakes.
 
-#### Design and Accessibility
+#### 1.2.2.8 - Design and Accessibility
 
  - The game supports both physical and digital components to reduce screen time for young players.
 
@@ -103,7 +171,7 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
  - Cards and app visuals are designed for clarity and consistency, creating a sense of immersion.
 
-#### Technical and Environmental Constraints
+#### 1.2.2.9 - Technical and Environmental Constraints
 
  - App loading times must be under 5 seconds.
 
@@ -111,17 +179,17 @@ You may read [the management reports](https://github.com/algosup/2024-2025-proje
 
  - Cards are printed on sustainable materials to minimize environmental impact.
 
-#### Future Scalability
+#### 1.2.2.10 - Future Scalability
 
  - GateKeeper is only the first chapter of a series of three games, therefore, the game framework must allow for future expansion.
 
  - Future updates may include more complex mechanics or additional educational themes.
 
-## Testing Areas
+## 1.3 - Testing Areas
 
 *From the previously mentioned requirements and specifications, we can anticipate that the Quality Assurance will extend to multiple aspects of the project, as shown below:*
 
-### Overview
+### 1.3.1 - Overview
 
 ![Testing Areas.png](../assets/Testing_Areas_1733355830362_0.png)
 
@@ -133,7 +201,7 @@ The project contains several testing areas which fall under three broad categori
 
  - **Program Development QA:** The focus here is on the implementation phase of the project, ensuring that both physical and digital components function seamlessly. This includes detailed testing of the Physical Cards to validate usability, clarity, and integration with the app, as well as rigorous testing of the Game App to ensure smooth gameplay, robust mechanics, and minimal bugs.
 
-### Detailed (Project Scope)
+### 1.3.2 - Detailed (Project Scope)
 
 *The following table presents the subjects being tested in this project, those categories will be used to designate which part of the game is being discussed. This system is mostly used for naming issues.*
 
@@ -148,7 +216,7 @@ The project contains several testing areas which fall under three broad categori
 > [!IMPORTANT]  
 > The unit testing of the game is not part of the QA's responsibility  
 
-## Success Criteria
+## 1.4 - Success Criteria
 
 *In conformity with the product's requirements and specifications, below are the criteria that we will attempt to monitor closely throughout the project, as they are important parameters for the improvement of our product.*
 
@@ -174,7 +242,7 @@ The project contains several testing areas which fall under three broad categori
 | **Scalability and Future-Proofing** | **Ease of Updates:** Game structure allows for future content additions or fixes without extensive rework. |
 | | **Expandability:** New levels, scenarios, or mechanics can be seamlessly added in future extensions. |
 
-## Identified Risks & Mitigations
+## 1.5 - Identified Risks & Mitigations
 
 > [!NOTE]
 > This is an extension if the "risks & mitigation" outlined in the Project Management Artefacts.
@@ -194,11 +262,11 @@ The project contains several testing areas which fall under three broad categori
 
 ---
 
-# Tooling
+# 2 - Tooling
 
 ---
 
-## Methodology
+## 2.1 - Methodology
 
 The Quality Assurance engineer's work typically falls into two broad categories:
 
@@ -208,15 +276,15 @@ The Quality Assurance engineer's work typically falls into two broad categories:
 
 *Here are two of the main processes that represent those categories:*
 
-### Bug Resolution process (Corrective QA)
+### 2.1.1 - Bug Resolution process (Corrective QA)
 
 ![bugReport.png](../assets/bugReport_1733358954238_0.png)
 
-### Test Creation and Execution (Proactive Quality Improvement)
+### 2.1.2 - Test Creation and Execution (Proactive Quality Improvement)
 
 ![testCases.png](../assets/testCases_1733358986626_0.png)
 
-## GitHub Issues
+## 2.2 - GitHub Issues
 
 Our QA workflow is designed to be fully integrated into GitHub Issues, making it the central hub for all quality assurance activities.
 
@@ -226,7 +294,7 @@ This approach ensures transparency, allows for better collaboration, and provide
 
 By leveraging GitHub's organizational tools, such as labels, milestones, and issue linking, we maintain a streamlined and efficient workflow that supports continuous feedback and improvement throughout the development cycle.
 
-### Issue Templates
+### 2.2.1 - Issue Templates
 
 Issue templates are there to streamline the process of creating, documenting, and addressing various QA tasks and development needs.
 
@@ -236,7 +304,7 @@ These templates allow contributors to focus on the content rather than the forma
 
 By categorizing and labeling issues with predefined templates, we enhance traceability, prioritize tasks effectively, allowing for better collaboration between QA, developers, and stakeholders.
 
-#### Overview
+#### 2.2.1.1 - Overview
 
 *You may access them by using the following links:*
 
@@ -256,7 +324,7 @@ By categorizing and labeling issues with predefined templates, we enhance tracea
 | Test Case Form | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=mathiskakal&labels=test&projects=algosup%2F45&template=test_case_form.yml&title=%5BTESTING%5D+TEST_NAME) |
 | Weekly Report Review | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=&labels=documentation&projects=&template=weekly_report_review_template.md&title=%5BDOCS%5D+Weekly+Report+Review+%23) |
 
-#### Detailed
+#### 2.2.1.2 - Detailed
 
 *In order to streamline the reviewing process, and thanks to our past experience, we have built up a library of Issue Templates that correspond to each area of testing.*
 
@@ -354,7 +422,7 @@ Weekly Report Review Template: This template is used to review weekly progress r
 
 
 
-## GitHub Project
+## 2.3 - GitHub Project
 
 Once the issues have been created, they end up in a database called "GitHub Projects", which allows us to have a more advanced and customisable view of all the current tasks and reports of the project.
 
@@ -364,7 +432,7 @@ This process adds additional metadata on top of the existing issues to help stra
 
 <!-- <CLICK HERE to explore the project dashboard (in a centered button)> -->
 
-### Issue Attributes
+### 2.3.1 - Issue Attributes
 
 *In order to successfully read the database, you will need to understand the following attributes which are used to describe the Issues.*
 
@@ -466,12 +534,12 @@ This process adds additional metadata on top of the existing issues to help stra
 </details>
 
 
-### Insights
+### 2.3.2 - Insights
 
 Those attributes will allow us to gain valuable insights which can take the form of multiple graphs, each serving a particular purpose.
 You can access those by clicking [this link](https://github.com/orgs/algosup/projects/45/insights).
 
-#### Issues by priority across iterations
+#### 2.3.2.1 - Issues by priority across iterations
 
 <!-- ![graph1.png](../assets/graph1_1733432762116_0.png) -->
 
@@ -482,7 +550,7 @@ Understand the distribution of high-priority (P0, P1) issues across iterations. 
 
 > Is the priority distribution aligned with our planned focus for each iteration?  
 
-#### Test Sizes Across Assignees
+#### 2.3.2.2 - Test Sizes Across Assignees
 
 <!-- ![graph2.png](../assets/graph2_1733432750346_0.png) -->
 
@@ -495,7 +563,7 @@ Visualize workload distribution among team members by task complexity (e.g., XS,
 
 > Are certain team members overwhelmed with too many tasks of varying sizes?  
 
-#### Issues by Status and Severity
+#### 2.3.2.3 - Issues by Status and Severity
 
 <!-- ![graph3.png](../assets/graph3_1733432735779_0.png) -->
 
@@ -508,7 +576,7 @@ Monitor the current state of issues, segmented by their severity (Critical, High
 
 > Are lower-severity issues getting stuck in the pipeline?  
 
-#### Test Execution Progress By Iteration
+#### 2.3.2.4 - Test Execution Progress By Iteration
 
 <!-- ![graph4.png](../assets/graph4_1733432723390_0.png) -->
 
@@ -521,7 +589,7 @@ Track how many tests are being executed manually versus semi-automatically over 
 
 > Which iterations had the highest manual testing workload?  
 
-#### Labels by Iteration
+#### 2.3.2.5 - Labels by Iteration
 
 <!-- ![graph5.png](../assets/graph5_1733432664713_0.png) -->
 
@@ -534,7 +602,7 @@ Analyze how different labels (e.g., "Bug", "Feedback", "Design Review") trend ac
 
 > Is the distribution of labeled tasks consistent with the iteration's goals?  
 
-#### Severity Distribution per Milestone
+#### 2.3.2.6 - Severity Distribution per Milestone
 
 <!-- ![graph6.png](../assets/graph6_1733432638977_0.png) -->
 
@@ -547,7 +615,7 @@ Compare the severity of issues tied to different milestones. Ensures major miles
 
 > Are we effectively addressing severe issues before they cascade into later milestones?  
 
-#### Issue Completion Rate by Iteration
+#### 2.3.2.7 - Issue Completion Rate by Iteration
 
 <!-- ![graph7.png](../assets/graph7_1733432626299_0.png) -->
 
@@ -560,7 +628,7 @@ Track how quickly issues are being completed over time. Ensures teams are keepin
 
 > Is there a trend of increasing or decreasing completion rates over time? 
 
-#### Status by Assignees
+#### 2.3.2.8 - Status by Assignees
 
 <!-- ![graph8.png](../assets/graph8_1733432590262_0.png) -->
 
@@ -573,7 +641,7 @@ Monitor individual progress by tracking how many issues each team member has in 
 
 > Are there patterns in status progression across assignees that need attention?
 
-#### Priority by Severity
+#### 2.3.2.9 - Priority by Severity
 
 <!-- ![graph9.png](../assets/graph9_1733432571130_0.png) -->
 
@@ -586,7 +654,7 @@ Highlight correlations between priority and severity. Ensures high-priority task
 
 > Are we focusing resources on the issues that are both high-priority and high-severity?
 
-#### Issue Count by Iteration and Milestone
+#### 2.3.2.10 - Issue Count by Iteration and Milestone
 
 <!-- ![graph10.png](../assets/graph10_1733432553589_0.png) -->
 
@@ -599,7 +667,7 @@ Understand how issues are distributed across iterations and milestones. Helps id
 
 > Are issues being distributed fairly across milestones and iterations?
 
-#### Test Size Trend Over Time
+#### 2.3.2.11 - Test Size Trend Over Time
 
 <!-- ![graph11.png](../assets/graph11_1733432474449_0.png){:height 357, :width 611} -->
 
@@ -614,7 +682,7 @@ See if the complexity of tests (size) is growing or decreasing over iterations, 
 
 ---
 
-# Strategy
+# 3 - Strategy
 
 ---
 
@@ -624,11 +692,18 @@ This part, named "strategy" will highlight all the QA activities performed and t
 
 This part will therefore focus on weeks 5-7 of the project, which are the three final weeks.
 
-## Testing Approaches
+## 3.1 - Testing Approaches
 
-### Integration Testing
+*Here the main test types identified, with an example for each of them for better understanding:*
+
+### 3.1.1 - Integration Testing
+
+*Ensures that individual components or modules of the software work together seamlessly as a combined system.*
 
 <!-- <LINK to actual issue that does this> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Verify that entering a correct code into the puzzle lock displays a success screen and updates the game state to progress the narrative.
@@ -652,9 +727,18 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** The correct code input triggers the success screen and updates the game’s state, allowing the player to progress.
  - **Fail:** The app does not display the success screen, does not update the game state, or otherwise fails to respond correctly to the entered code.
 
-### Functional Testing
+</details>
+
+
+
+### 3.1.2 - Functional Testing
+
+*Checks that the software’s features operate according to the specified requirements, producing correct and expected results.*
 
 <!-- <LINK to actual issue that does this> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Ensure that the hint system provides progressively revealing hints without skipping essential learning content.
@@ -677,9 +761,16 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** Hints appear in the correct order, maintain educational integrity, and help solve the puzzle.
  - **Fail:** Hints are not provided in order, are too vague or too revealing too soon, or skip the educational aspects entirely.
 
-### Internal Playtesting
+</details>
+
+### 3.1.3 - Internal Playtesting
+
+*Involves team members or internal stakeholders playing through the game to gather feedback on usability, enjoyment, and overall quality before external testing.*
 
 <!-- <LINK to KONSTANTINOS' Feedback> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Gather qualitative feedback on game flow, narrative engagement, and educational clarity from the internal team.
@@ -702,9 +793,16 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** No major blockers; testers understand the educational aims and find the game enjoyable.
  - **Fail:** Testers frequently get stuck, misunderstand key concepts, or find the game unengaging.
 
-### Regression Testing
+</details>
+
+### 3.1.4 - Regression Testing
+
+*Retests previously verified functionality after updates or fixes to ensure that no new defects were introduced and previous issues remain resolved.*
 
 <!-- <LINK to actual issue that does this> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Ensure that previously fixed bugs (e.g., puzzle timer glitches) have not reappeared after adding new features or updates.
@@ -726,9 +824,16 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** No recurrence of the bug, and the affected functionalities remain stable.
  - **Fail:** The same or a similar bug reemerges or introduces new errors in related features.
 
-### End-to-End Testing
+</details>
+
+### 3.1.5 - End-to-End Testing
+
+*Validates the entire application workflow from start to finish, confirming that all integrated parts work correctly together to produce the intended user experience.*
 
 <!-- <LINK to actual issue that does this> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Confirm that a player can start from the introduction, learn about climate change concepts, solve puzzles, use physical cards, progress through levels, and reach the end of the game with correct scoring and feedback.
@@ -751,12 +856,19 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** The player can complete the entire game flow without issues, and the educational objectives are met at the conclusion.
  - **Fail:** Any major obstacle prevents progress, or essential educational content is missing or inaccessible.
 
-### Usability and Accessibility Testing
+</details>
+
+### 3.1.6 - Usability and Accessibility Testing
+
+*Evaluates the software’s ease of use and its ability to accommodate users with various abilities, ensuring that the interface, controls, and content are clear, navigable, and inclusive.*
 
 <!-- <LINK to actual issue that does this> -->
 
+<details>
+<summary><ins>Example:</ins></summary><br/>
+
 **Test Objective:**
- - Ensure the game remains understandable and navigable for players with color vision deficiencies by simulating various types of color blindness using the ^^Daltonize Me^^ tool.
+ - Ensure the game remains understandable and navigable for players with color vision deficiencies by simulating various types of color blindness using the [Daltonize Me®](https://apps.apple.com/us/app/daltonize-me-camera/id936535542)Daltonize Me tool.
 
 **Test Setup:**
  - Install and run the Daltonize Me app (or similar color-blindness simulation tool) on a device.
@@ -778,9 +890,16 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** Players can navigate menus and complete the color-dependent puzzle using alternative cues without confusion, even when simulating various color blindness conditions.
  - **Fail:** Key elements or puzzles become too difficult or impossible to interpret under color blindness simulations, indicating insufficient alternative cues.
 
-### Performance Testing
+</details>
+
+### 3.1.7 - Performance Testing
+
+*Measures how the application responds under normal and peak conditions, assessing speed, stability, and resource usage to ensure a smooth user experience.*
 
 <!-- <LINK to actual issue that does this> -->
+
+<details>
+<summary><ins>Example:</ins></summary><br/>
 
 **Test Objective:**
  - Validate that the game loads within acceptable time limits (e.g., under 5 seconds), runs smoothly on target devices, and maintains stable frame rates and memory usage.
@@ -803,35 +922,37 @@ This part will therefore focus on weeks 5-7 of the project, which are the three 
  - **Pass:** All performance metrics meet or exceed the defined thresholds.
  - **Fail:** Excessive load times, frame rate drops, or unstable performance prevent a smooth player experience.
 
-## Testing Schedule
+</details>
 
-### Week 5: Validation and Early Integration
+## 3.2 - Testing Schedule
+
+### 3.2.1 - Week 5: Validation and Early Integration
 
 | **Aspect** | **Details** |
 |---|---|
 | **Focus** | Complete integration of all components (physical cards, app features, educational content) and ensure they work seamlessly together. |
-| **Key Activities** | Conduct ^^integration testing^^ to validate the interaction between physical cards and the app. |
-| | Perform ^^functional testing^^ for all critical app features, including puzzles, hint systems, and timer functionality. |
-| | Execute ^^internal playtesting sessions^^ to identify and resolve issues related to educational impact, game mechanics, and user engagement. |
-| | Start ^^regression testing^^ for previously resolved issues to ensure no new bugs have been introduced. |
+| **Key Activities** | Conduct integration testing to validate the interaction between physical cards and the app. |
+| | Perform functional testing for all critical app features, including puzzles, hint systems, and timer functionality. |
+| | Execute internal playtesting sessions to identify and resolve issues related to educational impact, game mechanics, and user engagement. |
+| | Start regression testing for previously resolved issues to ensure no new bugs have been introduced. |
 | **Deliverables** | Integration test report highlighting key findings and resolutions. |
 | | Updated bug tracker with priorities for Week 6. |
 
-### Week 6: Release Preparation and Final QA
+### 3.2.2 - Week 6: Release Preparation and Final QA
 
 | **Aspect** | **Details** |
 |---|---|
 | **Focus** | Polish the product, finalize testing, and ensure the game is ready for release by the end of the week. |
-| **Key Activities** | Perform ^^end-to-end testing^^ to validate the entire gameplay experience, simulating a player journey from start to finish. |
-| | Conduct ^^usability and accessibility^^ testing to ensure the game is intuitive and meets the needs of diverse users. |
-| | Execute ^^performance testing^^ to confirm app loading times, compatibility across devices, and smooth operation. |
+| **Key Activities** | Perform end-to-end testing to validate the entire gameplay experience, simulating a player journey from start to finish. |
+| | Conduct usability and accessibility testing to ensure the game is intuitive and meets the needs of diverse users. |
+| | Execute performance testing to confirm app loading times, compatibility across devices, and smooth operation. |
 | | Validate success criteria, including educational impact, engagement metrics, and alignment with the theme. |
-| | Prepare the ^^release build^^, addressing all critical and high-severity bugs. |
+| | Prepare the release build, addressing all critical and high-severity bugs. |
 | | Conduct a final playtesting session with external testers to gather release-critical feedback. |
 | **Deliverables** | Release-ready build of the game, with all known issues documented. |
 | | Comprehensive QA report summarizing testing results and addressed issues. |
 
-### Week 7: Presentation and Demo Preparation
+### 3.2.3 - Week 7: Presentation and Demo Preparation
 
 | **Aspect** | **Details** |
 |---|---|
