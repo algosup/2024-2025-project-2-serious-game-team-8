@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/Buttons/Square/Settings/settings.png" id="1_gpfe6"]
 [ext_resource type="Script" path="res://script/home_page.gd" id="1_qbvgi"]
-[ext_resource type="Texture2D" uid="uid://bht10qg071lt1" path="res://resources/background/menu_background.png" id="2_sbdoo"]
 [ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/Buttons/Square/Settings/settings_hover.png" id="4_3mcu8"]
+[ext_resource type="Texture2D" uid="uid://ccijrfbec5h3r" path="res://resources/background/homebackground2.jpg" id="4_5nhnf"]
 [ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="4_xtb3p"]
 [ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/Buttons/Rect/Start/start.png" id="5_wyg2g"]
 [ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/Buttons/Rect/Start/start_hover.png" id="7_iytfu"]
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sbdoo")
+texture = ExtResource("4_5nhnf")
 
 [node name="HeadBarControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -127,5 +127,10 @@ autoplay = true
 bus = &"Menu Music"
 parameters/looping = true
 
+[node name="BackGroundChangeTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonControl/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="BackGroundChangeTimer" to="." method="_on_back_ground_change_timer_timeout"]
