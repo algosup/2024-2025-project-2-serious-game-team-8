@@ -191,7 +191,7 @@ Here are the main features of the game, as laid out in the functional specificat
 
 ### 1.3.1 - Overview
 
-![Testing Areas.png](../assets/Testing_Areas_1733355830362_0.png)
+![image](https://github.com/user-attachments/assets/7abfd7ac-ff3b-4635-8e47-d674c4b551c7)
 
 The project contains several testing areas which fall under three broad categories:
 
@@ -278,11 +278,11 @@ The Quality Assurance engineer's work typically falls into two broad categories:
 
 ### 2.1.1 - Bug Resolution process (Corrective QA)
 
-![bugReport.png](../assets/bugReport_1733358954238_0.png)
+![image](https://github.com/user-attachments/assets/0e25620d-5e85-4992-9abf-646ab286a624)
 
 ### 2.1.2 - Test Creation and Execution (Proactive Quality Improvement)
 
-![testCases.png](../assets/testCases_1733358986626_0.png)
+![image](https://github.com/user-attachments/assets/5a089221-2f2f-4935-8a7d-5c12b887b2af)
 
 ## 2.2 - GitHub Issues
 
@@ -541,7 +541,7 @@ You can access those by clicking [this link](https://github.com/orgs/algosup/pro
 
 #### 2.3.2.1 - Issues by priority across iterations
 
-<!-- ![graph1.png](../assets/graph1_1733432762116_0.png) -->
+![image](https://github.com/user-attachments/assets/40f6e772-d747-4ef1-8d34-f373f9214a0d)
 
 Understand the distribution of high-priority (P0, P1) issues across iterations. Ensure critical issues are addressed earlier in the development cycle.
 
@@ -552,7 +552,7 @@ Understand the distribution of high-priority (P0, P1) issues across iterations. 
 
 #### 2.3.2.2 - Test Sizes Across Assignees
 
-<!-- ![graph2.png](../assets/graph2_1733432750346_0.png) -->
+![image](https://github.com/user-attachments/assets/d3b9eb3b-9ee4-4ce5-8337-86fa6a32e491)
 
 Visualize workload distribution among team members by task complexity (e.g., XS, S, M, L, XL). Helps balance workloads.
 
@@ -565,7 +565,7 @@ Visualize workload distribution among team members by task complexity (e.g., XS,
 
 #### 2.3.2.3 - Issues by Status and Severity
 
-<!-- ![graph3.png](../assets/graph3_1733432735779_0.png) -->
+![image](https://github.com/user-attachments/assets/2b0e6250-e3ae-43b1-932b-0b959eaab8fa)
 
 Monitor the current state of issues, segmented by their severity (Critical, High, Medium). Ensures critical issues are progressing.
 
@@ -578,7 +578,7 @@ Monitor the current state of issues, segmented by their severity (Critical, High
 
 #### 2.3.2.4 - Test Execution Progress By Iteration
 
-<!-- ![graph4.png](../assets/graph4_1733432723390_0.png) -->
+![image](https://github.com/user-attachments/assets/c992b324-6835-49e7-8405-27c97af11db2)
 
 Track how many tests are being executed manually versus semi-automatically over time. Helps identify automation opportunities.
 
@@ -591,7 +591,7 @@ Track how many tests are being executed manually versus semi-automatically over 
 
 #### 2.3.2.5 - Labels by Iteration
 
-<!-- ![graph5.png](../assets/graph5_1733432664713_0.png) -->
+![image](https://github.com/user-attachments/assets/00dc3eba-ea54-4ff3-9010-9c41a4817ca3)
 
 Analyze how different labels (e.g., "Bug", "Feedback", "Design Review") trend across iterations. Helps focus QA efforts on specific areas.
 
@@ -604,7 +604,7 @@ Analyze how different labels (e.g., "Bug", "Feedback", "Design Review") trend ac
 
 #### 2.3.2.6 - Severity Distribution per Milestone
 
-<!-- ![graph6.png](../assets/graph6_1733432638977_0.png) -->
+![image](https://github.com/user-attachments/assets/a96fa6ae-b4b1-4c2c-8276-2ab52751d64c)
 
 Compare the severity of issues tied to different milestones. Ensures major milestones have fewer critical issues left unresolved.
 
@@ -617,7 +617,7 @@ Compare the severity of issues tied to different milestones. Ensures major miles
 
 #### 2.3.2.7 - Issue Completion Rate by Iteration
 
-<!-- ![graph7.png](../assets/graph7_1733432626299_0.png) -->
+![image](https://github.com/user-attachments/assets/d9da00c0-e0ac-4ffb-8b00-478dd96bac67)
 
 Track how quickly issues are being completed over time. Ensures teams are keeping up with the planned iterations.
 
@@ -630,7 +630,7 @@ Track how quickly issues are being completed over time. Ensures teams are keepin
 
 #### 2.3.2.8 - Status by Assignees
 
-<!-- ![graph8.png](../assets/graph8_1733432590262_0.png) -->
+![image](https://github.com/user-attachments/assets/e718ffe3-ec55-43e2-9b97-4c82f774be2b)
 
 Monitor individual progress by tracking how many issues each team member has in different statuses (e.g., In Progress, Done, Blocked).
 
@@ -643,7 +643,7 @@ Monitor individual progress by tracking how many issues each team member has in 
 
 #### 2.3.2.9 - Priority by Severity
 
-<!-- ![graph9.png](../assets/graph9_1733432571130_0.png) -->
+![image](https://github.com/user-attachments/assets/dbed29da-da29-4bb8-92f9-3a4a7f9ada12)
 
 Highlight correlations between priority and severity. Ensures high-priority tasks align with high-severity issues.
 
@@ -656,7 +656,7 @@ Highlight correlations between priority and severity. Ensures high-priority task
 
 #### 2.3.2.10 - Issue Count by Iteration and Milestone
 
-<!-- ![graph10.png](../assets/graph10_1733432553589_0.png) -->
+![image](https://github.com/user-attachments/assets/3e3d87a7-d092-4869-b4ad-05ef2b5fe16b)
 
 Understand how issues are distributed across iterations and milestones. Helps identify bottlenecks or overburdened milestones.
 
@@ -669,7 +669,7 @@ Understand how issues are distributed across iterations and milestones. Helps id
 
 #### 2.3.2.11 - Test Size Trend Over Time
 
-<!-- ![graph11.png](../assets/graph11_1733432474449_0.png){:height 357, :width 611} -->
+![image](https://github.com/user-attachments/assets/aaa1c2e6-3ded-4b72-9ea5-32fa6733ce62)
 
 See if the complexity of tests (size) is growing or decreasing over iterations, which can inform planning and resource allocation.
 
