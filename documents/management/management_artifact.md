@@ -199,7 +199,7 @@ You can access each of them directly by following the links below:
 - [Access Report for Week 2](/documents/management/weekly_reports/weekly_report_week2.md)
 - [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md)
 - [Access Report for Week 4](/documents/management/weekly_reports/weekly_report_week4.md)
-<!-- - [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md) -->
+- [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md)
 <!-- - [Access Report for Week 6](/documents/management/weekly_reports/weekly_report_week6.md) -->
 <!-- - [Access Report for Week 7](/documents/management/weekly_reports/weekly_report_week7.md) -->
 
