@@ -1,11 +1,27 @@
-name: Bug report Form
-description: Create a report to help improve the product
+name: Bug Report Form
+description: Create a report to help improve the hybrid game product
 title: "[BUG] INSERT_BUG_NAME"
 labels: bug
 assignees: mathiskakal
 projects: [algosup/45]
 body:
-      
+
+  - type: dropdown
+    id: bug-category
+    attributes:
+      label: Bug Category
+      description: Select the category that best describes the issue.
+      options:
+        - UI/UX
+        - Gameplay
+        - Accessibility
+        - Performance
+        - Educational Content
+        - Integration
+        - Other
+    validations:
+      required: true
+
   - type: textarea
     id: expected-behavior
     attributes:
@@ -21,7 +37,20 @@ body:
       placeholder: A detailed description of the current behavior.
     validations:
       required: true
-      
+
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      description: How often does the bug occur?
+      options:
+        - Always
+        - Often
+        - Rarely
+        - Unable to Reproduce
+    validations:
+      required: true
+
   - type: textarea
     id: steps-to-reproduce
     attributes:
@@ -37,17 +66,54 @@ body:
         
         \| Step ID \| Step Description \|
         \|--------\|--------\|
-        \| O \| Cell \|
-        \| 1 \| Cell \|
-        \| 2 \| Cell \|
+        \| 1 \| Describe the first step here \|
+        \| 2 \| Describe the second step here \|
+        \| 3 \| Describe the third step here \|
         
         </details>
+      
+  - type: textarea
+    id: physical-card-details
+    attributes:
+      label: Physical Card Details (if applicable)
+      placeholder: Specify the card(s) involved in this issue, if relevant.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 (Critical)
+        - P1 (High)
+        - P2 (Medium)
+        - P3 (Low)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+        - Trivial
+    validations:
+      required: true
       
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots
-      placeholder: If applicable, add screenshots to help explain your problem.  
+      placeholder: If applicable, add screenshots to help explain your problem.
+      
+  - type: textarea
+    id: logs-and-errors
+    attributes:
+      label: Logs and Error Messages
+      placeholder: Include logs or error messages (if applicable).
       
   - type: textarea
     id: additional-context

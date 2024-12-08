@@ -1,5 +1,5 @@
 name: Test Case Form
-description: Declares a test case (form variant).
+description: Declares a test case (form variant) specific to the hybrid game project.
 title: "[TESTING] TEST_NAME"
 labels: [test]
 assignees: [mathiskakal]
@@ -11,7 +11,7 @@ body:
     attributes:
       label: Test Case Title
       description: A brief title of what the test is.
-      placeholder: e.g., Code Security Check
+      placeholder: e.g., Validate Hint System Functionality
     validations:
       required: true
 
@@ -28,13 +28,12 @@ body:
     validations:
       required: true
 
-
   - type: textarea
     id: test-description
     attributes:
       label: Test Description
       description: Describe what the test will do in simple terms.
-      placeholder: This test will read through all the code to find known vulnerability issues from a third-party database.
+      placeholder: This test ensures the hint system provides progressive hints without skipping essential learning content.
     validations:
       required: true
 
@@ -42,7 +41,7 @@ body:
     id: test-execution
     attributes:
       label: Test Execution
-      description: Specify if is to be run automatically or manually
+      description: Specify if it is to be run automatically or manually.
       options:
         - Automatic
         - Manual
@@ -53,7 +52,7 @@ body:
     attributes:
       label: Objective
       description: Describe why the test is relevant.
-      placeholder: The goal of this test is to ensure the product meets security requirements.
+      placeholder: To ensure the hint system is functional, aligned with educational goals, and user-friendly.
     validations:
       required: true
 
@@ -63,9 +62,10 @@ body:
       label: Test Environment
       description: Pick the predefined environment from which the test should be run from.
       options:
-        - School PC (Lenovo - Windows)
-        - School MacOS (MacBook Air M3 - MacOS)
-        - Testing server (Lenovo IdeaPad Slim)
+        - Android Device (5.0+)
+        - iOS Device (14+)
+        - QA PC (Windows 11 - Lenovo)
+        - QA MacBook Air (MacOS)
         - Other
       default: 0
     validations:
@@ -76,7 +76,7 @@ body:
     attributes:
       label: Dependencies
       description: Describe the elements the test(s) depend on.
-      placeholder: GCC version 12.3.0, Python version 3.11 etc.
+      placeholder: GODOT 4.3 runtime, physical cards with alphanumeric codes, stable network connection...
     validations:
       required: true
 
@@ -85,7 +85,7 @@ body:
     attributes:
       label: Preconditions
       description: Any requirements or conditions that must be met before performing the test.
-      placeholder: The board must be flashed with the latest software and/or reset prior to test execution, etc.
+      placeholder: The app must be installed on the target device, physical cards are available, backend services are active, etc.
     validations:
       required: true
 
@@ -94,7 +94,7 @@ body:
     attributes:
       label: Post-conditions
       description: Describe the expected state of the system after the test was executed, regardless of whether it failed or passed.
-      placeholder: After test execution, the test bed should close and the computer should be back to initial state...
+      placeholder: The system should return to its normal state, and all test data should be logged for review...
     validations:
       required: true
 
@@ -103,7 +103,7 @@ body:
     attributes:
       label: Test Data
       description: Describe the data required as an input for the test.
-      placeholder: The test will automatically pull the latest code from the dev branch...
+      placeholder: Hint system test data, sample puzzles, alphanumeric codes from physical cards...
     validations:
       required: true
 
@@ -112,7 +112,7 @@ body:
     attributes:
       label: Steps
       description: "You may use the markdown table template below to lay out the different steps of the test."
-      placeholder: "1. Login to the application\n2. Navigate to the settings page\n3. ..."
+      placeholder: "1. Launch the app\n2. Access the puzzle screen\n3. Input valid code from card\n4. Activate hint system..."
     validations:
       required: true
 
@@ -134,6 +134,6 @@ body:
     attributes:
       label: Notes
       description: Any additional comments or observations.
-      placeholder: I noticed the test execution briefly interrupted the connection to the internet...
+      placeholder: Observations during the test run or potential improvements to the feature...
     validations:
       required: false

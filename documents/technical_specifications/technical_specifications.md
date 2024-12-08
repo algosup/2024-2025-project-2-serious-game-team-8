@@ -69,6 +69,10 @@ The document should also benefit other stakeholders and project owners by giving
 
 The scope of the project is to prioritize educating users on climate change through engaging, interactive elements, with the gameplay serving as a supportive framework to reinforce the educational objectives.
 
+## Out of Scope 
+
+With the scope being set, we can expect the game to not focus on the gameplay, and to not misinform the user by presenting false information about climate change.
+
 ## Target Audience 
 
 The document is primarily intended for stakeholders, providing a clear understanding of the project's objectives and scope. Additionally, it serves as a valuable reference for developers and QA teams, providing insights into design and implementation.
@@ -79,7 +83,7 @@ The document is primarily intended for stakeholders, providing a clear understan
 
 As stated in the functional requirements, the goal of the project is to create a serious game focused on climate change, combining a board game with cards and a mobile app, which are both required to play, creating an integrated and interactive experience. The mobile app will be designed using Godot.
 
-We have been given 7 weeks to finish the project.
+We have been given 7 weeks to finish the project, starting 04/11/2024 and ending 20/12/2024.
 We chose to develop a board and mobile game because it allows us to concentrate on exploring and researching climate change and integrating these elements into a serious game. This approach aligns with our focus, without the added complexity of developing a PC game.
 
 ## Setting up the development environment 
@@ -91,11 +95,11 @@ The first step is to set up the development environment, which we can define as 
 - A mobile phone 
 - A PC 
 - A physical board and cards for the game
-- Additional papers which would include the tutorial/manual 
+- Additional paper which would include the tutorial/manual 
 
 ### Software Requirements
 
-- Any OS that supports Godot
+- Any OS that supports Godot 4.3
 - Any text editor 
 - [GitHub](https://github.com/) as a version control management system.
 
@@ -115,29 +119,86 @@ As this game combines a mobile app with a card game, the focus is split between 
 	- Use snake_case for variables and SCREAMING_SNAKE_CASE for constants.
 	- Choose descriptive names that clearly indicate their purpose.
 
+Example: 
+```gdscript
+# Variables
+var player_health = 100
+var current_level = 1
+
+# Constants
+const MAX_PLAYERS = 4
+const GAME_TITLE = "Escape Challenge"
+```
+
+
 2. **Function Names**
 	- Use snake_case for function names.
 	- Begin with a verb to describe the function's action or purpose clearly.
+Example:
+```gdscript
+# Function names
+func calculate_score(points: int) -> int:
+    return points * 10
+
+func spawn_enemy(position: Vector2):
+    # Logic for spawning an enemy
+    pass
+```
 
 3. **Class Names**
 	- Use PascalCase for class names to distinguish them from variables and functions.
 	- Class names should be nouns or noun phrases that describe the purpose of the class.
+Example:
+```gdscript
+# Class names
+class Player:
+    var health: int = 100
+    func move(direction: Vector2):
+        pass
+
+class EnemySpawner:
+    func spawn():
+        pass
+```
 
 4. **Signals** 
 	- Use snake_case for signals, with names that describe the event being triggered.
    - Prefix connected functions with _on_ to clarify they are signal handlers.
+Example:
+```gdscript
+# Signals
+signal game_over
+signal player_damaged(damage: int)
+
+# Signal handler
+func _on_game_over():
+    print("Game Over")
+
+func _on_player_damaged(damage: int):
+    print("Player took damage: %d" % damage)
+```
 
 5. **Scene and Node Names**
 	- Use lowerCamelCase for scenes and node names to distinguish them from variables and scripts.
    - Use descriptive names that indicate the role of the scene or node.
+Example:
+```gdscript
+# Scene and Node names
+# Scene: mainMenu.tscn
+# Scene: level1.tscn
 
+# Nodes in a scene
+# playerSprite
+# enemySpawner
+# healthBar
+```
 ### <ins>Commenting Conventions </ins>
 
 Comment near 100% of the Functions in the code
 
 ### <ins>Documenting Conventions</ins>
 
-All project documentation, including technical documents, code comments, and user manuals, will be written in **Markdown**. Markdown files will be stored in the `documents/` folder in the repository.
+All project documentation, including technical documents, code comments, and user manuals, will be written in **Github Flavored Markdown (GFM)**. Markdown files will be stored in the `documents/` folder in the repository.
 
 ## Setting up the game
 

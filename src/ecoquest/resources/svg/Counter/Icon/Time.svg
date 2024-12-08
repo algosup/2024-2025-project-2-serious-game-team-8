@@ -1,0 +1,22 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Counter/Icon/Time">
+<g id="Circle" filter="url(#filter0_i_673_16612)">
+<path d="M40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20Z" fill="#FDE294"/>
+</g>
+<g id="ClockIcon">
+<path id="Rectangle" d="M16.9372 10.9067C16.3237 9.9881 15.0818 9.74072 14.1632 10.3541C13.2447 10.9676 12.9973 12.2095 13.6107 13.1281L19.1642 21.4442C19.7776 22.3628 21.0196 22.6102 21.9381 21.9968C22.8567 21.3834 23.1041 20.1414 22.4907 19.2228L16.9372 10.9067Z" fill="#5F443C"/>
+<path id="Rectangle_2" d="M25.3068 19.747C26.2207 19.1367 26.4644 17.8972 25.8509 16.9787C25.2375 16.0601 23.9993 15.8102 23.0854 16.4205L19.7421 18.6531C18.8282 19.2635 18.5846 20.5029 19.198 21.4215C19.8114 22.34 21.0496 22.5899 21.9635 21.9796L25.3068 19.747Z" fill="#5F443C"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_673_16612" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_673_16612"/>
+</filter>
+</defs>
+</svg>

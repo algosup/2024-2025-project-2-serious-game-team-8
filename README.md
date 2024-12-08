@@ -1,7 +1,7 @@
 <hr>
 <div align="center">
     
-# 🍃 EcoQuest
+# 🍃 EkoLock's GateKeeper
 
 </div>
 
@@ -35,29 +35,22 @@
 
 <hr>
 
-## Project Overview
+## Introduction
 
-EcoQuest is a serious game about climate change. It aims to educate and teach people about some misconceptions about global warming. 
+Step into the world of GateKeeper, the thrilling hybrid escape game by EkoLock that tackles climate change head-on!
 
-Consequently, we are using a game engine easy to handle and learn which is named GODOT 4.
+This immersive experience is designed to debunk common misconceptions about global warming, all while keeping players on the edge of their seats. Using the intuitive power of Godot 4, we’ve crafted a game that’s as fun to play as it is enlightening to learn from.
 
-This game would be an escape game about climate change, every puzzle/enigma would clarify a misconception about climate change. Moreover, a timer would be set to escape the "room", adding some entertainment to the game.
+Each puzzle in Gatekeeper is more than a challenge—it’s a revelation, shedding light on the truths of climate change. Race against the clock to solve mind-bending enigmas, escape the "room," and unlock a deeper understanding of our planet’s future. Are you ready to beat the timer and uncover the hidden truths?
 
 ## Development-related information
 
 This software has been created using [GODOT 4.3](https://en.wikipedia.org/wiki/Godot_(game_engine)).
 
-It has been mainly coded on:
-- Apple Macbook Air m3 QWERTY
-- Lenovo Thinkbook 14
-- ThinkPad E14 Gen 5
-
-
-It has been mainly tested on:
-    - Lenovo Thinkbook 14-IIL 20 SL 16go Intel core i7-1065 g7
-    - MacBook Air M3 13" 16gb RAM 512 go SSD
-    - Lenovo IdeaPad (Debian 12)
-
+It has been mainly coded and tested on:
+- Apple Macbook Air m3 (16gb RAM) - MacOS Sequoia 15.1.1
+- Lenovo Thinkbook 14 (8gb & 16gb RAM) - Windows 11 24H2
+- ThinkPad E14 Gen 5 (8gb RAM) - Debian 12
 
 ## Installation
 

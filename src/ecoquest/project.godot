@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="EcoQuest"
+run/main_scene="res://scene/splash_screen.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+boot_splash/show_image=false
+config/icon="res://ecoquest_logo.png"
+
+[autoload]
+
+Global="*res://script/global.gd"
+
+[custom]
+
+slider_volume=0.256
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdscript_formatter/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

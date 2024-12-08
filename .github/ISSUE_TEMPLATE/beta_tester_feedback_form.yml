@@ -1,0 +1,119 @@
+name: Beta Tester Feedback Form
+description: Collects feedback from beta testers about the game.
+title: "[FEEDBACK] Beta Test Feedback"
+labels: [feedback, beta-testing]
+assignees: [mathiskakal]
+projects: [algosup/45]
+body:
+
+  - type: input
+    id: tester-name
+    attributes:
+      label: Tester Name
+      description: Provide your name or alias.
+      placeholder: e.g., John Doe
+    validations:
+      required: false
+
+  - type: textarea
+    id: educational-impact
+    attributes:
+      label: Educational Impact
+      description: Did you learn anything new about climate change? Share any facts or misconceptions that were clarified for you.
+      placeholder: e.g., I learned about the carbon footprint of common activities.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: engagement-level
+    attributes:
+      label: Engagement Level
+      description: How engaging did you find the game overall?
+      options:
+        - Very engaging
+        - Moderately engaging
+        - Neutral
+        - Slightly boring
+        - Very boring
+    validations:
+      required: true
+
+  - type: textarea
+    id: favorite-part
+    attributes:
+      label: Favorite Part
+      description: What was your favorite part of the game, and why?
+      placeholder: e.g., I enjoyed solving the puzzles with the card combinations.
+    validations:
+      required: true
+
+  - type: textarea
+    id: least-favorite-part
+    attributes:
+      label: Least Favorite Part
+      description: What was your least favorite part of the game, and why?
+      placeholder: e.g., The hint system felt slow to respond.
+    validations:
+      required: false
+
+  - type: textarea
+    id: bugs-or-issues
+    attributes:
+      label: Bugs or Issues
+      description: Did you encounter any bugs, glitches, or technical problems during gameplay? If yes, please describe them.
+      placeholder: e.g., The timer froze during the second puzzle.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty-balance
+    attributes:
+      label: Difficulty Balance
+      description: Was the game too easy, too hard, or just right?
+      options:
+        - Too easy
+        - Just right
+        - Too hard
+    validations:
+      required: true
+
+  - type: textarea
+    id: app-card-integration
+    attributes:
+      label: App-Card Integration
+      description: How seamless was the interaction between the app and physical cards? Were there any issues?
+      placeholder: e.g., Entering the card codes into the app worked perfectly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: usability-feedback
+    attributes:
+      label: Usability Feedback
+      description: Was the game intuitive and easy to navigate? Any suggestions to improve usability?
+      placeholder: e.g., The instructions on combining cards were not very clear.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: accessibility-rating
+    attributes:
+      label: Accessibility Rating
+      description: How accessible did you find the game, including visual and audio cues or features for diverse players?
+      options:
+        - Excellent
+        - Good
+        - Average
+        - Below Average
+        - Poor
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional Comments
+      description: Share any other observations, suggestions, or feedback that you think would improve the game.
+      placeholder: e.g., I would like to see more levels focusing on renewable energy.
+    validations:
+      required: false
