@@ -50,9 +50,14 @@ func _on_digicode_press(buttonID: int):
 					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
 
 		elif puzzle_codes[Global.current_chapter] == label.text:
-			var code_page = Global.code_page.instantiate()
-			get_parent().add_child(code_page)
-			queue_free()
+			var code_page_tutorial = Global.code_page.instantiate()
+			var code_page_chapter_one = Global.code_page_chapter_one.instantiate()
+			if Global.current_chapter == 0:
+				get_parent().add_child(code_page_tutorial)
+				queue_free()
+			elif  Global.current_chapter == 1: 
+				get_parent().add_child(code_page_chapter_one)
+				queue_free()
 
 		else:
 			for i in range(2):

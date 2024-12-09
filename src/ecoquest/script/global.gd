@@ -3,6 +3,7 @@ extends Node2D
 var settings = preload("res://scene/settings_page.tscn")
 var chapter_selection = preload("res://scene/chapters_selection.tscn")
 var code_page = preload("res://scene/code_page.tscn")
+var code_page_chapter_one = preload("res://scene/second_enigma.tscn")
 var win_page = preload("res://scene/code_win_page.tscn")
 var game_page = preload("res://scene/game_page.tscn")
 var chapter_one_completion_page = preload("res://scene/chapter_one_win.tscn")
