@@ -32,21 +32,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0673121, 0.196028, 0.327231, 0.313726)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -471.0
-offset_top = -142.0
-offset_right = 482.0
-offset_bottom = 447.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_mr4mi")
-
 [node name="TimerControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 8
@@ -249,5 +234,26 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("5_1ghio")
 texture_pressed = ExtResource("6_ynfvd")
 texture_hover = ExtResource("6_ynfvd")
+
+[node name="TestTubeControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TestTubes" type="TextureRect" parent="CanvasLayer/TestTubeControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 49.0
+offset_top = 798.0
+offset_right = 1002.0
+offset_bottom = 1387.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mr4mi")
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]
