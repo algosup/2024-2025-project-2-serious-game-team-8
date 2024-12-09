@@ -237,21 +237,73 @@ texture_hover = ExtResource("6_ynfvd")
 
 [node name="TestTubeControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TestTubes" type="TextureRect" parent="CanvasLayer/TestTubeControl"]
+[node name="Slider1" type="ColorRect" parent="CanvasLayer/TestTubeControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.439
+anchor_top = 29.132
+anchor_right = 5.439
+anchor_bottom = 29.132
+offset_left = -614.56
+offset_top = -821.28
+offset_right = -509.56
+offset_bottom = -731.28
+color = Color(0, 0, 1, 1)
+
+[node name="Slider2" type="ColorRect" parent="CanvasLayer/TestTubeControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 49.0
-offset_top = 798.0
-offset_right = 1002.0
-offset_bottom = 1387.0
+offset_left = -46.0
+offset_top = 324.0
+offset_right = 61.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.785372, 0.0951145, 0.200237, 1)
+
+[node name="Slider3" type="ColorRect" parent="CanvasLayer/TestTubeControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 297.0
+offset_top = 324.0
+offset_right = 404.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.29906, 0.857144, 3.85046e-07, 1)
+
+[node name="TestTubes" type="TextureRect" parent="CanvasLayer/TestTubeControl"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -483.0
+offset_top = -162.0
+offset_right = 470.0
+offset_bottom = 427.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_mr4mi")
