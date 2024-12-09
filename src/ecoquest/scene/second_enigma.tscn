@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=9 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://scene/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://wnnf8o4ovnuh" path="res://resources/background/test tubes.png" id="2_mr4mi"]
 [ext_resource type="Texture2D" uid="uid://c4axstyxv4s37" path="res://resources/svg/Button/IronButton/[1] Normal.png" id="4_n5ukb"]
 [ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="5_1ghio"]
-[ext_resource type="Texture2D" uid="uid://d4ko2rad36d6i" path="res://resources/svg/Button/IronButton/[2] Clicked.png" id="5_qrf6a"]
 [ext_resource type="Texture2D" uid="uid://cl7fknll7u2bv" path="res://resources/svg/Button/IronButton/[3] Hover.png" id="6_k18e2"]
 [ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="6_ynfvd"]
 
@@ -47,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TimerBg" type="Sprite2D" parent="CanvasLayer/TimerControl"]
-position = Vector2(25, -594)
+position = Vector2(25, -606)
 scale = Vector2(3, 3)
 texture = ExtResource("1_eptsh")
 
@@ -91,8 +90,7 @@ offset_right = -247.0
 offset_bottom = 791.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
-texture_pressed = ExtResource("5_qrf6a")
-texture_hover = ExtResource("6_k18e2")
+texture_pressed = ExtResource("6_k18e2")
 
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/ResetButton"]
 layout_mode = 0
@@ -116,8 +114,7 @@ offset_right = 318.0
 offset_bottom = 791.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
-texture_pressed = ExtResource("5_qrf6a")
-texture_hover = ExtResource("6_k18e2")
+texture_pressed = ExtResource("6_k18e2")
 
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/AnalyseButton"]
 layout_mode = 0
@@ -135,18 +132,18 @@ autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = -440.0
-offset_top = -415.0
-offset_right = -140.0
-offset_bottom = -265.0
+offset_left = -461.0
+offset_top = -465.0
+offset_right = -161.0
+offset_bottom = -315.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect"]
 layout_mode = 0
-offset_left = 12.5001
+offset_left = 10.0001
 offset_top = 7.50009
-offset_right = 287.5
+offset_right = 285.0
 offset_bottom = 126.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
@@ -157,10 +154,10 @@ autowrap_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = -100.0
-offset_top = -415.0
-offset_right = 200.0
-offset_bottom = -265.0
+offset_left = -94.0
+offset_top = -465.0
+offset_right = 206.0
+offset_bottom = -315.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
@@ -179,10 +176,10 @@ autowrap_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = 228.0
-offset_top = -415.0
-offset_right = 528.0
-offset_bottom = -265.0
+offset_left = 252.0
+offset_top = -464.0
+offset_right = 552.0
+offset_bottom = -314.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
@@ -198,6 +195,11 @@ theme_override_font_sizes/font_size = 90
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="FillButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="HeadBarControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -308,4 +310,5 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_mr4mi")
 
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]

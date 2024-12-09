@@ -31,3 +31,7 @@ func _increase_rect_size(rectangle:ColorRect, newHeight:int) -> void:
 		tween.parallel().tween_property(rectangle, "size", new_size, 1.0)
 
 	
+
+
+func _on_reset_button_pressed(rectangle:ColorRect) -> void:
+	rectangle.size = Vector2(0,0)
