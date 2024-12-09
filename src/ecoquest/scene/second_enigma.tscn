@@ -1,0 +1,237 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsfjtqnkw8vtp"]
+
+[ext_resource type="Script" path="res://scene/second_enigma.gd" id="1_ccolq"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_2dmjq"]
+[ext_resource type="Texture2D" uid="uid://c4axstyxv4s37" path="res://resources/svg/Button/IronButton/[1] Normal.png" id="4_n5ukb"]
+[ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="5_1ghio"]
+[ext_resource type="Texture2D" uid="uid://d4ko2rad36d6i" path="res://resources/svg/Button/IronButton/[2] Clicked.png" id="5_qrf6a"]
+[ext_resource type="Texture2D" uid="uid://cl7fknll7u2bv" path="res://resources/svg/Button/IronButton/[3] Hover.png" id="6_k18e2"]
+[ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="6_ynfvd"]
+
+[node name="SecondEnigma" type="Node2D"]
+script = ExtResource("1_ccolq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.439216, 0.439216, 0.439216, 0.313726)
+
+[node name="TimerControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerBg" type="Sprite2D" parent="CanvasLayer/TimerControl"]
+position = Vector2(25, -594)
+scale = Vector2(3, 3)
+texture = ExtResource("1_eptsh")
+
+[node name="TimerText" type="Label" parent="CanvasLayer/TimerControl/TimerBg"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -58.1667
+offset_right = -18.0
+offset_bottom = -3.16666
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 35
+text = "15:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonsControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResetButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_left = -443.0
+offset_top = 707.0
+offset_right = -247.0
+offset_bottom = 791.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_n5ukb")
+texture_pressed = ExtResource("5_qrf6a")
+texture_hover = ExtResource("6_k18e2")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/ResetButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 4.50003
+offset_right = 182.0
+offset_bottom = 51.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 30
+text = "Reset"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnalyseButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 707.0
+offset_right = 318.0
+offset_bottom = 791.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_n5ukb")
+texture_pressed = ExtResource("5_qrf6a")
+texture_hover = ExtResource("6_k18e2")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/AnalyseButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 183.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.00341551, 0.00391139, 0.00105562, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 30
+text = "Analyze"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_left = -440.0
+offset_top = -415.0
+offset_right = -140.0
+offset_bottom = -265.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_n5ukb")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect"]
+layout_mode = 0
+offset_left = 12.5001
+offset_top = 7.50009
+offset_right = 287.5
+offset_bottom = 126.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_left = -100.0
+offset_top = -415.0
+offset_right = 200.0
+offset_bottom = -265.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_n5ukb")
+
+[node name="Label2" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect2"]
+layout_mode = 0
+offset_left = 13.7501
+offset_top = 6.25011
+offset_right = 288.75
+offset_bottom = 125.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = -415.0
+offset_right = 528.0
+offset_bottom = -265.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_n5ukb")
+
+[node name="Label3" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect3"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 6.25005
+offset_right = 287.5
+offset_bottom = 125.25
+theme_override_colors/font_color = Color(0, 0, 0, 0.952941)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1714.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="ReturnButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 14.0
+offset_right = 112.0
+offset_bottom = 98.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_1ghio")
+texture_pressed = ExtResource("6_ynfvd")
+texture_hover = ExtResource("6_ynfvd")
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]
