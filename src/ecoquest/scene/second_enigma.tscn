@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=10 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://scene/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_2dmjq"]
+[ext_resource type="Texture2D" uid="uid://wnnf8o4ovnuh" path="res://resources/background/test tubes.png" id="2_mr4mi"]
 [ext_resource type="Texture2D" uid="uid://c4axstyxv4s37" path="res://resources/svg/Button/IronButton/[1] Normal.png" id="4_n5ukb"]
 [ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="5_1ghio"]
 [ext_resource type="Texture2D" uid="uid://d4ko2rad36d6i" path="res://resources/svg/Button/IronButton/[2] Clicked.png" id="5_qrf6a"]
@@ -29,7 +30,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.439216, 0.439216, 0.439216, 0.313726)
+color = Color(0.0673121, 0.196028, 0.327231, 0.313726)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -471.0
+offset_top = -142.0
+offset_right = 482.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mr4mi")
 
 [node name="TimerControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
