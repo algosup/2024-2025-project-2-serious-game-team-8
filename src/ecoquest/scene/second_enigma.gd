@@ -33,5 +33,13 @@ func _increase_rect_size(rectangle:ColorRect, newHeight:int) -> void:
 	
 
 
-func _on_reset_button_pressed(rectangle:ColorRect) -> void:
-	rectangle.size = Vector2(0,0)
+func _on_reset_button_pressed() -> void:
+	# Get all ColorRect children of the TestTubeControl node
+	for child in $CanvasLayer/TestTubeControl.get_children():
+		if child is ColorRect:
+			var tween = child.create_tween()
+			
+			var new_position = child.position + Vector2(0, child.size.y)  # Adjust position to move down by current height
+			var new_size = Vector2(child.size.x, 0)  # Reset height to 0, keep the width unchanged
+			tween.tween_property(child, "position", new_position, 1.0)  # Duration: 1 second
+			tween.parallel().tween_property(child, "size", new_size, 1.0)
