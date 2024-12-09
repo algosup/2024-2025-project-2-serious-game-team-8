@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	_increase_rect_size($CanvasLayer/TestTubeControl/Slider1, 235)
 	_increase_rect_size($CanvasLayer/TestTubeControl/Slider2, 135)
-	_increase_rect_size($CanvasLayer/TestTubeControl/Slider3, 435)
+	_increase_rect_size($CanvasLayer/TestTubeControl/Slider3, 525)
 
 
 func _on_return_button_pressed() -> void:
@@ -12,8 +12,8 @@ func _on_return_button_pressed() -> void:
 
 func _increase_rect_size(rectangle:ColorRect, newHeight:int) -> void:
 	# If height is higher than 435, set it to 435
-	if newHeight>435:
-		newHeight=435
+	if newHeight>525:
+		newHeight=525
 	var tween = rectangle.create_tween()
 
 	# Starting values
