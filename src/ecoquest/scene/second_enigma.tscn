@@ -30,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0673121, 0.196028, 0.327231, 0.313726)
+color = Color(0.167301, 0.183723, 0.250267, 1)
 
 [node name="TimerControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
