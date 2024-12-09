@@ -16,7 +16,7 @@
       - [1.2.2.1 - Game Structure and Mechanics](#1221---game-structure-and-mechanics)  
       - [1.2.2.2 - Educational Focus](#1222---educational-focus)  
       - [1.2.2.3 - Card-Based Gameplay](#1223---card-based-gameplay)  
-      - [1.2.2.4 - Digital Application Features](#1224---digital-application-features)  
+      - [1.2.2.4 - Digital Application Features](#1224---digital-application-features)
       - [1.2.2.5 - Game Levels and Narrative](#1225---game-levels-and-narrative)  
       - [1.2.2.6 - Integration of Cards and App](#1226---integration-of-cards-and-app)  
       - [1.2.2.7 - Performance Metrics and Player Feedback](#1227---performance-metrics-and-player-feedback)  
@@ -130,7 +130,7 @@ Here are the main features of the game, as laid out in the functional specificat
 
 - Cards are marked with unique alphanumeric codes for app integration.
 
-#### 1.2.2.4 Digital Application Features
+#### 1.2.2.4 - Digital Application Features
 
  - The app manages:
     - **Code entry** for unlocking puzzles or progressing in the story.
@@ -429,6 +429,8 @@ Once the issues have been created, they end up in a database called "GitHub Proj
 Unlike Issues, which can be created by any collaborator, the process of "Triaging" issues, which involves categorising, prioritising and managing issues is generally reserved to the Quality Assurance team member.
 
 This process adds additional metadata on top of the existing issues to help strategically solving them.
+
+<p align="center"><em>🗂️ Click <a href="https://github.com/orgs/algosup/projects/45">here</a> to access the Github Project interface.</em></p>
 
 <!-- <CLICK HERE to explore the project dashboard (in a centered button)> -->
 
