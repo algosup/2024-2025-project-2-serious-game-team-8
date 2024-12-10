@@ -4,6 +4,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	get_parent().get_node("TransitionLayer")
+
 	# Set the initial image on the specified node
 	var chapter_two_image = $CanvasLayer/ChapterTwoImgControl/ChapterTwoImage
 	chapter_two_image.texture = load("res://resources/chapterImages/chapter2img.png")
@@ -15,7 +17,9 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_setting_button_pressed() -> void:
-	add_child(Global.settings.instantiate())
+	get_parent().get_node("TransitionLayer").visible = true
+	await get_parent().get_node("TransitionLayer")._transition()
+	get_parent().add_child(Global.settings.instantiate())
 
 func _change_image_resource() -> void: 
 	if Global.beat_chapter1 == true: 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cup1s6ctjyj0r"]
+[gd_scene load_steps=9 format=3 uid="uid://cup1s6ctjyj0r"]
 
 [ext_resource type="Script" path="res://script/confirmation_page.gd" id="1_l226x"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_dpl2d"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/Buttons/Square/Cross/cross_hover.png" id="4_0wtvr"]
 [ext_resource type="Texture2D" uid="uid://dtue8nc3ftqji" path="res://resources/svg/Buttons/Square/Play/Default.svg" id="4_sxbxg"]
 [ext_resource type="Texture2D" uid="uid://cfocxawnl4mxp" path="res://resources/svg/Buttons/Square/Play/Hover.svg" id="5_c7w36"]
+[ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="8_s6b0l"]
 
 [node name="ConfirmationPage" type="Node2D"]
 script = ExtResource("1_l226x")
@@ -107,6 +108,8 @@ scale = Vector2(2.9, 2.9)
 texture_normal = ExtResource("3_dc5vs")
 texture_hover = ExtResource("4_0wtvr")
 metadata/_edit_use_anchors_ = true
+
+[node name="TransitionLayer" parent="." instance=ExtResource("8_s6b0l")]
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]

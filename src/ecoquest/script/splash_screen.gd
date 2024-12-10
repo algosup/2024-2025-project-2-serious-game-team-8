@@ -20,6 +20,8 @@ func _on_tween_finished() -> void:
 var home:PackedScene = preload("res://scene/home_page.tscn")
 
 func _on_loading_time_timeout() -> void:
+	$TransitionLayer.visible = true
+	await $TransitionLayer._transition()
 	var result = get_tree().change_scene_to_packed(home)
 	if result != OK:
 		print("Failed to change scene: ", result)

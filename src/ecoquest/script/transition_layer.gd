@@ -3,7 +3,7 @@ extends CanvasLayer
 signal transitionned
 
 func _ready() -> void:
-	pass
+	$".".visible = false
 
 
 func _transition():
