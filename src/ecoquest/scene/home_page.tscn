@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/Buttons/Rect/Start/start.png" id="5_wyg2g"]
 [ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/Buttons/Rect/Start/start_hover.png" id="7_iytfu"]
 [ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/menu_music.mp3" id="8_22ub0"]
-[ext_resource type="PackedScene" uid="uid://dlgggfbq7y1on" path="res://scene/transition_layer.tscn" id="9_0rhlq"]
+[ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="9_0rhlq"]
 
 [node name="HomePage" type="Node2D"]
 script = ExtResource("1_qbvgi")
