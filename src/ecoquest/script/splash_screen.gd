@@ -9,7 +9,7 @@ func _ready() -> void:
 	tween.tween_property(
 		$CanvasLayer/LogoControl/Logo,      # The target node
 		"scale",                        # The property to animate
-		Vector2(1.6, 1.6),                  # The target value
+		Vector2(0.35, 0.35),                  # The target value
 		1.5                            # Duration of the animation
 	).set_ease(Tween.EASE_OUT)
 	tween.finished.connect(_on_tween_finished)

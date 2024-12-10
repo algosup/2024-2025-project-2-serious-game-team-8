@@ -36,7 +36,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Logo" type="Sprite2D" parent="CanvasLayer/LogoControl"]
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, -175)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_jqsnx")
 
 [node name="TextControl" type="Control" parent="CanvasLayer"]
