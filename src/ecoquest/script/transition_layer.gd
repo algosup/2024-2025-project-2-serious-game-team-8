@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-signal transitioned
+signal transitionned
 
 func _transition():
 	$AnimationPlayer.play("fade_to_black")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0ogv2vt64x3a"]
+[gd_scene load_steps=20 format=3 uid="uid://b0ogv2vt64x3a"]
 
 [ext_resource type="Script" path="res://script/game_page.gd" id="1_50ksb"]
 [ext_resource type="Texture2D" uid="uid://bcxb7cvix84hp" path="res://resources/background/game_bg.png" id="2_co0cp"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://jqtcnyfdhxcb" path="res://resources/svg/Icon/visibility.png" id="9_pc4mj"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="11_i1g5n"]
 [ext_resource type="Texture2D" uid="uid://dn255hidwwwsh" path="res://resources/svg/Button/Circle/circle_disabled.png" id="12_jvn7x"]
+[ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="15_8cifa"]
 
 [sub_resource type="Animation" id="Animation_8g2nl"]
 length = 0.001
@@ -552,6 +553,8 @@ metadata/_edit_use_anchors_ = true
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 autoplay = true
 bus = &"Menu Music"
+
+[node name="TransitionLayer" parent="." instance=ExtResource("15_8cifa")]
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ButtonsControl/CloseButton" to="." method="_on_close_button_pressed"]

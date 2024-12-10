@@ -15,17 +15,12 @@ func _ready() -> void:
 	$TransitionLayer.visible = true
 	await $TransitionLayer._fade_in()
 	$TransitionLayer.visible = false
-	fade_in_music()
+	$MenuMusic.play()
 	$BackGroundChangeTimer.start()
 
 func _on_setting_button_pressed() -> void:
 	await _start_animation()
 	add_child(Global.settings.instantiate())
-
-func fade_in_music():
-	var tween = create_tween()
-	tween.tween_property($MenuMusic, "volume_db", 0, 3.0)  
-	$MenuMusic.play()
 
 
 func _on_back_ground_change_timer_timeout() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlgggfbq7y1on"]
+[gd_scene load_steps=6 format=3 uid="uid://di7ohmxvh7dwf"]
 
 [ext_resource type="Script" path="res://script/transition_layer.gd" id="1_attuy"]
 
@@ -19,6 +19,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hdmov"]
 resource_name = "fade_to_black"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -26,7 +27,7 @@ tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.466667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
@@ -34,6 +35,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_65xke"]
 resource_name = "fade_to_normal"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -41,7 +43,7 @@ tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]

@@ -25,6 +25,9 @@ var time_limits = [600, 900, 1200]
 
 
 func _ready() -> void:
+	$TransitionLayer.visible = true
+	await $TransitionLayer._fade_in()
+	$TransitionLayer.visible = false
 	play_current_track()
 	minutes = 0
 	seconds = 0

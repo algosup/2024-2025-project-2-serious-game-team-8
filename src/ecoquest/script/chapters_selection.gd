@@ -55,4 +55,11 @@ func _on_chapter_three_button_pressed() -> void:
 
 
 func _on_close_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/home_page.tscn")
+	get_parent().get_node("TransitionLayer").visible = true
+	await get_parent().get_node("TransitionLayer")._transition()
+	# Clean up the node
+	queue_free()
+
+
+func _on_tree_exiting() -> void:
+	await get_parent().get_node("TransitionLayer")._fade_in()
