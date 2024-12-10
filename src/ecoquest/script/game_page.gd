@@ -3,9 +3,16 @@ extends Node2D
 var is_paused: bool = false
 
 var music_list = [
-	"res://resources/musics/The Final Escape.mp3",
-	"res://resources/musics/Climate Crisis in the Company.mp3",
-	"res://resources/musics/The Final Flee.mp3"
+	[
+		"res://resources/musics/The Final Escape.mp3",
+		"res://resources/musics/Climate Crisis in the Company.mp3",
+		"res://resources/musics/The Final Flee.mp3"
+	],
+	[
+		"res://resources/musics/Labyrinth of Shadows.mp3",
+		"res://resources/musics/Labyrinth Escape.mp3",
+		"res://resources/musics/In the Lab of Shadows.mp3"
+	]
 ]
 
 var current_music_index: int = 0
@@ -62,7 +69,7 @@ func _process(_delta: float) -> void:
 
 
 func play_current_track() -> void:
-	var audio_stream: AudioStream = load(music_list[current_music_index]) as AudioStream
+	var audio_stream: AudioStream = load(music_list[Global.current_chapter][current_music_index]) as AudioStream
 	if audio_stream:
 		music_player.stream = audio_stream  # Assign the loaded stream
 		music_player.play()

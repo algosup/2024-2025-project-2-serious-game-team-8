@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coungmodg4bif"
+path="res://.godot/imported/Labyrinth Escape.mp3-e21e2bef41e573ed1e548475ac37d3e3.mp3str"
+
+[deps]
+
+source_file="res://resources/musics/Labyrinth Escape.mp3"
+dest_files=["res://.godot/imported/Labyrinth Escape.mp3-e21e2bef41e573ed1e548475ac37d3e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

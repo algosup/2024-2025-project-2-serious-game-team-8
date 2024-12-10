@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=12 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://scene/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
@@ -8,7 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="5_1ghio"]
 [ext_resource type="Texture2D" uid="uid://t6o20l1ejnrs" path="res://resources/UI_Flat_Frame01a.png" id="6_fwrvm"]
 [ext_resource type="Texture2D" uid="uid://cl7fknll7u2bv" path="res://resources/svg/Button/IronButton/[3] Hover.png" id="6_k18e2"]
+[ext_resource type="Script" path="res://scene/label.gd" id="6_xe1kq"]
 [ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="6_ynfvd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjbgw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="SecondEnigma" type="Node2D"]
 script = ExtResource("1_ccolq")
@@ -140,18 +144,23 @@ offset_bottom = -315.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
-[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect"]
+[node name="Label" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect"]
 layout_mode = 0
-offset_left = 10.0001
-offset_top = 7.50009
-offset_right = 285.0
-offset_bottom = 126.5
+offset_left = -8.75
+offset_right = 303.25
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
 theme_override_font_sizes/font_size = 90
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+alignment = 1
+max_length = 2
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("6_xe1kq")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
@@ -162,18 +171,24 @@ offset_bottom = -315.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
-[node name="Label2" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect2"]
+[node name="Label2" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect2"]
 layout_mode = 0
-offset_left = 13.7501
-offset_top = 6.25011
-offset_right = 288.75
-offset_bottom = 125.25
+offset_left = -6.25003
+offset_top = 6.25
+offset_right = 305.75
+offset_bottom = 133.25
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
 theme_override_font_sizes/font_size = 90
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+alignment = 1
+max_length = 2
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("6_xe1kq")
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
@@ -184,18 +199,24 @@ offset_bottom = -314.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
-[node name="Label3" type="Label" parent="CanvasLayer/ButtonsControl/TextureRect3"]
+[node name="Label3" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect3"]
 layout_mode = 0
-offset_left = 12.5
-offset_top = 6.25005
-offset_right = 287.5
-offset_bottom = 125.25
-theme_override_colors/font_color = Color(0, 0, 0, 0.952941)
+offset_left = -6.25006
+offset_top = 6.25
+offset_right = 305.75
+offset_bottom = 133.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
 theme_override_font_sizes/font_size = 90
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+alignment = 1
+max_length = 2
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("6_xe1kq")
 
 [node name="FillButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
@@ -320,7 +341,7 @@ anchor_bottom = 29.132
 offset_left = -614.56
 offset_top = -731.28
 offset_right = -509.56
-offset_bottom = -729.28
+offset_bottom = -731.28
 color = Color(0, 0, 1, 1)
 
 [node name="Slider2" type="ColorRect" parent="CanvasLayer/TestTubeControl"]
