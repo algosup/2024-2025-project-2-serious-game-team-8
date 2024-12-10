@@ -7,12 +7,15 @@ var fill_counts = {
 	"Slider3": 0
 }
 
+var fill_types= {
+	"Slider1": 0,
+	"Slider2": 0,
+	"Slider3": 0
+}
+
 const MAX_FILLS = 5
 const INCREASE_AMOUNT = 76
 const MAX_HEIGHT = 449
-
-func _ready() -> void:
-	pass
 
 func _on_return_button_pressed() -> void:
 	queue_free()
@@ -62,6 +65,8 @@ func _on_fill_button_pressed(slider_name: String, slider_node: ColorRect) -> voi
 
 func _on_fill_button_1_pressed() -> void:
 	$CanvasLayer/ButtonsControl/FillButton.disabled=true
+	$CanvasLayer/ButtonsControl/TextureRect/Input.text
+	
 	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1,"Slider1")
 	$CanvasLayer/ButtonsControl/FillButton.disabled=false
 	
