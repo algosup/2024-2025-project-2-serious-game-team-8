@@ -8,8 +8,8 @@ var fill_counts = {
 }
 
 const MAX_FILLS = 5
-var INCREASE_AMOUNT = 87
-const MAX_HEIGHT = 525
+const INCREASE_AMOUNT = 76
+const MAX_HEIGHT = 449
 
 func _ready() -> void:
 	pass
@@ -18,27 +18,28 @@ func _on_return_button_pressed() -> void:
 	queue_free()
 
 func _increase_rect_size(rectangle: ColorRect, slider_name: String) -> void:
-	# Check if the slider has reached the fill limit
-	if fill_counts[slider_name] == 0:
-		pass
-
-	# Increment the fill count
-	fill_counts[slider_name] += 1
-
 	# Calculate new height and clamp it to the maximum
 	var new_height = rectangle.size.y + INCREASE_AMOUNT
-	if new_height > MAX_HEIGHT:
-		new_height = MAX_HEIGHT
+	var new_Y= -INCREASE_AMOUNT 
+	
+	# Check if the slider has reached the fill limit
+	if fill_counts[slider_name] == 0:
+		new_height = rectangle.size.y + 87
+		new_Y= -87
+	# Increment the fill count
+	fill_counts[slider_name] += 1
+	
+	# Check if the new height is lower than the maximum
+	if new_height < MAX_HEIGHT:
+		var tween = rectangle.create_tween()
+		# Calculate new position and size
+		var new_position = rectangle.position + Vector2(0, new_Y)  # Move up by the increase amount
+		var new_size = Vector2(rectangle.size.x, new_height)  # Update only the height
 
-	var tween = rectangle.create_tween()
-
-	# Calculate new position and size
-	var new_position = rectangle.position + Vector2(0, -INCREASE_AMOUNT)  # Move up by the increase amount
-	var new_size = Vector2(rectangle.size.x, new_height)  # Update only the height
-
-	# Animate position and size
-	tween.tween_property(rectangle, "position", new_position, 1.0)  # Duration: 1 second
-	tween.parallel().tween_property(rectangle, "size", new_size, 1.0)
+		# Animate position and size
+		tween.tween_property(rectangle, "position", new_position, 1.0)  # Duration: 1 second
+		tween.parallel().tween_property(rectangle, "size", new_size, 1.0)
+		await tween.finished
 
 func _on_reset_button_pressed() -> void:
 	# Reset all sliders and fill counts
@@ -60,10 +61,16 @@ func _on_fill_button_pressed(slider_name: String, slider_node: ColorRect) -> voi
 	_increase_rect_size(slider_node, slider_name)
 
 func _on_fill_button_1_pressed() -> void:
-	_on_fill_button_pressed("Slider1", $CanvasLayer/TestTubeControl/Slider1)
-
+	$CanvasLayer/ButtonsControl/FillButton.disabled=true
+	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1,"Slider1")
+	$CanvasLayer/ButtonsControl/FillButton.disabled=false
+	
 func _on_fill_button_2_pressed() -> void:
-	_on_fill_button_pressed("Slider2", $CanvasLayer/TestTubeControl/Slider2)
-
+	$CanvasLayer/ButtonsControl/FillButton2.disabled=true
+	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider2,"Slider2")
+	$CanvasLayer/ButtonsControl/FillButton2.disabled=false
+	
 func _on_fill_button_3_pressed() -> void:
-	_on_fill_button_pressed("Slider3", $CanvasLayer/TestTubeControl/Slider3)
+	$CanvasLayer/ButtonsControl/FillButton3.disabled=true
+	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider3, "Slider3")
+	$CanvasLayer/ButtonsControl/FillButton3.disabled=false

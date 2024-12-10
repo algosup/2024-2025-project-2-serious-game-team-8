@@ -318,9 +318,9 @@ anchor_top = 29.132
 anchor_right = 5.439
 anchor_bottom = 29.132
 offset_left = -614.56
-offset_top = -733.28
+offset_top = -731.28
 offset_right = -509.56
-offset_bottom = -731.28
+offset_bottom = -729.28
 color = Color(0, 0, 1, 1)
 
 [node name="Slider2" type="ColorRect" parent="CanvasLayer/TestTubeControl"]
