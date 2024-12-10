@@ -13,8 +13,7 @@ var current_background_index: int = 0
 
 func _ready() -> void:
 	$TransitionLayer.visible = true
-	$TransitionLayer.get_child(1).play("fade_to_normal")
-	await $TransitionLayer.get_child(1).animation_finished
+	await $TransitionLayer._fade_in()
 	$TransitionLayer.visible = false
 	fade_in_music()
 	$BackGroundChangeTimer.start()
