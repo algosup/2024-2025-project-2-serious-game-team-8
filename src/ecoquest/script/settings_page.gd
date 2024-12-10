@@ -31,6 +31,7 @@ func _on_music_slider_value_changed(value: float) -> void:
 ### Close the settings page
 func _on_close_button_pressed() -> void:
 	# Clean up the node
+	get_parent().get_node("TransitionLayer").visible = false
 	queue_free()
 
 ### Open the Github repository on a browser

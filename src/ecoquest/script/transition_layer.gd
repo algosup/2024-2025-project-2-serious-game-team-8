@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func _transition():
 	$AnimationPlayer.play("fade_to_black")
+	await $AnimationPlayer.animation_finished
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_to_black":

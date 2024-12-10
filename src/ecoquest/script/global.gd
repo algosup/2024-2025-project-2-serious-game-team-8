@@ -32,6 +32,3 @@ var current_chapter = 0
 
 func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
-
-func _process(_delta: float) -> void:
-	pass

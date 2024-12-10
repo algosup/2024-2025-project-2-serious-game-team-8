@@ -17,6 +17,7 @@ func _ready() -> void:
 	$BackGroundChangeTimer.start()
 
 func _on_setting_button_pressed() -> void:
+	await _start_animation()
 	add_child(Global.settings.instantiate())
 
 func fade_in_music():
@@ -46,7 +47,11 @@ func _change_background() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	$TransitionLayer.visible = true
-	$TransitionLayer._transition()
-
+	await _start_animation()
 	add_child(Global.chapter_selection.instantiate())
+
+func _start_animation() -> void:
+	$TransitionLayer.visible = true
+	await $TransitionLayer._transition()
+	$TransitionLayer.visible = true
+	
