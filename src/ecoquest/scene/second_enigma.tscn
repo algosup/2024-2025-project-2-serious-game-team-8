@@ -161,6 +161,7 @@ middle_mouse_paste_enabled = false
 selecting_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+caret_blink = true
 script = ExtResource("6_xe1kq")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ButtonsControl"]

@@ -1,5 +1,7 @@
 extends LineEdit
 
+var last_valid_text: String = ""  # To store the last valid text
+
 func _ready() -> void:
 	grab_focus()
 	set_caret_column(len(text))
@@ -17,3 +19,17 @@ func _ready() -> void:
 
 	# Remove the selection highlight
 	add_theme_color_override("selection_color", Color(1, 1, 1, 1))  # Fully transparent selection
+	# Connect the text_changed signal to validate input
+	connect("text_changed", Callable(self, "_on_text_changed"))
+
+func _on_text_changed(new_text: String) -> void:
+	# Regex to allow only positive integers
+	var regex = RegEx.new()
+	regex.compile(r"^\d*$")  # Match only digits (0-9)
+	
+	# Check if the new text is valid
+	if regex.search(new_text):
+		last_valid_text = new_text  # Update the last valid text
+	else:
+		text = last_valid_text  # Revert to the last valid text
+		set_caret_column(len(last_valid_text))  # Restore caret position
