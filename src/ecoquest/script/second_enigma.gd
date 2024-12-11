@@ -3,8 +3,6 @@ extends Node2D
 # Track fills for each slider
 var fill_counts = {"Slider1": 0, "Slider2": 0, "Slider3": 0}
 
-var fill_types = [0, 0, 0]
-
 # A 3 dimensional array representing:
 # a combination of 3 ingredients
 # where each ingredient is a card's ID and it's quantity.
@@ -76,7 +74,6 @@ func _on_fill_button_pressed(slider_name: String, slider_node: ColorRect) -> voi
 func _on_fill_button_1_pressed() -> void:
 	$CanvasLayer/ButtonsControl/FillButton.disabled = true
 	$CanvasLayer/ButtonsControl/TextureRect/Input.text
-
 	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1, "Slider1")
 	$CanvasLayer/ButtonsControl/FillButton.disabled = false
 
@@ -91,3 +88,28 @@ func _on_fill_button_3_pressed() -> void:
 	$CanvasLayer/ButtonsControl/FillButton3.disabled = true
 	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider3, "Slider3")
 	$CanvasLayer/ButtonsControl/FillButton3.disabled = false
+
+
+func _contains_pair(pair: Array):
+	for i in range(combinations.size()):
+		for sub_pair in combinations[i]:
+			if sub_pair == pair:
+				return i
+	return false
+
+func _on_analyse_button_pressed() -> void:
+
+	var input1 = [int($CanvasLayer/ButtonsControl/TextureRect/Input.text), fill_counts["Slider1"]]
+	var input2 = [int($CanvasLayer/ButtonsControl/TextureRect2/Input2.text), fill_counts["Slider2"]]
+	var input3 = [int($CanvasLayer/ButtonsControl/TextureRect3/Input3.text), fill_counts["Slider3"]]
+	if (input1 != input2 and input1 != input3 and input2 != input3):
+		var input1_result = _contains_pair(input1)
+		var input2_result = _contains_pair(input2)
+		var input3_result = _contains_pair(input3)
+		
+		if typeof(input1_result) == TYPE_BOOL or typeof(input2_result) == TYPE_BOOL or typeof(input3_result) == TYPE_BOOL:
+			print("false")
+		elif(input1_result == input2_result and input1_result == input3_result):
+			print("true")
+	else:
+		print("false")

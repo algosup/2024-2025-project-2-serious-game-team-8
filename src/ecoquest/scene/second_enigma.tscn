@@ -393,6 +393,7 @@ texture = ExtResource("2_mr4mi")
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/AnalyseButton" to="." method="_on_analyse_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/FillButton" to="." method="_on_fill_button_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/FillButton2" to="." method="_on_fill_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/FillButton3" to="." method="_on_fill_button_3_pressed"]

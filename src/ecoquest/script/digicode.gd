@@ -4,7 +4,7 @@ extends Node2D
 @export var hints_or_puzzles: int = 0
 
 var hint_codes = [["0090","0054","0060"], "4321", "4562"]
-var puzzle_codes = ["0090", "2345", "2443"]
+var puzzle_codes = ["0090", "0031", "2443"]
 
 
 func _on_digicode_press(buttonID: int):
