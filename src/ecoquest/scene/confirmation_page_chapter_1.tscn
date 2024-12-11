@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://1vwir2vil5cd"]
+
+[ext_resource type="PackedScene" uid="uid://cup1s6ctjyj0r" path="res://scene/confirmation_page.tscn" id="1_p2wvi"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_uy0ul"]
+[ext_resource type="Texture2D" uid="uid://cwov1ps7on1gq" path="res://resources/svg/RoundCard.png" id="3_rouaw"]
+[ext_resource type="FontFile" uid="uid://dyrjedqjmf7dp" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Regular.ttf" id="4_kdlwj"]
+
+[node name="ConfirmationPageChapter1" instance=ExtResource("1_p2wvi")]
+
+[node name="KeepLabel" type="Label" parent="CanvasLayer/ColorRect" index="0"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 305.0
+offset_right = 913.0
+offset_bottom = 392.0
+theme_override_fonts/font = ExtResource("2_uy0ul")
+theme_override_font_sizes/font_size = 50
+text = "keep card number"
+horizontal_alignment = 1
+
+[node name="KeepLabel2" type="Label" parent="CanvasLayer/ColorRect" index="1"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 539.0
+offset_right = 913.0
+offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("2_uy0ul")
+theme_override_font_sizes/font_size = 50
+text = "Draw card number"
+horizontal_alignment = 1
+
+[node name="Label" parent="CanvasLayer/ColorRect" index="2"]
+anchor_left = 0.280423
+anchor_top = 0.199091
+anchor_right = 0.719577
+anchor_bottom = 0.216364
+text = "Before getting started
+"
+vertical_alignment = 0
+
+[node name="TextureButton" parent="CanvasLayer/ColorRect" index="3"]
+offset_left = 406.0
+offset_right = 223.51
+
+[node name="ButtonCircle08" type="TextureRect" parent="CanvasLayer/ColorRect" index="4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -162.0
+offset_right = 352.5
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rouaw")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/ButtonCircle08" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kdlwj")
+theme_override_font_sizes/font_size = 230
+text = "08"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButtonCircle33" type="TextureRect" parent="CanvasLayer/ColorRect" index="5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = 74.0
+offset_right = 355.5
+offset_bottom = 474.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rouaw")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/ButtonCircle33" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kdlwj")
+theme_override_font_sizes/font_size = 230
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

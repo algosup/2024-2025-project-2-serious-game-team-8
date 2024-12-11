@@ -13,6 +13,7 @@ var hint_page = preload("res://scene/hint_page.tscn")
 var digicode = preload("res://scene/digicode.tscn")
 var tutorial= preload("res://scene/game_page.tscn")
 var confirmation_tutorial = preload("res://scene/confirmation_page.tscn")
+var confirmation_chapter1 = preload("res://scene/confirmation_page_chapter_1.tscn")
 var beat_chapter1: bool = true
 var beat_chapter2: bool = false
 var beat_chapter3: bool = false

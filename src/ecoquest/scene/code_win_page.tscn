@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnpvjxnw4l2ca"]
+[gd_scene load_steps=6 format=3 uid="uid://dnpvjxnw4l2ca"]
 
 [ext_resource type="Script" path="res://script/code_win_page.gd" id="1_3ea0g"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="1_u3sof"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_gmcdd"]
+[ext_resource type="Texture2D" uid="uid://cwov1ps7on1gq" path="res://resources/svg/RoundCard.png" id="4_bhv7i"]
+[ext_resource type="FontFile" uid="uid://dyrjedqjmf7dp" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Regular.ttf" id="5_0swa2"]
 
 [node name="CodeWinPage" type="Node2D"]
 script = ExtResource("1_3ea0g")
@@ -45,11 +47,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="TextureRect" parent="CanvasLayer/ContainerControl"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = -1
+anchor_left = -0.35
+anchor_top = -10.1
+anchor_right = 2.125
+anchor_bottom = 0.275
 offset_left = -300.0
 offset_top = -200.0
 offset_right = 300.0
@@ -59,13 +61,13 @@ grow_vertical = 2
 texture = ExtResource("2_gmcdd")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+[node name="CongratulationText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.503333
-anchor_top = 0.3975
-anchor_right = 0.503333
-anchor_bottom = 0.8
+anchor_left = 0.511667
+anchor_top = 0.178102
+anchor_right = 0.511667
+anchor_bottom = 0.153285
 offset_left = -245.0
 offset_top = -111.0
 offset_right = 247.0
@@ -73,11 +75,213 @@ offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_u3sof")
-theme_override_font_sizes/font_size = 32
-text = "Congratulations!
-
-You've beaten this level.
-
-close this page to go back to the chapter selection"
+theme_override_font_sizes/font_size = 50
+text = "Congratulations! 🎉
+"
+horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="DiscardText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 210.0
+offset_right = 589.0
+offset_bottom = 307.0
+theme_override_fonts/font = ExtResource("1_u3sof")
+theme_override_font_sizes/font_size = 35
+text = "You can now discard cards number: 
+"
+autowrap_mode = 2
+
+[node name="KeepText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 491.0
+offset_right = 703.0
+offset_bottom = 549.0
+theme_override_fonts/font = ExtResource("1_u3sof")
+theme_override_font_sizes/font_size = 35
+text = "Keep card number:"
+
+[node name="CardCircle" type="Node" parent="CanvasLayer"]
+
+[node name="ButtonCircle90" type="TextureRect" parent="CanvasLayer/CardCircle"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -285.0
+offset_right = 262.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_bhv7i")
+
+[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle90"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_0swa2")
+theme_override_font_sizes/font_size = 230
+text = "90"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButtonCircle20" type="TextureRect" parent="CanvasLayer/CardCircle"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 44.0
+offset_top = -285.0
+offset_right = 442.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_bhv7i")
+
+[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle20"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_0swa2")
+theme_override_font_sizes/font_size = 230
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButtonCircle54" type="TextureRect" parent="CanvasLayer/CardCircle"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 232.0
+offset_top = -285.0
+offset_right = 630.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_bhv7i")
+
+[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle54"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_0swa2")
+theme_override_font_sizes/font_size = 230
+text = "54"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButtonCircle06" type="TextureRect" parent="CanvasLayer/CardCircle"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -285.0
+offset_right = 90.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_bhv7i")
+
+[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle06"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_0swa2")
+theme_override_font_sizes/font_size = 230
+text = "06"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButtonCircle08" type="TextureRect" parent="CanvasLayer/CardCircle"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -60.0
+offset_right = 351.0
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_bhv7i")
+
+[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle08"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -200.0
+offset_right = 120.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_0swa2")
+theme_override_font_sizes/font_size = 230
+text = "08"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

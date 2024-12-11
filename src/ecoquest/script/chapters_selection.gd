@@ -39,7 +39,7 @@ func _on_chapter_two_button_pressed() -> void:
 		var locked_instance = Global.chapter_locked.instantiate()
 		add_child(locked_instance)
 	elif Global.beat_chapter1 == true:
-		get_tree().change_scene_to_packed(Global.tutorial)
+		add_child(Global.confirmation_chapter1.instantiate())
 
 
 
