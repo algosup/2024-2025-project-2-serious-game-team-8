@@ -145,6 +145,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_n5ukb")
 
 [node name="Input" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect"]
+layout_mode = 0
 offset_left = -6.25003
 offset_top = 6.25
 offset_right = 305.75
