@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnpvjxnw4l2ca"]
+[gd_scene load_steps=7 format=3 uid="uid://dnpvjxnw4l2ca"]
 
 [ext_resource type="Script" path="res://script/code_win_page.gd" id="1_3ea0g"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="1_u3sof"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_gmcdd"]
 [ext_resource type="Texture2D" uid="uid://cwov1ps7on1gq" path="res://resources/svg/RoundCard.png" id="4_bhv7i"]
 [ext_resource type="FontFile" uid="uid://dyrjedqjmf7dp" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Regular.ttf" id="5_0swa2"]
+[ext_resource type="FontFile" uid="uid://of1ovoilf3vg" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Italic.ttf" id="6_053mh"]
 
 [node name="CodeWinPage" type="Node2D"]
 script = ExtResource("1_3ea0g")
@@ -30,22 +31,31 @@ grow_vertical = 2
 color = Color(0.388235, 0.388235, 0.388235, 0.588235)
 metadata/_edit_use_anchors_ = true
 
-[node name="ContainerControl" type="Control" parent="CanvasLayer"]
+[node name="Congratulations" type="Node" parent="CanvasLayer"]
+
+[node name="CongratulationsControl" type="Control" parent="CanvasLayer/Congratulations"]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContainerControl" type="Control" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -20.0
+offset_top = 92.0
 offset_right = 20.0
-offset_bottom = 20.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="TextureRect" parent="CanvasLayer/ContainerControl"]
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.35
@@ -59,69 +69,68 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_gmcdd")
-metadata/_edit_use_anchors_ = true
 
-[node name="CongratulationText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+[node name="CongratulationText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.511667
-anchor_top = 0.178102
+anchor_top = 0.153285
 anchor_right = 0.511667
 anchor_bottom = 0.153285
-offset_left = -245.0
-offset_top = -111.0
-offset_right = 247.0
-offset_bottom = 47.0
+offset_left = -244.655
+offset_top = -110.927
+offset_right = 247.345
+offset_bottom = -44.9273
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_u3sof")
 theme_override_font_sizes/font_size = 50
-text = "Congratulations! 🎉
+text = "Congratulations! 
 "
 horizontal_alignment = 1
 autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
 
-[node name="DiscardText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+[node name="DiscardText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 210.0
-offset_right = 589.0
-offset_bottom = 307.0
+offset_top = 120.0
+offset_right = 685.0
+offset_bottom = 267.0
 theme_override_fonts/font = ExtResource("1_u3sof")
-theme_override_font_sizes/font_size = 35
-text = "You can now discard cards number: 
-"
+theme_override_font_sizes/font_size = 30
+text = "Now you have finished the tutorial, you can discard the following cards :"
 autowrap_mode = 2
 
-[node name="KeepText" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
+[node name="KeepText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 491.0
+offset_top = 426.0
 offset_right = 703.0
-offset_bottom = 549.0
+offset_bottom = 638.0
 theme_override_fonts/font = ExtResource("1_u3sof")
-theme_override_font_sizes/font_size = 35
-text = "Keep card number:"
+theme_override_font_sizes/font_size = 30
+text = "Keep the card 8 to infiltrate the building: 
 
-[node name="CardCircle" type="Node" parent="CanvasLayer"]
+The chapter 1 is now unlocked on the main menu."
+autowrap_mode = 2
 
-[node name="ButtonCircle90" type="TextureRect" parent="CanvasLayer/CardCircle"]
+[node name="ButtonCircle90" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = -285.0
-offset_right = 262.0
-offset_bottom = 115.0
+offset_left = -312.0
+offset_top = -252.0
+offset_right = 86.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_bhv7i")
 
-[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle90"]
+[node name="Label" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ButtonCircle90"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -142,22 +151,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="ButtonCircle20" type="TextureRect" parent="CanvasLayer/CardCircle"]
+[node name="ButtonCircle20" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 44.0
-offset_top = -285.0
-offset_right = 442.0
-offset_bottom = 115.0
+offset_left = -145.0
+offset_top = -252.0
+offset_right = 253.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_bhv7i")
 
-[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle20"]
+[node name="Label" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ButtonCircle20"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -178,22 +188,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="ButtonCircle54" type="TextureRect" parent="CanvasLayer/CardCircle"]
+[node name="ButtonCircle54" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 232.0
-offset_top = -285.0
-offset_right = 630.0
-offset_bottom = 115.0
+offset_left = 210.0
+offset_top = -252.0
+offset_right = 608.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_bhv7i")
 
-[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle54"]
+[node name="Label" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ButtonCircle54"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -214,22 +225,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="ButtonCircle06" type="TextureRect" parent="CanvasLayer/CardCircle"]
+[node name="ButtonCircle06" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -308.0
-offset_top = -285.0
-offset_right = 90.0
-offset_bottom = 115.0
+offset_left = 28.0
+offset_top = -252.0
+offset_right = 426.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_bhv7i")
 
-[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle06"]
+[node name="Label" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ButtonCircle06"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -250,22 +262,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="ButtonCircle08" type="TextureRect" parent="CanvasLayer/CardCircle"]
+[node name="ButtonCircle08" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = -60.0
-offset_right = 351.0
-offset_bottom = 340.0
+offset_left = -62.0
+offset_top = 55.0
+offset_right = 336.0
+offset_bottom = 455.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_bhv7i")
 
-[node name="Label" type="Label" parent="CanvasLayer/CardCircle/ButtonCircle08"]
+[node name="Label" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ButtonCircle08"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -285,3 +299,68 @@ text = "08"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="StoryPage" type="Node" parent="CanvasLayer"]
+
+[node name="StoryControl" type="Control" parent="CanvasLayer/StoryPage"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContainerControl" type="Control" parent="CanvasLayer/StoryPage/StoryControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/StoryPage/StoryControl/ContainerControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.35
+anchor_top = -7.25
+anchor_right = 2.125
+anchor_bottom = 3.125
+offset_left = -2560.0
+offset_top = -1895.0
+offset_right = 3920.0
+offset_bottom = 3311.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gmcdd")
+
+[node name="CongratulationText" type="Label" parent="CanvasLayer/StoryPage/StoryControl/ContainerControl/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1230.5
+offset_top = -1410.5
+offset_right = -154.5
+offset_bottom = 386.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_053mh")
+theme_override_font_sizes/font_size = 50
+text = "You succeeded in decrypting the folder !
+
+A flood of hidden documents fills your screen. The company’s polished image crumbles under the weight of revelations. Their so-called ‘ecological efforts’ served nothing more than the increase of their monopoly, despite technological innovations in the service of the environment.
+
+But then, one file stops you cold: a list titled “Silenced Employees.” Its contents are partially corrupted, but one name hits your heart—your closest colleague, the friend who vanished from work without explanation just weeks ago...
+
+Fueled by a burning desire for justice, you decide to expose Omega Corp for what it truly is. Steeling yourself, you set your sights on their headquarters with the badge you've collected."
+horizontal_alignment = 1
+autowrap_mode = 2

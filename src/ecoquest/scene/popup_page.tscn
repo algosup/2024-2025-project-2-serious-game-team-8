@@ -22,6 +22,7 @@ offset_bottom = 193.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_tw77i")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
