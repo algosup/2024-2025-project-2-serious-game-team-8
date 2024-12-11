@@ -23,6 +23,8 @@ func _ready() -> void:
 	connect("text_changed", Callable(self, "_on_text_changed"))
 
 func _on_text_changed(new_text: String) -> void:
+	$"../../../..".reset_liquids()
+	
 	# Regex to allow only positive integers
 	var regex = RegEx.new()
 	regex.compile(r"^\d*$")  # Match only digits (0-9)

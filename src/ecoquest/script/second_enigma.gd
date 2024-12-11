@@ -51,6 +51,9 @@ func _increase_rect_size(rectangle: ColorRect, slider_name: String) -> void:
 
 
 func _on_reset_button_pressed() -> void:
+	reset_liquids()
+
+func reset_liquids()-> void:
 	# Reset all sliders and fill counts
 	for child in $CanvasLayer/TestTubeControl.get_children():
 		if child is ColorRect:
@@ -64,8 +67,7 @@ func _on_reset_button_pressed() -> void:
 	# Reset fill counts
 	for key in fill_counts.keys():
 		fill_counts[key] = 0
-
-
+		
 func _on_fill_button_pressed(slider_name: String, slider_node: ColorRect) -> void:
 	# Use the generic function to increase size
 	_increase_rect_size(slider_node, slider_name)
