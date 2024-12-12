@@ -32,5 +32,9 @@ var music_slider_value: float = 1.0  # Default volume value
 
 var current_chapter = 0
 
+var is_enigma_two_card_one_visible: bool = false
+var is_enigma_two_card_two_visible: bool = false
+var is_enigma_two_card_three_visible: bool = false
+
 func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
