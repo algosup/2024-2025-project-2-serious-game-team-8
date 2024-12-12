@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drmpf5opn5c8v"]
+[gd_scene load_steps=10 format=3 uid="uid://bc4a7uluva6mo"]
 
 [ext_resource type="Script" path="res://script/third_enigma.gd" id="1_3v56o"]
 [ext_resource type="Texture2D" uid="uid://brp2fsvvt86oo" path="res://resources/svg/Digicode_BG.png" id="1_cqg7h"]
@@ -382,7 +382,6 @@ texture_pressed = ExtResource("9_agjeu")
 texture_hover = ExtResource("9_agjeu")
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
 
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button1" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button2" to="." method="_on_button_pressed" binds= [2]]
