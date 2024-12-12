@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3pokjsdxibxx"]
+[gd_scene load_steps=4 format=3 uid="uid://dlf5bjtct38ee"]
 
 [ext_resource type="Script" path="res://script/pop_up_enigma_two.gd" id="1_681tr"]
 [ext_resource type="Texture2D" uid="uid://dmeg1qmfmoo7b" path="res://resources/ScientistResearch.png" id="2_gymxs"]

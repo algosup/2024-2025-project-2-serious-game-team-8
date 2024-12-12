@@ -539,6 +539,10 @@ range_layer_max = 1
 texture = ExtResource("12_g3fna")
 texture_scale = 0.59
 
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+bus = &"SFX"
+
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/AnalyseButton" to="." method="_on_analyse_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/FillButton" to="." method="_on_fill_button_1_pressed"]

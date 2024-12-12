@@ -3,6 +3,7 @@ extends Node2D
 # Track fills for each slider
 var fill_counts = {"Slider1": 0, "Slider2": 0, "Slider3": 0}
 
+var water_sound_player: AudioStreamPlayer
 
 # A 3 dimensional array representing:
 # a combination of 3 ingredients
@@ -24,6 +25,10 @@ const MAX_HEIGHT = 449
 
 
 func _ready() -> void:
+	# Initialize the audio player and load the sound
+	water_sound_player = $SFX
+	water_sound_player.stream = load("res://resources/musics/sound_effects/water.mp3")  # Make sure the path is correct
+
 	$CanvasLayer/Control/CardNumber/PointLight2D.visible = Global.is_enigma_two_card_one_visible
 	$CanvasLayer/Control/CardNumber2/PointLight2D2.visible = Global.is_enigma_two_card_two_visible
 	$CanvasLayer/Control/CardNumber3/PointLight2D3.visible = Global.is_enigma_two_card_three_visible
@@ -103,11 +108,11 @@ func reset_one_liquid(emitter: String) -> void:
 
 
 func reset_all_liquids() -> void:
+	water_sound_player.play()
 	# Reset all sliders and fill counts
 	for child in $CanvasLayer/TestTubeControl.get_children():
 		if child is ColorRect:
 			var tween = child.create_tween()
-
 			var new_position = child.position + Vector2(0, child.size.y)  # Adjust position to move down by current height
 			var new_size = Vector2(child.size.x, 0)  # Reset height to 0, keep the width unchanged
 			tween.tween_property(child, "position", new_position, 1.0)  # Duration: 1 second
@@ -122,6 +127,7 @@ func reset_all_liquids() -> void:
 
 
 func _on_fill_button_1_pressed() -> void:
+	water_sound_player.play()
 	if int($CanvasLayer/ButtonsControl/TextureRect/Input.text) in color_codes:
 		$CanvasLayer/ButtonsControl/FillButton.disabled = true
 		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
@@ -132,6 +138,7 @@ func _on_fill_button_1_pressed() -> void:
 
 
 func _on_fill_button_2_pressed() -> void:
+	water_sound_player.play()
 	if int($CanvasLayer/ButtonsControl/TextureRect2/Input2.text) in color_codes:
 		$CanvasLayer/ButtonsControl/FillButton2.disabled = true
 		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
@@ -141,6 +148,7 @@ func _on_fill_button_2_pressed() -> void:
 
 
 func _on_fill_button_3_pressed() -> void:
+	water_sound_player.play()
 	if int($CanvasLayer/ButtonsControl/TextureRect3/Input3.text) in color_codes:
 		$CanvasLayer/ButtonsControl/FillButton3.disabled = true
 		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
