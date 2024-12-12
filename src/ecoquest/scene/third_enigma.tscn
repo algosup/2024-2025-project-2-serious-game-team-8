@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc4a7uluva6mo"]
+[gd_scene load_steps=10 format=3 uid="uid://bc4a7uluva6mo"]
 
 [ext_resource type="Script" path="res://script/third_enigma.gd" id="1_3v56o"]
 [ext_resource type="Texture2D" uid="uid://brp2fsvvt86oo" path="res://resources/svg/Digicode_BG.png" id="1_cqg7h"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bxxhv46x7srph" path="res://resources/svg/Digicode_Feedback.png" id="3_q8wtn"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_e0btp"]
 [ext_resource type="Texture2D" uid="uid://c4axstyxv4s37" path="res://resources/svg/Button/IronButton/[1] Normal.png" id="7_i5ohd"]
+[ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="8_icwx8"]
+[ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="9_agjeu"]
 
 [node name="ThirdEnigma" type="Node2D"]
 script = ExtResource("1_3v56o")
@@ -343,6 +345,42 @@ theme_override_font_sizes/font_size = 35
 text = "15:00"
 metadata/_edit_use_anchors_ = true
 
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1714.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="ReturnButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 14.0
+offset_right = 112.0
+offset_bottom = 98.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_icwx8")
+texture_pressed = ExtResource("9_agjeu")
+texture_hover = ExtResource("9_agjeu")
+
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button1" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button2" to="." method="_on_button_pressed" binds= [2]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button3" to="." method="_on_button_pressed" binds= [3]]
@@ -353,3 +391,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button8" to="." method="_on_button_pressed" binds= [8]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button9" to="." method="_on_button_pressed" binds= [9]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button0" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ReturnButtonControl/ReturnButton" to="." method="_on_return_button_pressed"]

@@ -56,14 +56,21 @@ func _process(_delta: float) -> void:
 		time_low_warning()
 		if has_node("CodePage"):
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
+		elif has_node("SecondEnigma"):
+			$SecondEnigma/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
+		elif has_node("ThirdEnigma"):
+			$ThirdEnigma/CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "%02d:%02d" % [minutes, seconds]
-
 	else:
 		if $CanvasLayer/IncrementTimer.is_stopped():
 			$CanvasLayer/IncrementTimer.start()
 		if has_node("CodePage"):
 			$CodePage/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+		elif has_node("SecondEnigma"):
+			$SecondEnigma/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
+		elif has_node("ThirdEnigma"):
+			$ThirdEnigma/CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 		else:
 			$CanvasLayer/TimerControl/TimerBg/TimerText.text = "+%02d:%02d" % [minutes, seconds]
 

@@ -3,8 +3,8 @@ extends Node2D
 ## An int representing the type of digicode, 0 being hints & 1 being puzzles
 @export var hints_or_puzzles: int = 0
 
-var hint_codes = [["0090","0054","0060"], "4321", "4562"]
-var puzzle_codes = ["0090", "0031", "2443"]
+var hint_codes = [["0090","0054","0060"]]
+var puzzle_codes = [["0090", "0031", "2443"],["0031","0023"]]
 
 var sfx_player: AudioStreamPlayer
 
@@ -58,15 +58,18 @@ func _on_digicode_press(buttonID: int):
 					label.add_theme_color_override("font_color", original_color)  # Revert to original color
 					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
 
-		elif puzzle_codes[Global.current_chapter] == label.text:
+		elif puzzle_codes[Global.current_chapter].has(label.text):
 			var code_page_tutorial = Global.code_page.instantiate()
-			var code_page_chapter_one = Global.code_page_chapter_one.instantiate()
 			if Global.current_chapter == 0:
 				get_parent().add_child(code_page_tutorial)
 				queue_free()
 			elif  Global.current_chapter == 1: 
-				get_parent().add_child(code_page_chapter_one)
-				queue_free()
+				if(label.text=="0031"):
+					get_parent().add_child(Global.code_page_chapter_one.instantiate())
+					queue_free()
+				elif(label.text=="0023"):
+					get_parent().add_child(Global.digicode_chapter_one.instantiate())
+					queue_free()
 
 		else:
 			for i in range(2):

@@ -36,8 +36,9 @@ func _ready() -> void:
 	$CanvasLayer/Control/CardNumber.self_modulate = Color(1, 1, 1) if Global.is_enigma_two_card_one_visible else Color(0, 0, 0)
 	$CanvasLayer/Control/CardNumber2.self_modulate = Color(1, 1, 1) if Global.is_enigma_two_card_two_visible else Color(0, 0, 0)
 	$CanvasLayer/Control/CardNumber3.self_modulate = Color(1, 1, 1) if Global.is_enigma_two_card_three_visible else Color(0, 0, 0)
-
 	
+	$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate
+
 func _on_return_button_pressed() -> void:
 	queue_free()
 
