@@ -73,6 +73,7 @@ func _on_enter_button_pressed() -> void:
 		add_child(Global.win_page.instantiate())
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true
+		Global.save_game()
 	else:
 		play_incorrect_sfx()
 		var popup = Global.popup_page.instantiate()

@@ -14,13 +14,12 @@ var popup_page = preload("res://scene/popup_page.tscn")
 var pop_up_enigma_two = preload("res://scene/pop_up_enigma_two.tscn")
 var hint_page = preload("res://scene/hint_page.tscn")
 var digicode = preload("res://scene/digicode.tscn")
-var tutorial= preload("res://scene/game_page.tscn")
+var tutorial = preload("res://scene/game_page.tscn")
 var confirmation_tutorial = preload("res://scene/confirmation_page.tscn")
 var confirmation_chapter1 = preload("res://scene/confirmation_page_chapter_1.tscn")
 var beat_chapter1: bool = false
 var beat_chapter2: bool = false
 var beat_chapter3: bool = false
-
 
 var opened_hint_1_tutorial: bool = false
 var opened_hint_2_tutorial: bool = false
@@ -28,8 +27,8 @@ var opened_hint_3_tutorial: bool = false
 var opened_hint_4_tutorial: bool = false
 var opened_hint_5_tutorial: bool = false
 
-var initial_hint_button_color: Color = Color('363636')  # Dark gray
-var final_hint_button_color: Color = Color('#ffffff')   # White
+var initial_hint_button_color: Color = Color("363636")  # Dark gray
+var final_hint_button_color: Color = Color("#ffffff")  # White
 
 var screen_size: Vector2 = Vector2()  # Initialize screen_size as a Vector2
 var music_slider_value: float = 1.0  # Default volume value
@@ -41,5 +40,43 @@ var is_enigma_two_card_one_visible: bool = false
 var is_enigma_two_card_two_visible: bool = false
 var is_enigma_two_card_three_visible: bool = false
 
+
 func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
+	load_game()
+
+
+func load_game() -> void:
+	if FileAccess.file_exists("user://EkoLock_save.json"):
+		var f = FileAccess.open("user://EkoLock_save.json", FileAccess.READ)
+		if f:
+			# Read the entire file content as text
+			var content = f.get_as_text()
+			f.close()
+
+			# Parse the JSON string into an array
+			var result = JSON.parse_string(content)
+			if result is Array:
+				beat_chapter1 = result[0]
+				beat_chapter2 = result[1]
+			else:
+				# Fallback values if parsing fails
+				beat_chapter1 = false
+				beat_chapter2 = false
+	else:
+		# Default values if the file does not exist
+		beat_chapter1 = false
+		beat_chapter2 = false
+
+
+func save_game() -> void:
+	var bool_array = [beat_chapter1, beat_chapter2]
+
+	# Open the file in write mode
+	var f = FileAccess.open("user://EkoLock_save.json", FileAccess.WRITE)
+
+	# Convert the boolean array to a JSON string and store it
+	f.store_string(JSON.stringify(bool_array))
+
+	# Close the file
+	f.close()
