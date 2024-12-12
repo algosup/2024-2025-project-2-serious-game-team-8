@@ -162,14 +162,17 @@ func _on_analyse_button_pressed() -> void:
 			match input1_result:
 				0:
 					popup("This solution is interesting! All these ingredients are completely biodegradable this liquid can clean most surfaces, even greasy ones thanks to black soap. Vinegar helps to dissolve stains and works as an anti-bacterial. Mixed with baking soda, it produces some acetate, a perfect metal cleaner!")
+					$CanvasLayer/Control/CardNumber.self_modulate=Color(1,1,1)
 				1:
 					popup("Your product seems to clean most surfaces properly. However, benzalkonium chloride is harmful to aquatic life, while sodium laureth sulfate, which is found in many soaps, is not only harmful to the skin but also poorly biodegradable.")
 				2: 
 					popup("That's what I wanted! You made a gentle but efficient abrasive thanks to baking soda and citric acid. Black soap makes this a safe and sustainable cleaning agent... and nothing bad for the planet!")
+					$CanvasLayer/Control/CardNumber2.self_modulate=Color(1,1,1)
 				3:
 					popup("This solution could be a good scouring agent... Nevertheless, overused in most shampoos, sodium laureth sulfate is a skin, respiratory, and mucous membrane irritant, while less harmful phosphates stimulate the growth of algae and bacteria in the water. Fortunately, these are avoidable...")
 				4: 
 					popup("Amazing! This liquid seems to daintly soften water which contains a lot of limestone. Vinegar and citric acid are not only nice for the environment but effective at softening and descaling. It could be used for a dishwasher or washing machine, and even for boilers or jugs...")
+					$CanvasLayer/Control/CardNumber3.self_modulate=Color(1,1,1)
 				5:
 					popup("Even if this mix seems to reduce limestone in water, I wouldn't use it in my house... Phosphates only stimulate the growth of algae and bacteria in the water, but benzalkonium is very toxic to aquatic organisms and poorly biodegradable...")
 		else:

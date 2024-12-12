@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=13 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://script/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cl7fknll7u2bv" path="res://resources/svg/Button/IronButton/[3] Hover.png" id="6_k18e2"]
 [ext_resource type="Script" path="res://script/Input.gd" id="6_xe1kq"]
 [ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="6_ynfvd"]
+[ext_resource type="Texture2D" uid="uid://d4ko2rad36d6i" path="res://resources/svg/Button/IronButton/[2] Clicked.png" id="11_px8h3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjbgw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -90,9 +91,9 @@ grow_vertical = 2
 [node name="ResetButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
 offset_left = -443.0
-offset_top = 707.0
+offset_top = 550.0
 offset_right = -247.0
-offset_bottom = 791.0
+offset_bottom = 634.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
 texture_pressed = ExtResource("6_k18e2")
@@ -114,9 +115,9 @@ autowrap_mode = 3
 [node name="AnalyseButton" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
 offset_left = 122.0
-offset_top = 707.0
+offset_top = 550.0
 offset_right = 318.0
-offset_bottom = 791.0
+offset_bottom = 634.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
 texture_pressed = ExtResource("6_k18e2")
@@ -392,6 +393,113 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_mr4mi")
 metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+
+[node name="CardNumber" type="TextureRect" parent="CanvasLayer/Control"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -450.0
+offset_top = -240.0
+offset_right = -150.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_px8h3")
+
+[node name="Card" type="Label" parent="CanvasLayer/Control/CardNumber"]
+layout_mode = 0
+offset_left = -6.25
+offset_top = 15.0
+offset_right = 305.75
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardNumber2" type="TextureRect" parent="CanvasLayer/Control"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -240.0
+offset_right = 200.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_px8h3")
+
+[node name="Card" type="Label" parent="CanvasLayer/Control/CardNumber2"]
+layout_mode = 0
+offset_left = -6.25
+offset_top = 15.0
+offset_right = 305.75
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardNumber3" type="TextureRect" parent="CanvasLayer/Control"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 250.0
+offset_top = -240.0
+offset_right = 550.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_px8h3")
+
+[node name="Card" type="Label" parent="CanvasLayer/Control/CardNumber3"]
+layout_mode = 0
+offset_left = -6.25
+offset_top = 15.0
+offset_right = 305.75
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2dmjq")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
+text = "58"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/AnalyseButton" to="." method="_on_analyse_button_pressed"]
