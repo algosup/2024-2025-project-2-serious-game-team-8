@@ -113,7 +113,7 @@ func _on_visibility_pressed() -> void:
 
 
 func _on_pause_pressed() -> void:
-	var buttons = [$CanvasLayer/GameControls/Code, $CanvasLayer/GameControls/Penality, $CanvasLayer/GameControls/Hint, $CanvasLayer/GameControls/View]
+	var buttons = [$CanvasLayer/GameControls/Code, $CanvasLayer/GameControls/Penality, $CanvasLayer/GameControls/Hint]
 	if is_paused == false:
 		is_paused = true
 		$CanvasLayer/GameControls/PauseAnimation.play("pause")
