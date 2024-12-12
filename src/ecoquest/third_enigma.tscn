@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc4a7uluva6mo"]
+[gd_scene load_steps=6 format=3 uid="uid://cjr4dj2gcjmng"]
 
-[ext_resource type="Texture2D" uid="uid://brp2fsvvt86oo" path="res://resources/svg/Digicode_BG.png" id="1_cqg7h"]
-[ext_resource type="Texture2D" uid="uid://b5e80wx3psqwx" path="res://resources/Rect-Light-Default.png" id="2_7c0rl"]
-[ext_resource type="Texture2D" uid="uid://dpqx43mni7rex" path="res://resources/Rect-Light-Hover.png" id="3_mlsqb"]
-[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_e0btp"]
+[ext_resource type="Texture2D" uid="uid://brp2fsvvt86oo" path="res://resources/svg/Digicode_BG.png" id="1_8l0p1"]
+[ext_resource type="Texture2D" uid="uid://bxxhv46x7srph" path="res://resources/svg/Digicode_Feedback.png" id="2_0fo3w"]
+[ext_resource type="Texture2D" uid="uid://b5e80wx3psqwx" path="res://resources/Rect-Light-Default.png" id="2_kwiqw"]
+[ext_resource type="Texture2D" uid="uid://dpqx43mni7rex" path="res://resources/Rect-Light-Hover.png" id="3_ue6wd"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="4_iokmg"]
 
 [node name="ThirdEnigma" type="Node2D"]
 
@@ -54,7 +55,23 @@ offset_bottom = -99.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_cqg7h")
+texture = ExtResource("1_8l0p1")
+
+[node name="DigicodeFeedback" type="TextureRect" parent="CanvasLayer/DigicodeControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -557.0
+offset_right = -87.0
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_0fo3w")
 
 [node name="Button1" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
@@ -63,8 +80,8 @@ offset_top = -150.0
 offset_right = -154.0
 offset_bottom = -99.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button1"]
 layout_mode = 0
@@ -73,7 +90,7 @@ offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "1"
 horizontal_alignment = 1
@@ -86,17 +103,16 @@ offset_top = -150.0
 offset_right = 51.0
 offset_bottom = -99.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button2"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "2"
 horizontal_alignment = 1
@@ -109,17 +125,16 @@ offset_top = -150.0
 offset_right = 246.0
 offset_bottom = -99.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button3"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "3"
 horizontal_alignment = 1
@@ -132,17 +147,16 @@ offset_top = -30.0
 offset_right = -154.0
 offset_bottom = 21.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button4"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "4"
 horizontal_alignment = 1
@@ -155,17 +169,16 @@ offset_top = -30.0
 offset_right = 51.0
 offset_bottom = 21.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button5"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "5"
 horizontal_alignment = 1
@@ -178,17 +191,16 @@ offset_top = -30.0
 offset_right = 246.0
 offset_bottom = 21.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button6"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "6"
 horizontal_alignment = 1
@@ -201,17 +213,16 @@ offset_top = 80.0
 offset_right = -154.0
 offset_bottom = 131.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button7"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "7"
 horizontal_alignment = 1
@@ -224,17 +235,16 @@ offset_top = 80.0
 offset_right = 51.0
 offset_bottom = 131.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button8"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "8"
 horizontal_alignment = 1
@@ -247,17 +257,16 @@ offset_top = 80.0
 offset_right = 246.0
 offset_bottom = 131.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button9"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "9"
 horizontal_alignment = 1
@@ -270,17 +279,16 @@ offset_top = 190.0
 offset_right = 51.0
 offset_bottom = 241.0
 scale = Vector2(1.8, 1.8)
-texture_normal = ExtResource("2_7c0rl")
-texture_pressed = ExtResource("3_mlsqb")
+texture_normal = ExtResource("2_kwiqw")
+texture_pressed = ExtResource("3_ue6wd")
 
 [node name="Label" type="Label" parent="CanvasLayer/DigicodeControl/Button10"]
-layout_mode = 0
 offset_left = 17.7778
 offset_top = 5.55556
 offset_right = 57.7778
 offset_bottom = 45.5556
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_e0btp")
+theme_override_fonts/font = ExtResource("4_iokmg")
 theme_override_font_sizes/font_size = 30
 text = "0"
 horizontal_alignment = 1

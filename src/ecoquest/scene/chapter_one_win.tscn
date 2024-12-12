@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bee7hge464eqr"]
+[gd_scene load_steps=6 format=3 uid="uid://byn3fc6t2uyvy"]
 
 [ext_resource type="Script" path="res://script/chapter_one_win.gd" id="1_gn6l3"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_rd6hs"]

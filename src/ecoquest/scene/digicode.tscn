@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpc2b2qaayw2b"]
+[gd_scene load_steps=10 format=3 uid="uid://cpc2b2qaayw2b"]
 
 [ext_resource type="Script" path="res://script/digicode.gd" id="1_6700h"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_bi2tg"]
 [ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/background/settings_bg.svg" id="2_rnp1c"]
-[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/Buttons/Square/Settings/settings.png" id="3_nadsb"]
 [ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/Buttons/Square/Cross/cross.png" id="3_o1ftq"]
-[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/Buttons/Square/Settings/settings_hover.png" id="4_j55yu"]
 [ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/Buttons/Square/Cross/cross_hover.png" id="4_nbh1j"]
 [ext_resource type="Texture2D" uid="uid://dl747fbwjeasn" path="res://resources/svg/Button/Square/Fill/Default.svg" id="7_s8wd6"]
 [ext_resource type="Texture2D" uid="uid://cfxp8hoxb3t13" path="res://resources/svg/Button/Square/Fill/Hover.svg" id="8_247uq"]
@@ -53,28 +51,6 @@ anchor_right = 1.0
 offset_bottom = 200.0
 grow_horizontal = 2
 color = Color(0.447059, 0.34902, 0.321569, 1)
-
-[node name="SettingsButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SettingButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 48.0
-offset_top = -82.0
-offset_right = 100.0
-offset_bottom = -28.0
-grow_vertical = 2
-scale = Vector2(3, 3)
-texture_normal = ExtResource("3_nadsb")
-texture_pressed = ExtResource("4_j55yu")
 
 [node name="BackButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
 layout_mode = 1
@@ -499,9 +475,7 @@ theme_override_fonts/font = SubResource("FontVariation_k6wt7")
 theme_override_font_sizes/font_size = 200
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
 
-[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/Button1" to="." method="_on_digicode_press" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/Button2" to="." method="_on_digicode_press" binds= [2]]
