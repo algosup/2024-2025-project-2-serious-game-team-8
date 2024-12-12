@@ -1,9 +1,12 @@
 extends Node2D
 
+var sfx_player: AudioStreamPlayer
+
 
 func _ready() -> void:
 	$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate
-
+	sfx_player = $SFX
+	
 
 func _on_return_button_pressed() -> void:
 	queue_free()
@@ -14,6 +17,11 @@ var input3 = "CanvasLayer/CodeControl/Input3/Label"
 var input4 = "CanvasLayer/CodeControl/Input4/Label"
 
 var codes=["3426","1443","1566"]
+
+# Function to play the incorrect sound effect
+func play_incorrect_sfx() -> void:
+	sfx_player.stream = load("res://resources/musics/sound_effects/windowserror.mp3")
+	sfx_player.play()
 
 func _on_input_pressed(buttonID: int) -> void:
 	match buttonID:
@@ -66,6 +74,7 @@ func _on_enter_button_pressed() -> void:
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true
 	else:
+		play_incorrect_sfx()
 		var popup = Global.popup_page.instantiate()
 		popup.text= "There was an error. \nThis was the wrong password. \n-1 minute to the timer"
 		popup.color= Color(1,0,0)
