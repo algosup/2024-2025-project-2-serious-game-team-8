@@ -3,8 +3,8 @@ extends Node2D
 ## An int representing the type of digicode, 0 being hints & 1 being puzzles
 @export var hints_or_puzzles: int = 0
 
-var hint_codes = [["0090","0054","0060"]]
-var puzzle_codes = [["0090", "0031", "2443"],["0031","0023"]]
+var hint_codes = [[["0090", "0054", "0060"]], [["0059", "0031"], ["0039"], ["0047", "0045", "0048"], ["0033"], ["0062"], ["0001"], ["0023"]]]
+var puzzle_codes = [["0090"], ["0031", "0023"]]
 
 var sfx_player: AudioStreamPlayer
 
@@ -46,37 +46,43 @@ func _on_digicode_press(buttonID: int):
 				label.text += "9"
 	if buttonID == 10:
 		if hints_or_puzzles == 0:
-			if hint_codes[Global.current_chapter].has(label.text):
-				var hint_page = Global.hint_page.instantiate()
-				add_child(hint_page)
-				label.text = ""
-
-			else:
-				for i in range(2):
-					label.add_theme_color_override("font_color", red)  # Change to red
-					await get_tree().create_timer(0.3).timeout  # Wait for the duration
-					label.add_theme_color_override("font_color", original_color)  # Revert to original color
-					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
+			for i in range(hint_codes[Global.current_chapter].size()):
+				if hint_codes[Global.current_chapter][i].has(label.text):
+					# Instantiate the hint page
+					var hint_page = Global.hint_page.instantiate()
+					
+					# Update hintIndex based on the index of the matched subarray
+					hint_page.hint_index=i
+					add_child(hint_page)
+					
+					# Reset the label text
+					label.text = ""
+					return
+			for i in range(2):
+				label.add_theme_color_override("font_color", red)  # Change to red
+				await get_tree().create_timer(0.3).timeout  # Wait for the duration
+				label.add_theme_color_override("font_color", original_color)  # Revert to original color
+				await get_tree().create_timer(0.3).timeout  # Wait again for the duration
 
 		elif puzzle_codes[Global.current_chapter].has(label.text):
 			var code_page_tutorial = Global.code_page.instantiate()
 			if Global.current_chapter == 0:
 				get_parent().add_child(code_page_tutorial)
 				queue_free()
-			elif  Global.current_chapter == 1: 
-				if(label.text=="0031"):
+			elif Global.current_chapter == 1:
+				if label.text == "0031":
 					get_parent().add_child(Global.code_page_chapter_one.instantiate())
 					queue_free()
-				elif(label.text=="0023"):
+				elif label.text == "0023":
 					get_parent().add_child(Global.digicode_chapter_one.instantiate())
 					queue_free()
 
 		else:
 			for i in range(2):
-					label.add_theme_color_override("font_color", red)  # Change to red
-					await get_tree().create_timer(0.3).timeout  # Wait for the duration
-					label.add_theme_color_override("font_color", original_color)  # Revert to original color
-					await get_tree().create_timer(0.3).timeout  # Wait again for the duration
+				label.add_theme_color_override("font_color", red)  # Change to red
+				await get_tree().create_timer(0.3).timeout  # Wait for the duration
+				label.add_theme_color_override("font_color", original_color)  # Revert to original color
+				await get_tree().create_timer(0.3).timeout  # Wait again for the duration
 
 	if buttonID == 11:
 		label.text = label.text.substr(0, label.text.length() - 1)

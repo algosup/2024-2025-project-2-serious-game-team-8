@@ -170,6 +170,60 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_e2vpk")
 text = "3"
 
+[node name="HintButton4" type="TextureButton" parent="CanvasLayer/ContainerControl"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 400.0
+offset_right = -86.0
+offset_bottom = 484.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_b6yuw")
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton4"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 12.0
+offset_right = 47.0
+offset_bottom = 35.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e2vpk")
+text = "4
+"
+
+[node name="HintButton5" type="TextureButton" parent="CanvasLayer/ContainerControl"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 114.0
+offset_bottom = 484.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_b6yuw")
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerControl/HintButton5"]
+modulate = Color(0.212305, 0.212305, 0.212305, 1)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 12.0
+offset_right = 47.0
+offset_bottom = 35.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e2vpk")
+text = "5
+"
+
 [node name="Label" type="Label" parent="CanvasLayer/ContainerControl"]
 layout_mode = 1
 anchors_preset = -1
@@ -218,4 +272,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton1" to="." method="_on_hint_button_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton2" to="." method="_on_hint_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton3" to="." method="_on_hint_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton4" to="." method="_on_hint_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/ContainerControl/HintButton5" to="." method="_on_hint_button_5_pressed"]
 [connection signal="pressed" from="CanvasLayer/ContainerControl/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]

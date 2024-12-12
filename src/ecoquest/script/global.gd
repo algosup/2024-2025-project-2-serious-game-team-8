@@ -24,6 +24,8 @@ var beat_chapter3: bool = false
 var opened_hint_1_tutorial: bool = false
 var opened_hint_2_tutorial: bool = false
 var opened_hint_3_tutorial: bool = false
+var opened_hint_4_tutorial: bool = false
+var opened_hint_5_tutorial: bool = false
 
 var initial_hint_button_color: Color = Color('363636')  # Dark gray
 var final_hint_button_color: Color = Color('#ffffff')   # White
