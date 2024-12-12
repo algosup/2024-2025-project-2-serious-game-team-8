@@ -132,7 +132,6 @@ func _on_fill_button_1_pressed() -> void:
 	if int($CanvasLayer/ButtonsControl/TextureRect/Input.text) in color_codes:
 		$CanvasLayer/ButtonsControl/FillButton.disabled = true
 		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
-		$CanvasLayer/ButtonsControl/TextureRect/Input.text
 		await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1, "Slider1")
 		$CanvasLayer/ButtonsControl/FillButton.disabled = false
 		$CanvasLayer/ButtonsControl/ResetButton.disabled = false
@@ -210,7 +209,7 @@ func _on_analyse_button_pressed() -> void:
 
 
 func popup(text):
-	var popup = Global.pop_up_enigma_two.instantiate()
-	popup.text = text
-	popup.color = Color(0,0,0)
-	add_child(popup)
+	var popup_page = Global.pop_up_enigma_two.instantiate()
+	popup_page.text = text
+	popup_page.color = Color(0,0,0)
+	add_child(popup_page)

@@ -4,14 +4,14 @@ var is_paused: bool = false
 
 var music_list = [
 	[
-		"res://resources/musics/The Final Escape.mp3",
-		"res://resources/musics/Climate Crisis in the Company.mp3",
-		"res://resources/musics/The Final Flee.mp3"
+		"res://resources/musics/music/The Final Escape.mp3",
+		"res://resources/musics/music/Climate Crisis in the Company.mp3",
+		"res://resources/musics/music/The Final Flee.mp3"
 	],
 	[
-		"res://resources/musics/Labyrinth of Shadows.mp3",
-		"res://resources/musics/Labyrinth Escape.mp3",
-		"res://resources/musics/In the Lab of Shadows.mp3"
+		"res://resources/musics/music/Labyrinth of Shadows.mp3",
+		"res://resources/musics/music/Labyrinth Escape.mp3",
+		"res://resources/musics/music/In the Lab of Shadows.mp3"
 	]
 ]
 

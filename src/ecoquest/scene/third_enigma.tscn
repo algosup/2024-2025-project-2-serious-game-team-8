@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc4a7uluva6mo"]
+[gd_scene load_steps=10 format=3 uid="uid://drmpf5opn5c8v"]
 
 [ext_resource type="Script" path="res://script/third_enigma.gd" id="1_3v56o"]
 [ext_resource type="Texture2D" uid="uid://brp2fsvvt86oo" path="res://resources/svg/Digicode_BG.png" id="1_cqg7h"]
@@ -80,10 +80,10 @@ texture = ExtResource("3_q8wtn")
 
 [node name="Button1" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -230.0
-offset_top = -150.0
-offset_right = -154.0
-offset_bottom = -99.0
+offset_left = -247.0
+offset_top = -152.0
+offset_right = -171.0
+offset_bottom = -101.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -103,10 +103,10 @@ vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -25.0
-offset_top = -150.0
-offset_right = 51.0
-offset_bottom = -99.0
+offset_left = -42.0
+offset_top = -152.0
+offset_right = 34.0
+offset_bottom = -101.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -126,10 +126,10 @@ vertical_alignment = 1
 
 [node name="Button3" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = -150.0
-offset_right = 246.0
-offset_bottom = -99.0
+offset_left = 153.0
+offset_top = -152.0
+offset_right = 229.0
+offset_bottom = -101.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -149,10 +149,10 @@ vertical_alignment = 1
 
 [node name="Button4" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -230.0
-offset_top = -30.0
-offset_right = -154.0
-offset_bottom = 21.0
+offset_left = -247.0
+offset_top = -32.0
+offset_right = -171.0
+offset_bottom = 19.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -172,10 +172,10 @@ vertical_alignment = 1
 
 [node name="Button5" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -25.0
-offset_top = -30.0
-offset_right = 51.0
-offset_bottom = 21.0
+offset_left = -42.0
+offset_top = -32.0
+offset_right = 34.0
+offset_bottom = 19.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -195,10 +195,10 @@ vertical_alignment = 1
 
 [node name="Button6" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = -30.0
-offset_right = 246.0
-offset_bottom = 21.0
+offset_left = 153.0
+offset_top = -32.0
+offset_right = 229.0
+offset_bottom = 19.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -218,10 +218,10 @@ vertical_alignment = 1
 
 [node name="Button7" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -230.0
-offset_top = 80.0
-offset_right = -154.0
-offset_bottom = 131.0
+offset_left = -247.0
+offset_top = 78.0
+offset_right = -171.0
+offset_bottom = 129.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -241,10 +241,10 @@ vertical_alignment = 1
 
 [node name="Button8" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -25.0
-offset_top = 80.0
-offset_right = 51.0
-offset_bottom = 131.0
+offset_left = -42.0
+offset_top = 78.0
+offset_right = 34.0
+offset_bottom = 129.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -264,10 +264,10 @@ vertical_alignment = 1
 
 [node name="Button9" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = 80.0
-offset_right = 246.0
-offset_bottom = 131.0
+offset_left = 153.0
+offset_top = 78.0
+offset_right = 229.0
+offset_bottom = 129.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -287,10 +287,10 @@ vertical_alignment = 1
 
 [node name="Button0" type="TextureButton" parent="CanvasLayer/DigicodeControl"]
 layout_mode = 0
-offset_left = -25.0
-offset_top = 190.0
-offset_right = 51.0
-offset_bottom = 241.0
+offset_left = -42.0
+offset_top = 188.0
+offset_right = 34.0
+offset_bottom = 239.0
 scale = Vector2(1.8, 1.8)
 texture_normal = ExtResource("2_7c0rl")
 texture_pressed = ExtResource("3_mlsqb")
@@ -380,6 +380,9 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("8_icwx8")
 texture_pressed = ExtResource("9_agjeu")
 texture_hover = ExtResource("9_agjeu")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
 
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button1" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button2" to="." method="_on_button_pressed" binds= [2]]

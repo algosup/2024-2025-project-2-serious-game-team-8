@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cup1s6ctjyj0r" path="res://scene/confirmation_page.tscn" id="1_p2wvi"]
 [ext_resource type="Script" path="res://script/confirmation_page_chapter_1.gd" id="2_6h48o"]
-[ext_resource type="Texture2D" uid="uid://h2cyl2qpmipo" path="res://resources/svg/Container.png" id="3_ayssb"]
+[ext_resource type="Texture2D" uid="uid://dj6gd3jnu5vma" path="res://resources/background/labbackground.png" id="3_ge23u"]
 [ext_resource type="FontFile" uid="uid://of1ovoilf3vg" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Italic.ttf" id="4_cs7uj"]
 
 [node name="ConfirmationPageChapter1" instance=ExtResource("1_p2wvi")]
@@ -14,25 +14,33 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1930.0
-offset_top = -1793.0
-offset_right = 1802.0
-offset_bottom = 1446.0
+offset_left = -1466.0
+offset_top = -1636.0
+offset_right = 1368.0
+offset_bottom = 1271.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_ayssb")
+texture = ExtResource("3_ge23u")
 
-[node name="StoryText" type="Label" parent="CanvasLayer/StoryRectange" index="0"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/StoryRectange" index="0"]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 871.0
+offset_right = 1930.0
+offset_bottom = 1584.0
+color = Color(0.490196, 0.490196, 0.490196, 0.741176)
+
+[node name="StoryText" type="Label" parent="CanvasLayer/StoryRectange" index="1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -430.0
-offset_top = -507.5
-offset_right = 582.0
-offset_bottom = 65.5
+offset_left = -438.0
+offset_top = -557.5
+offset_right = 511.0
+offset_bottom = 87.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_cs7uj")
@@ -41,11 +49,12 @@ text = "By opening this chapter, you’ve decided to expose the true intentions 
 
 In this folder, there was information about laboratory research, and you’re determined to find out all the secrets activity of your company, but you’re unsure where to begin.
 "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="ColorRect" parent="CanvasLayer" index="2"]
-offset_top = 8.0
-offset_bottom = 851.0
+offset_top = 9.0
+offset_bottom = 852.0
 tooltip_text = "Pop-up"
 
 [node name="Label" parent="CanvasLayer/ColorRect" index="0"]
@@ -58,7 +67,7 @@ And make sure you’ve kept card (8)"
 vertical_alignment = 0
 
 [node name="TextureButton" parent="CanvasLayer/ColorRect" index="1"]
-offset_left = 395.0
+offset_left = 265.0
 offset_top = 563.0
-offset_right = 212.51
+offset_right = 190.51
 offset_bottom = 256.691

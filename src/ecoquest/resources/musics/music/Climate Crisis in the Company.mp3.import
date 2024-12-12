@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djyuwtbc5uax4"
+path="res://.godot/imported/Climate Crisis in the Company.mp3-a696934895f339f9be40c14b56673d62.mp3str"
+
+[deps]
+
+source_file="res://resources/musics/music/Climate Crisis in the Company.mp3"
+dest_files=["res://.godot/imported/Climate Crisis in the Company.mp3-a696934895f339f9be40c14b56673d62.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
