@@ -1,19 +1,27 @@
 extends Node2D
 
+var sfx_player: AudioStreamPlayer
+
 
 func _ready() -> void:
 	$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate
-
+	sfx_player = $SFX
+	
 
 func _on_return_button_pressed() -> void:
 	queue_free()
-
 
 var input1 = "CanvasLayer/CodeControl/Input1/Label"
 var input2 = "CanvasLayer/CodeControl/Input2/Label"
 var input3 = "CanvasLayer/CodeControl/Input3/Label"
 var input4 = "CanvasLayer/CodeControl/Input4/Label"
 
+var codes=["3426","1443","1566"]
+
+# Function to play the incorrect sound effect
+func play_incorrect_sfx() -> void:
+	sfx_player.stream = load("res://resources/musics/sound_effects/windowserror.mp3")
+	sfx_player.play()
 
 func _on_input_pressed(buttonID: int) -> void:
 	match buttonID:
@@ -61,12 +69,17 @@ func _on_input_pressed(buttonID: int) -> void:
 
 func _on_enter_button_pressed() -> void:
 	var answer = get_node(input1).text + get_node(input2).text + get_node(input3).text + get_node(input4).text
-	if str(answer) == "3247":
+	if str(answer) == codes[Global.current_chapter]:
 		add_child(Global.win_page.instantiate())
 		get_parent().is_chapter_finished = true
 		Global.beat_chapter1 = true
+		Global.save_game()
 	else:
-		add_child(Global.error_page.instantiate())
+		play_incorrect_sfx()
+		var popup = Global.popup_page.instantiate()
+		popup.text= "There was an error. \nThis was the wrong password. \n-1 minute to the timer"
+		popup.color= Color(1,0,0)
+		add_child(popup)
 		var time_left = get_parent().get_child(0).get_node("Timer").time_left
 		get_parent().remove_time()
 		if time_left <= 60:

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlf5bjtct38ee"]
+
+[ext_resource type="Script" path="res://script/pop_up_enigma_two.gd" id="1_681tr"]
+[ext_resource type="Texture2D" uid="uid://dmeg1qmfmoo7b" path="res://resources/ScientistResearch.png" id="2_gymxs"]
+[ext_resource type="FontFile" uid="uid://of1ovoilf3vg" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Italic.ttf" id="3_7ptsf"]
+
+[node name="PopUpEnigmaTwo" type="Node2D"]
+script = ExtResource("1_681tr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.278704
+anchor_top = 0.05625
+anchor_right = 0.644444
+anchor_bottom = 0.627604
+offset_left = -317.0
+offset_top = 110.0
+offset_right = 383.0
+offset_bottom = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gymxs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.313242
+anchor_top = 0.332665
+anchor_right = 0.684748
+anchor_bottom = 0.609886
+offset_left = -245.0
+offset_top = -111.0
+offset_right = 247.0
+offset_bottom = 47.0001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7ptsf")
+theme_override_font_sizes/font_size = 50
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true

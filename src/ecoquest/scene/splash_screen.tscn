@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmrq8lmjtshgp"]
+[gd_scene load_steps=4 format=3 uid="uid://bmrq8lmjtshgp"]
 
 [ext_resource type="Script" path="res://script/splash_screen.gd" id="1_iclyy"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="1_jqsnx"]
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="1_jqsnx"]
+[ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="3_vjgan"]
 
 [node name="SplashScreen" type="Node2D"]
 script = ExtResource("1_iclyy")
@@ -36,7 +37,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Logo" type="Sprite2D" parent="CanvasLayer/LogoControl"]
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, -175)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_jqsnx")
 
 [node name="TextControl" type="Control" parent="CanvasLayer"]
@@ -74,5 +76,7 @@ text = "Loading...
 [node name="LoadingTime" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="TransitionLayer" parent="." instance=ExtResource("3_vjgan")]
 
 [connection signal="timeout" from="LoadingTime" to="." method="_on_loading_time_timeout"]
