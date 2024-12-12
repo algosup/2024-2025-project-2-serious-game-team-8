@@ -6,8 +6,17 @@ extends Node2D
 var hint_codes = [["0090","0054","0060"], "4321", "4562"]
 var puzzle_codes = ["0090", "0031", "2443"]
 
+var sfx_player: AudioStreamPlayer
+
+func _ready() -> void:
+	# Properly initialize sfx_player using the exported variable
+	sfx_player = $SFX
+	sfx_player.stream = load("res://resources/musics/sound_effects/digicode.mp3")
+
 
 func _on_digicode_press(buttonID: int):
+	if sfx_player:
+		sfx_player.play()
 	var label = $CanvasLayer/DisplayControl/Label
 	var original_color = label.get_theme_color("font_color", "Label")
 	var red = Color(1, 0, 0)

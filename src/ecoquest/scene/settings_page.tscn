@@ -176,6 +176,30 @@ max_value = 1.0
 step = 0.001
 value = 1.0
 
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/MusicSliderControl"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.637
+anchor_top = -6.9
+anchor_right = -0.637
+anchor_bottom = -6.9
+offset_left = -248.52
+offset_top = 140.0
+offset_right = 248.48
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = ExtResource("7_7urlr")
+theme_override_icons/grabber_highlight = ExtResource("7_7urlr")
+theme_override_icons/grabber_disabled = ExtResource("7_7urlr")
+theme_override_styles/slider = SubResource("StyleBoxTexture_dkuus")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_govi0")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_gv0q6")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
 [node name="GithubButtonControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 8
@@ -235,7 +259,25 @@ theme_override_fonts/font = ExtResource("6_wwy6w")
 theme_override_font_sizes/font_size = 35
 text = "Music"
 
+[node name="Label2" type="Label" parent="CanvasLayer/MusicTextControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.65
+anchor_top = -8.975
+anchor_right = -2.65
+anchor_bottom = -8.975
+offset_left = -168.0
+offset_top = 141.0
+offset_right = -46.0
+offset_bottom = 188.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.298039, 0.239216, 0.219608, 1)
+theme_override_fonts/font = ExtResource("6_wwy6w")
+theme_override_font_sizes/font_size = 35
+text = "SFX"
+
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="value_changed" from="CanvasLayer/MusicSliderControl/Music Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/MusicSliderControl/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/GithubButtonControl/GithubButton" to="." method="_on_github_button_pressed"]

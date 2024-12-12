@@ -29,6 +29,7 @@ var final_hint_button_color: Color = Color('#ffffff')   # White
 
 var screen_size: Vector2 = Vector2()  # Initialize screen_size as a Vector2
 var music_slider_value: float = 1.0  # Default volume value
+var sfx_slider_value: float = 1.0  # Default volume value
 
 var current_chapter = 0
 

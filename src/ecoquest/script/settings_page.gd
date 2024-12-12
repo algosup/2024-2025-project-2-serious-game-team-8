@@ -42,3 +42,11 @@ func _on_github_button_pressed() -> void:
 
 func _on_tree_exiting() -> void:
 	await get_parent().get_node("TransitionLayer")._fade_in()
+
+
+func _on_sfx_slider_value_changed(value: float) -> void:
+	Global.sfx_slider_value = value
+	AudioServer.set_bus_volume_db(
+		bus_index,
+		linear_to_db(value)
+	)

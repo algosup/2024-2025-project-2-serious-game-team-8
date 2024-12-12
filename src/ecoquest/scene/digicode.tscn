@@ -498,6 +498,9 @@ theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
 theme_override_fonts/font = SubResource("FontVariation_k6wt7")
 theme_override_font_sizes/font_size = 200
 
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/Button1" to="." method="_on_digicode_press" binds= [1]]
