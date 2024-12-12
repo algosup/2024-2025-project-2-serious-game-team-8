@@ -9,16 +9,17 @@ var fill_counts = {"Slider1": 0, "Slider2": 0, "Slider3": 0}
 # Every pair index are ecological combinations, impair index are harmful combinations
 const combinations = [
 	[[13, 4], [14, 1], [16, 2]],
-	[[19, 1], [18, 2], [22, 4]],
-	[[14, 3], [15, 1], [16, 2]],
-	[[14, 3], [18, 2], [21, 2]],
-	[[13, 2], [22, 4], [15, 1]],
-	[[19, 1], [22, 3], [21, 1]]
+	[[19, 1], [18, 3], [22, 2]],
+	[[14, 4], [18, 2], [16, 3]],
+	[[14, 2], [18, 4], [21, 1]],
+	[[18, 1], [22, 4], [13, 2]],
+	[[21, 4], [19, 2], [22, 3]]
 ]
+var color_codes = {13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#032B5C", 21: "#81CB3B", 22: "#77EBED"}
 
 const MAX_FILLS = 5
 const INCREASE_AMOUNT = 76
-const MAX_HEIGHT = 363
+const MAX_HEIGHT = 449
 
 
 func _on_return_button_pressed() -> void:
@@ -30,11 +31,11 @@ func _increase_rect_size(rectangle: ColorRect, slider_name: String) -> void:
 	var new_height = rectangle.size.y + INCREASE_AMOUNT
 	var new_Y = -INCREASE_AMOUNT
 
-	# Increment the fill count
-	fill_counts[slider_name] += 1
 
 	# Check if the new height is lower than the maximum
 	if new_height < MAX_HEIGHT:
+		# Increment the fill count
+		fill_counts[slider_name] += 1
 		var tween = rectangle.create_tween()
 		# Calculate new position and size
 		var new_position = rectangle.position + Vector2(0, new_Y)  # Move up by the increase amount
@@ -51,25 +52,25 @@ func _on_reset_button_pressed() -> void:
 
 
 func reset_one_liquid(emitter: String) -> void:
-	$"CanvasLayer/ButtonsControl/FillButton".disabled=false
-	$"CanvasLayer/ButtonsControl/FillButton2".disabled=false
-	$"CanvasLayer/ButtonsControl/FillButton3".disabled=false
-	$"CanvasLayer/ButtonsControl/ResetButton".disabled=false
-	$CanvasLayer/ButtonsControl/TextureRect/Input.editable=false
-	$CanvasLayer/ButtonsControl/TextureRect2/Input2.editable=false
-	$CanvasLayer/ButtonsControl/TextureRect3/Input3.editable=false
-	
+	$"CanvasLayer/ButtonsControl/ResetButton".disabled = false
+
 	var slider = $"CanvasLayer/TestTubeControl/Slider1"
 	var fill_count_index = 0
 	match emitter:
 		"Input":
 			slider = $"CanvasLayer/TestTubeControl/Slider1"
 			fill_count_index = 0
+			$"CanvasLayer/ButtonsControl/FillButton".disabled = false
+			$CanvasLayer/ButtonsControl/TextureRect/Input.editable = false
 		"Input2":
 			slider = $"CanvasLayer/TestTubeControl/Slider2"
 			fill_count_index = 1
+			$"CanvasLayer/ButtonsControl/FillButton2".disabled = false
+			$CanvasLayer/ButtonsControl/TextureRect2/Input2.editable = false
 		"Input3":
 			slider = $"CanvasLayer/TestTubeControl/Slider3"
+			$"CanvasLayer/ButtonsControl/FillButton3".disabled = false
+			$CanvasLayer/ButtonsControl/TextureRect3/Input3.editable = false
 			fill_count_index = 2
 
 	# Reset one slider and  its fill count
@@ -80,13 +81,13 @@ func reset_one_liquid(emitter: String) -> void:
 	tween.parallel().tween_property(slider, "size", new_size, 1.0)
 
 	fill_counts[fill_count_index] = 0
-	$"CanvasLayer/ButtonsControl/FillButton".disabled=true
-	$"CanvasLayer/ButtonsControl/FillButton2".disabled=true
-	$"CanvasLayer/ButtonsControl/FillButton3".disabled=true
-	$"CanvasLayer/ButtonsControl/ResetButton".disabled=true
-	$CanvasLayer/ButtonsControl/TextureRect/Input.editable=true
-	$CanvasLayer/ButtonsControl/TextureRect2/Input2.editable=true
-	$CanvasLayer/ButtonsControl/TextureRect3/Input3.editable=true
+	$"CanvasLayer/ButtonsControl/FillButton".disabled = true
+	$"CanvasLayer/ButtonsControl/FillButton2".disabled = true
+	$"CanvasLayer/ButtonsControl/FillButton3".disabled = true
+	$"CanvasLayer/ButtonsControl/ResetButton".disabled = true
+	$CanvasLayer/ButtonsControl/TextureRect/Input.editable = true
+	$CanvasLayer/ButtonsControl/TextureRect2/Input2.editable = true
+	$CanvasLayer/ButtonsControl/TextureRect3/Input3.editable = true
 	await tween.finished
 
 
@@ -100,43 +101,41 @@ func reset_all_liquids() -> void:
 			var new_size = Vector2(child.size.x, 0)  # Reset height to 0, keep the width unchanged
 			tween.tween_property(child, "position", new_position, 1.0)  # Duration: 1 second
 			tween.parallel().tween_property(child, "size", new_size, 1.0)
-	$CanvasLayer/ButtonsControl/TextureRect/Input.text=""
-	$CanvasLayer/ButtonsControl/TextureRect2/Input2.text=""
-	$CanvasLayer/ButtonsControl/TextureRect3/Input3.text=""
+	$CanvasLayer/ButtonsControl/TextureRect/Input.text = ""
+	$CanvasLayer/ButtonsControl/TextureRect2/Input2.text = ""
+	$CanvasLayer/ButtonsControl/TextureRect3/Input3.text = ""
 
 	# Reset fill counts
 	for key in fill_counts.keys():
 		fill_counts[key] = 0
 
 
-func _on_fill_button_pressed(slider_name: String, slider_node: ColorRect) -> void:
-	# Use the generic function to increase size
-	_increase_rect_size(slider_node, slider_name)
-
-
 func _on_fill_button_1_pressed() -> void:
-	$CanvasLayer/ButtonsControl/FillButton.disabled = true
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = true
-	$CanvasLayer/ButtonsControl/TextureRect/Input.text
-	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1, "Slider1")
-	$CanvasLayer/ButtonsControl/FillButton.disabled = false
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = false
+	if int($CanvasLayer/ButtonsControl/TextureRect/Input.text) in color_codes:
+		$CanvasLayer/ButtonsControl/FillButton.disabled = true
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
+		$CanvasLayer/ButtonsControl/TextureRect/Input.text
+		await _increase_rect_size($CanvasLayer/TestTubeControl/Slider1, "Slider1")
+		$CanvasLayer/ButtonsControl/FillButton.disabled = false
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = false
 
 
 func _on_fill_button_2_pressed() -> void:
-	$CanvasLayer/ButtonsControl/FillButton2.disabled = true
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = true
-	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider2, "Slider2")
-	$CanvasLayer/ButtonsControl/FillButton2.disabled = false
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = false
+	if int($CanvasLayer/ButtonsControl/TextureRect2/Input2.text) in color_codes:
+		$CanvasLayer/ButtonsControl/FillButton2.disabled = true
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
+		await _increase_rect_size($CanvasLayer/TestTubeControl/Slider2, "Slider2")
+		$CanvasLayer/ButtonsControl/FillButton2.disabled = false
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = false
 
 
 func _on_fill_button_3_pressed() -> void:
-	$CanvasLayer/ButtonsControl/FillButton3.disabled = true
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = true
-	await _increase_rect_size($CanvasLayer/TestTubeControl/Slider3, "Slider3")
-	$CanvasLayer/ButtonsControl/FillButton3.disabled = false
-	$CanvasLayer/ButtonsControl/ResetButton.disabled = false
+	if int($CanvasLayer/ButtonsControl/TextureRect3/Input3.text) in color_codes:
+		$CanvasLayer/ButtonsControl/FillButton3.disabled = true
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = true
+		await _increase_rect_size($CanvasLayer/TestTubeControl/Slider3, "Slider3")
+		$CanvasLayer/ButtonsControl/FillButton3.disabled = false
+		$CanvasLayer/ButtonsControl/ResetButton.disabled = false
 
 
 func _contains_pair(pair: Array):
@@ -157,8 +156,12 @@ func _on_analyse_button_pressed() -> void:
 		var input3_result = _contains_pair(input3)
 
 		if typeof(input1_result) == TYPE_BOOL or typeof(input2_result) == TYPE_BOOL or typeof(input3_result) == TYPE_BOOL:
-			print("false")
+			print("false, one of the liquids does not exists or have the wrong quantity")
 		elif input1_result == input2_result and input1_result == input3_result:
 			print("true")
+		else:
+			print(input1, "\n", input2, "\n", input3)
+			print(input1_result, "\n", input2_result, "\n", input3_result)
+			print("false, does not exists")
 	else:
-		print("false")
+		print("false, same")

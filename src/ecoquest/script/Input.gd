@@ -2,7 +2,6 @@ extends LineEdit
 
 var last_valid_text: String = ""  # To store the last valid text
 
-var color_codes = {11: "#77EBED", 13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#032B5C", 21: "#81CB3B"}
 
 
 func _ready() -> void:
@@ -35,8 +34,8 @@ func _change_slider_color(code: int, emitter: String) -> void:
 			rect = $"../../../TestTubeControl/Slider2"
 		"Input3":
 			rect = $"../../../TestTubeControl/Slider3"
-	if code in color_codes:
-		var color = Color(color_codes[code])
+	if code in $"../../../..".color_codes:
+		var color = Color($"../../../..".color_codes[code])
 		rect.color = color
 		$"../../FillButton".disabled=true
 		$"../../FillButton2".disabled=true
