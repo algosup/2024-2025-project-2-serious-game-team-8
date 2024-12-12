@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=15 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://script/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
@@ -11,6 +11,10 @@
 [ext_resource type="Script" path="res://script/Input.gd" id="6_xe1kq"]
 [ext_resource type="Texture2D" uid="uid://7k7micbt2miv" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Hover.svg" id="6_ynfvd"]
 [ext_resource type="Texture2D" uid="uid://d4ko2rad36d6i" path="res://resources/svg/Button/IronButton/[2] Clicked.png" id="11_px8h3"]
+[ext_resource type="Texture2D" uid="uid://bp35p4x17f0c2" path="res://resources/light/circle.png" id="12_g3fna"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uiadx"]
+polygon = PackedVector2Array(8.5, 0, 183.5, 0, 191.5, 7.5, 192.5, 56.5, 184, 65, 9, 64, -0.5, 56, -1, 7.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjbgw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -98,6 +102,9 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
 texture_pressed = ExtResource("6_k18e2")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="CanvasLayer/ButtonsControl/ResetButton"]
+occluder = SubResource("OccluderPolygon2D_uiadx")
+
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/ResetButton"]
 layout_mode = 0
 offset_left = 15.0
@@ -121,6 +128,10 @@ offset_bottom = 634.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_n5ukb")
 texture_pressed = ExtResource("6_k18e2")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="CanvasLayer/ButtonsControl/AnalyseButton"]
+position = Vector2(-1, -2)
+occluder = SubResource("OccluderPolygon2D_uiadx")
 
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/AnalyseButton"]
 layout_mode = 0
@@ -439,6 +450,15 @@ text = "47"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer/Control/CardNumber"]
+position = Vector2(156.25, 85)
+scale = Vector2(0.999999, 0.999999)
+color = Color(1, 1, 0.376471, 0.921569)
+energy = 2.0
+range_layer_max = 1
+texture = ExtResource("12_g3fna")
+texture_scale = 0.59
+
 [node name="CardNumber2" type="TextureRect" parent="CanvasLayer/Control"]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
@@ -470,6 +490,15 @@ text = "45"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="PointLight2D2" type="PointLight2D" parent="CanvasLayer/Control/CardNumber2"]
+position = Vector2(146.25, 75)
+scale = Vector2(0.999999, 0.999999)
+color = Color(1, 1, 0.376471, 0.921569)
+energy = 2.0
+range_layer_max = 1
+texture = ExtResource("12_g3fna")
+texture_scale = 0.59
+
 [node name="CardNumber3" type="TextureRect" parent="CanvasLayer/Control"]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
@@ -500,6 +529,15 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
 text = "58"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PointLight2D3" type="PointLight2D" parent="CanvasLayer/Control/CardNumber3"]
+position = Vector2(146.25, 83.75)
+scale = Vector2(0.999999, 0.999999)
+color = Color(1, 1, 0.376471, 0.921569)
+energy = 2.0
+range_layer_max = 1
+texture = ExtResource("12_g3fna")
+texture_scale = 0.59
 
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/AnalyseButton" to="." method="_on_analyse_button_pressed"]
