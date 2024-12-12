@@ -40,7 +40,7 @@ func _on_button_pressed(number: int) -> void:
 			await get_tree().create_timer(0.15).timeout  # Wait for the duration
 			$CanvasLayer/DigicodeControl/DigicodeFeedback.self_modulate = Color(1, 1, 1)
 			await get_tree().create_timer(0.15).timeout  # Wait for the duration
-			add_child(Global.win_page_chapter1.instantiate())
+			add_child(Global.win_page_chapter_one.instantiate())
 			Global.beat_chapter2 = true
 		else:
 			play_incorrect_sfx()

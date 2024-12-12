@@ -15,9 +15,9 @@ var hints = [
 			"If you made an ecological household product, a number should have appeared."
 		],
 		["This board is really dirty.", "Try to clean it with some product."],
-		["One of these household products could be useful.", "Which product would clean the board.", "The spray is perfect for this dirty board."],
+		["One of these household products could be useful.", "Which product would clean the board?", "The spray is perfect for this dirty board."],
 		["You probably missed some shadow"],
-		["Any way to open it, you should try to force it.", "A tool could be helpful.", "You probably missed some shadow."],
+		["No way to open it, you should try to force it.", "A tool could be helpful.", "You probably missed some shadow."],
 		["A tool to force some locks."],
 		["Wait for the card 59 to be removed."]
 	]

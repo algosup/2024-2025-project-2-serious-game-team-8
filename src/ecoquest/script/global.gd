@@ -6,6 +6,7 @@ var code_page = preload("res://scene/code_page.tscn")
 var code_page_chapter_one = preload("res://scene/second_enigma.tscn")
 var digicode_chapter_one = preload("res://scene/third_enigma.tscn")
 var win_page = preload("res://scene/code_win_page.tscn")
+var win_page_chapter_one = preload("res://code_win_page_two.tscn")
 var game_page = preload("res://scene/game_page.tscn")
 var chapter_one_completion_page = preload("res://scene/chapter_one_win.tscn")
 var chapter_locked = preload("res://scene/locked_chapter.tscn")
@@ -16,7 +17,7 @@ var digicode = preload("res://scene/digicode.tscn")
 var tutorial= preload("res://scene/game_page.tscn")
 var confirmation_tutorial = preload("res://scene/confirmation_page.tscn")
 var confirmation_chapter1 = preload("res://scene/confirmation_page_chapter_1.tscn")
-var beat_chapter1: bool = true
+var beat_chapter1: bool = false
 var beat_chapter2: bool = false
 var beat_chapter3: bool = false
 

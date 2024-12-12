@@ -1,0 +1,181 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6252pp3jblcw"]
+
+[ext_resource type="Script" path="res://script/code_win_page.gd" id="1_6h5l7"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_g7rnv"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="3_emegn"]
+[ext_resource type="FontFile" uid="uid://of1ovoilf3vg" path="res://resources/font/Bungee,DM_Serif_Text/DM_Serif_Text/DMSerifText-Italic.ttf" id="4_k70yq"]
+
+[node name="CodeWinPageTwo" type="Node2D"]
+script = ExtResource("1_6h5l7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundColor" type="ColorRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.388235, 0.388235, 0.388235, 0.588235)
+metadata/_edit_use_anchors_ = true
+
+[node name="Congratulations" type="Node" parent="CanvasLayer"]
+
+[node name="CongratulationsControl" type="Control" parent="CanvasLayer/Congratulations"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContainerControl" type="Control" parent="CanvasLayer/Congratulations/CongratulationsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 92.0
+offset_right = 20.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.35
+anchor_top = -10.1
+anchor_right = 2.125
+anchor_bottom = 0.275
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g7rnv")
+
+[node name="CongratulationText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.511667
+anchor_top = 0.153285
+anchor_right = 0.511667
+anchor_bottom = 0.153285
+offset_left = -244.655
+offset_top = -88.9272
+offset_right = 247.345
+offset_bottom = -21.9271
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_emegn")
+theme_override_font_sizes/font_size = 50
+text = "Congratulations! 
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="DiscardText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 129.0
+offset_right = 685.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("3_emegn")
+theme_override_font_sizes/font_size = 30
+text = "Now you have finished chapter one, you can discard all the cards you have"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="KeepText" type="Label" parent="CanvasLayer/Congratulations/CongratulationsControl/ContainerControl/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 296.0
+offset_right = 703.0
+offset_bottom = 508.0
+theme_override_fonts/font = ExtResource("3_emegn")
+theme_override_font_sizes/font_size = 30
+text = "Please discard all the cards out before proceeding further down:
+
+A new chapter had been unlocked if you want to explore other labs... "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StoryPage" type="Node" parent="CanvasLayer"]
+
+[node name="StoryControl" type="Control" parent="CanvasLayer/StoryPage"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContainerControl" type="Control" parent="CanvasLayer/StoryPage/StoryControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/StoryPage/StoryControl/ContainerControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.35
+anchor_top = -7.25
+anchor_right = 2.125
+anchor_bottom = 3.125
+offset_left = -2560.0
+offset_top = -1895.0
+offset_right = 3920.0
+offset_bottom = 3311.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_g7rnv")
+
+[node name="CongratulationText" type="Label" parent="CanvasLayer/StoryPage/StoryControl/ContainerControl/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1230.5
+offset_top = -1410.5
+offset_right = -154.5
+offset_bottom = 386.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_k70yq")
+theme_override_font_sizes/font_size = 50
+text = "Perfect!
+You found a way to dive deeper into the underground buildings.
+You collected your first data about some experiments, and you are now even able to make your eco-friendly household products!Please discard all the cards before proceeding further down:
+
+A new chapter has been unlocked if you want to explore other labs..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
