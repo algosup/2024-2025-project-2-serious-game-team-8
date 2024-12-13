@@ -58,24 +58,31 @@ func load_game() -> void:
 			if result is Array:
 				beat_chapter1 = result[0]
 				beat_chapter2 = result[1]
+				music_slider_value = result[2]
+				sfx_slider_value = result[3]
 			else:
 				# Fallback values if parsing fails
 				beat_chapter1 = false
 				beat_chapter2 = false
+				music_slider_value = 1
+				sfx_slider_value = 1
 	else:
 		# Default values if the file does not exist
 		beat_chapter1 = false
 		beat_chapter2 = false
+		music_slider_value = 1
+		sfx_slider_value = 1
 
 
 func save_game() -> void:
-	var bool_array = [beat_chapter1, beat_chapter2]
+	
+	var save_values = [beat_chapter1, beat_chapter2, music_slider_value, sfx_slider_value]
 
 	# Open the file in write mode
 	var f = FileAccess.open("user://EkoLock_save.json", FileAccess.WRITE)
 
 	# Convert the boolean array to a JSON string and store it
-	f.store_string(JSON.stringify(bool_array))
+	f.store_string(JSON.stringify(save_values))
 
 	# Close the file
 	f.close()
