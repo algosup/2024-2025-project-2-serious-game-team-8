@@ -56,23 +56,23 @@ func load_game() -> void:
 			# Parse the JSON string into an array
 			var result = JSON.parse_string(content)
 			if result is Array:
-				beat_chapter1 = result[0]
-				beat_chapter2 = result[1]
-				music_slider_value = result[2]
-				sfx_slider_value = result[3]
+				if result.size() >= 4:  # Ensure the array has at least 4 elements
+					beat_chapter1 = result[0]
+					beat_chapter2 = result[1]
+					music_slider_value = result[2]
+					sfx_slider_value = result[3]
+				else:
+					# Log a warning and use default values if array is incomplete
+					print("Warning: Save file does not contain all required values. Using defaults.")
+					reset_to_defaults()
 			else:
-				# Fallback values if parsing fails
-				beat_chapter1 = false
-				beat_chapter2 = false
-				music_slider_value = 1
-				sfx_slider_value = 1
+				# Log a warning and use default values if parsing fails
+				print("Warning: Save file is corrupted or not a valid JSON array. Using defaults.")
+				reset_to_defaults()
 	else:
-		# Default values if the file does not exist
-		beat_chapter1 = false
-		beat_chapter2 = false
-		music_slider_value = 1
-		sfx_slider_value = 1
-
+		# Log info and use default values if the file does not exist
+		print("No save file found. Using defaults.")
+		reset_to_defaults()
 
 func save_game() -> void:
 	
@@ -86,3 +86,9 @@ func save_game() -> void:
 
 	# Close the file
 	f.close()
+
+func reset_to_defaults() -> void:
+	beat_chapter1 = false
+	beat_chapter2 = false
+	music_slider_value = 1.0
+	sfx_slider_value = 1.0
