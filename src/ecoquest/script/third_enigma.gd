@@ -74,7 +74,7 @@ func _on_button_pressed(number: int) -> void:
 		else:
 			# Play the "failure" sound effect
 			play_incorrect_sfx()
-			
+			get_parent().remove_time()
 			# Start the "failure" animation, making the outer ring flash in red 2 times. 
 			$CanvasLayer/DigicodeControl/DigicodeFeedback.self_modulate = Color(0.988, 0, 0)
 			await get_tree().create_timer(0.15).timeout  # Wait for the duration

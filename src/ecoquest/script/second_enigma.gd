@@ -22,7 +22,7 @@ const combinations = [
 ]
 
 # Dictionary of color codes for each liquid, mapping IDs to hex color strings
-var color_codes = {13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#032B5C", 21: "#81CB3B", 22: "#77EBED"}
+var color_codes = {13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#117489", 21: "#81CB3B", 22: "#77EBED"}
 
 # The maximum number of fills a test tube can hold
 const MAX_FILLS = 4
