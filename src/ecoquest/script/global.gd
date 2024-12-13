@@ -39,10 +39,29 @@ var is_enigma_two_card_one_visible: bool = false
 var is_enigma_two_card_two_visible: bool = false
 var is_enigma_two_card_three_visible: bool = false
 
+var music_bus_index: int
+# Sound effect bus
+var sfx_bus_index: int
+
 
 func _ready() -> void:
 	screen_size = DisplayServer.window_get_size()  # Get the current screen size in pixels
 	load_game()
+	# Get the audio bus indices for "Menu Music" and "SFX"
+	music_bus_index = AudioServer.get_bus_index("Menu Music")
+	sfx_bus_index = AudioServer.get_bus_index("SFX")  
+
+	# Set the music bus' volume to the saved values
+	AudioServer.set_bus_volume_db(
+		music_bus_index,
+		linear_to_db(Global.music_slider_value)
+	)
+	
+	# Set the sound effects bus' volume to the saved value
+	AudioServer.set_bus_volume_db(
+		sfx_bus_index,
+		linear_to_db(Global.sfx_slider_value)
+	)
 
 
 func load_game() -> void:

@@ -4,25 +4,20 @@ extends Node2D
 ## - The management of the different sound buses
 ## - A link to the GitHub page
 
-# Main music bus
-var music_bus_index: int
-# Sound effect bus
-var sfx_bus_index: int
-
 func _ready() -> void:
 	# Get the audio bus indices for "Menu Music" and "SFX"
-	music_bus_index = AudioServer.get_bus_index("Menu Music")
-	sfx_bus_index = AudioServer.get_bus_index("SFX")  
+	Global.music_bus_index = AudioServer.get_bus_index("Menu Music")
+	Global.sfx_bus_index = AudioServer.get_bus_index("SFX")  
 
 	# Set the music bus' volume to the saved values
 	AudioServer.set_bus_volume_db(
-		music_bus_index,
+		Global.music_bus_index,
 		linear_to_db(Global.music_slider_value)
 	)
 	
 	# Set the sound effects bus' volume to the saved value
 	AudioServer.set_bus_volume_db(
-		sfx_bus_index,
+		Global.sfx_bus_index,
 		linear_to_db(Global.sfx_slider_value)
 	)
 
@@ -45,7 +40,7 @@ func _on_music_slider_value_changed(value: float) -> void:
 	
 	# Update the music audio bus volume
 	AudioServer.set_bus_volume_db(
-		music_bus_index,
+		Global.music_bus_index,
 		linear_to_db(value)
 	)
 	# Save the game
@@ -59,7 +54,7 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 	
 	# Update the sound effects audio bus volume
 	AudioServer.set_bus_volume_db(
-		sfx_bus_index,
+		Global.sfx_bus_index,
 		linear_to_db(value)
 	)
 	# Save the game
