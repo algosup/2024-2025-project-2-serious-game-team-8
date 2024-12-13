@@ -1,5 +1,12 @@
 extends Node2D
 
+## This script manages the second enigma, also named chemical mixer,
+## it includes:
+## - Multiple visual and audio feedbacks,
+## - Multiple combinations,
+## - Redirections to 3 physical cards.
+
+
 # Track fills for each slider
 var fill_counts = {"Slider1": 0, "Slider2": 0, "Slider3": 0}
 
