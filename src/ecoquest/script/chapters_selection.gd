@@ -3,7 +3,8 @@ extends Node2D
 ## This script is directly linked to the chapter selection page, it serves to navigate in the app
 ## basic checking for chapters locking/unlocking and chapter initialization/selection.
 
-@export var image_resource: Texture # exporting Backgroudn texture to change it dynamically
+## exporting Backgroudn texture to change it dynamically
+@export var image_resource: Texture
 
 
 func _ready() -> void:
