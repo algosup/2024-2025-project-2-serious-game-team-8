@@ -14,11 +14,21 @@ func _ready() -> void:
 	
 	# Remove the default focus outline by setting a fully transparent style box
 	var focus_style = StyleBoxFlat.new()
-	focus_style.bg_color = Color(0, 0, 0, 0)  # Fully transparent background
+	focus_style.bg_color = Color(1, 1, 1, 0.5)  # White with 50% transparency
 	focus_style.border_width_left = 0
 	focus_style.border_width_right = 0
 	focus_style.border_width_top = 0
 	focus_style.border_width_bottom = 0
+	
+	# Set the corner radius for the top-left corner of the focus style to 500 pixels, making it highly rounded.
+	focus_style.corner_radius_top_left = 500
+	# Set the corner radius for the top-right corner of the focus style to 500 pixels, ensuring it matches the top-left for symmetry.
+	focus_style.corner_radius_top_right = 500
+	# Set the corner radius for the bottom-left corner of the focus style to 500 pixels, rounding the bottom-left side.
+	focus_style.corner_radius_bottom_left = 500
+	# Set the corner radius for the bottom-right corner of the focus style to 500 pixels, making the bottom-right side match the other corners.
+	focus_style.corner_radius_bottom_right = 500
+
 	add_theme_stylebox_override("focus", focus_style)
 
 	# Make the caret (cursor) invisible by setting it to a black color
