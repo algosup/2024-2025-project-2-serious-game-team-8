@@ -22,7 +22,7 @@ const combinations = [
 ]
 
 # Dictionary of color codes for each liquid, mapping IDs to hex color strings
-var color_codes = {13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#032B5C", 21: "#81CB3B", 22: "#77EBED"}
+var color_codes = {13: "#135BB5", 14: "C44B78", 15: "#F8EB44", 16: "#631C60", 18: "#C0810C", 19: "#117489", 21: "#81CB3B", 22: "#77EBED"}
 
 # The maximum number of fills a test tube can hold
 const MAX_FILLS = 4
@@ -216,6 +216,7 @@ func _on_analyse_button_pressed() -> void:
 		# If any result is false, the combination doesn't exist
 		if typeof(input1_result) == TYPE_BOOL or typeof(input2_result) == TYPE_BOOL or typeof(input3_result) == TYPE_BOOL:
 			popup("This combination does not exist. \nYou lose one minute.")
+			get_parent().remove_time()
 		# If all results match, display the appropriate feedback
 		elif input1_result == input2_result and input1_result == input3_result:
 			match input1_result:
@@ -245,8 +246,10 @@ func _on_analyse_button_pressed() -> void:
 					popup("Even if this mix seems to reduce limestone in water, I wouldn't use it in my house... Phosphates only stimulate the growth of algae and bacteria in the water, but benzalkonium is very toxic to aquatic organisms and poorly biodegradable...")
 		else:
 			popup("This combination does not exist. \nYou lose one minute.")
+			get_parent().remove_time()
 	else:
 		popup("This combination does not exist. \nYou lose one minute.")
+		get_parent().remove_time()
 
 # Displays a popup message with the given text
 func popup(text):
