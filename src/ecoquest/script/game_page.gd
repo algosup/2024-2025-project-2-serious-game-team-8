@@ -30,7 +30,7 @@ var current_music_index: int = 0
 @export var is_chapter_finished: bool = false
 
 # Time limits for each chapter in seconds
-var time_limits = [600, 900, 1200]
+var time_limits = [600, 1800, 1200]
 
 func _ready() -> void:
 	# Display a transition effect at the start

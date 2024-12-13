@@ -261,11 +261,11 @@ vertical_alignment = 1
 [node name="Plus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0861017, 0, 0.808627, 1)
 layout_mode = 0
-offset_left = -200.0
-offset_top = -88.0
-offset_right = -164.0
-offset_bottom = -68.0
-scale = Vector2(2, 2)
+offset_left = -210.714
+offset_top = -95.1427
+offset_right = -174.714
+offset_bottom = -75.1427
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_01f26")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus1"]
@@ -287,11 +287,11 @@ vertical_alignment = 1
 [node name="Plus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = -66.0
-offset_top = -88.0
-offset_right = -30.0
-offset_bottom = -68.0
-scale = Vector2(2, 2)
+offset_left = -76.0
+offset_top = -95.0
+offset_right = -40.0
+offset_bottom = -75.0
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_01f26")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus2"]
@@ -313,11 +313,11 @@ vertical_alignment = 1
 [node name="Plus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = 68.0
-offset_top = -88.0
-offset_right = 104.0
-offset_bottom = -68.0
-scale = Vector2(2, 2)
+offset_left = 57.0
+offset_top = -95.0
+offset_right = 93.0
+offset_bottom = -75.0
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_01f26")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus3"]
@@ -339,11 +339,11 @@ vertical_alignment = 1
 [node name="Plus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = 202.0
-offset_top = -88.0
-offset_right = 238.0
-offset_bottom = -68.0
-scale = Vector2(2, 2)
+offset_left = 190.0
+offset_top = -95.0
+offset_right = 226.0
+offset_bottom = -75.0
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_01f26")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Plus4"]
@@ -351,9 +351,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.102
 anchor_bottom = 0.119
-offset_left = -1.0
+offset_left = -0.642853
 offset_top = -4.0
-offset_right = 34.92
+offset_right = 35.2771
 offset_bottom = 25.24
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_xugxh")
@@ -365,11 +365,11 @@ vertical_alignment = 1
 [node name="Minus1" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = -200.0
+offset_left = -209.286
 offset_top = 112.0
-offset_right = -164.0
+offset_right = -173.286
 offset_bottom = 132.0
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("8_h86hf")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus1"]
@@ -377,10 +377,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.102
 anchor_bottom = 0.119
-offset_left = -1.0
-offset_top = -7.0
-offset_right = 34.92
-offset_bottom = 22.24
+offset_left = -1.28571
+offset_top = -7.28574
+offset_right = 34.6343
+offset_bottom = 21.9543
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_xugxh")
 theme_override_font_sizes/font_size = 15
@@ -391,11 +391,11 @@ vertical_alignment = 1
 [node name="Minus2" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = -66.0
+offset_left = -75.9997
 offset_top = 112.0
-offset_right = -30.0
+offset_right = -39.9997
 offset_bottom = 132.0
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("8_h86hf")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus2"]
@@ -417,11 +417,11 @@ vertical_alignment = 1
 [node name="Minus3" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = 68.0
+offset_left = 58.0001
 offset_top = 112.0
-offset_right = 104.0
+offset_right = 94.0001
 offset_bottom = 132.0
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("8_h86hf")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus3"]
@@ -443,11 +443,11 @@ vertical_alignment = 1
 [node name="Minus4" type="TextureButton" parent="CanvasLayer/CodeControl"]
 modulate = Color(0.0862745, 0, 0.807843, 1)
 layout_mode = 0
-offset_left = 202.0
+offset_left = 191.286
 offset_top = 112.0
-offset_right = 238.0
+offset_right = 227.286
 offset_bottom = 132.0
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("8_h86hf")
 
 [node name="Label" type="Label" parent="CanvasLayer/CodeControl/Minus4"]
