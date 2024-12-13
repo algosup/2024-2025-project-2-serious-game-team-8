@@ -13,6 +13,7 @@ var code = ""
 var sfx_player: AudioStreamPlayer
 
 func _ready() -> void:
+	$CanvasLayer/TimerControl/TimerBg/TimerText.modulate = get_parent().get_child(0).get_node("TimerControl").get_node("TimerBg").get_node("TimerText").modulate
 	sfx_player = $SFX
 
 
