@@ -382,6 +382,7 @@ texture_pressed = ExtResource("9_agjeu")
 texture_hover = ExtResource("9_agjeu")
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
 
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button1" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/DigicodeControl/Button2" to="." method="_on_button_pressed" binds= [2]]

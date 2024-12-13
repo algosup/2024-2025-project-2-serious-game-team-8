@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://script/home_page.gd" id="1_qbvgi"]
 [ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/Buttons/Square/Settings/settings_hover.png" id="4_3mcu8"]
 [ext_resource type="Texture2D" uid="uid://ccijrfbec5h3r" path="res://resources/background/homebackground2.jpg" id="4_5nhnf"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="4_xtb3p"]
+[ext_resource type="Texture2D" uid="uid://c8dyi07daubs7" path="res://ekoLock_logo.png" id="4_xtb3p"]
 [ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/Buttons/Rect/Start/start.png" id="5_wyg2g"]
 [ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/Buttons/Rect/Start/start_hover.png" id="7_iytfu"]
 [ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/music/menu_music.mp3" id="8_22ub0"]

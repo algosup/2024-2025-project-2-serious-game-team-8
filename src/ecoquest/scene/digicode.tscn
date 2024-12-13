@@ -475,6 +475,7 @@ theme_override_fonts/font = SubResource("FontVariation_k6wt7")
 theme_override_font_sizes/font_size = 200
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
 bus = &"SFX"
 
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
