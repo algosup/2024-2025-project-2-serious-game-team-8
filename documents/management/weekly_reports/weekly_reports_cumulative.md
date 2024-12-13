@@ -22,18 +22,18 @@
     - [Challenges](#challenges-2)
     - [Plan for Next Week](#plan-for-next-week-2)
     - [Conclusion](#conclusion-2)
-<!-- - [Weekly Report - Week 4](#weekly-report---week-4)
+- [Weekly Report - Week 4](#weekly-report---week-4)
     - [Overview](#overview-3)
     - [Accomplishments](#accomplishments-3)
     - [Challenges](#challenges-3)
     - [Plan for Next Week](#plan-for-next-week-3)
-    - [Conclusion](#conclusion-3) -->
-<!-- - [Weekly Report - Week 5](#weekly-report---week-5)
+    - [Conclusion](#conclusion-3)
+- [Weekly Report - Week 5](#weekly-report---week-5)
     - [Overview](#overview-4)
     - [Accomplishments](#accomplishments-4)
     - [Challenges](#challenges-4)
     - [Plan for Next Week](#plan-for-next-week-4)
-    - [Conclusion](#conclusion-4) -->
+    - [Conclusion](#conclusion-4)
 <!-- - [Weekly Report - Week 6](#weekly-report---week-6)
     - [Overview](#overview-5)
     - [Accomplishments](#accomplishments-5)
@@ -206,13 +206,113 @@ This week was mainly focused on the functional specifications and game designs. 
 
 Our team worked collaboratively on the design aspects to progress quickly and efficiently. Communication within the team was effective, and the project is now taking off, boosting the overall morale of the group.
 
-<!-- --- -->
+---
 
-<!-- Insert Weekly Report 4 -->
+# Weekly Report - Week 4
 
-<!-- --- -->
+## Overview
 
-<!-- Insert Weekly Report 5 -->
+This week had limited project time but was highly productive nonetheless. Deliverables were completed, and an MVP was coded.
+
+## Accomplishments
+
+1. **MVP**
+    - Significant progress was made on the MVP this week. We developed:
+        - Loading Screen;
+        - Chapter Selection;
+        - Parameters Page;
+        - Main Page;
+        - Machine Page;
+        - Hint Page.
+2. **Documents**
+    - The main document advancements this week were:
+        - The **Functional Specifications** were improved, particularly in the design section.
+        - The **Technical Specifications** were fully written, approved, and delivered.
+3. **Beta Testing**
+    - We conducted our first tests on the MVP. Testers primarily included ALGOSUP students and B3 residents.
+
+## Challenges
+
+1. **Time Allocation**
+    - We had very limited project time this week (only 1 hour).
+2. **Team Management**
+    - Managing the team without dedicated project time was challenging and primarily conducted remotely via Slack.
+3. **Finding Beta Testers**
+    - Although we planned to conduct more tests (5 additional sessions), time constraints limited us to only 3.
+
+## Plan for Next Week
+
+1. **New Test Sessions**
+    - To build a substantial database, we need to conduct additional tests with:
+        - ALGOSUP students;
+        - Foreign teachers;
+        - B3 residents.
+2. **Documents**
+    - Deliver the following documents:
+        - Test Plan;
+        - Test Cases;
+        - Weekly Reports.
+3. **Second Prototype**
+    - The development team will iterate based on feedback gathered from the test sessions conducted this week.
+
+## Conclusion
+
+This week was highly productive, and we overcame several challenges. The first phase of this project is now complete, and we are committed to maintaining this momentum moving forward.
+
+---
+
+# Weekly Report - Week 4
+
+## Overview
+
+This week had limited allocated time and many deliverables, leading to significant overtime.
+
+## Accomplishments
+
+1. **Documents**
+    - The **Test Plan** was fully completed and reviewed during the week.
+    - The **Functional Specifications** continued to evolve with new designs.
+    - The **User Manual** was started, and some pages have already been written.
+2. **Design**
+    - The entirety of Level 1 was designed and documented in a spreadsheet.
+    - The application was updated to align with the Level 1 design.
+3. **Testing**
+    - Additional tests were conducted with:
+        - Konstantinos, our game design teacher.
+        - ALGOSUP students.
+
+## Challenges
+
+1. **Time Allocation**
+    - The time allocated for the project was insufficient, requiring us to work overtime to keep up.
+2. **Team Management**
+    - The team experienced tension that the project manager had to address to restore harmony.
+    - Collaborative efforts were challenging, and the team struggled to work cohesively.
+3. **Lack of Design**
+    - The project is significantly behind on design work, requiring us to lower expectations in this area.
+
+## Plan for Next Week
+
+1. **Design**
+    - Improve the tutorial based on Konstantinos' feedback.
+    - Create Level 1 (cards).
+    - Design Level 2, including:
+        - Cards;
+        - Application;
+        - Game harmony.
+2. **Documents**
+    - Finalize the **Functional Specifications** with its last update.
+    - Complete, review, and push the **User Manual**.
+3. **Tests**
+    - Conduct further tests to iterate on the game and resolve difficulty issues with:
+        - Konstantinos, our game design teacher.
+        - ALGOSUP students.
+        - ALGOSUP staff members.
+        - B3 residents.
+
+## Conclusion
+
+This week was marked by numerous challenges and limited progress on the game. However, we are committed to improving and delivering a nearly complete game by the end of next week.
 
 <!-- --- -->
 
