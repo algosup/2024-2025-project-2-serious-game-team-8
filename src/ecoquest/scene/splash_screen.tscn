@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmrq8lmjtshgp"]
 
 [ext_resource type="Script" path="res://script/splash_screen.gd" id="1_iclyy"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="1_jqsnx"]
+[ext_resource type="Texture2D" uid="uid://c8dyi07daubs7" path="res://ekoLock_logo.png" id="1_jqsnx"]
 [ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="3_vjgan"]
 
 [node name="SplashScreen" type="Node2D"]

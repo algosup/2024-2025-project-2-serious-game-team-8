@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6252pp3jblcw"]
+[gd_scene load_steps=5 format=3 uid="uid://dbk0xkgmir2w"]
 
 [ext_resource type="Script" path="res://script/code_win_page.gd" id="1_6h5l7"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_g7rnv"]

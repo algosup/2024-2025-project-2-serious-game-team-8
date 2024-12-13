@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bsfjtqnkw8vtp"]
+[gd_scene load_steps=16 format=3 uid="uid://bsfjtqnkw8vtp"]
 
 [ext_resource type="Script" path="res://script/second_enigma.gd" id="1_ccolq"]
 [ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="1_eptsh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wnnf8o4ovnuh" path="res://resources/background/test tubes.png" id="2_mr4mi"]
 [ext_resource type="Texture2D" uid="uid://c4axstyxv4s37" path="res://resources/svg/Button/IronButton/[1] Normal.png" id="4_n5ukb"]
 [ext_resource type="Texture2D" uid="uid://b0beyvk74xkrd" path="res://resources/svg/Buttons/Square/ArrowLeft-Bold/Default.svg" id="5_1ghio"]
+[ext_resource type="Texture2D" uid="uid://yubrwmed500i" path="res://resources/book.png" id="6_2xwb7"]
 [ext_resource type="Texture2D" uid="uid://t6o20l1ejnrs" path="res://resources/UI_Flat_Frame01a.png" id="6_fwrvm"]
 [ext_resource type="Texture2D" uid="uid://cl7fknll7u2bv" path="res://resources/svg/Button/IronButton/[3] Hover.png" id="6_k18e2"]
 [ext_resource type="Script" path="res://script/Input.gd" id="6_xe1kq"]
@@ -149,22 +150,21 @@ autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = -461.0
-offset_top = -465.0
-offset_right = -161.0
-offset_bottom = -315.0
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_n5ukb")
+offset_left = -431.0
+offset_top = -483.0
+offset_right = -234.0
+offset_bottom = -287.0
+texture = ExtResource("6_2xwb7")
 
 [node name="Input" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect"]
 layout_mode = 0
-offset_left = -6.25003
-offset_top = 6.25
-offset_right = 305.75
-offset_bottom = 133.25
+offset_left = 16.0
+offset_top = 25.0
+offset_right = 160.0
+offset_bottom = 152.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
 alignment = 1
 max_length = 2
@@ -178,22 +178,21 @@ script = ExtResource("6_xe1kq")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = -94.0
-offset_top = -465.0
-offset_right = 206.0
-offset_bottom = -315.0
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_n5ukb")
+offset_left = -65.0
+offset_top = -483.0
+offset_right = 132.0
+offset_bottom = -287.0
+texture = ExtResource("6_2xwb7")
 
 [node name="Input2" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect2"]
 layout_mode = 0
-offset_left = -6.25003
-offset_top = 6.25
-offset_right = 305.75
-offset_bottom = 133.25
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 164.0
+offset_bottom = 152.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
 alignment = 1
 max_length = 2
@@ -206,22 +205,21 @@ script = ExtResource("6_xe1kq")
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ButtonsControl"]
 layout_mode = 0
-offset_left = 252.0
-offset_top = -464.0
-offset_right = 552.0
-offset_bottom = -314.0
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_n5ukb")
+offset_left = 283.0
+offset_top = -483.0
+offset_right = 480.0
+offset_bottom = -287.0
+texture = ExtResource("6_2xwb7")
 
 [node name="Input3" type="LineEdit" parent="CanvasLayer/ButtonsControl/TextureRect3"]
 layout_mode = 0
-offset_left = -6.25006
-offset_top = 6.25
-offset_right = 305.75
-offset_bottom = 133.25
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 164.0
+offset_bottom = 152.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2dmjq")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjbgw")
 alignment = 1
 max_length = 2
@@ -540,8 +538,7 @@ texture = ExtResource("12_g3fna")
 texture_scale = 0.59
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0
-bus = &"SFX"
+volume_db = -15.0
 
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonsControl/AnalyseButton" to="." method="_on_analyse_button_pressed"]
