@@ -45,8 +45,9 @@ func _on_button_pressed(number: int) -> void:
 	# If the code has less than 4 digit, concatenate the new digit to the string 
 	if code.length() < 4:
 		code = code + str(number)
+		
 	# If the code has 4 digits 
-	elif code.length() == 4:
+	if code.length() == 4:
 		# Check if the code is correct
 		if code == "4132":
 			# Stop the timer
