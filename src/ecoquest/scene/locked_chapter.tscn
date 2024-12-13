@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkcny8yyextey"]
+[gd_scene load_steps=4 format=3 uid="uid://dkcny8yyextey"]
 
 [ext_resource type="Script" path="res://script/locked_chapter.gd" id="1_hrotc"]
+[ext_resource type="Texture2D" uid="uid://cxph83xt7e3iq" path="res://resources/svg/Counter/Dummy.svg" id="2_655h2"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_glqhp"]
-[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_n15lm"]
-[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_skcg4"]
 
 [node name="LockedChapter" type="Node2D"]
 script = ExtResource("1_hrotc")
@@ -44,7 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ContainerControl"]
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/ContainerControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,16 +56,16 @@ offset_right = 300.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.592157, 0.47451, 0.439216, 1)
+texture = ExtResource("2_655h2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/ContainerControl/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.503333
-anchor_top = 0.3975
-anchor_right = 0.503333
-anchor_bottom = 0.8
+anchor_left = 0.466667
+anchor_top = 0.3025
+anchor_right = 0.526667
+anchor_bottom = 0.845
 offset_left = -245.0
 offset_top = -111.0
 offset_right = 247.0
@@ -79,26 +78,3 @@ text = "Finish the previous chapter(s) to unlock this one!"
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="BackButtonControl" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="CloseButton" type="TextureButton" parent="CanvasLayer/BackButtonControl"]
-layout_mode = 0
-offset_left = -124.0
-offset_top = 52.0
-offset_right = -74.0
-offset_bottom = 102.0
-scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("3_n15lm")
-texture_hover = ExtResource("4_skcg4")
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="CanvasLayer/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]

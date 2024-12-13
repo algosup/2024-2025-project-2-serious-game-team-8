@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2bpqbfuvdn02"]
-
-[ext_resource type="PackedScene" uid="uid://mn5cv22ntp47" path="res://scene/hint_parent_page.tscn" id="1_umhqc"]
-
-[node name="HintChildOne" instance=ExtResource("1_umhqc")]
-
-[node name="Label" parent="CanvasLayer/ColorRect" index="0"]
-text = "You have to find two numbers"

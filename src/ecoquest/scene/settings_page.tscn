@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://drw5ljx4fsbdx"]
 
 [ext_resource type="Script" path="res://script/settings_page.gd" id="1_2oj5p"]
-[ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/svg/settings_bg.svg" id="2_35iie"]
-[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/cross.png" id="3_foelt"]
-[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/cross_hover.png" id="4_a2agt"]
+[ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/background/settings_bg.svg" id="2_35iie"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/Buttons/Square/Cross/cross.png" id="3_foelt"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/Buttons/Square/Cross/cross_hover.png" id="4_a2agt"]
 [ext_resource type="Texture2D" uid="uid://c8nlcgd4sgeim" path="res://resources/svg/Button/Rect/Fill/Default.svg" id="5_fhuid"]
 [ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="6_wwy6w"]
 [ext_resource type="Texture2D" uid="uid://uqx6thmo3fgi" path="res://resources/svg/Bar/slider.svg" id="7_7urlr"]
 [ext_resource type="Texture2D" uid="uid://d0qp1ohmkdao2" path="res://resources/svg/Bar/Background.svg" id="8_65s1p"]
 [ext_resource type="Texture2D" uid="uid://do6w35im262pi" path="res://resources/svg/Bar/Line.png" id="8_x4akh"]
-[ext_resource type="Texture2D" uid="uid://ckjs7k7m0bu64" path="res://resources/svg/github.png" id="10_2sfd5"]
-[ext_resource type="Texture2D" uid="uid://dnv1ofnbolvyt" path="res://resources/svg/github_hover.png" id="11_48ckv"]
+[ext_resource type="Texture2D" uid="uid://ckjs7k7m0bu64" path="res://resources/svg/Buttons/Square/GitHub/github.png" id="10_2sfd5"]
+[ext_resource type="Texture2D" uid="uid://dnv1ofnbolvyt" path="res://resources/svg/Buttons/Square/GitHub/github_hover.png" id="11_48ckv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkuus"]
 content_margin_left = 15.0
@@ -176,6 +176,30 @@ max_value = 1.0
 step = 0.001
 value = 1.0
 
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/MusicSliderControl"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.637
+anchor_top = -6.9
+anchor_right = -0.637
+anchor_bottom = -6.9
+offset_left = -248.52
+offset_top = 140.0
+offset_right = 248.48
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = ExtResource("7_7urlr")
+theme_override_icons/grabber_highlight = ExtResource("7_7urlr")
+theme_override_icons/grabber_disabled = ExtResource("7_7urlr")
+theme_override_styles/slider = SubResource("StyleBoxTexture_dkuus")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_govi0")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_gv0q6")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
 [node name="GithubButtonControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 8
@@ -235,6 +259,25 @@ theme_override_fonts/font = ExtResource("6_wwy6w")
 theme_override_font_sizes/font_size = 35
 text = "Music"
 
+[node name="Label2" type="Label" parent="CanvasLayer/MusicTextControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.65
+anchor_top = -8.975
+anchor_right = -2.65
+anchor_bottom = -8.975
+offset_left = -168.0
+offset_top = 141.0
+offset_right = -46.0
+offset_bottom = 188.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.298039, 0.239216, 0.219608, 1)
+theme_override_fonts/font = ExtResource("6_wwy6w")
+theme_override_font_sizes/font_size = 35
+text = "SFX"
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/ClosesButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="value_changed" from="CanvasLayer/MusicSliderControl/Music Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/MusicSliderControl/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/GithubButtonControl/GithubButton" to="." method="_on_github_button_pressed"]

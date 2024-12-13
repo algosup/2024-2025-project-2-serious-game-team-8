@@ -1,0 +1,492 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpc2b2qaayw2b"]
+
+[ext_resource type="Script" path="res://script/digicode.gd" id="1_6700h"]
+[ext_resource type="FontFile" uid="uid://c2iu4eowycoxp" path="res://resources/font/Bungee/Bungee-Regular.ttf" id="2_bi2tg"]
+[ext_resource type="Texture2D" uid="uid://copd4i4xqjiwv" path="res://resources/background/settings_bg.svg" id="2_rnp1c"]
+[ext_resource type="Texture2D" uid="uid://ddp7ccypqeptl" path="res://resources/svg/Buttons/Square/Cross/cross.png" id="3_o1ftq"]
+[ext_resource type="Texture2D" uid="uid://bjv66ma4qhqm" path="res://resources/svg/Buttons/Square/Cross/cross_hover.png" id="4_nbh1j"]
+[ext_resource type="Texture2D" uid="uid://dl747fbwjeasn" path="res://resources/svg/Button/Square/Fill/Default.svg" id="7_s8wd6"]
+[ext_resource type="Texture2D" uid="uid://cfxp8hoxb3t13" path="res://resources/svg/Button/Square/Fill/Hover.svg" id="8_247uq"]
+[ext_resource type="Texture2D" uid="uid://d3m8fbm0j4vka" path="res://resources/svg/Bar/Background.png" id="10_64bic"]
+
+[sub_resource type="FontVariation" id="FontVariation_k6wt7"]
+base_font = ExtResource("2_bi2tg")
+spacing_glyph = 50
+
+[node name="Digicode" type="Node2D"]
+script = ExtResource("1_6700h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rnp1c")
+
+[node name="HeadBarControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+color = Color(0.447059, 0.34902, 0.321569, 1)
+
+[node name="BackButtonControl" type="Control" parent="CanvasLayer/HeadBarControl/HeadBar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.012
+anchor_top = 2.512
+anchor_right = -2.012
+anchor_bottom = 2.512
+offset_left = -72.52
+offset_top = -72.48
+offset_right = -22.52
+offset_bottom = -22.48
+scale = Vector2(2.9, 2.9)
+texture_normal = ExtResource("3_o1ftq")
+texture_hover = ExtResource("4_nbh1j")
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonsControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -59.0
+offset_right = 10.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="Button1" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -170.0
+offset_right = -186.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button1"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "1"
+
+[node name="Button2" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -170.0
+offset_right = 14.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 46.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "2"
+
+[node name="Button3" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = -170.0
+offset_right = 214.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button3"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "3"
+
+[node name="Button4" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 30.0
+offset_right = -186.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button4"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "4
+"
+
+[node name="Button5" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 30.0
+offset_right = 14.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button5"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "5"
+
+[node name="Button6" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 30.0
+offset_right = 214.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button6"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "6"
+
+[node name="Button7" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 230.0
+offset_right = -186.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button7"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "7"
+
+[node name="Button8" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 230.0
+offset_right = 14.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button8"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "8"
+
+[node name="Button9" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 230.0
+offset_right = 214.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button9"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "9"
+
+[node name="Button0" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 430.0
+offset_right = 14.0
+offset_bottom = 514.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Button0"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "0"
+
+[node name="Validate" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 430.0
+offset_right = 214.0
+offset_bottom = 514.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Validate"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.104616, 0.480715, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = ">"
+
+[node name="Cancel" type="TextureButton" parent="CanvasLayer/ButtonsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 430.0
+offset_right = -186.0
+offset_bottom = 514.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_s8wd6")
+texture_hover = ExtResource("8_247uq")
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsControl/Cancel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 37.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bi2tg")
+text = "X"
+
+[node name="DisplayControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/DisplayControl"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.0
+offset_top = -707.0
+offset_right = 1183.0
+offset_bottom = -407.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 1)
+texture = ExtResource("10_64bic")
+
+[node name="Label" type="Label" parent="CanvasLayer/DisplayControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -697.0
+offset_right = 348.0
+offset_bottom = -433.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.886275, 0.580392, 1)
+theme_override_fonts/font = SubResource("FontVariation_k6wt7")
+theme_override_font_sizes/font_size = 200
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/BackButtonControl/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button1" to="." method="_on_digicode_press" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button2" to="." method="_on_digicode_press" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button3" to="." method="_on_digicode_press" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button4" to="." method="_on_digicode_press" binds= [4]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button5" to="." method="_on_digicode_press" binds= [5]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button6" to="." method="_on_digicode_press" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button7" to="." method="_on_digicode_press" binds= [7]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button8" to="." method="_on_digicode_press" binds= [8]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button9" to="." method="_on_digicode_press" binds= [9]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Button0" to="." method="_on_digicode_press" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Validate" to="." method="_on_digicode_press" binds= [10]]
+[connection signal="pressed" from="CanvasLayer/ButtonsControl/Cancel" to="." method="_on_digicode_press" binds= [11]]

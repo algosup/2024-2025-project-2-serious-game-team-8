@@ -16,7 +16,7 @@
       - [1.2.2.1 - Game Structure and Mechanics](#1221---game-structure-and-mechanics)  
       - [1.2.2.2 - Educational Focus](#1222---educational-focus)  
       - [1.2.2.3 - Card-Based Gameplay](#1223---card-based-gameplay)  
-      - [1.2.2.4 - Digital Application Features](#1224---digital-application-features)  
+      - [1.2.2.4 - Digital Application Features](#1224---digital-application-features)
       - [1.2.2.5 - Game Levels and Narrative](#1225---game-levels-and-narrative)  
       - [1.2.2.6 - Integration of Cards and App](#1226---integration-of-cards-and-app)  
       - [1.2.2.7 - Performance Metrics and Player Feedback](#1227---performance-metrics-and-player-feedback)  
@@ -130,7 +130,7 @@ Here are the main features of the game, as laid out in the functional specificat
 
 - Cards are marked with unique alphanumeric codes for app integration.
 
-#### 1.2.2.4 Digital Application Features
+#### 1.2.2.4 - Digital Application Features
 
  - The app manages:
     - **Code entry** for unlocking puzzles or progressing in the story.
@@ -322,6 +322,7 @@ By categorizing and labeling issues with predefined templates, we enhance tracea
 | Sound Design Review | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=&labels=design%2C+audio%2C+quality-assurance&projects=&template=sound_design_review_template.md&title=%5BAUDIO%5D+Sound+Design+Review+%23) |
 | Technical Specifications Review | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=&labels=documentation&projects=&template=technical_specifications_review_template.md&title=%5BDOCS%5D+Technical+Specifications+Review+%23) |
 | Test Case Form | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=mathiskakal&labels=test&projects=algosup%2F45&template=test_case_form.yml&title=%5BTESTING%5D+TEST_NAME) |
+| User Manual Review Form | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=&labels=documentation&projects=&template=user_manual_review_template.md&title=%5BDOCS%5D+User+Manual+Review+%23) |
 | Weekly Report Review | [Link To Issue Template](https://github.com/algosup/2024-2025-project-2-serious-game-team-8/issues/new?assignees=&labels=documentation&projects=&template=weekly_report_review_template.md&title=%5BDOCS%5D+Weekly+Report+Review+%23) |
 
 #### 2.2.1.2 - Detailed
@@ -414,9 +415,16 @@ This template is designed for documenting individual test cases. It includes det
 </details>
 
 <details>
+<summary><ins>User Manual Review Template:</ins></summary><br/>
+
+This template is used to review the user manual, which provides instructions for installing and playing the game. It ensures the manual is clear, accurate, and user-friendly, guiding players effectively while addressing potential issues and accessibility needs.
+
+</details>
+
+<details>
 <summary><ins>Weekly Report Review Template:</ins></summary><br/>
 
-Weekly Report Review Template: This template is used to review weekly progress reports submitted by the team. It ensures the reports accurately reflect completed tasks, challenges, and plans for the upcoming week, thus helping with transparency and accountability.
+This template is used to review weekly progress reports submitted by the team. It ensures the reports accurately reflect completed tasks, challenges, and plans for the upcoming week, thus helping with transparency and accountability.
 
 </details>
 
@@ -429,6 +437,8 @@ Once the issues have been created, they end up in a database called "GitHub Proj
 Unlike Issues, which can be created by any collaborator, the process of "Triaging" issues, which involves categorising, prioritising and managing issues is generally reserved to the Quality Assurance team member.
 
 This process adds additional metadata on top of the existing issues to help strategically solving them.
+
+<p align="center"><em>🗂️ Click <a href="https://github.com/orgs/algosup/projects/45">here</a> to access the Github Project interface.</em></p>
 
 <!-- <CLICK HERE to explore the project dashboard (in a centered button)> -->
 

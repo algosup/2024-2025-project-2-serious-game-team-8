@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://q66v306kfprs"]
+[gd_scene load_steps=10 format=3 uid="uid://q66v306kfprs"]
 
-[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/settings.png" id="1_gpfe6"]
+[ext_resource type="Texture2D" uid="uid://b3ak1svtyb2ai" path="res://resources/svg/Buttons/Square/Settings/settings.png" id="1_gpfe6"]
 [ext_resource type="Script" path="res://script/home_page.gd" id="1_qbvgi"]
-[ext_resource type="Texture2D" uid="uid://bht10qg071lt1" path="res://resources/background/menu_background.png" id="2_sbdoo"]
-[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/settings_hover.png" id="4_3mcu8"]
-[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ecoquest_logo.png" id="4_xtb3p"]
-[ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/start.png" id="5_wyg2g"]
-[ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/start_hover.png" id="7_iytfu"]
-[ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/menu_music.mp3" id="8_22ub0"]
+[ext_resource type="Texture2D" uid="uid://bmknhgwb36y52" path="res://resources/svg/Buttons/Square/Settings/settings_hover.png" id="4_3mcu8"]
+[ext_resource type="Texture2D" uid="uid://ccijrfbec5h3r" path="res://resources/background/homebackground2.jpg" id="4_5nhnf"]
+[ext_resource type="Texture2D" uid="uid://l3cphcvvstyl" path="res://ekoLock_logo.png" id="4_xtb3p"]
+[ext_resource type="Texture2D" uid="uid://cax5wgxtqy8af" path="res://resources/svg/Buttons/Rect/Start/start.png" id="5_wyg2g"]
+[ext_resource type="Texture2D" uid="uid://26nunt1i3so5" path="res://resources/svg/Buttons/Rect/Start/start_hover.png" id="7_iytfu"]
+[ext_resource type="AudioStream" uid="uid://dlprucyy6ethq" path="res://resources/musics/music/menu_music.mp3" id="8_22ub0"]
+[ext_resource type="PackedScene" uid="uid://di7ohmxvh7dwf" path="res://scene/transition_layer.tscn" id="9_0rhlq"]
 
 [node name="HomePage" type="Node2D"]
 script = ExtResource("1_qbvgi")
@@ -23,6 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/BackgroundControl"]
 layout_mode = 1
@@ -31,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sbdoo")
+texture = ExtResource("4_5nhnf")
 
 [node name="HeadBarControl" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -41,6 +43,7 @@ anchor_bottom = 1.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="HeadBar" type="ColorRect" parent="CanvasLayer/HeadBarControl"]
 layout_mode = 1
@@ -87,10 +90,11 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="Logo" type="Sprite2D" parent="CanvasLayer/LogoControl"]
-position = Vector2(25, -505)
-scale = Vector2(0.8, 0.8)
+position = Vector2(27, -249)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("4_xtb3p")
 
 [node name="ButtonControl" type="Control" parent="CanvasLayer"]
@@ -102,8 +106,9 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/ButtonControl"]
+[node name="StartButton" type="TextureButton" parent="CanvasLayer/ButtonControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -111,9 +116,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -79.5
-offset_top = -35.5
+offset_top = 164.5
 offset_right = 79.5
-offset_bottom = 35.5
+offset_bottom = 235.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
@@ -123,9 +128,15 @@ texture_pressed = ExtResource("7_iytfu")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_22ub0")
-autoplay = true
 bus = &"Menu Music"
 parameters/looping = true
 
+[node name="BackGroundChangeTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="TransitionLayer" parent="." instance=ExtResource("9_0rhlq")]
+
 [connection signal="pressed" from="CanvasLayer/HeadBarControl/HeadBar/SettingsButtonControl/SettingButton" to="." method="_on_setting_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/ButtonControl/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonControl/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="BackGroundChangeTimer" to="." method="_on_back_ground_change_timer_timeout"]
