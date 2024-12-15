@@ -182,7 +182,7 @@ This section gathers all the forms used for the KPIs.
 - [Team 8 Satisfaction Week 3](https://docs.google.com/spreadsheets/d/1_P8kYex3n9S3TnirVDKRWVjTEJSFhVTa1bV3EisE8-Y/edit?usp=sharing)
 - [Team 8 Satisfaction Week 4](https://docs.google.com/spreadsheets/d/1PsAMqpvzBwksOwLR2FZh8NaUVsCk1HshIutcaTAYFcc/edit?usp=sharing)
 - [Team 8 Satisfaction Week 5](https://docs.google.com/spreadsheets/d/1CsPfJLTnMo8vAKUvs7HMroY3VXcN0KFMnoV2ljvqaj8/edit?usp=sharing)
-<!-- - [Team 8 Satisfaction Week 6]() -->
+- [Team 8 Satisfaction Week 6](https://docs.google.com/spreadsheets/d/1yWvlcxULeDr22tygJemJTSZbNen299Eyt9hlNy-qgtE/edit?usp=sharing)
 <!-- - [Team 8 Satisfaction Week 7]() -->
 
 The following link is used as a cumulative file for the seven weeks:
@@ -200,7 +200,7 @@ You can access each of them directly by following the links below:
 - [Access Report for Week 3](/documents/management/weekly_reports/weekly_report_week3.md)
 - [Access Report for Week 4](/documents/management/weekly_reports/weekly_report_week4.md)
 - [Access Report for Week 5](/documents/management/weekly_reports/weekly_report_week5.md)
-<!-- - [Access Report for Week 6](/documents/management/weekly_reports/weekly_report_week6.md) -->
+- [Access Report for Week 6](/documents/management/weekly_reports/weekly_report_week6.md)
 <!-- - [Access Report for Week 7](/documents/management/weekly_reports/weekly_report_week7.md) -->
 
 You can also access all the reports in one file using the link below:
