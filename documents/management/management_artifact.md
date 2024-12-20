@@ -17,9 +17,9 @@ This document aims to centralize all the management artifact links and resources
   - [Link to the project's KPIs](#link-to-the-projects-kpis)
   - [Link to the forms](#link-to-the-forms)
 - [Weekly Reports](#weekly-reports)
-<!-- - [Post Mortem Analysis](#post-mortem-analysis) -->
-<!-- - [Addendum](#addendum) -->
-  <!-- - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule) -->
+- [Post Mortem Analysis](#post-mortem-analysis)
+- [Addendum](#addendum)
+  - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule)
 
 ## Tasks & Schedule
 
@@ -207,18 +207,20 @@ You can also access all the reports in one file using the link below:
 
 - [Access Cumulative File for All 7 Weeks](/documents/management/weekly_reports/weekly_reports_cumulative.md)
 
-<!-- ## Post Mortem Analysis -->
+## Post Mortem Analysis
 
-<!-- You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md). -->
+You can access the Post Mortem Analysis of our project following [this link](./post_mortem.md).
 
-<!-- ## Addendum -->
+## Addendum
 
-<!-- ### Differences Between Gantt Chart and Actual Schedule -->
+### Differences Between Gantt Chart and Actual Schedule
 
-<!-- The project schedule deviated significantly from the initial Gantt Chart, reflecting substantial differences in both the timeline and the expected prototype of "Adopte Un Candidat." This section aims to explain the discrepancies between the planned and actual schedules.
+The project schedule deviated from the initial Gantt chart due to several factors, which will be explained in this section.
 
-Learning Dart and Flutter took longer than anticipated, delaying the development phase from the start. As mentioned in the [Post Mortem Analysis](./post_mortem.md), we should have spent more time mastering the language before diving into the project. This would have prevented many of the issues and incompatibilities discovered later, which forced us to rework several features towards the end.
+Firstly, the design process was far more complicated and lengthy than I had planned. As a result, there were significant delays in other tasks since the design was essential for the entire project. To address this, we adopted a more iterative approach to creation, which explains the deviations from the original schedule.
 
-As the project manager, I underestimated the time required to develop each page and its related features. This miscalculation could not be mitigated by overtime if our software engineer worked alone. Consequently, to ensure a functional prototype, we had to reorganize our efforts. Our QA and Technical Writer continued with their tasks, only seeking assistance when necessary. We also solely focused on the job seeker side rather than the company one, preferring quality over quantity.
+Secondly, the test sessions took significantly more time than I had anticipated. Even by conducting some tests during our free time as overtime, we could not keep up with the original plan. Additionally, as the project manager, I did not allocate sufficient time for these tasks in the initial schedule. This contributed to delays in application development at certain points.
 
-Overall, although our progress was not as far along as planned, future projects should account more accurately for the software engineer's learning curve and the actual effort needed to create each page. -->
+Finally, we had to scale back many of our initial ideas to deliver something playable and enjoyable by the end of the project. This explains why most tasks were nearly completed, except for the game application development, where not all the features we initially envisioned were implemented.
+
+Overall, while some aspects of the project took longer than planned, we successfully delivered a playable game by the end of the project, which was the primary requirement set by our team.
