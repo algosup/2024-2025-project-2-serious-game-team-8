@@ -8,58 +8,56 @@
 - [Key Achievements](#key-achievements)
 - [Challenges](#challenges)
 - [Root Causes](#root-causes)
-- [Lessons Learnt](#lessons-learnt)
+- [Lessons Learned](#lessons-learned)
 - [Conclusion](#conclusion)
 
 </details>
 
 ## Introduction
 
-<!-- This document aims to summarize all the takeaways from our project. It highlights areas where the team excelled, identifies weaknesses, and suggests improvements for future projects, from both personal and team perspectives. -->
+This document aims to summarize the key takeaways of this project from both personal and team perspectives.
 
 ## Mad, Sad, Glad
 
 | Team Member         | Mad                                                                      | Sad                                                                                                           | Glad                                                                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Maxime THIZEAU      ||||
-| Benoît DE KEYN      ||||
-| Pavlo PRENDI        ||||
-| Aurélien FERNANDEZ  ||||
-| Thibaud MARLIER     ||||
-| Antoine PREVOST     ||||
-| Mathis KAKAL        ||||
+| -------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Maxime THIZEAU       | - Lack of communication between team members                            | - Presentation went poorly <br> - The game wasn't fully implemented                                           | - The team overcame its differences to complete the game, at least partially.                                                                                                                                     |
+| Benoît DE KEYN       |                                                                         |                                                                                                               |                                                                                                                                                                                                                   |
+| Pavlo PRENDI         | - The first idea might have worked since the educational aspect could have been more evident | - The jury didn't fully understand our game                                                                   | - Nice team <br> - Actively tried to speak English <br> - Always felt informed about what the team was doing                                                                                 |
+| Aurélien FERNANDEZ   |                                                                         |                                                                                                               |                                                                                                                                                                                                                   |
+| Thibaud MARLIER      |                                                                         |                                                                                                               |                                                                                                                                                                                                                   |
+| Antoine PREVOST      |                                                                         |                                                                                                               |                                                                                                                                                                                                                   |
+| Mathis KAKAL         | /                                                                       | /                                                                                                             | /                                                                                                                                                                                                                 |
 
 ## Key Achievements
 
-- 
-<!-- - The working prototype has a great design, and the developed pages are polished and refined.
-- The final presentation conveyed all key information clearly to the client and was better than previous presentations.
-- Git & GitHub organization was overall clear and efficient.
-- Our motivation benefited from team cohesion and management that allowed members to work independently.
-- Pavlo, our new member, learned to work as a team on a software project. -->
+- Successfully integrated the card-based and application-based parts of the game for a cohesive experience.
+- Clear and efficient organization of Git & GitHub repositories.
+- Created visually appealing and high-quality game cards.
+- Delivered a fully playable game.
 
 ## Challenges
 
-- 
-<!-- - Our project tended to expand into side features that, while relevant, were not critical.
-- Some team members were not as involved in the project as others.
-- We faced numerous dead ends, and our development pace was hindered by technical issues.
-- Respecting deadlines and managing time effectively were consistent challenges throughout the project. -->
+- Limited project time posed a significant challenge.
+- The design process was time-consuming, and finding the right ideas for implementation was difficult.
+- Identifying which climate change-related topics to focus on was a major hurdle.
+- The client’s expectations were vague and insufficiently defined.
+- Managing human resources, including maintaining team morale and efficiency, was challenging.
 
 ## Root Causes
 
-- 
-<!-- - The definition of critical features should have been approached with more critical thinking and review.
-- A lack of strict management and oversight led to some team members being less involved.
-- We began developing the application without mastering the language, leading to functionality issues.
-- The project duration was short, with only five weeks for the development phase, making it difficult to meet deadlines while aiming for a refined application. -->
+- The allocated project time was too short; we should have planned a smaller game or committed to more work outside of school hours.
+- Lack of attentive listening led to misunderstandings that impacted the project later on.
+- Issues in task organization, tracking, and communication among team members and with the client.
 
-## Lessons Learnt
+## Lessons Learned
 
-- 
-<!-- - Better management with improved risk anticipation and efforts to involve all team members should lead to a better product and less stress towards deadlines.
-- Mastering the programming language before starting the development phase will help avoid future problems. -->
+- Greater curiosity about the project topic is essential, including maintaining better and more frequent communication with the client.
+- Presentations should be aligned with Franck’s feedback to improve their quality.
+- Regularly reevaluate and question decisions to ensure alignment with project goals and requirements.
+- Testing is critical and should include users outside the school to gain diverse feedback.
+- Each team member should learn from their own tasks, roles, and mistakes as well as those of other team members.
 
 ## Conclusion
 
-<!-- Overall, this project was a valuable learning experience for everyone, despite technical and management challenges. The insights gained will be beneficial for delivering higher quality work in future projects, and the team will work to avoid repeating the same mistakes. -->
+This project was a valuable learning experience for all of us. The mistakes we made and the challenges we faced will serve as stepping stones for future projects, enabling us to improve and succeed in our endeavors.
